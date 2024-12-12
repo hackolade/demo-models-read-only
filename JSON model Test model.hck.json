@@ -1,0 +1,292 @@
+{
+    "modelName": "Test model",
+    "collections": [
+        {
+            "collectionName": "address",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "city",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "properties": [],
+                    "GUID": "b1c17327-df37-4594-a184-314701d32f2c",
+                    "sources": [
+                        {
+                            "GUID": "7c414882-b7f6-4402-a885-034a4ee0463e",
+                            "lineageSourceGUID": "66da4382-6466-422d-95f4-28b497a7de13",
+                            "lineageSourceAttrBusName": "New Field",
+                            "lineageSourceAttrTechName": "",
+                            "lineageSrcEntityBusName": "New Document",
+                            "lineageSrcEntityTechName": "",
+                            "lineageSourceContainerBusName": "Test Group",
+                            "lineageSourceContainerTechName": ""
+                        },
+                        {
+                            "GUID": "055011a6-640f-4969-864e-c6c83d2db93d",
+                            "lineageSourceGUID": "3db030e8-d5db-49d7-a877-a15c2970574a",
+                            "lineageSourceAttrBusName": "New Field",
+                            "lineageSourceAttrTechName": "",
+                            "lineageSrcEntityBusName": "address",
+                            "lineageSrcEntityTechName": "",
+                            "lineageSourceContainerBusName": "Test Group",
+                            "lineageSourceContainerTechName": ""
+                        },
+                        {
+                            "GUID": "8a8ea348-19ec-4a88-8c46-51ab192e2e8a",
+                            "lineageSourceGUID": "5858a198-009f-4c2d-adfb-e9be1ec9010b",
+                            "lineageSourceAttrBusName": "city",
+                            "lineageSourceAttrTechName": "",
+                            "lineageSrcEntityBusName": "address",
+                            "lineageSrcEntityTechName": "",
+                            "lineageSourceContainerBusName": "Test Group",
+                            "lineageSourceContainerTechName": ""
+                        }
+                    ],
+                    "error": {}
+                },
+                {
+                    "name": "streetName",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "properties": [],
+                    "GUID": "2d62738f-63bc-4444-8096-5300fdd23b60",
+                    "sources": [
+                        {
+                            "GUID": "14e7495f-20ef-45a0-995d-6d99400e2c67",
+                            "lineageSourceGUID": "66da4382-6466-422d-95f4-28b497a7de13",
+                            "lineageSourceAttrBusName": "New Field1",
+                            "lineageSourceAttrTechName": "",
+                            "lineageSrcEntityBusName": "New Document",
+                            "lineageSrcEntityTechName": "",
+                            "lineageSourceContainerBusName": "Test Group",
+                            "lineageSourceContainerTechName": ""
+                        },
+                        {
+                            "GUID": "094ae028-f1cb-4516-88f3-39922595b982",
+                            "lineageSourceGUID": "3db030e8-d5db-49d7-a877-a15c2970574a",
+                            "lineageSourceAttrBusName": "New Field1",
+                            "lineageSourceAttrTechName": "",
+                            "lineageSrcEntityBusName": "address",
+                            "lineageSrcEntityTechName": "",
+                            "lineageSourceContainerBusName": "Test Group",
+                            "lineageSourceContainerTechName": ""
+                        },
+                        {
+                            "GUID": "40685751-1951-4ffc-824c-25613d1e9313",
+                            "lineageSourceGUID": "5858a198-009f-4c2d-adfb-e9be1ec9010b",
+                            "lineageSourceAttrBusName": "streetName",
+                            "lineageSourceAttrTechName": "",
+                            "lineageSrcEntityBusName": "address",
+                            "lineageSrcEntityTechName": "",
+                            "lineageSourceContainerBusName": "Test Group",
+                            "lineageSourceContainerTechName": ""
+                        }
+                    ],
+                    "error": {}
+                },
+                {
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "properties": [],
+                    "GUID": "8b345f37-a748-4aad-8fcb-04905815fa1c",
+                    "sources": [
+                        {
+                            "GUID": "93b89637-0017-45ec-bfe8-73214b0e86e7",
+                            "lineageSourceGUID": "66da4382-6466-422d-95f4-28b497a7de13",
+                            "lineageSourceAttrBusName": "New Field2",
+                            "lineageSourceAttrTechName": "",
+                            "lineageSrcEntityBusName": "New Document",
+                            "lineageSrcEntityTechName": "",
+                            "lineageSourceContainerBusName": "Test Group",
+                            "lineageSourceContainerTechName": ""
+                        },
+                        {
+                            "GUID": "24f0425f-0940-45e4-b2b3-df12eab431e7",
+                            "lineageSourceGUID": "3db030e8-d5db-49d7-a877-a15c2970574a",
+                            "lineageSourceAttrBusName": "New Field2",
+                            "lineageSourceAttrTechName": "",
+                            "lineageSrcEntityBusName": "address",
+                            "lineageSrcEntityTechName": "",
+                            "lineageSourceContainerBusName": "Test Group",
+                            "lineageSourceContainerTechName": ""
+                        },
+                        {
+                            "GUID": "d83b0420-fa7c-4d17-a95c-1c5278736ec5",
+                            "lineageSourceGUID": "5858a198-009f-4c2d-adfb-e9be1ec9010b",
+                            "lineageSourceAttrBusName": "addressNumber",
+                            "lineageSourceAttrTechName": "",
+                            "lineageSrcEntityBusName": "address",
+                            "lineageSrcEntityTechName": "",
+                            "lineageSourceContainerBusName": "Test Group",
+                            "lineageSourceContainerTechName": ""
+                        }
+                    ],
+                    "name": "addressNumber",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "56e89005-f45e-4fae-a0de-1b84ff8e416e"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "GUID": "8412e863-4349-40ce-87d2-92a6d614773b",
+            "bucketId": "76ffbfd8-a9d7-4fae-a6bb-111354c4b00f"
+        }
+    ],
+    "buckets": [
+        {
+            "name": "Test Group",
+            "type": "bucket",
+            "collectionIds": [
+                "8412e863-4349-40ce-87d2-92a6d614773b"
+            ],
+            "backgroundColor": {
+                "r": 216,
+                "g": 0,
+                "b": 115,
+                "a": 1
+            },
+            "show": true,
+            "isActivated": true,
+            "GUID": "76ffbfd8-a9d7-4fae-a6bb-111354c4b00f"
+        }
+    ],
+    "views": [],
+    "relationships": [],
+    "users": [],
+    "diagramViews": [],
+    "idToNameHashTable": {
+        "76ffbfd8-a9d7-4fae-a6bb-111354c4b00f": "Test Group",
+        "8412e863-4349-40ce-87d2-92a6d614773b": "address",
+        "b1c17327-df37-4594-a184-314701d32f2c": "city",
+        "2d62738f-63bc-4444-8096-5300fdd23b60": "streetName",
+        "8b345f37-a748-4aad-8fcb-04905815fa1c": "addressNumber",
+        "66da4382-6466-422d-95f4-28b497a7de13": "Renamed Container",
+        "3db030e8-d5db-49d7-a877-a15c2970574a": "Renamed Entity",
+        "5858a198-009f-4c2d-adfb-e9be1ec9010b": "Renamed Attribute"
+    },
+    "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "5512c26d-8666-4b21-8905-02569a4370d4"
+    },
+    "polyglotDefinitions": {
+        "type": "polyglotDefinitions",
+        "properties": [],
+        "GUID": "2027d3bd-8efa-42bd-8f3d-63db3348bc93"
+    },
+    "externalDefinitions": {
+        "type": "externalDefinitions",
+        "properties": [],
+        "GUID": "042a9f92-0d35-4c95-b8c7-aa52b4d5ff39"
+    },
+    "sources": [
+        {
+            "GUID": "66da4382-6466-422d-95f4-28b497a7de13",
+            "sourceName": "Renamed Container",
+            "lineageTimestamp": "2024-12-12 10:34:18 GMT−5",
+            "lineageSourceType": "Rename Container",
+            "lineageSourceFormat": "Model",
+            "lineageFilePathName": "Current model"
+        },
+        {
+            "GUID": "3db030e8-d5db-49d7-a877-a15c2970574a",
+            "sourceName": "Renamed Entity",
+            "lineageTimestamp": "2024-12-12 10:34:21 GMT−5",
+            "lineageSourceType": "Rename Entity",
+            "lineageSourceFormat": "Model",
+            "lineageFilePathName": "Current model"
+        },
+        {
+            "GUID": "5858a198-009f-4c2d-adfb-e9be1ec9010b",
+            "sourceName": "Renamed Attribute",
+            "lineageTimestamp": "2024-12-12 10:34:28 GMT−5",
+            "lineageSourceType": "Rename Attribute",
+            "lineageSourceFormat": "Model",
+            "lineageFilePathName": "Current model"
+        }
+    ],
+    "decorativeSymbols": [],
+    "dbVendor": "JSON",
+    "dbVersion": "2020-12",
+    "appTarget": "JSON",
+    "creationTS": "2024-12-12T15:31:32.195Z",
+    "GUID": "6c300282-6652-4b58-85d6-73bd14d9246e",
+    "isLineageEnabled": true,
+    "hackoladeMeta": {
+        "validationErrors": {
+            "modelName": false
+        }
+    },
+    "lastModifTS": "2024-12-12T15:35:26.760Z",
+    "persistenceSchemaVersion": "7",
+    "isCreatedByPlugin": true,
+    "pluginInformation": {
+        "pluginEngineVersion": "1.0.0"
+    },
+    "applicationInformation": {
+        "version": "7.8.4"
+    },
+    "settings": {
+        "centralPane": {
+            "dbLevel": {
+                "erd": [
+                    {
+                        "GUID": "8412e863-4349-40ce-87d2-92a6d614773b",
+                        "x": 1080,
+                        "y": 1081,
+                        "width": 208,
+                        "height": 87,
+                        "color": {}
+                    }
+                ],
+                "erdDefinitions": {
+                    "erd": [],
+                    "rootPath": [],
+                    "entities": [],
+                    "decorativeSymbols": []
+                },
+                "buckets": [
+                    {
+                        "x": 1040,
+                        "y": 1041,
+                        "GUID": "76ffbfd8-a9d7-4fae-a6bb-111354c4b00f"
+                    }
+                ],
+                "collapsedNodes": [],
+                "activeRelationship": "",
+                "activeRelationshipFields": {
+                    "childField": [],
+                    "parentField": []
+                },
+                "selectedCollections": [],
+                "displayColorPicker": false,
+                "graphView": {
+                    "erd": [],
+                    "buckets": [],
+                    "decorativeSymbols": [],
+                    "forceLayout": true,
+                    "defaultLinkLength": 300
+                },
+                "diagramViews": [],
+                "decorativeSymbols": [],
+                "nestedCollectionsLayout": "horizontal",
+                "options": [],
+                "relationshipUpdateDisabled": false
+            },
+            "collectionLevel": {},
+            "changed": false
+        },
+        "dtDiagram": {
+            "collapsedNodes": [],
+            "shouldDistributeCollections": false
+        }
+    }
+}
