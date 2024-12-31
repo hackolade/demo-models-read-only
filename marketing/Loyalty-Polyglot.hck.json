@@ -1,5 +1,5 @@
 {
-  "modelName": "Loyalty",
+  "modelName": "Loyalty management",
   "collections": [
     {
       "GUID": "317a2e84-5f9c-4f59-8bda-ed2df628354a",
@@ -419,7 +419,7 @@
       "normalization": false
     }
   ],
-  "lastModifTS": "2024-12-31T11:26:47.962Z",
+  "lastModifTS": "2024-12-31T11:52:11.055Z",
   "persistenceSchemaVersion": "7",
   "isCreatedByPlugin": true,
   "pluginInformation": {
