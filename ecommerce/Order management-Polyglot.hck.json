@@ -828,120 +828,6 @@
       }
     },
     {
-      "parentField": [],
-      "childField": [
-        [
-          "12222410-3b51-46a4-8c5a-c72edd77e24d"
-        ]
-      ],
-      "level": "field",
-      "lineSize": 2,
-      "parentCollection": "76f845fc-2198-57c1-b578-feed927b00e0",
-      "childCollection": "d3accff4-f228-4b80-9149-8efdf6ac1e70",
-      "hackoladeStyles": {
-        "GUID": "ad5107fe-eca5-47b6-a3c9-29010ef492a2",
-        "autoPositioning": true,
-        "type": "Orthogonal",
-        "thickness": 2,
-        "color": "#79c4ff",
-        "dataType": "",
-        "shape": [
-          {
-            "x": 1351,
-            "y": 1330
-          },
-          {
-            "x": 1351,
-            "y": 1296.5
-          },
-          {
-            "x": 1275,
-            "y": 1296.5
-          },
-          {
-            "x": 1275,
-            "y": 1263
-          }
-        ],
-        "sides": [
-          "top",
-          "bottom"
-        ]
-      },
-      "name": "has",
-      "relationshipType": "",
-      "parentCardinality": "1",
-      "isActivated": true,
-      "childCardinality": "0..n",
-      "type": "reference",
-      "refType": "polyglot",
-      "$ref": "#external/definitions/has",
-      "refIdPath": [
-        "c67522a8-66b6-4046-89f1-2190faa20f67",
-        "c2c1c7a2-2fd6-4b39-b890-9bf77cfa26c7",
-        "d028ee1a-a542-4adf-898b-bf5ef757feac"
-      ],
-      "ref": "d028ee1a-a542-4adf-898b-bf5ef757feac",
-      "GUID": "8fd59a13-33c9-42f0-8d29-41e3215efa85"
-    },
-    {
-      "parentField": [],
-      "childField": [
-        [
-          "12222410-3b51-46a4-8c5a-c72edd77e24d"
-        ]
-      ],
-      "level": "field",
-      "lineSize": 2,
-      "parentCollection": "138a8017-4801-441d-bdfe-e54f867faed2",
-      "childCollection": "d3accff4-f228-4b80-9149-8efdf6ac1e70",
-      "hackoladeStyles": {
-        "GUID": "9988c7a4-2abd-4095-a657-80486eb9b51b",
-        "autoPositioning": true,
-        "type": "Orthogonal",
-        "thickness": 2,
-        "color": "#79c4ff",
-        "dataType": "",
-        "shape": [
-          {
-            "x": 1494,
-            "y": 1386
-          },
-          {
-            "x": 1564.5,
-            "y": 1386
-          },
-          {
-            "x": 1564.5,
-            "y": 1344
-          },
-          {
-            "x": 1635,
-            "y": 1344
-          }
-        ],
-        "sides": [
-          "right",
-          "left"
-        ]
-      },
-      "name": "belongs to",
-      "relationshipType": "",
-      "parentCardinality": "1",
-      "isActivated": true,
-      "childCardinality": "0..n",
-      "type": "reference",
-      "refType": "polyglot",
-      "$ref": "#external/definitions/belongs to",
-      "refIdPath": [
-        "c67522a8-66b6-4046-89f1-2190faa20f67",
-        "c2c1c7a2-2fd6-4b39-b890-9bf77cfa26c7",
-        "39c772d3-dec9-42ae-8fca-f030b060db29"
-      ],
-      "ref": "39c772d3-dec9-42ae-8fca-f030b060db29",
-      "GUID": "464ddf20-dd6f-4e15-b6b0-ae173574182e"
-    },
-    {
       "name": "grants",
       "relationshipType": "",
       "parentField": [],
@@ -1017,8 +903,6 @@
     "49ef85bb-702d-4d34-b06f-1c5c77862041": "Date",
     "82f051b0-0a0a-4205-962f-71c919436001": "has",
     "d3accff4-f228-4b80-9149-8efdf6ac1e70": "Customer loyalty points",
-    "8fd59a13-33c9-42f0-8d29-41e3215efa85": "has",
-    "464ddf20-dd6f-4e15-b6b0-ae173574182e": "belongs to",
     "a82ce1d4-c3de-489e-af38-30dc81667450": "grants",
     "17da7d85-57e4-4888-8e0d-803712b15fc8": "Item price"
   },
@@ -1916,11 +1800,7 @@
         "kind": "relativePath",
         "fieldRelativePath": "#/relationships/has",
         "fileType": "hackoladeSchema",
-        "definitionRefs": [
-          [
-            "8fd59a13-33c9-42f0-8d29-41e3215efa85"
-          ]
-        ]
+        "definitionRefs": []
       },
       {
         "parentField": [],
@@ -1972,11 +1852,7 @@
         "kind": "relativePath",
         "fieldRelativePath": "#/relationships/belongs to",
         "fileType": "hackoladeSchema",
-        "definitionRefs": [
-          [
-            "464ddf20-dd6f-4e15-b6b0-ae173574182e"
-          ]
-        ]
+        "definitionRefs": []
       }
     ],
     "GUID": "c2c1c7a2-2fd6-4b39-b890-9bf77cfa26c7"
@@ -2019,7 +1895,7 @@
       "normalization": false
     }
   ],
-  "lastModifTS": "2024-12-31T13:59:59.197Z",
+  "lastModifTS": "2024-12-31T14:02:54.802Z",
   "persistenceSchemaVersion": "7",
   "isCreatedByPlugin": true,
   "pluginInformation": {
