@@ -108,6 +108,18 @@
       "additionalProperties": false,
       "error": {
         "refPath": false
+      },
+      "referenceDiff": {
+        "properties": [
+          {
+            "GUID": "7fa9c279-fe3c-4864-83e9-10df93832aef",
+            "referenceDiffDeleted": true
+          },
+          {
+            "GUID": "bb57e423-15a3-43d2-bb4f-81c084e50416",
+            "referenceDiffDeleted": true
+          }
+        ]
       }
     },
     {
@@ -128,27 +140,84 @@
         "properties": [],
         "GUID": "7fbe6b16-697f-4d13-8150-7ae1b57a8856"
       },
-      "additionalProperties": false
-    },
-    {
-      "GUID": "439eb19b-9c15-452c-ad39-830b0f9d723c",
-      "type": "reference",
-      "$ref": "#external/definitions/Country",
-      "refType": "polyglot",
-      "ref": "7dabf47c-763d-4d78-8481-24036d740bf8",
-      "refIdPath": [
-        "c67522a8-66b6-4046-89f1-2190faa20f67",
-        "c2c1c7a2-2fd6-4b39-b890-9bf77cfa26c7",
-        "7dabf47c-763d-4d78-8481-24036d740bf8"
-      ],
-      "isActivated": true,
-      "collectionName": "Country",
-      "properties": [],
-      "definitions": {
-        "properties": [],
-        "GUID": "e1895aa3-476c-4a4d-91ca-f89f28be6738"
+      "additionalProperties": false,
+      "error": {
+        "refPath": false
       },
-      "additionalProperties": false
+      "referenceDiff": {
+        "properties": [
+          {
+            "primaryKey": false,
+            "required": false,
+            "alternateKey": false,
+            "childType": "varchar",
+            "type": "string",
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "Street",
+            "hackoladeMeta": {},
+            "isActivated": true,
+            "GUID": "226178a4-d5d7-4303-8ded-6edd2bf5e94a",
+            "mode": "",
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ]
+          },
+          {
+            "primaryKey": false,
+            "required": false,
+            "alternateKey": false,
+            "childType": "varchar",
+            "type": "string",
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "Postal code",
+            "hackoladeMeta": {},
+            "isActivated": true,
+            "GUID": "172ef4de-fb50-4087-a44b-9a34e92b1f39",
+            "foreignCollection": "",
+            "foreignField": [],
+            "mode": "",
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ]
+          },
+          {
+            "primaryKey": false,
+            "required": false,
+            "alternateKey": false,
+            "childType": "varchar",
+            "type": "string",
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "City",
+            "hackoladeMeta": {},
+            "isActivated": true,
+            "GUID": "f23a20a2-d7b1-476d-b567-50a67b99f2fc",
+            "foreignCollection": "",
+            "foreignField": [],
+            "mode": "",
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ]
+          },
+          {
+            "GUID": "226178a4-d5d7-4303-8ded-6edd2bf5e94a",
+            "referenceDiffDeleted": true
+          },
+          {
+            "GUID": "172ef4de-fb50-4087-a44b-9a34e92b1f39",
+            "referenceDiffDeleted": true
+          },
+          {
+            "GUID": "f23a20a2-d7b1-476d-b567-50a67b99f2fc",
+            "referenceDiffDeleted": true
+          }
+        ]
+      }
     },
     {
       "GUID": "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648",
@@ -169,28 +238,22 @@
         "properties": [],
         "GUID": "d87de0ac-964a-409d-9986-e3db66156c34"
       },
-      "additionalProperties": false
-    },
-    {
-      "GUID": "4afc70bc-e88c-4d73-a47f-925f8eb50356",
-      "type": "reference",
-      "$ref": "#external/definitions/Price",
-      "refType": "polyglot",
-      "ref": "5433139f-ca20-4b8e-9035-013c24880ada",
-      "refIdPath": [
-        "c67522a8-66b6-4046-89f1-2190faa20f67",
-        "c2c1c7a2-2fd6-4b39-b890-9bf77cfa26c7",
-        "5433139f-ca20-4b8e-9035-013c24880ada"
-      ],
-      "isActivated": true,
-      "collectionName": "Price",
-      "bucketId": "893adac0-c450-4c13-b69e-974ee5e93117",
-      "properties": [],
-      "definitions": {
-        "properties": [],
-        "GUID": "5eb60173-0cb8-4068-88d7-f450fdc8a544"
+      "additionalProperties": false,
+      "error": {
+        "refPath": false
       },
-      "additionalProperties": false
+      "referenceDiff": {
+        "properties": [
+          {
+            "GUID": "6ef810f9-c366-426b-9aa7-97f54138905f",
+            "referenceDiffDeleted": true
+          },
+          {
+            "GUID": "9eef2e6d-3db0-47c7-8370-77393590a1df",
+            "referenceDiffDeleted": true
+          }
+        ]
+      }
     },
     {
       "GUID": "2dbbe312-6a6d-4363-8f91-c4d108fc6d56",
@@ -406,7 +469,15 @@
         "properties": [],
         "GUID": "ab74237f-8484-40bc-a32a-cc0dfe6e5a08"
       },
-      "additionalProperties": false
+      "additionalProperties": false,
+      "referenceDiff": {
+        "properties": [
+          {
+            "GUID": "ce2dac80-c30f-4100-bb14-3374d09d8820",
+            "referenceDiffDeleted": true
+          }
+        ]
+      }
     }
   ],
   "buckets": [
@@ -432,7 +503,6 @@
       "name": "Product management",
       "type": "bucket",
       "collectionIds": [
-        "4afc70bc-e88c-4d73-a47f-925f8eb50356",
         "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648"
       ],
       "backgroundColor": {
@@ -449,59 +519,6 @@
   ],
   "views": [],
   "relationships": [
-    {
-      "name": "is located in",
-      "relationshipType": "",
-      "parentField": [],
-      "parentCardinality": "1..n",
-      "childField": [],
-      "isActivated": true,
-      "childCardinality": "1",
-      "level": "field",
-      "lineSize": 2,
-      "parentCollection": "5d9d5043-52d4-4fd8-b846-c8b49ccf1867",
-      "childCollection": "439eb19b-9c15-452c-ad39-830b0f9d723c",
-      "hackoladeStyles": {
-        "GUID": "9618b19b-7ce8-4952-8085-2aa486a93826",
-        "autoPositioning": true,
-        "type": "Orthogonal",
-        "thickness": 2,
-        "color": "#79c4ff",
-        "dataType": "",
-        "shape": [
-          {
-            "x": 1942.2494989979966,
-            "y": 1161.0380761523052
-          },
-          {
-            "x": 1868.5080160320636,
-            "y": 1161.0380761523052
-          },
-          {
-            "x": 1868.5080160320636,
-            "y": 1145.630260521043
-          },
-          {
-            "x": 1794.7665330661307,
-            "y": 1145.630260521043
-          }
-        ],
-        "sides": [
-          "left",
-          "right"
-        ]
-      },
-      "type": "reference",
-      "refType": "polyglot",
-      "$ref": "#external/definitions/is located in",
-      "refIdPath": [
-        "c67522a8-66b6-4046-89f1-2190faa20f67",
-        "c2c1c7a2-2fd6-4b39-b890-9bf77cfa26c7",
-        "f1b7487d-7cac-486b-81ca-1102915af795"
-      ],
-      "ref": "f1b7487d-7cac-486b-81ca-1102915af795",
-      "GUID": "041510d5-1312-4508-b668-db1ce87f37ad"
-    },
     {
       "name": "placed",
       "relationshipType": "",
@@ -528,16 +545,16 @@
             "y": 1470.0230460921853
           },
           {
-            "x": 1301.7244253035133,
+            "x": 1302.2244253035133,
             "y": 1470.0230460921853
           },
           {
-            "x": 1301.7244253035133,
-            "y": 1194.8850777707719
+            "x": 1302.2244253035133,
+            "y": 1171.8850777707719
           },
           {
-            "x": 1188.9107744547214,
-            "y": 1194.8850777707719
+            "x": 1189.9107744547214,
+            "y": 1171.8850777707719
           }
         ],
         "sides": [
@@ -568,16 +585,16 @@
         "dataType": "",
         "shape": [
           {
-            "x": 1630.7665330661307,
-            "y": 1193.630260521043
+            "x": 1572.637580797294,
+            "y": 1242.9135026620118
           },
           {
-            "x": 1630.7665330661307,
-            "y": 1305.3266533066142
+            "x": 1572.637580797294,
+            "y": 1329.9682743770986
           },
           {
             "x": 1510.5380761523052,
-            "y": 1305.3266533066142
+            "y": 1329.9682743770986
           },
           {
             "x": 1510.5380761523052,
@@ -589,59 +606,6 @@
           "top"
         ]
       }
-    },
-    {
-      "name": "is sold at",
-      "relationshipType": "",
-      "parentField": [],
-      "parentCardinality": "1",
-      "childField": [],
-      "isActivated": true,
-      "childCardinality": "1..n",
-      "level": "field",
-      "lineSize": 2,
-      "parentCollection": "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648",
-      "childCollection": "4afc70bc-e88c-4d73-a47f-925f8eb50356",
-      "hackoladeStyles": {
-        "GUID": "5aebedb8-21b2-43f6-aa3c-33eb2cb1b1ba",
-        "autoPositioning": true,
-        "type": "Orthogonal",
-        "thickness": 2,
-        "color": "#79c4ff",
-        "dataType": "",
-        "shape": [
-          {
-            "x": 1699.1930096648898,
-            "y": 1907.1779712443329
-          },
-          {
-            "x": 1552.0524166560924,
-            "y": 1907.1779712443329
-          },
-          {
-            "x": 1552.0524166560924,
-            "y": 1912.8687374749477
-          },
-          {
-            "x": 1404.911823647295,
-            "y": 1912.8687374749477
-          }
-        ],
-        "sides": [
-          "left",
-          "right"
-        ]
-      },
-      "type": "reference",
-      "refType": "polyglot",
-      "$ref": "#external/definitions/is sold at",
-      "refIdPath": [
-        "c67522a8-66b6-4046-89f1-2190faa20f67",
-        "c2c1c7a2-2fd6-4b39-b890-9bf77cfa26c7",
-        "f54025a2-3993-4002-87ec-c22cf78ec3b6"
-      ],
-      "ref": "f54025a2-3993-4002-87ec-c22cf78ec3b6",
-      "GUID": "2dbf628f-f18f-4b65-9d17-537515e2cfdf"
     },
     {
       "name": "is billed to",
@@ -665,16 +629,16 @@
         "dataType": "",
         "shape": [
           {
-            "x": 1712.7665330661307,
-            "y": 1193.630260521043
+            "x": 1654.637580797294,
+            "y": 1242.9135026620118
           },
           {
-            "x": 1712.7665330661307,
-            "y": 1305.3266533066142
+            "x": 1654.637580797294,
+            "y": 1329.9682743770986
           },
           {
             "x": 1606.5380761523052,
-            "y": 1305.3266533066142
+            "y": 1329.9682743770986
           },
           {
             "x": 1606.5380761523052,
@@ -758,15 +722,15 @@
           },
           {
             "x": 1378.0140280561131,
-            "y": 1767.719438877754
+            "y": 1782.8835133826683
           },
           {
-            "x": 1246.411823647295,
-            "y": 1767.719438877754
+            "x": 1567.3847340013047,
+            "y": 1782.8835133826683
           },
           {
-            "x": 1246.411823647295,
-            "y": 1836.3687374749477
+            "x": 1567.3847340013047,
+            "y": 1866.6968864847759
           }
         ],
         "sides": [
@@ -805,11 +769,11 @@
             "y": 1575.0465931863728
           },
           {
-            "x": 1510.5380761523052,
+            "x": 1558.5380761523052,
             "y": 1575.0465931863728
           },
           {
-            "x": 1510.5380761523052,
+            "x": 1558.5380761523052,
             "y": 1523.0230460921853
           }
         ],
@@ -999,15 +963,15 @@
         "dataType": "",
         "shape": [
           {
-            "x": 1114.5574043879349,
-            "y": 1455.9313998738958
+            "x": 1104.5574043879349,
+            "y": 1448.9313998738958
           },
           {
-            "x": 1194.785716222024,
-            "y": 1455.9313998738958
+            "x": 1189.785716222024,
+            "y": 1448.9313998738958
           },
           {
-            "x": 1194.785716222024,
+            "x": 1189.785716222024,
             "y": 1663.0701402805605
           },
           {
@@ -1031,13 +995,9 @@
     "cea70e8e-cd4f-4fe4-bde3-c6cfc2e9f238": "Customer",
     "bf97f885-30f8-4924-afa2-9119605a1517": "Customer management",
     "5d9d5043-52d4-4fd8-b846-c8b49ccf1867": "Address",
-    "439eb19b-9c15-452c-ad39-830b0f9d723c": "Country",
-    "041510d5-1312-4508-b668-db1ce87f37ad": "is located in",
     "f8f34cd7-4027-46ad-9160-b0dcaa29a509": "placed",
     "9b5d5c1b-1140-41b6-93a5-eb45280ac781": "to ship to",
     "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648": "Product",
-    "4afc70bc-e88c-4d73-a47f-925f8eb50356": "Price",
-    "2dbf628f-f18f-4b65-9d17-537515e2cfdf": "is sold at",
     "893adac0-c450-4c13-b69e-974ee5e93117": "Product management",
     "2dbbe312-6a6d-4363-8f91-c4d108fc6d56": "Ordered item",
     "3248e26a-62b5-4a67-9654-f76e85db859a": "Quantity",
@@ -1436,15 +1396,15 @@
         "isActivated": true,
         "additionalProperties": false,
         "definitionEntityType": "collection",
-        "link": "../common/Address-Polyglot.hck.json",
-        "kind": "relativePath",
-        "fieldRelativePath": "#/Address",
         "fileType": "hackoladeSchema",
         "definitionRefs": [
           [
             "5d9d5043-52d4-4fd8-b846-c8b49ccf1867"
           ]
-        ]
+        ],
+        "kind": "relativePath",
+        "link": "../common/Address-Polyglot.hck.json",
+        "fieldRelativePath": "#/Address"
       },
       {
         "GUID": "7dabf47c-763d-4d78-8481-24036d740bf8",
@@ -1499,11 +1459,7 @@
         "kind": "relativePath",
         "fieldRelativePath": "#/Country",
         "fileType": "hackoladeSchema",
-        "definitionRefs": [
-          [
-            "439eb19b-9c15-452c-ad39-830b0f9d723c"
-          ]
-        ]
+        "definitionRefs": []
       },
       {
         "name": "is located in",
@@ -1549,15 +1505,11 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "../common/Address-Polyglot.hck.json",
-        "kind": "relativePath",
-        "fieldRelativePath": "#/relationships/is located in",
         "fileType": "hackoladeSchema",
-        "definitionRefs": [
-          [
-            "041510d5-1312-4508-b668-db1ce87f37ad"
-          ]
-        ]
+        "definitionRefs": [],
+        "kind": "relativePath",
+        "link": "../common/Address-Polyglot.hck.json",
+        "fieldRelativePath": "#/relationships/is located in"
       },
       {
         "GUID": "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
@@ -1682,15 +1634,15 @@
         "isActivated": true,
         "additionalProperties": false,
         "definitionEntityType": "collection",
-        "link": "../merchandising/Product-Polyglot.hck.json",
-        "kind": "relativePath",
-        "fieldRelativePath": "#/Product",
         "fileType": "hackoladeSchema",
         "definitionRefs": [
           [
             "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648"
           ]
-        ]
+        ],
+        "kind": "relativePath",
+        "link": "../merchandising/Product-Polyglot.hck.json",
+        "fieldRelativePath": "#/Product"
       },
       {
         "GUID": "5433139f-ca20-4b8e-9035-013c24880ada",
@@ -1764,11 +1716,7 @@
         "kind": "relativePath",
         "fieldRelativePath": "#/Price",
         "fileType": "hackoladeSchema",
-        "definitionRefs": [
-          [
-            "4afc70bc-e88c-4d73-a47f-925f8eb50356"
-          ]
-        ]
+        "definitionRefs": []
       },
       {
         "name": "is sold at",
@@ -1818,11 +1766,7 @@
         "kind": "relativePath",
         "fieldRelativePath": "#/relationships/is sold at",
         "fileType": "hackoladeSchema",
-        "definitionRefs": [
-          [
-            "2dbf628f-f18f-4b65-9d17-537515e2cfdf"
-          ]
-        ]
+        "definitionRefs": []
       },
       {
         "type": "object",
@@ -2075,7 +2019,7 @@
       "normalization": false
     }
   ],
-  "lastModifTS": "2024-12-31T13:54:22.286Z",
+  "lastModifTS": "2024-12-31T13:59:59.197Z",
   "persistenceSchemaVersion": "7",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -2086,6 +2030,7 @@
   "applicationInformation": {
     "version": "7.9.4"
   },
+  "hackoladeMeta": {},
   "settings": {
     "centralPane": {
       "dbLevel": {
@@ -2094,16 +2039,16 @@
             "GUID": "d3accff4-f228-4b80-9149-8efdf6ac1e70",
             "x": 828.5574043879349,
             "y": 1399.9313998738958,
-            "width": 286,
-            "height": 112,
+            "width": 276,
+            "height": 98,
             "color": {
               "hex": "#2196F3"
             }
           },
           {
             "GUID": "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648",
-            "x": 1087.911823647295,
-            "y": 1836.3687374749477,
+            "x": 1408.8847340013047,
+            "y": 1866.6968864847759,
             "width": 317,
             "height": 153,
             "color": {
@@ -2111,31 +2056,11 @@
             }
           },
           {
-            "GUID": "4afc70bc-e88c-4d73-a47f-925f8eb50356",
-            "x": 1699.1930096648898,
-            "y": 1860.6779712443329,
-            "width": 265,
-            "height": 93,
-            "color": {
-              "hex": "#2196F3"
-            }
-          },
-          {
             "GUID": "5d9d5043-52d4-4fd8-b846-c8b49ccf1867",
-            "x": 1548.7665330661307,
-            "y": 1097.630260521043,
+            "x": 1490.637580797294,
+            "y": 1146.9135026620118,
             "width": 246,
             "height": 96,
-            "color": {
-              "hex": "#2196F3"
-            }
-          },
-          {
-            "GUID": "439eb19b-9c15-452c-ad39-830b0f9d723c",
-            "x": 1942.2494989979966,
-            "y": 1127.5380761523052,
-            "width": 194,
-            "height": 67,
             "color": {
               "hex": "#2196F3"
             }
@@ -2144,8 +2069,8 @@
             "GUID": "cea70e8e-cd4f-4fe4-bde3-c6cfc2e9f238",
             "x": 938.9107744547215,
             "y": 1122.8850777707719,
-            "width": 250,
-            "height": 144,
+            "width": 251,
+            "height": 98,
             "color": {
               "hex": "#2196F3"
             }
@@ -2204,8 +2129,8 @@
             "GUID": "bf97f885-30f8-4924-afa2-9119605a1517"
           },
           {
-            "x": 1047.911823647295,
-            "y": 1796.3687374749477,
+            "x": 1368.8847340013047,
+            "y": 1826.6968864847759,
             "GUID": "893adac0-c450-4c13-b69e-974ee5e93117"
           }
         ],
@@ -2238,22 +2163,10 @@
               "y": 2040
             },
             {
-              "GUID": "439eb19b-9c15-452c-ad39-830b0f9d723c",
-              "size": 100,
-              "x": 1140,
-              "y": 1840
-            },
-            {
               "GUID": "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648",
               "size": 100,
               "x": 1390,
               "y": 2540
-            },
-            {
-              "GUID": "4afc70bc-e88c-4d73-a47f-925f8eb50356",
-              "size": 100,
-              "x": 1140,
-              "y": 2340
             },
             {
               "GUID": "2dbbe312-6a6d-4363-8f91-c4d108fc6d56",
@@ -2319,6 +2232,16 @@
             "autoWidth": false,
             "autoHeight": false,
             "GUID": "2dbbe312-6a6d-4363-8f91-c4d108fc6d56"
+          },
+          {
+            "autoWidth": false,
+            "autoHeight": false,
+            "GUID": "cea70e8e-cd4f-4fe4-bde3-c6cfc2e9f238"
+          },
+          {
+            "autoWidth": false,
+            "autoHeight": false,
+            "GUID": "d3accff4-f228-4b80-9149-8efdf6ac1e70"
           }
         ],
         "relationshipUpdateDisabled": false
