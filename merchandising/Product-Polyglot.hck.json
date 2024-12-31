@@ -417,7 +417,10 @@
         "properties": [],
         "GUID": "6b253ca3-3ca0-419d-b103-edd9d4095e5f"
       },
-      "additionalProperties": false
+      "additionalProperties": false,
+      "error": {
+        "refPath": false
+      }
     }
   ],
   "buckets": [],
@@ -859,7 +862,7 @@
           ]
         ],
         "kind": "relativePath",
-        "link": "Address-Polyglot.hck.json",
+        "link": "../common/Address-Polyglot.hck.json",
         "fieldRelativePath": "#/Address"
       },
       {
@@ -911,15 +914,15 @@
         "isActivated": true,
         "additionalProperties": false,
         "definitionEntityType": "collection",
-        "link": "Address-Polyglot.hck.json",
-        "kind": "relativePath",
-        "fieldRelativePath": "#/Country",
         "fileType": "hackoladeSchema",
         "definitionRefs": [
           [
             "2527df83-d482-4c3c-913c-41be0e4dc9ac"
           ]
-        ]
+        ],
+        "kind": "relativePath",
+        "link": "../common/Address-Polyglot.hck.json",
+        "fieldRelativePath": "#/Country"
       },
       {
         "name": "is located in",
@@ -965,15 +968,15 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "Address-Polyglot.hck.json",
-        "kind": "relativePath",
-        "fieldRelativePath": "#/relationships/is located in",
         "fileType": "hackoladeSchema",
         "definitionRefs": [
           [
             "cbd783f6-3793-4e2c-b7b3-5995633ab67a"
           ]
-        ]
+        ],
+        "kind": "relativePath",
+        "link": "../common/Address-Polyglot.hck.json",
+        "fieldRelativePath": "#/relationships/is located in"
       }
     ],
     "GUID": "a1ded27f-a068-43eb-99cc-f62411f7feba"
@@ -1002,11 +1005,11 @@
     {
       "GUID": "3d29f4b8-e0bc-4600-ae0a-3debcf6eb87d",
       "polyglotModelName": "Address-Polyglot.hck",
-      "polyglotModelPath": "Address-Polyglot.hck.json",
+      "polyglotModelPath": "../common/Address-Polyglot.hck.json",
       "normalization": false
     }
   ],
-  "lastModifTS": "2024-12-31T11:51:31.515Z",
+  "lastModifTS": "2024-12-31T11:56:30.089Z",
   "persistenceSchemaVersion": "7",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -1017,6 +1020,7 @@
   "applicationInformation": {
     "version": "7.9.4"
   },
+  "hackoladeMeta": {},
   "settings": {
     "centralPane": {
       "dbLevel": {
