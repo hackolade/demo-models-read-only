@@ -1,0 +1,301 @@
+{
+  "modelName": "Address",
+  "collections": [
+    {
+      "GUID": "50ec3adc-dd4a-4ddf-bab7-572b8e9b8bf7",
+      "collectionName": "Address",
+      "type": "object",
+      "properties": [
+        {
+          "name": "Street",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "GUID": "226178a4-d5d7-4303-8ded-6edd2bf5e94a",
+          "error": {}
+        },
+        {
+          "name": "Postal code",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "GUID": "172ef4de-fb50-4087-a44b-9a34e92b1f39",
+          "error": {
+            "name": false,
+            "code": false
+          },
+          "foreignCollection": "",
+          "foreignField": []
+        },
+        {
+          "name": "City",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "GUID": "f23a20a2-d7b1-476d-b567-50a67b99f2fc",
+          "foreignCollection": "",
+          "foreignField": [],
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "fca16002-ccce-45ab-804e-e7e2ec62e4b8"
+      },
+      "isActivated": true,
+      "additionalProperties": false
+    },
+    {
+      "GUID": "7dabf47c-763d-4d78-8481-24036d740bf8",
+      "collectionName": "Country",
+      "type": "object",
+      "properties": [
+        {
+          "name": "ISO code",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "required": false,
+          "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
+          "primaryKey": false,
+          "symbols": [
+            "Y"
+          ],
+          "alternateKey": false,
+          "childType": "enum",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "error": {},
+          "GUID": "f8615e15-71ec-4a66-b029-fc0dce507d4e"
+        },
+        {
+          "name": "Name",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "GUID": "3892ed74-833f-4712-86c5-969ee4400fdc",
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "8a7ab247-cabd-425d-97a9-d8e8207c668e"
+      },
+      "isActivated": true,
+      "additionalProperties": false
+    }
+  ],
+  "buckets": [],
+  "views": [],
+  "relationships": [
+    {
+      "name": "is located in",
+      "relationshipType": "",
+      "parentField": [],
+      "parentCardinality": "1..n",
+      "childField": [],
+      "isActivated": true,
+      "childCardinality": "1",
+      "level": "field",
+      "GUID": "f1b7487d-7cac-486b-81ca-1102915af795",
+      "lineSize": 2,
+      "parentCollection": "50ec3adc-dd4a-4ddf-bab7-572b8e9b8bf7",
+      "childCollection": "7dabf47c-763d-4d78-8481-24036d740bf8",
+      "hackoladeStyles": {
+        "GUID": "9618b19b-7ce8-4952-8085-2aa486a93826",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1607,
+            "y": 1340.5
+          },
+          {
+            "x": 1547,
+            "y": 1340.5
+          },
+          {
+            "x": 1547,
+            "y": 1301
+          },
+          {
+            "x": 1487,
+            "y": 1301
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      }
+    }
+  ],
+  "users": [],
+  "diagramViews": [],
+  "idToNameHashTable": {
+    "50ec3adc-dd4a-4ddf-bab7-572b8e9b8bf7": "Address",
+    "226178a4-d5d7-4303-8ded-6edd2bf5e94a": "Street",
+    "7dabf47c-763d-4d78-8481-24036d740bf8": "Country",
+    "3892ed74-833f-4712-86c5-969ee4400fdc": "Name",
+    "f8615e15-71ec-4a66-b029-fc0dce507d4e": "ISO code",
+    "f1b7487d-7cac-486b-81ca-1102915af795": "is located in",
+    "172ef4de-fb50-4087-a44b-9a34e92b1f39": "Postal code",
+    "f23a20a2-d7b1-476d-b567-50a67b99f2fc": "City"
+  },
+  "definitions": {
+    "type": "definitions",
+    "properties": [],
+    "GUID": "b00cf64f-498b-4c96-9cd6-7aa57bf280eb"
+  },
+  "polyglotDefinitions": {
+    "type": "polyglotDefinitions",
+    "properties": [],
+    "GUID": "49fcd7e9-0825-4147-a0ae-f09882cad60e"
+  },
+  "externalDefinitions": {
+    "type": "externalDefinitions",
+    "properties": [],
+    "GUID": "ae0e231c-24ce-4e47-af84-c6093003bf3b"
+  },
+  "sources": [],
+  "decorativeSymbols": [],
+  "dbVendor": "Polyglot",
+  "appTarget": "Polyglot",
+  "creationTS": "2024-12-31T10:50:34.735Z",
+  "GUID": "251c1cc6-cb0b-4efc-bbc7-56d5a47c2515",
+  "isLineageEnabled": false,
+  "lastModifTS": "2024-12-31T11:10:05.541Z",
+  "persistenceSchemaVersion": "7",
+  "isCreatedByPlugin": true,
+  "pluginInformation": {
+    "pluginName": "Polyglot",
+    "pluginVersion": "0.0.1",
+    "pluginEngineVersion": "1.0.0"
+  },
+  "applicationInformation": {
+    "version": "7.9.4"
+  },
+  "hackoladeMeta": {},
+  "settings": {
+    "centralPane": {
+      "dbLevel": {
+        "erd": [
+          {
+            "GUID": "50ec3adc-dd4a-4ddf-bab7-572b8e9b8bf7",
+            "x": 1284,
+            "y": 1256,
+            "width": 203,
+            "height": 90,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "7dabf47c-763d-4d78-8481-24036d740bf8",
+            "x": 1607,
+            "y": 1307,
+            "width": 194,
+            "height": 67,
+            "color": {
+              "hex": "#2196F3"
+            }
+          }
+        ],
+        "erdDefinitions": {
+          "erd": [],
+          "rootPath": [],
+          "entities": [],
+          "decorativeSymbols": []
+        },
+        "buckets": [],
+        "collapsedNodes": [],
+        "activeRelationship": "",
+        "activeRelationshipFields": {
+          "childField": [],
+          "parentField": []
+        },
+        "selectedCollections": [],
+        "displayColorPicker": false,
+        "graphView": {
+          "erd": [
+            {
+              "GUID": "50ec3adc-dd4a-4ddf-bab7-572b8e9b8bf7",
+              "size": 100,
+              "x": 1040,
+              "y": 1040
+            },
+            {
+              "GUID": "7dabf47c-763d-4d78-8481-24036d740bf8",
+              "size": 100,
+              "x": 1040,
+              "y": 1040
+            }
+          ],
+          "buckets": [],
+          "decorativeSymbols": [],
+          "forceLayout": true,
+          "defaultLinkLength": 300
+        },
+        "diagramViews": [],
+        "decorativeSymbols": [],
+        "nestedCollectionsLayout": "horizontal",
+        "options": [
+          {
+            "autoWidth": false,
+            "autoHeight": false,
+            "GUID": "50ec3adc-dd4a-4ddf-bab7-572b8e9b8bf7"
+          },
+          {
+            "autoWidth": false,
+            "autoHeight": false,
+            "GUID": "7dabf47c-763d-4d78-8481-24036d740bf8"
+          }
+        ],
+        "relationshipUpdateDisabled": false
+      },
+      "collectionLevel": {},
+      "changed": false
+    },
+    "dtDiagram": {
+      "collapsedNodes": [],
+      "shouldDistributeCollections": false
+    }
+  }
+}

@@ -1,0 +1,524 @@
+{
+  "modelName": "Loyalty",
+  "collections": [
+    {
+      "GUID": "317a2e84-5f9c-4f59-8bda-ed2df628354a",
+      "type": "reference",
+      "$ref": "#external/definitions/Customer",
+      "refType": "polyglot",
+      "ref": "5cc94e26-8eb9-4b1c-a78d-a870d9f640db",
+      "refIdPath": [
+        "cee68ca2-a8f5-4229-9391-6ae31724de75",
+        "1c794375-37a2-4fc4-b32d-d4367ffa71fa",
+        "5cc94e26-8eb9-4b1c-a78d-a870d9f640db"
+      ],
+      "isActivated": true,
+      "collectionName": "Customer",
+      "properties": [],
+      "definitions": {
+        "properties": [],
+        "GUID": "e5f955ec-992a-4d16-9a31-f6f1f81c1a5c"
+      },
+      "additionalProperties": false,
+      "error": {
+        "refPath": false
+      }
+    },
+    {
+      "type": "object",
+      "properties": [
+        {
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "name": "Name",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "GUID": "52b23ea1-067c-4f56-a31f-ad924ae36667",
+          "unique": true,
+          "mode": "",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ]
+        },
+        {
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "name": "Description",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "GUID": "f29ec549-bdc4-48fc-ae32-8961f523108d",
+          "mode": "",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ]
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "4945cb3b-d7b4-47fb-9e89-78275c45e08d"
+      },
+      "GUID": "138a8017-4801-441d-bdfe-e54f867faed2",
+      "isActivated": true,
+      "collectionName": "Loyalty campaign",
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": [
+        {
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "name": "Current points",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "GUID": "ce2dac80-c30f-4100-bb14-3374d09d8820",
+          "mode": "",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ]
+        },
+        {
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "name": "Initial points",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "GUID": "b1f0da3d-aa24-4d94-86fc-d0d17c2ed416",
+          "mode": "",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ]
+        },
+        {
+          "required": true,
+          "alternateKey": false,
+          "childType": "date",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "name": "Validity start date",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "GUID": "9f6bf033-75c3-4cb4-bf92-fe366b61404a",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ]
+        },
+        {
+          "required": true,
+          "alternateKey": false,
+          "childType": "date",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "name": "Validity end date",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "GUID": "2e76a9a8-cce1-4281-a2a3-9ff420aab341",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ]
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "4b4196e6-dbce-4f8a-84a2-33f2e9a8a1e0"
+      },
+      "GUID": "12222410-3b51-46a4-8c5a-c72edd77e24d",
+      "isActivated": true,
+      "collectionName": "Customer loyalty points",
+      "additionalProperties": false
+    }
+  ],
+  "buckets": [],
+  "views": [],
+  "relationships": [
+    {
+      "parentField": [],
+      "childField": [
+        []
+      ],
+      "level": "field",
+      "lineSize": 2,
+      "parentCollection": "317a2e84-5f9c-4f59-8bda-ed2df628354a",
+      "childCollection": "12222410-3b51-46a4-8c5a-c72edd77e24d",
+      "hackoladeStyles": {
+        "GUID": "ad5107fe-eca5-47b6-a3c9-29010ef492a2",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1351,
+            "y": 1330
+          },
+          {
+            "x": 1351,
+            "y": 1296.5
+          },
+          {
+            "x": 1275,
+            "y": 1296.5
+          },
+          {
+            "x": 1275,
+            "y": 1263
+          }
+        ],
+        "sides": [
+          "top",
+          "bottom"
+        ]
+      },
+      "name": "has",
+      "relationshipType": "",
+      "parentCardinality": "1",
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "d028ee1a-a542-4adf-898b-bf5ef757feac"
+    },
+    {
+      "parentField": [],
+      "childField": [
+        []
+      ],
+      "level": "field",
+      "lineSize": 2,
+      "parentCollection": "138a8017-4801-441d-bdfe-e54f867faed2",
+      "childCollection": "12222410-3b51-46a4-8c5a-c72edd77e24d",
+      "hackoladeStyles": {
+        "GUID": "9988c7a4-2abd-4095-a657-80486eb9b51b",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1494,
+            "y": 1386
+          },
+          {
+            "x": 1564.5,
+            "y": 1386
+          },
+          {
+            "x": 1564.5,
+            "y": 1344
+          },
+          {
+            "x": 1635,
+            "y": 1344
+          }
+        ],
+        "sides": [
+          "right",
+          "left"
+        ]
+      },
+      "name": "belongs to",
+      "relationshipType": "",
+      "parentCardinality": "1",
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "39c772d3-dec9-42ae-8fca-f030b060db29"
+    }
+  ],
+  "users": [],
+  "diagramViews": [],
+  "idToNameHashTable": {
+    "317a2e84-5f9c-4f59-8bda-ed2df628354a": "Customer",
+    "138a8017-4801-441d-bdfe-e54f867faed2": "Loyalty campaign",
+    "12222410-3b51-46a4-8c5a-c72edd77e24d": "Customer loyalty points",
+    "d028ee1a-a542-4adf-898b-bf5ef757feac": "has",
+    "39c772d3-dec9-42ae-8fca-f030b060db29": "belongs to",
+    "ce2dac80-c30f-4100-bb14-3374d09d8820": "Current points",
+    "b1f0da3d-aa24-4d94-86fc-d0d17c2ed416": "Initial points",
+    "9f6bf033-75c3-4cb4-bf92-fe366b61404a": "Validity start date",
+    "2e76a9a8-cce1-4281-a2a3-9ff420aab341": "Validity end date",
+    "52b23ea1-067c-4f56-a31f-ad924ae36667": "Name",
+    "f29ec549-bdc4-48fc-ae32-8961f523108d": "Description"
+  },
+  "definitions": {
+    "type": "definitions",
+    "properties": [],
+    "GUID": "d850d762-5ca6-410f-baa9-ec81fffa0dcd"
+  },
+  "polyglotDefinitions": {
+    "type": "polyglotDefinitions",
+    "properties": [
+      {
+        "GUID": "5cc94e26-8eb9-4b1c-a78d-a870d9f640db",
+        "collectionName": "Customer",
+        "type": "object",
+        "properties": [
+          {
+            "primaryKey": false,
+            "required": false,
+            "alternateKey": false,
+            "childType": "varchar",
+            "type": "string",
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "Firstname",
+            "hackoladeMeta": {},
+            "isActivated": true,
+            "GUID": "e8a58173-1262-4752-859c-10ceec5598aa",
+            "mode": "",
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ]
+          },
+          {
+            "primaryKey": false,
+            "required": false,
+            "alternateKey": false,
+            "childType": "varchar",
+            "type": "string",
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "Lastname",
+            "hackoladeMeta": {},
+            "isActivated": true,
+            "GUID": "872c6f47-1c90-4b97-ad5e-2c446d854243",
+            "mode": "",
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ]
+          },
+          {
+            "primaryKey": true,
+            "required": true,
+            "alternateKey": false,
+            "childType": "varchar",
+            "type": "string",
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "email",
+            "hackoladeMeta": {},
+            "isActivated": true,
+            "GUID": "18d05aa0-70b0-4f8e-9736-ffbc7104f778",
+            "mode": "",
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ]
+          },
+          {
+            "primaryKey": false,
+            "required": false,
+            "alternateKey": false,
+            "childType": "varchar",
+            "type": "string",
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "Phone number",
+            "hackoladeMeta": {},
+            "isActivated": true,
+            "GUID": "bb57e423-15a3-43d2-bb4f-81c084e50416",
+            "mode": "",
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ]
+          },
+          {
+            "required": false,
+            "alternateKey": false,
+            "childType": "date",
+            "type": "string",
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "Registration date",
+            "hackoladeMeta": {},
+            "isActivated": true,
+            "primaryKey": false,
+            "GUID": "7fa9c279-fe3c-4864-83e9-10df93832aef",
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ]
+          }
+        ],
+        "definitions": {
+          "type": "definitions",
+          "properties": [],
+          "GUID": "a8a134b2-2caf-48d9-93b6-3a86f837ad43"
+        },
+        "isActivated": true,
+        "additionalProperties": false,
+        "definitionEntityType": "collection",
+        "fileType": "hackoladeSchema",
+        "definitionRefs": [
+          [
+            "317a2e84-5f9c-4f59-8bda-ed2df628354a"
+          ]
+        ],
+        "kind": "relativePath",
+        "link": "../common/Customer-Polyglot.hck.json",
+        "fieldRelativePath": "#/Customer"
+      }
+    ],
+    "GUID": "1c794375-37a2-4fc4-b32d-d4367ffa71fa"
+  },
+  "externalDefinitions": {
+    "type": "externalDefinitions",
+    "properties": [],
+    "GUID": "a037a285-238e-479c-9846-5fafe133b22d"
+  },
+  "sources": [],
+  "decorativeSymbols": [],
+  "dbVendor": "Polyglot",
+  "appTarget": "Polyglot",
+  "creationTS": "2024-12-31T11:24:05.109Z",
+  "GUID": "cee68ca2-a8f5-4229-9391-6ae31724de75",
+  "isLineageEnabled": false,
+  "polyglotModelPaths": [
+    {
+      "GUID": "ba3e28be-a844-4a6d-b651-f89222dc56b2",
+      "polyglotModelName": "Customer-Polyglot.hck",
+      "polyglotModelPath": "../common/Customer-Polyglot.hck.json",
+      "normalization": false
+    }
+  ],
+  "lastModifTS": "2024-12-31T11:26:47.962Z",
+  "persistenceSchemaVersion": "7",
+  "isCreatedByPlugin": true,
+  "pluginInformation": {
+    "pluginName": "Polyglot",
+    "pluginVersion": "0.0.1",
+    "pluginEngineVersion": "1.0.0"
+  },
+  "applicationInformation": {
+    "version": "7.9.4"
+  },
+  "hackoladeMeta": {},
+  "settings": {
+    "centralPane": {
+      "dbLevel": {
+        "erd": [
+          {
+            "GUID": "317a2e84-5f9c-4f59-8bda-ed2df628354a",
+            "x": 1150,
+            "y": 1119,
+            "width": 250,
+            "height": 144,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "138a8017-4801-441d-bdfe-e54f867faed2",
+            "x": 1635,
+            "y": 1307,
+            "width": 228,
+            "height": 74,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "12222410-3b51-46a4-8c5a-c72edd77e24d",
+            "x": 1208,
+            "y": 1330,
+            "width": 286,
+            "height": 112,
+            "color": {
+              "hex": "#2196F3"
+            }
+          }
+        ],
+        "erdDefinitions": {
+          "erd": [],
+          "rootPath": [],
+          "entities": [],
+          "decorativeSymbols": []
+        },
+        "buckets": [],
+        "collapsedNodes": [],
+        "activeRelationship": "",
+        "activeRelationshipFields": {
+          "childField": [],
+          "parentField": []
+        },
+        "selectedCollections": [],
+        "displayColorPicker": false,
+        "graphView": {
+          "erd": [
+            {
+              "GUID": "317a2e84-5f9c-4f59-8bda-ed2df628354a",
+              "size": 100,
+              "x": 350,
+              "y": 300
+            },
+            {
+              "GUID": "138a8017-4801-441d-bdfe-e54f867faed2",
+              "size": 100,
+              "x": 100,
+              "y": 100
+            },
+            {
+              "GUID": "12222410-3b51-46a4-8c5a-c72edd77e24d",
+              "size": 100,
+              "x": 100,
+              "y": 350
+            }
+          ],
+          "buckets": [],
+          "decorativeSymbols": [],
+          "forceLayout": true,
+          "defaultLinkLength": 300
+        },
+        "diagramViews": [],
+        "decorativeSymbols": [],
+        "nestedCollectionsLayout": "horizontal",
+        "options": [],
+        "relationshipUpdateDisabled": false
+      },
+      "collectionLevel": {},
+      "changed": false
+    },
+    "dtDiagram": {
+      "collapsedNodes": [],
+      "shouldDistributeCollections": false
+    }
+  }
+}
