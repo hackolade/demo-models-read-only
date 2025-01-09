@@ -65,117 +65,18 @@
         "GUID": "fca16002-ccce-45ab-804e-e7e2ec62e4b8"
       },
       "isActivated": true,
-      "additionalProperties": false
-    },
-    {
-      "GUID": "7dabf47c-763d-4d78-8481-24036d740bf8",
-      "collectionName": "Country",
-      "type": "object",
-      "properties": [
-        {
-          "name": "ISO code",
-          "hackoladeMeta": {},
-          "isActivated": true,
-          "required": false,
-          "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
-          "primaryKey": false,
-          "symbols": [
-            "Y"
-          ],
-          "alternateKey": false,
-          "childType": "enum",
-          "type": "string",
-          "compositeKey": [
-            "compositePrimaryKey",
-            "compositeUniqueKey"
-          ],
-          "compositePrimaryKey": false,
-          "compositeUniqueKey": false,
-          "error": {},
-          "GUID": "f8615e15-71ec-4a66-b029-fc0dce507d4e"
-        },
-        {
-          "name": "Name",
-          "hackoladeMeta": {},
-          "isActivated": true,
-          "primaryKey": false,
-          "required": false,
-          "childType": "varchar",
-          "type": "string",
-          "compositeKey": [
-            "compositePrimaryKey",
-            "compositeUniqueKey"
-          ],
-          "GUID": "3892ed74-833f-4712-86c5-969ee4400fdc",
-          "error": {}
-        }
-      ],
-      "definitions": {
-        "type": "definitions",
-        "properties": [],
-        "GUID": "8a7ab247-cabd-425d-97a9-d8e8207c668e"
-      },
-      "isActivated": true,
-      "additionalProperties": false
+      "additionalProperties": false,
+      "bucketId": ""
     }
   ],
   "buckets": [],
   "views": [],
-  "relationships": [
-    {
-      "name": "is located in",
-      "relationshipType": "",
-      "parentField": [],
-      "parentCardinality": "1..n",
-      "childField": [],
-      "isActivated": true,
-      "childCardinality": "1",
-      "level": "field",
-      "GUID": "f1b7487d-7cac-486b-81ca-1102915af795",
-      "lineSize": 2,
-      "parentCollection": "50ec3adc-dd4a-4ddf-bab7-572b8e9b8bf7",
-      "childCollection": "7dabf47c-763d-4d78-8481-24036d740bf8",
-      "hackoladeStyles": {
-        "GUID": "9618b19b-7ce8-4952-8085-2aa486a93826",
-        "autoPositioning": true,
-        "type": "Orthogonal",
-        "thickness": 2,
-        "color": "#79c4ff",
-        "dataType": "",
-        "shape": [
-          {
-            "x": 1607,
-            "y": 1340.5
-          },
-          {
-            "x": 1547,
-            "y": 1340.5
-          },
-          {
-            "x": 1547,
-            "y": 1301
-          },
-          {
-            "x": 1487,
-            "y": 1301
-          }
-        ],
-        "sides": [
-          "left",
-          "right"
-        ]
-      }
-    }
-  ],
+  "relationships": [],
   "users": [],
   "diagramViews": [],
   "idToNameHashTable": {
     "50ec3adc-dd4a-4ddf-bab7-572b8e9b8bf7": "Address",
     "226178a4-d5d7-4303-8ded-6edd2bf5e94a": "Street",
-    "7dabf47c-763d-4d78-8481-24036d740bf8": "Country",
-    "3892ed74-833f-4712-86c5-969ee4400fdc": "Name",
-    "f8615e15-71ec-4a66-b029-fc0dce507d4e": "ISO code",
-    "f1b7487d-7cac-486b-81ca-1102915af795": "is located in",
     "172ef4de-fb50-4087-a44b-9a34e92b1f39": "Postal code",
     "f23a20a2-d7b1-476d-b567-50a67b99f2fc": "City"
   },
@@ -195,13 +96,21 @@
     "GUID": "ae0e231c-24ce-4e47-af84-c6093003bf3b"
   },
   "sources": [],
-  "decorativeSymbols": [],
+  "decorativeSymbols": [
+    {
+      "GUID": "e5521fe8-98de-4f72-bfa0-156a53edd8af",
+      "name": "Disclaimer",
+      "type": "annotation",
+      "disableInitialFocus": true,
+      "value": "This Model serves as a basic example of reusable definitions within a data modeling context.\n\nIt is intended for illustration purposes only and simplifies the complexities of address data management, omitting certain variations and best practices relevant to real-world applications."
+    }
+  ],
   "dbVendor": "Polyglot",
   "appTarget": "Polyglot",
   "creationTS": "2024-12-31T10:50:34.735Z",
   "GUID": "251c1cc6-cb0b-4efc-bbc7-56d5a47c2515",
   "isLineageEnabled": false,
-  "lastModifTS": "2024-12-31T11:10:05.541Z",
+  "lastModifTS": "2025-01-09T13:33:10.057Z",
   "persistenceSchemaVersion": "7",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -210,7 +119,7 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "7.9.4"
+    "version": "7.9.5"
   },
   "hackoladeMeta": {},
   "settings": {
@@ -219,20 +128,10 @@
         "erd": [
           {
             "GUID": "50ec3adc-dd4a-4ddf-bab7-572b8e9b8bf7",
-            "x": 1284,
-            "y": 1256,
-            "width": 203,
-            "height": 90,
-            "color": {
-              "hex": "#2196F3"
-            }
-          },
-          {
-            "GUID": "7dabf47c-763d-4d78-8481-24036d740bf8",
-            "x": 1607,
-            "y": 1307,
-            "width": 194,
-            "height": 67,
+            "x": 1263,
+            "y": 1084,
+            "width": 237,
+            "height": 97,
             "color": {
               "hex": "#2196F3"
             }
@@ -260,32 +159,40 @@
               "size": 100,
               "x": 1040,
               "y": 1040
-            },
-            {
-              "GUID": "7dabf47c-763d-4d78-8481-24036d740bf8",
-              "size": 100,
-              "x": 1040,
-              "y": 1040
             }
           ],
           "buckets": [],
-          "decorativeSymbols": [],
+          "decorativeSymbols": [
+            {
+              "GUID": "e5521fe8-98de-4f72-bfa0-156a53edd8af",
+              "x": 1229,
+              "y": 1066,
+              "height": 150,
+              "width": 300
+            }
+          ],
           "forceLayout": true,
           "defaultLinkLength": 300
         },
         "diagramViews": [],
-        "decorativeSymbols": [],
+        "decorativeSymbols": [
+          {
+            "GUID": "e5521fe8-98de-4f72-bfa0-156a53edd8af",
+            "x": 1587,
+            "y": 1013,
+            "height": 154,
+            "width": 366,
+            "color": {
+              "hex": "#fec107"
+            }
+          }
+        ],
         "nestedCollectionsLayout": "horizontal",
         "options": [
           {
             "autoWidth": false,
             "autoHeight": false,
             "GUID": "50ec3adc-dd4a-4ddf-bab7-572b8e9b8bf7"
-          },
-          {
-            "autoWidth": false,
-            "autoHeight": false,
-            "GUID": "7dabf47c-763d-4d78-8481-24036d740bf8"
           }
         ],
         "relationshipUpdateDisabled": false
