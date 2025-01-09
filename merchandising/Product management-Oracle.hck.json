@@ -59,7 +59,7 @@
               "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
               "01db6679-2c5e-4abf-bfbc-4aeba046e257"
             ],
-            "relationshipType": "Foreign Key"
+            "relationshipType": ""
           },
           {
             "name": "Supplier ID",
@@ -101,40 +101,6 @@
             "GUID": "6ef810f9-c366-426b-9aa7-97f54138905f",
             "hackoladeMeta": {},
             "error": {}
-          },
-          {
-            "GUID": "dc12c121-c011-42fd-865f-1a0fcd657fc0",
-            "hackoladeMeta": {},
-            "error": {}
-          },
-          {
-            "GUID": "097524b6-a4e7-4091-bf57-be02308a2816",
-            "properties": [
-              {
-                "GUID": "1002c3a4-64cd-46ec-b4ff-e330099caa23",
-                "properties": [
-                  {
-                    "GUID": "ea782112-8bc7-4902-98a0-7dc8ea8207e5",
-                    "error": {
-                      "enum": true
-                    },
-                    "hackoladeMeta": {}
-                  },
-                  {
-                    "GUID": "2c86253b-1d80-4798-ad2b-3bef74fa239c",
-                    "error": {
-                      "code": false,
-                      "name": false
-                    },
-                    "hackoladeMeta": {}
-                  }
-                ],
-                "hackoladeMeta": {},
-                "error": {}
-              }
-            ],
-            "hackoladeMeta": {},
-            "error": {}
           }
         ]
       },
@@ -143,7 +109,10 @@
         "namingConvention": "code",
         "validationErrors": {}
       },
-      "code": "Product"
+      "code": "Product",
+      "error": {
+        "refPath": false
+      }
     },
     {
       "GUID": "1613f3a1-fd25-44ff-b783-50ef813d030d",
@@ -222,7 +191,10 @@
         "namingConvention": "code",
         "validationErrors": {}
       },
-      "code": "Category"
+      "code": "Category",
+      "error": {
+        "refPath": false
+      }
     },
     {
       "GUID": "14f76f99-ec52-4034-af62-68cbfa92562c",
@@ -281,7 +253,10 @@
         "namingConvention": "code",
         "validationErrors": {}
       },
-      "code": "Stock"
+      "code": "Stock",
+      "error": {
+        "refPath": false
+      }
     },
     {
       "GUID": "0ebf8b17-2f08-434f-8e8c-0fd8d4396fb4",
@@ -331,6 +306,9 @@
       "hackoladeMeta": {
         "namingConvention": "code",
         "validationErrors": {}
+      },
+      "error": {
+        "refPath": false
       }
     },
     {
@@ -382,6 +360,9 @@
       "hackoladeMeta": {
         "namingConvention": "code",
         "validationErrors": {}
+      },
+      "error": {
+        "refPath": false
       }
     },
     {
@@ -405,6 +386,17 @@
       },
       "referenceDiff": {
         "properties": [
+          {
+            "GUID": "ca068016-1c2e-4d47-bc59-17b2a13ae042",
+            "parentRelationship": "019a5d84-8470-44b8-beb6-5b35edc7b9a3",
+            "relationshipType": "Foreign Key",
+            "foreignCollection": "1529b933-9dce-4eda-a7b4-bedbffad6e69",
+            "foreignField": [
+              "1529b933-9dce-4eda-a7b4-bedbffad6e69",
+              "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
+              "918f5f74-43df-4045-b663-e312d4c5bc4b"
+            ]
+          },
           {
             "GUID": "8ee85d26-2d69-49d4-82b9-1d2b12c7966d",
             "error": {
@@ -441,17 +433,6 @@
             "parentRelationship": "021aefa8-d5f1-4a55-8449-b940c71f8bd2",
             "hackoladeMeta": {},
             "error": {}
-          },
-          {
-            "GUID": "ca068016-1c2e-4d47-bc59-17b2a13ae042",
-            "parentRelationship": "019a5d84-8470-44b8-beb6-5b35edc7b9a3",
-            "relationshipType": "Foreign Key",
-            "foreignCollection": "1529b933-9dce-4eda-a7b4-bedbffad6e69",
-            "foreignField": [
-              "1529b933-9dce-4eda-a7b4-bedbffad6e69",
-              "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
-              "918f5f74-43df-4045-b663-e312d4c5bc4b"
-            ]
           }
         ]
       },
@@ -460,7 +441,10 @@
         "namingConvention": "code",
         "validationErrors": {}
       },
-      "code": "Supplier"
+      "code": "Supplier",
+      "error": {
+        "refPath": false
+      }
     },
     {
       "GUID": "b6aafcc0-2209-4b49-904a-65a07dd45a8f",
@@ -474,8 +458,8 @@
         "2e87e930-b351-4573-b460-c6eb4120d07f"
       ],
       "isActivated": true,
-      "collectionName": "Address1",
-      "code": "Address1",
+      "collectionName": "Address",
+      "code": "Address",
       "bucketId": "343a4218-1d52-49a1-bd6a-41ddf7bdc55a",
       "properties": [],
       "definitions": {
@@ -504,8 +488,10 @@
       },
       "additionalProperties": false,
       "hackoladeMeta": {
-        "namingConvention": "code",
-        "validationErrors": {}
+        "namingConvention": "code"
+      },
+      "error": {
+        "refPath": false
       }
     }
   ],
@@ -672,28 +658,6 @@
                   }
                 },
                 {
-                  "code": "Images",
-                  "GUID": "5d0e36aa-007a-4413-94f1-fd5f6d385bf2",
-                  "type": "reference",
-                  "name": "Images",
-                  "ref": "dc12c121-c011-42fd-865f-1a0fcd657fc0",
-                  "refType": "collectionReference",
-                  "refIdPath": [
-                    "1529b933-9dce-4eda-a7b4-bedbffad6e69",
-                    "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
-                    "dc12c121-c011-42fd-865f-1a0fcd657fc0"
-                  ],
-                  "isActivated": true,
-                  "referencedColumnName": "Images",
-                  "error": {
-                    "name": false,
-                    "code": false
-                  },
-                  "hackoladeMeta": {
-                    "namingConvention": "code"
-                  }
-                },
-                {
                   "code": "Currency",
                   "GUID": "4453dffb-910d-4dff-946f-90c5b5a8cd9b",
                   "type": "reference",
@@ -710,24 +674,8 @@
                   "isActivated": true,
                   "referencedColumnName": "Currency",
                   "error": {
-                    "enum": true,
-                    "enums": [
-                      true,
-                      true,
-                      true,
-                      true,
-                      true,
-                      true,
-                      true,
-                      true,
-                      true,
-                      true,
-                      true,
-                      true,
-                      true,
-                      true,
-                      true
-                    ],
+                    "enum": false,
+                    "enums": false,
                     "name": false,
                     "code": false
                   },
@@ -1087,7 +1035,7 @@
     },
     {
       "name": "contains",
-      "relationshipType": "Foreign Key",
+      "relationshipType": "",
       "parentField": [
         [
           "1613f3a1-fd25-44ff-b783-50ef813d030d",
@@ -1290,7 +1238,7 @@
     "0ebf8b17-2f08-434f-8e8c-0fd8d4396fb4": "Address",
     "c318c8ce-f00b-4a82-a1ff-33b19318efa5": "Warehouse",
     "3f99e0a2-e75c-48c5-a1a5-2769ba87ac18": "Supplier",
-    "b6aafcc0-2209-4b49-904a-65a07dd45a8f": "Address1",
+    "b6aafcc0-2209-4b49-904a-65a07dd45a8f": "Address",
     "343a4218-1d52-49a1-bd6a-41ddf7bdc55a": "Product management",
     "4edf4e5b-5f7c-4982-a28d-9ee2b6b43536": "fk_Warehouse_id_to_Stock_Warehouse",
     "53028365-cdd4-41ba-b8c9-95a03de7da45": "fk_Address_id_to_Warehouse_Address",
@@ -1324,7 +1272,6 @@
     "f76ed924-2a08-4570-8201-cc81b6b0cd28": "SKU",
     "d94847b1-4347-472a-836d-99737bae9ff5": "Name",
     "a1e1386b-4a6e-49ab-b015-4f336660e0e2": "Description",
-    "5d0e36aa-007a-4413-94f1-fd5f6d385bf2": "Images",
     "4453dffb-910d-4dff-946f-90c5b5a8cd9b": "Currency",
     "532b75ce-ae07-4134-a683-069a9f94b007": "Amount"
   },
@@ -1418,200 +1365,6 @@
               "compositeUniqueKey"
             ],
             "code": "Description"
-          },
-          {
-            "properties": [
-              {
-                "primaryKey": false,
-                "mode": "varchar2",
-                "length": 20,
-                "subtype": "string",
-                "required": false,
-                "childType": "char",
-                "type": "string",
-                "partitionKey": false,
-                "compositePartitionKey": false,
-                "compositePrimaryKey": false,
-                "compositeUniqueKey": false,
-                "hackoladeMeta": {},
-                "isActivated": true,
-                "GUID": "eb09feb9-6460-4193-b564-2d31c3ca40b4",
-                "arrayItem": true,
-                "displayName": "url",
-                "compositeKey": [
-                  "partitionKey",
-                  "compositePartitionKey",
-                  "compositePrimaryKey",
-                  "compositeUniqueKey"
-                ]
-              }
-            ],
-            "childType": "vector",
-            "type": "array",
-            "partitionKey": false,
-            "compositePartitionKey": false,
-            "compositePrimaryKey": false,
-            "compositeUniqueKey": false,
-            "name": "Images",
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            },
-            "isActivated": true,
-            "additionalItems": true,
-            "primaryKey": false,
-            "required": false,
-            "GUID": "dc12c121-c011-42fd-865f-1a0fcd657fc0",
-            "compositeKey": [
-              "partitionKey",
-              "compositePartitionKey",
-              "compositePrimaryKey",
-              "compositeUniqueKey"
-            ],
-            "code": "Images"
-          },
-          {
-            "properties": [
-              {
-                "properties": [
-                  {
-                    "primaryKey": false,
-                    "mode": "varchar2",
-                    "length": 20,
-                    "subtype": "string",
-                    "required": true,
-                    "childType": "char",
-                    "type": "string",
-                    "partitionKey": false,
-                    "compositePartitionKey": false,
-                    "compositePrimaryKey": false,
-                    "compositeUniqueKey": false,
-                    "name": "Currency",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    },
-                    "isActivated": true,
-                    "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
-                    "GUID": "ea782112-8bc7-4902-98a0-7dc8ea8207e5",
-                    "enum": [
-                      "USD: United States Dollar",
-                      "EUR: Euro",
-                      "JPY: Japanese Yen",
-                      "GBP: British Pound Sterling",
-                      "AUD: Australian Dollar",
-                      "CAD: Canadian Dollar",
-                      "CHF: Swiss Franc",
-                      "CNY: Chinese Yuan Renminbi",
-                      "SEK: Swedish Krona",
-                      "NZD: New Zealand Dollar",
-                      "INR: Indian Rupee",
-                      "MXN: Mexican Peso",
-                      "SGD: Singapore Dollar",
-                      "HKD: Hong Kong Dollar",
-                      "NOK: Norwegian Krone"
-                    ],
-                    "compositeKey": [
-                      "partitionKey",
-                      "compositePartitionKey",
-                      "compositePrimaryKey",
-                      "compositeUniqueKey"
-                    ],
-                    "code": "Currency"
-                  },
-                  {
-                    "exclusiveMinimum": false,
-                    "exclusiveMaximum": false,
-                    "primaryKey": false,
-                    "mode": "number",
-                    "required": true,
-                    "childType": "number",
-                    "type": "numeric",
-                    "partitionKey": false,
-                    "compositePartitionKey": false,
-                    "compositePrimaryKey": false,
-                    "compositeUniqueKey": false,
-                    "name": "Amount",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    },
-                    "isActivated": true,
-                    "GUID": "bfcda36f-8a7b-421b-ba98-8a9b313affc6",
-                    "foreignCollection": "",
-                    "foreignField": [],
-                    "compositeKey": [
-                      "partitionKey",
-                      "compositePartitionKey",
-                      "compositePrimaryKey",
-                      "compositeUniqueKey"
-                    ],
-                    "code": "Amount"
-                  },
-                  {
-                    "primaryKey": false,
-                    "mode": "date",
-                    "required": true,
-                    "childType": "datetime",
-                    "type": "string",
-                    "partitionKey": false,
-                    "compositePartitionKey": false,
-                    "compositePrimaryKey": false,
-                    "compositeUniqueKey": false,
-                    "name": "Effective date",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    },
-                    "isActivated": true,
-                    "GUID": "2c86253b-1d80-4798-ad2b-3bef74fa239c",
-                    "compositeKey": [
-                      "partitionKey",
-                      "compositePartitionKey",
-                      "compositePrimaryKey",
-                      "compositeUniqueKey"
-                    ],
-                    "code": "Effectivedate"
-                  }
-                ],
-                "primaryKey": false,
-                "childType": "object_udt",
-                "type": "document",
-                "partitionKey": false,
-                "compositePartitionKey": false,
-                "compositePrimaryKey": false,
-                "compositeUniqueKey": false,
-                "hackoladeMeta": {},
-                "isActivated": true,
-                "GUID": "1002c3a4-64cd-46ec-b4ff-e330099caa23",
-                "arrayItem": true,
-                "displayName": "Price",
-                "compositeKey": [
-                  "partitionKey",
-                  "compositePartitionKey",
-                  "compositePrimaryKey",
-                  "compositeUniqueKey"
-                ]
-              }
-            ],
-            "childType": "vector",
-            "type": "array",
-            "partitionKey": false,
-            "compositePartitionKey": false,
-            "compositePrimaryKey": false,
-            "compositeUniqueKey": false,
-            "name": "Prices",
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            },
-            "isActivated": true,
-            "additionalItems": true,
-            "primaryKey": false,
-            "required": false,
-            "GUID": "097524b6-a4e7-4091-bf57-be02308a2816",
-            "compositeKey": [
-              "partitionKey",
-              "compositePartitionKey",
-              "compositePrimaryKey",
-              "compositeUniqueKey"
-            ],
-            "code": "Prices"
           }
         ],
         "definitions": {
@@ -1622,20 +1375,20 @@
         "isActivated": true,
         "additionalProperties": false,
         "bucketId": "4631c9fb-41fb-4647-a18e-f22367a656c5",
+        "hackoladeMeta": {
+          "namingConvention": "code"
+        },
+        "code": "Product",
         "definitionEntityType": "collection",
-        "link": "Product-Polyglot.hck.json",
-        "kind": "relativePath",
-        "fieldRelativePath": "#/Product management/Product",
         "fileType": "hackoladeSchema",
         "definitionRefs": [
           [
             "1529b933-9dce-4eda-a7b4-bedbffad6e69"
           ]
         ],
-        "hackoladeMeta": {
-          "namingConvention": "code"
-        },
-        "code": "Product"
+        "kind": "relativePath",
+        "link": "Product-Polyglot.hck.json",
+        "fieldRelativePath": "#/Product management/Product"
       },
       {
         "GUID": "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
@@ -1703,20 +1456,20 @@
         "isActivated": true,
         "additionalProperties": false,
         "bucketId": "4631c9fb-41fb-4647-a18e-f22367a656c5",
+        "hackoladeMeta": {
+          "namingConvention": "code"
+        },
+        "code": "Category",
         "definitionEntityType": "collection",
-        "link": "Product-Polyglot.hck.json",
-        "kind": "relativePath",
-        "fieldRelativePath": "#/Product management/Category",
         "fileType": "hackoladeSchema",
         "definitionRefs": [
           [
             "1613f3a1-fd25-44ff-b783-50ef813d030d"
           ]
         ],
-        "hackoladeMeta": {
-          "namingConvention": "code"
-        },
-        "code": "Category"
+        "kind": "relativePath",
+        "link": "Product-Polyglot.hck.json",
+        "fieldRelativePath": "#/Product management/Category"
       },
       {
         "GUID": "14dd0530-7fdc-4567-a3c4-2177fc0bd660",
@@ -1827,13 +1580,13 @@
             "compositePrimaryKey": false,
             "compositeUniqueKey": false,
             "GUID": "8b6314e5-b395-43b9-a367-4fbde307f10d",
+            "code": "Warehouse",
             "foreignCollection": "18240a4a-8f6b-4878-952e-29c68f399bf3",
             "foreignField": [
               "18240a4a-8f6b-4878-952e-29c68f399bf3",
               "ce8a38ce-95f2-4f39-80ea-e12fa66800c4"
             ],
-            "relationshipType": "Foreign Key",
-            "code": "Warehouse"
+            "relationshipType": "Foreign Key"
           }
         ],
         "definitions": {
@@ -1844,20 +1597,20 @@
         "isActivated": true,
         "additionalProperties": false,
         "bucketId": "4631c9fb-41fb-4647-a18e-f22367a656c5",
+        "hackoladeMeta": {
+          "namingConvention": "code"
+        },
+        "code": "Stock",
         "definitionEntityType": "collection",
-        "link": "Product-Polyglot.hck.json",
-        "kind": "relativePath",
-        "fieldRelativePath": "#/Product management/Stock",
         "fileType": "hackoladeSchema",
         "definitionRefs": [
           [
             "14f76f99-ec52-4034-af62-68cbfa92562c"
           ]
         ],
-        "hackoladeMeta": {
-          "namingConvention": "code"
-        },
-        "code": "Stock"
+        "kind": "relativePath",
+        "link": "Product-Polyglot.hck.json",
+        "fieldRelativePath": "#/Product management/Stock"
       },
       {
         "GUID": "497e668a-7e1c-439a-aac9-108ab6bc61a6",
@@ -1977,7 +1730,7 @@
         "definitions": {
           "type": "definitions",
           "properties": [],
-          "GUID": "fa7eb5e6-980e-4364-9390-f1402ad1e6fa"
+          "GUID": "4e5ecd54-5958-49a2-ba9b-b2b1c10868dd"
         },
         "isActivated": true,
         "additionalProperties": false,
@@ -1987,23 +1740,23 @@
         "duplicated": false,
         "immutable": false,
         "code": "Address",
-        "normalizationSourceFieldId": "e486e793-d174-4dde-a091-f01158f80e86",
         "primaryKey": [],
+        "hackoladeMeta": {
+          "namingConvention": "code"
+        },
         "definitionEntityType": "collection",
-        "bucketId": "4631c9fb-41fb-4647-a18e-f22367a656c5",
-        "normalizationSourceCollection": "14dd0530-7fdc-4567-a3c4-2177fc0bd660",
-        "link": "Product-Polyglot.hck.json",
-        "kind": "relativePath",
         "fileType": "hackoladeSchema",
-        "fieldRelativePath": "#/Product management/Stock/properties/Warehouse/properties/Address",
         "definitionRefs": [
           [
             "0ebf8b17-2f08-434f-8e8c-0fd8d4396fb4"
           ]
         ],
-        "hackoladeMeta": {
-          "namingConvention": "code"
-        }
+        "kind": "relativePath",
+        "link": "Product-Polyglot.hck.json",
+        "fieldRelativePath": "#/Product management/Stock/properties/Warehouse/properties/Address",
+        "normalizationSourceCollection": "14dd0530-7fdc-4567-a3c4-2177fc0bd660",
+        "normalizationSourceFieldId": "e486e793-d174-4dde-a091-f01158f80e86",
+        "bucketId": "4631c9fb-41fb-4647-a18e-f22367a656c5"
       },
       {
         "GUID": "18240a4a-8f6b-4878-952e-29c68f399bf3",
@@ -2088,19 +1841,19 @@
             "compositePrimaryKey": false,
             "compositeUniqueKey": false,
             "GUID": "e486e793-d174-4dde-a091-f01158f80e86",
+            "code": "Address",
             "foreignCollection": "497e668a-7e1c-439a-aac9-108ab6bc61a6",
             "foreignField": [
               "497e668a-7e1c-439a-aac9-108ab6bc61a6",
               "d19e5eb2-a65a-4045-86c4-b8adb380781f"
             ],
-            "relationshipType": "Foreign Key",
-            "code": "Address"
+            "relationshipType": "Foreign Key"
           }
         ],
         "definitions": {
           "type": "definitions",
           "properties": [],
-          "GUID": "e9df8ae2-e2e5-4028-8325-0a009cc0ae19"
+          "GUID": "541a8e0a-5788-43af-8802-856ea7787895"
         },
         "isActivated": true,
         "additionalProperties": false,
@@ -2110,23 +1863,23 @@
         "duplicated": false,
         "immutable": false,
         "code": "Warehouse",
-        "normalizationSourceFieldId": "8b6314e5-b395-43b9-a367-4fbde307f10d",
         "primaryKey": [],
+        "hackoladeMeta": {
+          "namingConvention": "code"
+        },
         "definitionEntityType": "collection",
-        "bucketId": "4631c9fb-41fb-4647-a18e-f22367a656c5",
-        "normalizationSourceCollection": "14dd0530-7fdc-4567-a3c4-2177fc0bd660",
-        "link": "Product-Polyglot.hck.json",
-        "kind": "relativePath",
         "fileType": "hackoladeSchema",
-        "fieldRelativePath": "#/Product management/Stock/properties/Warehouse",
         "definitionRefs": [
           [
             "c318c8ce-f00b-4a82-a1ff-33b19318efa5"
           ]
         ],
-        "hackoladeMeta": {
-          "namingConvention": "code"
-        }
+        "kind": "relativePath",
+        "link": "Product-Polyglot.hck.json",
+        "fieldRelativePath": "#/Product management/Stock/properties/Warehouse",
+        "normalizationSourceCollection": "14dd0530-7fdc-4567-a3c4-2177fc0bd660",
+        "normalizationSourceFieldId": "8b6314e5-b395-43b9-a367-4fbde307f10d",
+        "bucketId": "4631c9fb-41fb-4647-a18e-f22367a656c5"
       },
       {
         "name": "fk_Warehouse_id_to_Stock_Warehouse",
@@ -2355,13 +2108,13 @@
             "compositePrimaryKey": false,
             "compositeUniqueKey": false,
             "GUID": "b9d5da76-8812-4308-8bf6-0ac6a34c938f",
+            "code": "Address",
             "foreignCollection": "2e87e930-b351-4573-b460-c6eb4120d07f",
             "foreignField": [
               "2e87e930-b351-4573-b460-c6eb4120d07f",
               "99d40c6c-e650-4eed-bc55-754f9c22c708"
             ],
-            "relationshipType": "Foreign Key",
-            "code": "Address"
+            "relationshipType": "Foreign Key"
           }
         ],
         "definitions": {
@@ -2372,24 +2125,24 @@
         "isActivated": true,
         "additionalProperties": false,
         "bucketId": "4631c9fb-41fb-4647-a18e-f22367a656c5",
+        "hackoladeMeta": {
+          "namingConvention": "code"
+        },
+        "code": "Supplier",
         "definitionEntityType": "collection",
-        "link": "Product-Polyglot.hck.json",
-        "kind": "relativePath",
-        "fieldRelativePath": "#/Product management/Supplier",
         "fileType": "hackoladeSchema",
         "definitionRefs": [
           [
             "3f99e0a2-e75c-48c5-a1a5-2769ba87ac18"
           ]
         ],
-        "hackoladeMeta": {
-          "namingConvention": "code"
-        },
-        "code": "Supplier"
+        "kind": "relativePath",
+        "link": "Product-Polyglot.hck.json",
+        "fieldRelativePath": "#/Product management/Supplier"
       },
       {
         "GUID": "2e87e930-b351-4573-b460-c6eb4120d07f",
-        "collectionName": "Address1",
+        "collectionName": "Address",
         "type": "object",
         "properties": [
           {
@@ -2505,7 +2258,7 @@
         "definitions": {
           "type": "definitions",
           "properties": [],
-          "GUID": "c0bce336-123d-4dea-96b8-6ced3857c3ae"
+          "GUID": "9ed7f3a5-904f-4a15-8174-50791f236aaa"
         },
         "isActivated": true,
         "additionalProperties": false,
@@ -2514,24 +2267,24 @@
         "sharded": false,
         "duplicated": false,
         "immutable": false,
-        "code": "Address1",
-        "normalizationSourceFieldId": "b9d5da76-8812-4308-8bf6-0ac6a34c938f",
+        "code": "Address",
         "primaryKey": [],
+        "hackoladeMeta": {
+          "namingConvention": "code"
+        },
         "definitionEntityType": "collection",
-        "bucketId": "4631c9fb-41fb-4647-a18e-f22367a656c5",
-        "normalizationSourceCollection": "1eec2f02-271b-45e3-b874-b47ac00ca585",
-        "link": "Product-Polyglot.hck.json",
-        "kind": "relativePath",
         "fileType": "hackoladeSchema",
-        "fieldRelativePath": "#/Product management/Supplier/properties/Address",
         "definitionRefs": [
           [
             "b6aafcc0-2209-4b49-904a-65a07dd45a8f"
           ]
         ],
-        "hackoladeMeta": {
-          "namingConvention": "code"
-        }
+        "kind": "relativePath",
+        "link": "Product-Polyglot.hck.json",
+        "fieldRelativePath": "#/Product management/Supplier/properties/Address",
+        "normalizationSourceCollection": "1eec2f02-271b-45e3-b874-b47ac00ca585",
+        "normalizationSourceFieldId": "b9d5da76-8812-4308-8bf6-0ac6a34c938f",
+        "bucketId": "4631c9fb-41fb-4647-a18e-f22367a656c5"
       },
       {
         "name": "fk_Address_id_to_Supplier_Address",
@@ -2658,15 +2411,15 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "Product-Polyglot.hck.json",
-        "kind": "relativePath",
-        "fieldRelativePath": "#/relationships/contains",
         "fileType": "hackoladeSchema",
         "definitionRefs": [
           [
             "758cdfb2-7717-4487-b6af-5a2057a5a0fb"
           ]
-        ]
+        ],
+        "kind": "relativePath",
+        "link": "Product-Polyglot.hck.json",
+        "fieldRelativePath": "#/relationships/contains"
       },
       {
         "name": "is valid in",
@@ -2760,15 +2513,15 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "Product-Polyglot.hck.json",
-        "kind": "relativePath",
-        "fieldRelativePath": "#/relationships/has",
         "fileType": "hackoladeSchema",
         "definitionRefs": [
           [
             "9547a392-9459-43cc-b3ff-b40ce569e12f"
           ]
-        ]
+        ],
+        "kind": "relativePath",
+        "link": "Product-Polyglot.hck.json",
+        "fieldRelativePath": "#/relationships/has"
       },
       {
         "name": "is issued by",
@@ -2813,15 +2566,15 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "Product-Polyglot.hck.json",
-        "kind": "relativePath",
-        "fieldRelativePath": "#/relationships/is issued by",
         "fileType": "hackoladeSchema",
         "definitionRefs": [
           [
             "019a5d84-8470-44b8-beb6-5b35edc7b9a3"
           ]
-        ]
+        ],
+        "kind": "relativePath",
+        "link": "Product-Polyglot.hck.json",
+        "fieldRelativePath": "#/relationships/is issued by"
       },
       {
         "name": "Product management",
@@ -2845,20 +2598,20 @@
         "isActivated": true,
         "indexes": [],
         "GUID": "4631c9fb-41fb-4647-a18e-f22367a656c5",
+        "hackoladeMeta": {
+          "namingConvention": "code"
+        },
+        "code": "Productmanagement",
         "definitionEntityType": "bucket",
-        "link": "Product-Polyglot.hck.json",
-        "kind": "relativePath",
-        "fieldRelativePath": "#/Product management",
         "fileType": "hackoladeSchema",
         "definitionRefs": [
           [
             "343a4218-1d52-49a1-bd6a-41ddf7bdc55a"
           ]
         ],
-        "hackoladeMeta": {
-          "namingConvention": "code"
-        },
-        "code": "Productmanagement"
+        "kind": "relativePath",
+        "link": "Product-Polyglot.hck.json",
+        "fieldRelativePath": "#/Product management"
       }
     ],
     "GUID": "fc5ffd0a-6d54-4600-af31-ee23ba2c5076"
@@ -2878,7 +2631,8 @@
       "hackoladeMeta": {
         "namingConvention": "code"
       },
-      "code": "Disclaimer"
+      "code": "Disclaimer",
+      "disableInitialFocus": true
     },
     {
       "GUID": "5ebff822-7dea-4385-8124-79f64f9673a8",
@@ -2888,7 +2642,8 @@
       "hackoladeMeta": {
         "namingConvention": "code"
       },
-      "code": "Questions"
+      "code": "Questions",
+      "disableInitialFocus": true
     }
   ],
   "dbVersion": "23ai",
@@ -2909,7 +2664,7 @@
       "normalization": true
     }
   ],
-  "lastModifTS": "2025-01-09T14:29:53.917Z",
+  "lastModifTS": "2025-01-09T14:40:18.468Z",
   "persistenceSchemaVersion": "7",
   "isCreatedByPlugin": true,
   "pluginInformation": {

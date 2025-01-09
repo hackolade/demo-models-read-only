@@ -106,53 +106,30 @@
                   "symbols": [
                     "Y"
                   ],
-                  "alternateKey": false,
                   "childType": "enum",
                   "type": "string",
                   "compositeKey": [
                     "compositePrimaryKey",
                     "compositeUniqueKey"
                   ],
-                  "compositePrimaryKey": false,
-                  "compositeUniqueKey": false,
-                  "error": {
-                    "enum": true,
-                    "enums": [
-                      true,
-                      true,
-                      true,
-                      true,
-                      true,
-                      true,
-                      true,
-                      true,
-                      true,
-                      true,
-                      true,
-                      true,
-                      true,
-                      true,
-                      true
-                    ]
-                  },
                   "GUID": "ea782112-8bc7-4902-98a0-7dc8ea8207e5",
                   "enum": [
-                    "USD: United States Dollar",
-                    "EUR: Euro",
-                    "JPY: Japanese Yen",
-                    "GBP: British Pound Sterling",
-                    "AUD: Australian Dollar",
-                    "CAD: Canadian Dollar",
-                    "CHF: Swiss Franc",
-                    "CNY: Chinese Yuan Renminbi",
-                    "SEK: Swedish Krona",
-                    "NZD: New Zealand Dollar",
-                    "INR: Indian Rupee",
-                    "MXN: Mexican Peso",
-                    "SGD: Singapore Dollar",
-                    "HKD: Hong Kong Dollar",
-                    "NOK: Norwegian Krone"
-                  ]
+                    "USD",
+                    "EUR",
+                    "JPY",
+                    "GBP",
+                    "AUD",
+                    "CAD",
+                    "CHF",
+                    "CNY",
+                    "SEK",
+                    "NZD",
+                    "INR",
+                    "MXN",
+                    "SGD",
+                    "HKD"
+                  ],
+                  "error": {}
                 },
                 {
                   "name": "Amount",
@@ -898,7 +875,7 @@
   "GUID": "530c923e-219d-470a-b2f9-1c2a82d43bb0",
   "isLineageEnabled": false,
   "polyglotModelPaths": [],
-  "lastModifTS": "2025-01-09T13:46:39.852Z",
+  "lastModifTS": "2025-01-09T14:39:02.638Z",
   "persistenceSchemaVersion": "7",
   "isCreatedByPlugin": true,
   "pluginInformation": {
