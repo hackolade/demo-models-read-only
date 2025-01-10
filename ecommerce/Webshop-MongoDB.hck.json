@@ -104,7 +104,67 @@
       }
     }
   ],
-  "views": [],
+  "views": [
+    {
+      "name": "Payment view",
+      "type": "object",
+      "properties": [
+        {
+          "code": "Identifier",
+          "GUID": "252dd917-b447-4204-a871-9e65946fc470",
+          "type": "reference",
+          "name": "Identifier",
+          "ref": "2dc5cd19-9bb7-4405-a00f-69af0c39ea24",
+          "refType": "collectionReference",
+          "refIdPath": [
+            "f4d3c81f-3ecb-45f0-9c66-247f24dff2b0",
+            "fc98da0d-f7b3-4b2e-8b1e-f9686cb9e569"
+          ],
+          "isActivated": true,
+          "error": {
+            "name": false,
+            "code": false
+          },
+          "hackoladeMeta": {
+            "namingConvention": "code"
+          }
+        },
+        {
+          "code": "Payments",
+          "GUID": "8aa2e04f-f1e0-4a74-96dd-7519a328a0f6",
+          "type": "reference",
+          "name": "Payments",
+          "ref": "fad47821-c108-4728-ac06-edd87399a408",
+          "refType": "collectionReference",
+          "refIdPath": [
+            "f4d3c81f-3ecb-45f0-9c66-247f24dff2b0",
+            "0af2ea62-2399-45b2-b0b5-b7159d1f2284"
+          ],
+          "isActivated": true,
+          "error": {
+            "name": false,
+            "code": false
+          },
+          "hackoladeMeta": {
+            "namingConvention": "code"
+          }
+        }
+      ],
+      "isActivated": true,
+      "GUID": "85b51e97-1407-4461-870f-2533bb60d277",
+      "pipeline": "[\n    {\n        \"$project\": {\n            \"Identifier\": \"Undefined\",\n            \"Payments\": 1\n        }\n    }\n]",
+      "viewOn": "f4d3c81f-3ecb-45f0-9c66-247f24dff2b0",
+      "bucketId": "751eaf1f-e126-4b4e-ac49-142180c51a10",
+      "hackoladeMeta": {
+        "validationErrors": {
+          "name": false,
+          "code": false
+        },
+        "namingConvention": "code"
+      },
+      "code": "Paymentview"
+    }
+  ],
   "relationships": [],
   "users": [],
   "diagramViews": [],
@@ -112,7 +172,13 @@
     "f4d3c81f-3ecb-45f0-9c66-247f24dff2b0": "Order",
     "751eaf1f-e126-4b4e-ac49-142180c51a10": "Order management",
     "d450f1ca-2851-4efb-a533-6b5aa8fd00ef": "Customer",
-    "c85c860a-8480-43eb-a9c0-5678271016fe": "Customer"
+    "c85c860a-8480-43eb-a9c0-5678271016fe": "Customer",
+    "ace3d3d9-7934-413b-b4f5-e70b256a3079": "Payment view",
+    "3b3241a0-dc76-4ca9-8b53-924989ca6991": "Identifier",
+    "1d014ae3-2e66-4f3d-a6ad-5d0d1d8eac5b": "Payments",
+    "85b51e97-1407-4461-870f-2533bb60d277": "Payment view",
+    "252dd917-b447-4204-a871-9e65946fc470": "Identifier",
+    "8aa2e04f-f1e0-4a74-96dd-7519a328a0f6": "Payments"
   },
   "definitions": {
     "type": "definitions",
@@ -927,7 +993,7 @@
       "normalization": false
     }
   ],
-  "lastModifTS": "2025-01-10T10:45:28.034Z",
+  "lastModifTS": "2025-01-10T10:51:58.754Z",
   "persistenceSchemaVersion": "7",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -949,6 +1015,14 @@
             "color": {
               "hex": "#2196F3"
             }
+          },
+          {
+            "GUID": "85b51e97-1407-4461-870f-2533bb60d277",
+            "x": 1427,
+            "y": 1529,
+            "width": 296,
+            "height": 163,
+            "color": {}
           }
         ],
         "erdDefinitions": {
@@ -1000,9 +1074,17 @@
             "autoWidth": false,
             "autoHeight": false,
             "GUID": "f4d3c81f-3ecb-45f0-9c66-247f24dff2b0"
+          },
+          {
+            "autoWidth": false,
+            "autoHeight": false,
+            "GUID": "85b51e97-1407-4461-870f-2533bb60d277"
           }
         ],
-        "relationshipUpdateDisabled": false
+        "relationshipUpdateDisabled": false,
+        "displayOptions": {
+          "hideErdRelationshipsNames": false
+        }
       },
       "collectionLevel": {},
       "changed": false
