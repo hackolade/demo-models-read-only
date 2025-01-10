@@ -1,5 +1,5 @@
 {
-  "modelName": "Product management",
+  "modelName": "Product Polyglot",
   "collections": [
     {
       "GUID": "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
@@ -875,7 +875,7 @@
   "GUID": "530c923e-219d-470a-b2f9-1c2a82d43bb0",
   "isLineageEnabled": false,
   "polyglotModelPaths": [],
-  "lastModifTS": "2025-01-09T14:39:02.638Z",
+  "lastModifTS": "2025-01-10T10:14:38.040Z",
   "persistenceSchemaVersion": "7",
   "isCreatedByPlugin": true,
   "pluginInformation": {

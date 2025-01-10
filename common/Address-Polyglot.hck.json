@@ -1,5 +1,5 @@
 {
-  "modelName": "Address",
+  "modelName": "Address Polyglot",
   "collections": [
     {
       "GUID": "50ec3adc-dd4a-4ddf-bab7-572b8e9b8bf7",
@@ -110,7 +110,7 @@
   "creationTS": "2024-12-31T10:50:34.735Z",
   "GUID": "251c1cc6-cb0b-4efc-bbc7-56d5a47c2515",
   "isLineageEnabled": false,
-  "lastModifTS": "2025-01-09T13:33:10.057Z",
+  "lastModifTS": "2025-01-10T10:14:49.696Z",
   "persistenceSchemaVersion": "7",
   "isCreatedByPlugin": true,
   "pluginInformation": {

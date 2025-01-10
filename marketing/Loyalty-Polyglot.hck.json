@@ -1,5 +1,5 @@
 {
-  "modelName": "Loyalty management",
+  "modelName": "Loyalty Polyglot",
   "collections": [
     {
       "GUID": "317a2e84-5f9c-4f59-8bda-ed2df628354a",
@@ -111,7 +111,8 @@
       "GUID": "138a8017-4801-441d-bdfe-e54f867faed2",
       "isActivated": true,
       "collectionName": "Loyalty campaign",
-      "additionalProperties": false
+      "additionalProperties": false,
+      "bucketId": "11956698-cdd6-44b8-855f-cd59a50e4665"
     },
     {
       "type": "object",
@@ -199,7 +200,8 @@
       "GUID": "12222410-3b51-46a4-8c5a-c72edd77e24d",
       "isActivated": true,
       "collectionName": "Customer loyalty points",
-      "additionalProperties": false
+      "additionalProperties": false,
+      "bucketId": "11956698-cdd6-44b8-855f-cd59a50e4665"
     }
   ],
   "buckets": [
@@ -226,6 +228,24 @@
       "collectionIds": [
         "317a2e84-5f9c-4f59-8bda-ed2df628354a"
       ]
+    },
+    {
+      "name": "Loyalty management",
+      "type": "bucket",
+      "collectionIds": [
+        "12222410-3b51-46a4-8c5a-c72edd77e24d",
+        "138a8017-4801-441d-bdfe-e54f867faed2"
+      ],
+      "backgroundColor": {
+        "r": 0,
+        "g": 138,
+        "b": 0,
+        "a": 1
+      },
+      "show": true,
+      "isActivated": true,
+      "indexes": [],
+      "GUID": "11956698-cdd6-44b8-855f-cd59a50e4665"
     }
   ],
   "views": [],
@@ -248,16 +268,16 @@
         "dataType": "",
         "shape": [
           {
-            "x": 1412,
-            "y": 1399
+            "x": 1513,
+            "y": 1429
           },
           {
-            "x": 1412,
-            "y": 1341.2170706006323
+            "x": 1513,
+            "y": 1356.2170706006323
           },
           {
             "x": 1314.1085353003136,
-            "y": 1341.2170706006323
+            "y": 1356.2170706006323
           },
           {
             "x": 1314.1085353003136,
@@ -294,25 +314,21 @@
         "dataType": "",
         "shape": [
           {
-            "x": 1555,
-            "y": 1455
+            "x": 1656,
+            "y": 1486
           },
           {
-            "x": 1614.5,
-            "y": 1455
+            "x": 1812,
+            "y": 1486
           },
           {
-            "x": 1614.5,
-            "y": 1502
-          },
-          {
-            "x": 1674,
-            "y": 1502
+            "x": 1812,
+            "y": 1560
           }
         ],
         "sides": [
           "right",
-          "left"
+          "top"
         ]
       },
       "name": "belongs to",
@@ -338,7 +354,8 @@
     "52b23ea1-067c-4f56-a31f-ad924ae36667": "Name",
     "f29ec549-bdc4-48fc-ae32-8961f523108d": "Description",
     "1be970c9-a83a-41b1-bdd5-ed045231c1bc": "Customer management",
-    "c2faf611-b4fb-4453-84a7-14037cc26ecc": "Disclaimer"
+    "c2faf611-b4fb-4453-84a7-14037cc26ecc": "Disclaimer",
+    "11956698-cdd6-44b8-855f-cd59a50e4665": "Loyalty management"
   },
   "definitions": {
     "type": "definitions",
@@ -703,7 +720,7 @@
       "normalization": false
     }
   ],
-  "lastModifTS": "2025-01-09T13:46:14.187Z",
+  "lastModifTS": "2025-01-10T10:30:13.567Z",
   "persistenceSchemaVersion": "7",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -731,8 +748,8 @@
           },
           {
             "GUID": "138a8017-4801-441d-bdfe-e54f867faed2",
-            "x": 1674,
-            "y": 1465,
+            "x": 1698,
+            "y": 1560,
             "width": 228,
             "height": 74,
             "color": {
@@ -741,8 +758,8 @@
           },
           {
             "GUID": "12222410-3b51-46a4-8c5a-c72edd77e24d",
-            "x": 1269,
-            "y": 1399,
+            "x": 1370,
+            "y": 1430,
             "width": 286,
             "height": 112,
             "color": {
@@ -761,6 +778,11 @@
             "x": 1125.1085353003136,
             "y": 949.4341412012643,
             "GUID": "1be970c9-a83a-41b1-bdd5-ed045231c1bc"
+          },
+          {
+            "x": 1330,
+            "y": 1390,
+            "GUID": "11956698-cdd6-44b8-855f-cd59a50e4665"
           }
         ],
         "collapsedNodes": [],
@@ -797,6 +819,11 @@
               "x": 40,
               "y": 40,
               "GUID": "1be970c9-a83a-41b1-bdd5-ed045231c1bc"
+            },
+            {
+              "x": 1079,
+              "y": 949,
+              "GUID": "11956698-cdd6-44b8-855f-cd59a50e4665"
             }
           ],
           "decorativeSymbols": [
