@@ -25,7 +25,14 @@
           {
             "GUID": "6b6386de-f9dc-46d9-9fc2-16d3c2c58340",
             "hackoladeMeta": {},
-            "error": {}
+            "error": {},
+            "compositeKey": [
+              "partitionKey",
+              "compositePartitionKey",
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ],
+            "compositeUniqueKey": true
           },
           {
             "name": "Category ID",
@@ -48,7 +55,7 @@
             "partitionKey": false,
             "compositePartitionKey": false,
             "compositePrimaryKey": false,
-            "compositeUniqueKey": false,
+            "compositeUniqueKey": true,
             "error": {},
             "code": "CategoryID",
             "GUID": "28aa362d-6455-4cca-bb6f-305b1ace27c7",
@@ -84,7 +91,7 @@
             "partitionKey": false,
             "compositePartitionKey": false,
             "compositePrimaryKey": false,
-            "compositeUniqueKey": false,
+            "compositeUniqueKey": true,
             "GUID": "918f5f74-43df-4045-b663-e312d4c5bc4b",
             "error": {},
             "code": "SupplierID",
@@ -101,6 +108,22 @@
             "GUID": "6ef810f9-c366-426b-9aa7-97f54138905f",
             "hackoladeMeta": {},
             "error": {}
+          }
+        ],
+        "uniqueKey": [
+          {
+            "GUID": "24d575b0-be56-4865-9348-c340cdb21d25",
+            "compositeUniqueKey": [
+              {
+                "keyId": "6b6386de-f9dc-46d9-9fc2-16d3c2c58340"
+              },
+              {
+                "keyId": "918f5f74-43df-4045-b663-e312d4c5bc4b"
+              },
+              {
+                "keyId": "28aa362d-6455-4cca-bb6f-305b1ace27c7"
+              }
+            ]
           }
         ]
       },
@@ -877,19 +900,19 @@
         "shape": [
           {
             "x": 1321.782929399368,
-            "y": 1487.2096934615001
+            "y": 1485.9926228608679
           },
           {
             "x": 1321.782929399368,
-            "y": 1427.7096939383373
+            "y": 1426.492623337705
           },
           {
             "x": 1182.2829293993677,
-            "y": 1427.7096939383373
+            "y": 1426.492623337705
           },
           {
             "x": 1182.2829293993677,
-            "y": 1368.2096944151745
+            "y": 1366.9926238145422
           }
         ],
         "sides": [
@@ -943,19 +966,11 @@
         "shape": [
           {
             "x": 1182.2829293993677,
-            "y": 1284.2096944151745
+            "y": 1282.9926238145422
           },
           {
             "x": 1182.2829293993677,
-            "y": 1232.7096944151745
-          },
-          {
-            "x": 1182.2829293993677,
-            "y": 1232.7096944151745
-          },
-          {
-            "x": 1182.2829293993677,
-            "y": 1181.2096944151745
+            "y": 1179.9926238145422
           }
         ],
         "sides": [
@@ -1009,19 +1024,19 @@
         "shape": [
           {
             "x": 1830.2829293993677,
-            "y": 1487.2096934615001
+            "y": 1485.9926228608679
           },
           {
             "x": 1830.2829293993677,
-            "y": 1436.0853525263242
+            "y": 1434.868281925692
           },
           {
             "x": 1872.8804004214965,
-            "y": 1436.0853525263242
+            "y": 1434.868281925692
           },
           {
             "x": 1872.8804004214965,
-            "y": 1384.9610115911482
+            "y": 1383.743940990516
           }
         ],
         "sides": [
@@ -1066,19 +1081,19 @@
         "shape": [
           {
             "x": 1693.77555321391,
-            "y": 1265.4488935721802
+            "y": 1264.231822971548
           },
           {
             "x": 1967.531085353003,
-            "y": 1265.4488935721802
+            "y": 1264.231822971548
           },
           {
             "x": 1967.531085353003,
-            "y": 1067.778187565858
+            "y": 1066.5611169652257
           },
           {
             "x": 1942.531085353003,
-            "y": 1067.778187565858
+            "y": 1066.5611169652257
           }
         ],
         "sides": [
@@ -1120,20 +1135,20 @@
         "dataType": "",
         "shape": [
           {
-            "x": 1445.4495960660345,
-            "y": 1487.2096934615001
+            "x": 1383.6162627327012,
+            "y": 1485.9926228608679
           },
           {
-            "x": 1445.4495960660345,
-            "y": 1439.8292935168402
-          },
-          {
-            "x": 1476.4422198805767,
-            "y": 1439.8292935168402
+            "x": 1383.6162627327012,
+            "y": 1438.6122229162079
           },
           {
             "x": 1476.4422198805767,
-            "y": 1392.4488935721802
+            "y": 1438.6122229162079
+          },
+          {
+            "x": 1476.4422198805767,
+            "y": 1391.231822971548
           }
         ],
         "sides": [
@@ -1156,7 +1171,7 @@
       }
     },
     {
-      "name": "is issued by",
+      "name": "is_issued_by",
       "relationshipType": "Foreign Key",
       "parentField": [
         [
@@ -1188,19 +1203,19 @@
         "shape": [
           {
             "x": 1733.6162627327012,
-            "y": 1487.2096934615001
+            "y": 1485.9926228608679
           },
           {
             "x": 1733.6162627327012,
-            "y": 1439.8292935168402
+            "y": 1438.6122229162079
           },
           {
             "x": 1585.1088865472432,
-            "y": 1439.8292935168402
+            "y": 1438.6122229162079
           },
           {
             "x": 1585.1088865472432,
-            "y": 1392.4488935721802
+            "y": 1391.231822971548
           }
         ],
         "sides": [
@@ -1218,11 +1233,7 @@
       ],
       "ref": "742e1275-de2e-4675-a75e-5902b8832233",
       "GUID": "019a5d84-8470-44b8-beb6-5b35edc7b9a3",
-      "hackoladeMeta": {
-        "validationErrors": {
-          "name": true
-        }
-      }
+      "hackoladeMeta": {}
     }
   ],
   "users": [],
@@ -1245,7 +1256,7 @@
     "021aefa8-d5f1-4a55-8449-b940c71f8bd2": "fk_Address_id_to_Supplier_Address",
     "758cdfb2-7717-4487-b6af-5a2057a5a0fb": "contains",
     "9547a392-9459-43cc-b3ff-b40ce569e12f": "has",
-    "019a5d84-8470-44b8-beb6-5b35edc7b9a3": "is issued by",
+    "019a5d84-8470-44b8-beb6-5b35edc7b9a3": "is_issued_by",
     "d6d76faa-ff30-5a41-8c60-02eea4dbeb34": "",
     "55e67346-9510-4ad0-9431-ab96ef358ec3": "Product Category Duality View",
     "65c775b4-7fcd-4dec-82ae-1a954389c70c": "Name",
@@ -1730,7 +1741,7 @@
         "definitions": {
           "type": "definitions",
           "properties": [],
-          "GUID": "4e5ecd54-5958-49a2-ba9b-b2b1c10868dd"
+          "GUID": "bd4fd027-2cdf-4794-8a9c-65f4e77fc951"
         },
         "isActivated": true,
         "additionalProperties": false,
@@ -1853,7 +1864,7 @@
         "definitions": {
           "type": "definitions",
           "properties": [],
-          "GUID": "541a8e0a-5788-43af-8802-856ea7787895"
+          "GUID": "27e95b99-b51a-4a09-b927-961b7afea5d2"
         },
         "isActivated": true,
         "additionalProperties": false,
@@ -2258,7 +2269,7 @@
         "definitions": {
           "type": "definitions",
           "properties": [],
-          "GUID": "9ed7f3a5-904f-4a15-8174-50791f236aaa"
+          "GUID": "c5272724-405e-4bbb-ae83-149b85fab2c8"
         },
         "isActivated": true,
         "additionalProperties": false,
@@ -2664,12 +2675,12 @@
       "normalization": true
     }
   ],
-  "lastModifTS": "2025-01-09T14:40:18.468Z",
+  "lastModifTS": "2025-01-10T09:57:47.519Z",
   "persistenceSchemaVersion": "7",
   "isCreatedByPlugin": true,
   "pluginInformation": {
     "pluginName": "Oracle",
-    "pluginVersion": "0.2.22",
+    "pluginVersion": "0.2.28",
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
