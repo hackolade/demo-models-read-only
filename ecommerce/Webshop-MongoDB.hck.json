@@ -46,28 +46,18 @@
             "GUID": "fad47821-c108-4728-ac06-edd87399a408"
           },
           {
-            "GUID": "72bc07b9-d511-42e0-966a-7e5f14513040"
-          },
-          {
-            "GUID": "c85c860a-8480-43eb-a9c0-5678271016fe",
-            "name": "Customer",
-            "type": "reference",
-            "$ref": "#external/definitions/Customer",
-            "refType": "polyglot",
-            "ref": "5cc94e26-8eb9-4b1c-a78d-a870d9f640db",
-            "refIdPath": [
-              "71f8f9bd-37ce-4c73-b0e8-01de0b3eb8d0",
-              "9c502726-1a91-423c-a689-9dc3dbb02978",
-              "5cc94e26-8eb9-4b1c-a78d-a870d9f640db"
-            ],
-            "isActivated": true,
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            },
-            "error": {},
-            "code": "Customer"
+            "GUID": "72bc07b9-d511-42e0-966a-7e5f14513040",
+            "properties": [
+              {
+                "GUID": "eae27a5b-3644-46dd-a3d1-01afce2a245d",
+                "properties": []
+              }
+            ]
           }
         ]
+      },
+      "error": {
+        "refPath": false
       }
     }
   ],
@@ -104,67 +94,7 @@
       }
     }
   ],
-  "views": [
-    {
-      "name": "Payment view",
-      "type": "object",
-      "properties": [
-        {
-          "code": "Identifier",
-          "GUID": "252dd917-b447-4204-a871-9e65946fc470",
-          "type": "reference",
-          "name": "Identifier",
-          "ref": "2dc5cd19-9bb7-4405-a00f-69af0c39ea24",
-          "refType": "collectionReference",
-          "refIdPath": [
-            "f4d3c81f-3ecb-45f0-9c66-247f24dff2b0",
-            "fc98da0d-f7b3-4b2e-8b1e-f9686cb9e569"
-          ],
-          "isActivated": true,
-          "error": {
-            "name": false,
-            "code": false
-          },
-          "hackoladeMeta": {
-            "namingConvention": "code"
-          }
-        },
-        {
-          "code": "Payments",
-          "GUID": "8aa2e04f-f1e0-4a74-96dd-7519a328a0f6",
-          "type": "reference",
-          "name": "Payments",
-          "ref": "fad47821-c108-4728-ac06-edd87399a408",
-          "refType": "collectionReference",
-          "refIdPath": [
-            "f4d3c81f-3ecb-45f0-9c66-247f24dff2b0",
-            "0af2ea62-2399-45b2-b0b5-b7159d1f2284"
-          ],
-          "isActivated": true,
-          "error": {
-            "name": false,
-            "code": false
-          },
-          "hackoladeMeta": {
-            "namingConvention": "code"
-          }
-        }
-      ],
-      "isActivated": true,
-      "GUID": "85b51e97-1407-4461-870f-2533bb60d277",
-      "pipeline": "[\n    {\n        \"$project\": {\n            \"Identifier\": \"Undefined\",\n            \"Payments\": 1\n        }\n    }\n]",
-      "viewOn": "f4d3c81f-3ecb-45f0-9c66-247f24dff2b0",
-      "bucketId": "751eaf1f-e126-4b4e-ac49-142180c51a10",
-      "hackoladeMeta": {
-        "validationErrors": {
-          "name": false,
-          "code": false
-        },
-        "namingConvention": "code"
-      },
-      "code": "Paymentview"
-    }
-  ],
+  "views": [],
   "relationships": [],
   "users": [],
   "diagramViews": [],
@@ -411,8 +341,78 @@
                     "code": "Quantity"
                   },
                   {
+                    "type": "string",
+                    "name": "SKU",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    },
+                    "isActivated": true,
+                    "primaryKey": true,
+                    "required": true,
+                    "GUID": "acdd584f-e173-4126-a669-6ea2f414ffd0",
+                    "code": "SKU",
+                    "foreignCollection": "f7ceef84-81de-57ff-9055-5bb0b3337f02",
+                    "foreignField": [
+                      "f7ceef84-81de-57ff-9055-5bb0b3337f02",
+                      "a32b91a4-33c4-5028-815c-b44e4800f498"
+                    ]
+                  },
+                  {
+                    "type": "string",
+                    "name": "Name",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    },
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "required": false,
+                    "GUID": "39a652f4-defc-4297-8814-d16fdb749d18",
+                    "code": "Name"
+                  },
+                  {
+                    "type": "string",
+                    "name": "Description",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    },
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "required": false,
+                    "GUID": "6d536af4-ae07-48db-923e-3fd215300a8c",
+                    "code": "Description"
+                  },
+                  {
+                    "type": "string",
+                    "name": "Currency",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    },
+                    "isActivated": true,
+                    "required": true,
+                    "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
+                    "primaryKey": false,
+                    "enum": [
+                      "USD",
+                      "EUR",
+                      "JPY",
+                      "GBP",
+                      "AUD",
+                      "CAD",
+                      "CHF",
+                      "CNY",
+                      "SEK",
+                      "NZD",
+                      "INR",
+                      "MXN",
+                      "SGD",
+                      "HKD"
+                    ],
+                    "GUID": "c7ccd811-1374-4a95-96b8-1bbb7eda7590",
+                    "code": "Currency"
+                  },
+                  {
                     "type": "numeric",
-                    "name": "Applied unit price",
+                    "name": "Amount",
                     "hackoladeMeta": {
                       "namingConvention": "code"
                     },
@@ -420,176 +420,12 @@
                     "exclusiveMinimum": false,
                     "exclusiveMaximum": false,
                     "primaryKey": false,
-                    "required": false,
-                    "GUID": "172fc9ef-624f-4d75-9de7-48fd05190222",
+                    "required": true,
                     "mode": "decimal128",
-                    "code": "Appliedunitprice"
-                  },
-                  {
-                    "type": "document",
-                    "properties": [
-                      {
-                        "type": "string",
-                        "name": "SKU",
-                        "hackoladeMeta": {
-                          "namingConvention": "code"
-                        },
-                        "isActivated": true,
-                        "primaryKey": true,
-                        "required": true,
-                        "GUID": "a4f3aa58-9d9f-5502-ab69-41757131df38",
-                        "code": "SKU"
-                      },
-                      {
-                        "type": "string",
-                        "name": "Name",
-                        "hackoladeMeta": {
-                          "namingConvention": "code"
-                        },
-                        "isActivated": true,
-                        "primaryKey": false,
-                        "required": false,
-                        "GUID": "37740325-336b-5cb7-91b2-efdcd5fa0051",
-                        "code": "Name"
-                      },
-                      {
-                        "type": "string",
-                        "name": "Description",
-                        "hackoladeMeta": {
-                          "namingConvention": "code"
-                        },
-                        "isActivated": true,
-                        "primaryKey": false,
-                        "required": false,
-                        "GUID": "8f2c594b-7969-577d-85a0-184ff948d680",
-                        "code": "Description"
-                      },
-                      {
-                        "type": "array",
-                        "properties": [
-                          {
-                            "type": "string",
-                            "hackoladeMeta": {
-                              "namingConvention": "code"
-                            },
-                            "isActivated": true,
-                            "primaryKey": false,
-                            "required": false,
-                            "GUID": "8736f4e2-3a01-5887-ab1a-c03cef2f048a",
-                            "arrayItem": true,
-                            "displayName": "url"
-                          }
-                        ],
-                        "additionalItems": true,
-                        "name": "Images",
-                        "hackoladeMeta": {
-                          "namingConvention": "code"
-                        },
-                        "isActivated": true,
-                        "primaryKey": false,
-                        "required": false,
-                        "GUID": "666f423a-7b7a-5868-a566-877e84495615",
-                        "code": "Images"
-                      },
-                      {
-                        "type": "array",
-                        "properties": [
-                          {
-                            "type": "document",
-                            "properties": [
-                              {
-                                "type": "string",
-                                "name": "Currency",
-                                "hackoladeMeta": {
-                                  "namingConvention": "code"
-                                },
-                                "isActivated": true,
-                                "required": true,
-                                "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
-                                "primaryKey": false,
-                                "GUID": "ace253e1-08e4-5985-b0ae-f55471e551a9",
-                                "enum": [
-                                  "USD",
-                                  "EUR",
-                                  "JPY",
-                                  "GBP",
-                                  "AUD",
-                                  "CAD",
-                                  "CHF",
-                                  "CNY",
-                                  "SEK",
-                                  "NZD",
-                                  "INR",
-                                  "MXN",
-                                  "SGD",
-                                  "HKD"
-                                ],
-                                "code": "Currency"
-                              },
-                              {
-                                "type": "numeric",
-                                "name": "Amount",
-                                "hackoladeMeta": {
-                                  "namingConvention": "code"
-                                },
-                                "isActivated": true,
-                                "exclusiveMinimum": false,
-                                "exclusiveMaximum": false,
-                                "primaryKey": false,
-                                "required": true,
-                                "GUID": "3fbd9d24-1fc6-5a40-ba37-78cc244b2c9b",
-                                "mode": "decimal128",
-                                "foreignCollection": "",
-                                "foreignField": [],
-                                "code": "Amount"
-                              },
-                              {
-                                "type": "date",
-                                "primaryKey": false,
-                                "name": "Effective date",
-                                "hackoladeMeta": {
-                                  "namingConvention": "code"
-                                },
-                                "isActivated": true,
-                                "required": true,
-                                "GUID": "b3f3d47e-b612-5f86-a2a4-c172fcc5581e",
-                                "foreignCollection": "",
-                                "foreignField": [],
-                                "code": "Effectivedate"
-                              }
-                            ],
-                            "additionalProperties": false,
-                            "hackoladeMeta": {
-                              "namingConvention": "code"
-                            },
-                            "isActivated": true,
-                            "GUID": "908037fa-cfe9-5f11-8c5c-ff3e49bf9f17",
-                            "arrayItem": true,
-                            "primaryKey": false,
-                            "required": false,
-                            "displayName": "Price"
-                          }
-                        ],
-                        "additionalItems": true,
-                        "name": "Prices",
-                        "hackoladeMeta": {
-                          "namingConvention": "code"
-                        },
-                        "isActivated": true,
-                        "primaryKey": false,
-                        "required": false,
-                        "GUID": "9e05d28b-aea7-5efa-8f86-ccf35c8f3a3a",
-                        "code": "Prices"
-                      }
-                    ],
-                    "additionalProperties": false,
-                    "name": "Product",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    },
-                    "isActivated": true,
-                    "GUID": "e1bdb802-3fea-4b28-8120-92d99fde6691",
-                    "code": "Product"
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "GUID": "cf7c7d06-9e2a-490d-852d-29010e9eefd8",
+                    "code": "Amount"
                   }
                 ],
                 "additionalProperties": false,
@@ -624,20 +460,20 @@
         "isActivated": true,
         "additionalProperties": false,
         "bucketId": "e863d79d-6e38-4098-a01e-46d6249501f8",
-        "definitionEntityType": "collection",
-        "link": "Order management-Polyglot.hck.json",
-        "kind": "relativePath",
-        "fieldRelativePath": "#/Order management/Order",
-        "fileType": "hackoladeSchema",
         "hackoladeMeta": {
           "namingConvention": "code"
         },
         "code": "Order",
+        "definitionEntityType": "collection",
+        "fileType": "hackoladeSchema",
         "definitionRefs": [
           [
             "f4d3c81f-3ecb-45f0-9c66-247f24dff2b0"
           ]
-        ]
+        ],
+        "kind": "relativePath",
+        "link": "Order management-Polyglot.hck.json",
+        "fieldRelativePath": "#/Order management/Order"
       },
       {
         "name": "Product management",
@@ -680,45 +516,20 @@
         "isActivated": true,
         "indexes": [],
         "GUID": "e863d79d-6e38-4098-a01e-46d6249501f8",
-        "definitionEntityType": "bucket",
-        "link": "Order management-Polyglot.hck.json",
-        "kind": "relativePath",
-        "fieldRelativePath": "#/Order management",
-        "fileType": "hackoladeSchema",
         "hackoladeMeta": {
           "namingConvention": "code"
         },
         "code": "Ordermanagement",
+        "definitionEntityType": "bucket",
+        "fileType": "hackoladeSchema",
         "definitionRefs": [
           [
             "751eaf1f-e126-4b4e-ac49-142180c51a10"
           ]
-        ]
-      },
-      {
-        "type": "bucket",
-        "backgroundColor": {
-          "r": 0,
-          "g": 138,
-          "b": 0,
-          "a": 1
-        },
-        "show": true,
-        "indexes": [],
-        "GUID": "919fc2a8-2448-5d32-b343-c3eb758e7fe2",
-        "name": "Loyalty management",
-        "isActivated": true,
-        "collectionIds": [],
-        "definitionEntityType": "bucket",
-        "link": "Order management-Polyglot.hck.json",
+        ],
         "kind": "relativePath",
-        "fieldRelativePath": "#/Loyalty management",
-        "fileType": "hackoladeSchema",
-        "hackoladeMeta": {
-          "namingConvention": "code"
-        },
-        "code": "Loyaltymanagement",
-        "definitionRefs": []
+        "link": "Order management-Polyglot.hck.json",
+        "fieldRelativePath": "#/Order management"
       },
       {
         "type": "bucket",
@@ -762,8 +573,7 @@
             "isActivated": true,
             "primaryKey": false,
             "required": false,
-            "GUID": "e8a58173-1262-4752-859c-10ceec5598aa",
-            "code": "Firstname"
+            "GUID": "e8a58173-1262-4752-859c-10ceec5598aa"
           },
           {
             "type": "string",
@@ -774,8 +584,7 @@
             "isActivated": true,
             "primaryKey": false,
             "required": false,
-            "GUID": "872c6f47-1c90-4b97-ad5e-2c446d854243",
-            "code": "Lastname"
+            "GUID": "872c6f47-1c90-4b97-ad5e-2c446d854243"
           },
           {
             "type": "string",
@@ -786,8 +595,7 @@
             "isActivated": true,
             "primaryKey": true,
             "required": true,
-            "GUID": "18d05aa0-70b0-4f8e-9736-ffbc7104f778",
-            "code": "email"
+            "GUID": "18d05aa0-70b0-4f8e-9736-ffbc7104f778"
           },
           {
             "type": "string",
@@ -798,8 +606,7 @@
             "isActivated": true,
             "primaryKey": false,
             "required": false,
-            "GUID": "bb57e423-15a3-43d2-bb4f-81c084e50416",
-            "code": "Phonenumber"
+            "GUID": "bb57e423-15a3-43d2-bb4f-81c084e50416"
           },
           {
             "type": "date",
@@ -810,8 +617,7 @@
             },
             "isActivated": true,
             "required": false,
-            "GUID": "7fa9c279-fe3c-4864-83e9-10df93832aef",
-            "code": "Registrationdate"
+            "GUID": "7fa9c279-fe3c-4864-83e9-10df93832aef"
           },
           {
             "type": "document",
@@ -819,52 +625,42 @@
               {
                 "type": "string",
                 "name": "Street",
-                "hackoladeMeta": {
-                  "namingConvention": "code"
-                },
+                "hackoladeMeta": {},
                 "isActivated": true,
                 "primaryKey": false,
                 "required": false,
-                "GUID": "c5857260-3656-58d4-b243-67712a507c70",
-                "code": "Street"
+                "GUID": "ecbb43ea-0993-5816-a4ed-88245fc6aa74"
               },
               {
                 "type": "string",
                 "name": "Postal code",
-                "hackoladeMeta": {
-                  "namingConvention": "code"
-                },
+                "hackoladeMeta": {},
                 "isActivated": true,
                 "primaryKey": false,
                 "required": false,
-                "GUID": "a251d071-f920-5a2d-9cb5-e65f3dcaed6b",
+                "GUID": "1b1a3d76-edce-5c06-bb4f-2ce2d8af2680",
                 "foreignCollection": "",
-                "foreignField": [],
-                "code": "Postalcode"
+                "foreignField": []
               },
               {
                 "type": "string",
                 "name": "City",
-                "hackoladeMeta": {
-                  "namingConvention": "code"
-                },
+                "hackoladeMeta": {},
                 "isActivated": true,
                 "primaryKey": false,
                 "required": false,
-                "GUID": "7b74c1ad-b71a-5c8d-b51a-8cba71e13633",
+                "GUID": "46719528-1e8c-5df1-8362-9794cbdb696b",
                 "foreignCollection": "",
-                "foreignField": [],
-                "code": "City"
+                "foreignField": []
               }
             ],
             "additionalProperties": false,
-            "GUID": "7c3325ce-c9c4-4ad6-9287-8c1e2084ab9a",
             "name": "Bill-to address",
-            "isActivated": true,
             "hackoladeMeta": {
               "namingConvention": "code"
             },
-            "code": "Billtoaddress"
+            "isActivated": true,
+            "GUID": "7c3325ce-c9c4-4ad6-9287-8c1e2084ab9a"
           },
           {
             "type": "array",
@@ -875,51 +671,42 @@
                   {
                     "type": "string",
                     "name": "Street",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    },
+                    "hackoladeMeta": {},
                     "isActivated": true,
                     "primaryKey": false,
                     "required": false,
-                    "GUID": "bb7e9343-303e-5b06-a179-60cfdb0ea1be",
-                    "code": "Street"
+                    "GUID": "473443ff-5b77-557d-8f38-e2fc3887ec6c"
                   },
                   {
                     "type": "string",
                     "name": "Postal code",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    },
+                    "hackoladeMeta": {},
                     "isActivated": true,
                     "primaryKey": false,
                     "required": false,
-                    "GUID": "91673053-00fa-5132-ab09-b96d8381db4a",
+                    "GUID": "4d854aca-6c5b-5379-80e8-4fee9c366232",
                     "foreignCollection": "",
-                    "foreignField": [],
-                    "code": "Postalcode"
+                    "foreignField": []
                   },
                   {
                     "type": "string",
                     "name": "City",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    },
+                    "hackoladeMeta": {},
                     "isActivated": true,
                     "primaryKey": false,
                     "required": false,
-                    "GUID": "44a160cb-ded8-578a-8712-b8432b9b8188",
+                    "GUID": "5c335a67-1c92-5902-ae42-a807a09e38f9",
                     "foreignCollection": "",
-                    "foreignField": [],
-                    "code": "City"
+                    "foreignField": []
                   }
                 ],
                 "additionalProperties": false,
-                "GUID": "8678843b-3325-445b-9161-00f739973a3b",
-                "isActivated": true,
-                "displayName": "Address",
                 "hackoladeMeta": {
                   "namingConvention": "code"
                 },
+                "isActivated": true,
+                "GUID": "8678843b-3325-445b-9161-00f739973a3b",
+                "displayName": "Address",
                 "arrayItem": true
               }
             ],
@@ -931,13 +718,13 @@
             "isActivated": true,
             "primaryKey": false,
             "required": false,
-            "GUID": "a569060a-b3b2-4f73-95c7-7c2e2145c273",
-            "code": "Shiptoaddresses"
+            "GUID": "a569060a-b3b2-4f73-95c7-7c2e2145c273"
           }
         ],
         "additionalProperties": false,
         "color": "#555555",
         "GUID": "5cc94e26-8eb9-4b1c-a78d-a870d9f640db",
+        "code": "",
         "description": "",
         "comments": "",
         "definitionEntityType": "field",
@@ -945,13 +732,7 @@
         "link": "../common/Customer-Polyglot.hck.json",
         "kind": "relativePath",
         "fileType": "hackoladeSchema",
-        "definitionRefs": [
-          [
-            "f4d3c81f-3ecb-45f0-9c66-247f24dff2b0",
-            "46385b4a-a728-4579-8b09-10e9e7c52c99",
-            "c85c860a-8480-43eb-a9c0-5678271016fe"
-          ]
-        ]
+        "definitionRefs": []
       }
     ],
     "GUID": "9c502726-1a91-423c-a689-9dc3dbb02978"
@@ -993,7 +774,7 @@
       "normalization": false
     }
   ],
-  "lastModifTS": "2025-01-10T10:51:58.754Z",
+  "lastModifTS": "2025-01-10T14:00:48.782Z",
   "persistenceSchemaVersion": "7",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -1015,14 +796,6 @@
             "color": {
               "hex": "#2196F3"
             }
-          },
-          {
-            "GUID": "85b51e97-1407-4461-870f-2533bb60d277",
-            "x": 1427,
-            "y": 1529,
-            "width": 296,
-            "height": 163,
-            "color": {}
           }
         ],
         "erdDefinitions": {
@@ -1038,9 +811,7 @@
             "GUID": "751eaf1f-e126-4b4e-ac49-142180c51a10"
           }
         ],
-        "collapsedNodes": [
-          "f4d3c81f-3ecb-45f0-9c66-247f24dff2b046385b4a-a728-4579-8b09-10e9e7c52c99c85c860a-8480-43eb-a9c0-5678271016fe"
-        ],
+        "collapsedNodes": [],
         "activeRelationship": "",
         "activeRelationshipFields": {
           "childField": [],
@@ -1074,11 +845,6 @@
             "autoWidth": false,
             "autoHeight": false,
             "GUID": "f4d3c81f-3ecb-45f0-9c66-247f24dff2b0"
-          },
-          {
-            "autoWidth": false,
-            "autoHeight": false,
-            "GUID": "85b51e97-1407-4461-870f-2533bb60d277"
           }
         ],
         "relationshipUpdateDisabled": false,
