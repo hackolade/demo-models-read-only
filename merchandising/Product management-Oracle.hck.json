@@ -109,22 +109,6 @@
             "hackoladeMeta": {},
             "error": {}
           }
-        ],
-        "uniqueKey": [
-          {
-            "GUID": "24d575b0-be56-4865-9348-c340cdb21d25",
-            "compositeUniqueKey": [
-              {
-                "keyId": "6b6386de-f9dc-46d9-9fc2-16d3c2c58340"
-              },
-              {
-                "keyId": "918f5f74-43df-4045-b663-e312d4c5bc4b"
-              },
-              {
-                "keyId": "28aa362d-6455-4cca-bb6f-305b1ace27c7"
-              }
-            ]
-          }
         ]
       },
       "additionalProperties": false,
@@ -412,7 +396,7 @@
           {
             "GUID": "ca068016-1c2e-4d47-bc59-17b2a13ae042",
             "parentRelationship": "019a5d84-8470-44b8-beb6-5b35edc7b9a3",
-            "relationshipType": "Foreign Key",
+            "relationshipType": "",
             "foreignCollection": "1529b933-9dce-4eda-a7b4-bedbffad6e69",
             "foreignField": [
               "1529b933-9dce-4eda-a7b4-bedbffad6e69",
@@ -511,10 +495,34 @@
       },
       "additionalProperties": false,
       "hackoladeMeta": {
-        "namingConvention": "code"
+        "namingConvention": "code",
+        "validationErrors": {
+          "collectionName": true
+        }
       },
       "error": {
         "refPath": false
+      }
+    },
+    {
+      "collectionName": "Loyalty campaign ext ref",
+      "code": "Loyaltycampaignextref",
+      "refType": "polyglot",
+      "refNamePath": "#external/definitions/Loyalty campaign",
+      "properties": [],
+      "GUID": "597f3b94-103a-48ef-9178-07b627c8752f",
+      "bucketId": "343a4218-1d52-49a1-bd6a-41ddf7bdc55a",
+      "ref": "138a8017-4801-441d-bdfe-e54f867faed2",
+      "refIdPath": [
+        "8726fe59-875c-4786-812d-4e206135a9a3",
+        "fc5ffd0a-6d54-4600-af31-ee23ba2c5076",
+        "138a8017-4801-441d-bdfe-e54f867faed2"
+      ],
+      "type": "reference",
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "37091ffc-706d-46eb-8eb0-54c706fa1175"
       }
     }
   ],
@@ -546,7 +554,8 @@
         "0ebf8b17-2f08-434f-8e8c-0fd8d4396fb4",
         "c318c8ce-f00b-4a82-a1ff-33b19318efa5",
         "3f99e0a2-e75c-48c5-a1a5-2769ba87ac18",
-        "b6aafcc0-2209-4b49-904a-65a07dd45a8f"
+        "b6aafcc0-2209-4b49-904a-65a07dd45a8f",
+        "597f3b94-103a-48ef-9178-07b627c8752f"
       ],
       "hackoladeMeta": {
         "namingConvention": "code",
@@ -1135,11 +1144,11 @@
         "dataType": "",
         "shape": [
           {
-            "x": 1445.4495960660345,
+            "x": 1383.6162627327012,
             "y": 1485.9926228608679
           },
           {
-            "x": 1445.4495960660345,
+            "x": 1383.6162627327012,
             "y": 1438.6122229162079
           },
           {
@@ -1171,8 +1180,8 @@
       }
     },
     {
-      "name": "is_issued_by",
-      "relationshipType": "Foreign Key",
+      "name": "is issued by",
+      "relationshipType": "",
       "parentField": [
         [
           "1529b933-9dce-4eda-a7b4-bedbffad6e69",
@@ -1202,11 +1211,11 @@
         "dataType": "",
         "shape": [
           {
-            "x": 1781.9495960660345,
+            "x": 1733.6162627327012,
             "y": 1485.9926228608679
           },
           {
-            "x": 1781.9495960660345,
+            "x": 1733.6162627327012,
             "y": 1438.6122229162079
           },
           {
@@ -1256,7 +1265,7 @@
     "021aefa8-d5f1-4a55-8449-b940c71f8bd2": "fk_Address_id_to_Supplier_Address",
     "758cdfb2-7717-4487-b6af-5a2057a5a0fb": "contains",
     "9547a392-9459-43cc-b3ff-b40ce569e12f": "has",
-    "019a5d84-8470-44b8-beb6-5b35edc7b9a3": "is_issued_by",
+    "019a5d84-8470-44b8-beb6-5b35edc7b9a3": "is issued by",
     "d6d76faa-ff30-5a41-8c60-02eea4dbeb34": "",
     "55e67346-9510-4ad0-9431-ab96ef358ec3": "Product Category Duality View",
     "65c775b4-7fcd-4dec-82ae-1a954389c70c": "Name",
@@ -1284,7 +1293,10 @@
     "d94847b1-4347-472a-836d-99737bae9ff5": "Name",
     "a1e1386b-4a6e-49ab-b015-4f336660e0e2": "Description",
     "4453dffb-910d-4dff-946f-90c5b5a8cd9b": "Currency",
-    "532b75ce-ae07-4134-a683-069a9f94b007": "Amount"
+    "532b75ce-ae07-4134-a683-069a9f94b007": "Amount",
+    "597f3b94-103a-48ef-9178-07b627c8752f": "Loyalty campaign ext ref",
+    "25011a2e-f6be-4f65-a2d2-eec437c99b90": "new_column",
+    "ff5e20a6-3704-4223-b580-5600e76d33ba": "new_column1"
   },
   "definitions": {
     "type": "definitions",
@@ -1741,7 +1753,7 @@
         "definitions": {
           "type": "definitions",
           "properties": [],
-          "GUID": "bd4fd027-2cdf-4794-8a9c-65f4e77fc951"
+          "GUID": "84c4bd9b-cc7c-4e55-914b-df789291e83a"
         },
         "isActivated": true,
         "additionalProperties": false,
@@ -1864,7 +1876,7 @@
         "definitions": {
           "type": "definitions",
           "properties": [],
-          "GUID": "27e95b99-b51a-4a09-b927-961b7afea5d2"
+          "GUID": "0319adff-6b9c-4045-ad72-89c6167f4bfc"
         },
         "isActivated": true,
         "additionalProperties": false,
@@ -2269,7 +2281,7 @@
         "definitions": {
           "type": "definitions",
           "properties": [],
-          "GUID": "c5272724-405e-4bbb-ae83-149b85fab2c8"
+          "GUID": "9e3d630d-c063-4b3c-a89f-aa9ac825ac13"
         },
         "isActivated": true,
         "additionalProperties": false,
@@ -2623,6 +2635,95 @@
         "kind": "relativePath",
         "link": "Product-Polyglot.hck.json",
         "fieldRelativePath": "#/Product management"
+      },
+      {
+        "name": "Loyalty campaign",
+        "hackoladeMeta": {
+          "namingConvention": "code"
+        },
+        "isActivated": true,
+        "primaryKey": false,
+        "unique": false,
+        "properties": [
+          {
+            "primaryKey": false,
+            "mode": "varchar2",
+            "length": 20,
+            "subtype": "string",
+            "required": true,
+            "childType": "char",
+            "type": "string",
+            "partitionKey": false,
+            "compositePartitionKey": false,
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "Name",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            },
+            "isActivated": true,
+            "GUID": "52b23ea1-067c-4f56-a31f-ad924ae36667",
+            "unique": true,
+            "compositeKey": [
+              "partitionKey",
+              "compositePartitionKey",
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ],
+            "code": "Name"
+          },
+          {
+            "primaryKey": false,
+            "mode": "varchar2",
+            "length": 20,
+            "subtype": "string",
+            "required": false,
+            "childType": "char",
+            "type": "string",
+            "partitionKey": false,
+            "compositePartitionKey": false,
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "Description",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            },
+            "isActivated": true,
+            "GUID": "f29ec549-bdc4-48fc-ae32-8961f523108d",
+            "compositeKey": [
+              "partitionKey",
+              "compositePartitionKey",
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ],
+            "code": "Description"
+          }
+        ],
+        "childType": "object_udt",
+        "type": "document",
+        "compositeKey": [
+          "partitionKey",
+          "compositePartitionKey",
+          "compositePrimaryKey",
+          "compositeUniqueKey"
+        ],
+        "partitionKey": false,
+        "compositePartitionKey": false,
+        "compositePrimaryKey": false,
+        "compositeUniqueKey": false,
+        "GUID": "138a8017-4801-441d-bdfe-e54f867faed2",
+        "description": "",
+        "comments": "",
+        "definitionEntityType": "field",
+        "fieldRelativePath": "#/Loyalty management/Loyalty campaign",
+        "link": "../marketing/Loyalty-Polyglot.hck.json",
+        "kind": "relativePath",
+        "fileType": "hackoladeSchema",
+        "definitionRefs": [
+          [
+            "597f3b94-103a-48ef-9178-07b627c8752f"
+          ]
+        ]
       }
     ],
     "GUID": "fc5ffd0a-6d54-4600-af31-ee23ba2c5076"
@@ -2675,7 +2776,7 @@
       "normalization": true
     }
   ],
-  "lastModifTS": "2025-01-10T10:14:08.200Z",
+  "lastModifTS": "2025-01-10T10:54:47.914Z",
   "persistenceSchemaVersion": "7",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -2770,6 +2871,14 @@
             "width": 300,
             "height": 100,
             "color": {}
+          },
+          {
+            "GUID": "597f3b94-103a-48ef-9178-07b627c8752f",
+            "x": 1554.6223292580328,
+            "y": 1859.6026346944439,
+            "width": 313,
+            "height": 76,
+            "color": {}
           }
         ],
         "erdDefinitions": {
@@ -2836,6 +2945,11 @@
             "autoWidth": false,
             "autoHeight": false,
             "GUID": "1529b933-9dce-4eda-a7b4-bedbffad6e69"
+          },
+          {
+            "autoWidth": false,
+            "autoHeight": false,
+            "GUID": "597f3b94-103a-48ef-9178-07b627c8752f"
           }
         ],
         "relationshipUpdateDisabled": false,
