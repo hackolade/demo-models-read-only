@@ -81,6 +81,7 @@
           "compositePrimaryKey": false,
           "primaryKey": false,
           "GUID": "7fa9c279-fe3c-4864-83e9-10df93832aef",
+          "description": "Records the date when the customer registered on the e-commerce platform. It is essential for tracking customer lifecycle stages, analyzing customer acquisition trends, and managing loyalty programs.",
           "error": {}
         },
         {
@@ -103,9 +104,9 @@
           "compositePrimaryKey": false,
           "compositeUniqueKey": false,
           "error": {
-            "name": false,
-            "refPath": false
-          }
+            "refDescription": false
+          },
+          "refDescription": "Stores the billing address associated with the customer. It is used for invoicing and payment processing, ensuring that billing information is accurate and up to date. The bill-to address may differ from the shipping address and is crucial for financial record-keeping."
         },
         {
           "name": "Ship-to addresses",
@@ -138,7 +139,6 @@
               }
             }
           ],
-          "alternateKey": false,
           "childType": "array",
           "type": "array",
           "compositeKey": [
@@ -146,11 +146,11 @@
             "compositeUniqueKey"
           ],
           "compositePrimaryKey": false,
-          "compositeUniqueKey": false,
-          "error": {},
           "primaryKey": false,
           "required": false,
-          "GUID": "a569060a-b3b2-4f73-95c7-7c2e2145c273"
+          "GUID": "a569060a-b3b2-4f73-95c7-7c2e2145c273",
+          "description": "Holds a list of potential shipping addresses registered by the customer. Customers can maintain multiple shipping addresses for convenience and flexibility, allowing them to select a preferred address when placing an order. This feature enhances the user experience by accommodating different delivery locations, such as home, work, or gift recipients.",
+          "error": {}
         }
       ],
       "definitions": {
@@ -319,7 +319,7 @@
   "GUID": "dca9ade7-ee0b-4953-b408-cc0e6b806e82",
   "isLineageEnabled": false,
   "polyglotModelPaths": [],
-  "lastModifTS": "2025-01-10T10:14:59.620Z",
+  "lastModifTS": "2025-01-16T06:34:39.596Z",
   "persistenceSchemaVersion": "7",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -328,9 +328,14 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "7.9.5"
+    "version": "7.9.6"
   },
-  "hackoladeMeta": {},
+  "hackoladeMeta": {
+    "validationErrors": {
+      "description": false
+    }
+  },
+  "description": "The **Customer** entity represents individuals or organizations that engage with the e-commerce platform. This entity captures essential information about customers, allowing for effective management of customer relationships, order processing, and personalized marketing efforts.",
   "settings": {
     "centralPane": {
       "dbLevel": {
