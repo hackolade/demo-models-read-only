@@ -19,6 +19,7 @@
             "compositeUniqueKey"
           ],
           "GUID": "226178a4-d5d7-4303-8ded-6edd2bf5e94a",
+          "description": "Specifies the street name and number, providing detailed location information within a city or town.",
           "error": {}
         },
         {
@@ -34,12 +35,10 @@
             "compositeUniqueKey"
           ],
           "GUID": "172ef4de-fb50-4087-a44b-9a34e92b1f39",
-          "error": {
-            "name": false,
-            "code": false
-          },
           "foreignCollection": "",
-          "foreignField": []
+          "foreignField": [],
+          "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
+          "error": {}
         },
         {
           "name": "City",
@@ -56,6 +55,7 @@
           "GUID": "f23a20a2-d7b1-476d-b567-50a67b99f2fc",
           "foreignCollection": "",
           "foreignField": [],
+          "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
           "error": {}
         }
       ],
@@ -66,7 +66,8 @@
       },
       "isActivated": true,
       "additionalProperties": false,
-      "bucketId": ""
+      "bucketId": "",
+      "description": "Represents a physical location, including street details, postal code, and city information. Used to store and manage location-based data for individuals, businesses, or properties."
     }
   ],
   "buckets": [],
@@ -110,8 +111,8 @@
   "creationTS": "2024-12-31T10:50:34.735Z",
   "GUID": "251c1cc6-cb0b-4efc-bbc7-56d5a47c2515",
   "isLineageEnabled": false,
-  "lastModifTS": "2025-01-10T10:14:49.696Z",
-  "persistenceSchemaVersion": "7",
+  "lastModifTS": "2025-02-19T11:11:17.449Z",
+  "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
     "pluginName": "Polyglot",
@@ -119,9 +120,14 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "7.9.5"
+    "version": "8.0.1"
   },
-  "hackoladeMeta": {},
+  "hackoladeMeta": {
+    "validationErrors": {
+      "description": false
+    }
+  },
+  "description": "This Model serves as a basic example of reusable definitions within a data modeling context.\n\nIt is intended for illustration purposes only and simplifies the complexities of address data management, omitting certain variations and best practices relevant to real-world applications.",
   "settings": {
     "centralPane": {
       "dbLevel": {

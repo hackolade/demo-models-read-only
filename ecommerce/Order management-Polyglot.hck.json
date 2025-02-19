@@ -297,7 +297,8 @@
                     "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648",
                     "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
                     "6b6386de-f9dc-46d9-9fc2-16d3c2c58340"
-                  ]
+                  ],
+                  "relationshipType": "Foreign Master"
                 },
                 {
                   "GUID": "39a652f4-defc-4297-8814-d16fdb749d18",
@@ -472,7 +473,8 @@
             "GUID": "6ef810f9-c366-426b-9aa7-97f54138905f"
           }
         ]
-      }
+      },
+      "description": "Represents the items available for sale in the e-commerce platform. It encompasses essential details about each product, including its **name**, **description**, **pricing**, and associations with **categories** and **suppliers**. This entity is crucial for managing inventory and facilitating sales transactions."
     },
     {
       "GUID": "e2ba0994-1763-4b13-8b19-e7a0d9f95edb",
@@ -563,7 +565,7 @@
   "relationships": [
     {
       "name": "placed",
-      "relationshipType": "",
+      "relationshipType": "Foreign Master",
       "parentField": [],
       "parentCardinality": "1",
       "childField": [],
@@ -607,7 +609,7 @@
     },
     {
       "name": "concerns",
-      "relationshipType": "",
+      "relationshipType": "Foreign Master",
       "parentField": [
         [
           "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648",
@@ -664,7 +666,7 @@
     },
     {
       "name": "contains",
-      "relationshipType": "",
+      "relationshipType": "Foreign Master",
       "parentField": [],
       "parentCardinality": "1",
       "childField": [],
@@ -708,7 +710,7 @@
     },
     {
       "name": "grants",
-      "relationshipType": "",
+      "relationshipType": "Foreign Master",
       "parentField": [],
       "parentCardinality": "1",
       "childField": [],
@@ -815,6 +817,7 @@
             "hackoladeMeta": {},
             "isActivated": true,
             "GUID": "6b6386de-f9dc-46d9-9fc2-16d3c2c58340",
+            "description": "A unique identifier assigned to each product for inventory management and tracking purposes. It helps differentiate products and streamline the ordering process.",
             "mode": "",
             "compositeKey": [
               "compositePrimaryKey",
@@ -856,6 +859,7 @@
               "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
               "97db87db-8fbe-41bb-8850-34193c9ee07e"
             ],
+            "relationshipType": "Foreign Master",
             "mode": "",
             "compositeKey": [
               "compositePrimaryKey",
@@ -913,6 +917,7 @@
             "primaryKey": false,
             "required": false,
             "GUID": "dc12c121-c011-42fd-865f-1a0fcd657fc0",
+            "description": "An array of URLs representing images of the product for display on the website. These images enhance the customer experience by providing visual context and details about the product.",
             "compositeKey": [
               "compositePrimaryKey",
               "compositeUniqueKey"
@@ -1025,6 +1030,7 @@
             "primaryKey": false,
             "required": false,
             "GUID": "097524b6-a4e7-4091-bf57-be02308a2816",
+            "description": "An array of price records associated with the product, each linked to an **effective date**. This allows for tracking price changes over time and supports promotional pricing strategies.",
             "compositeKey": [
               "compositePrimaryKey",
               "compositeUniqueKey"
@@ -1039,6 +1045,7 @@
         "isActivated": true,
         "additionalProperties": false,
         "bucketId": "4631c9fb-41fb-4647-a18e-f22367a656c5",
+        "description": "Represents the items available for sale in the e-commerce platform. It encompasses essential details about each product, including its **name**, **description**, **pricing**, and associations with **categories** and **suppliers**. This entity is crucial for managing inventory and facilitating sales transactions.",
         "definitionEntityType": "collection",
         "fileType": "hackoladeSchema",
         "definitionRefs": [
@@ -1139,6 +1146,7 @@
             "isActivated": true,
             "primaryKey": false,
             "GUID": "7fa9c279-fe3c-4864-83e9-10df93832aef",
+            "description": "Records the date when the customer registered on the e-commerce platform. It is essential for tracking customer lifecycle stages, analyzing customer acquisition trends, and managing loyalty programs.",
             "compositeKey": [
               "compositePrimaryKey",
               "compositeUniqueKey"
@@ -1158,6 +1166,7 @@
                 "hackoladeMeta": {},
                 "isActivated": true,
                 "GUID": "ecbb43ea-0993-5816-a4ed-88245fc6aa74",
+                "description": "Specifies the street name and number, providing detailed location information within a city or town.",
                 "mode": "",
                 "compositeKey": [
                   "compositePrimaryKey",
@@ -1178,6 +1187,7 @@
                 "GUID": "1b1a3d76-edce-5c06-bb4f-2ce2d8af2680",
                 "foreignCollection": "",
                 "foreignField": [],
+                "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
                 "mode": "",
                 "compositeKey": [
                   "compositePrimaryKey",
@@ -1198,6 +1208,7 @@
                 "GUID": "46719528-1e8c-5df1-8362-9794cbdb696b",
                 "foreignCollection": "",
                 "foreignField": [],
+                "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
                 "mode": "",
                 "compositeKey": [
                   "compositePrimaryKey",
@@ -1215,6 +1226,7 @@
             "hackoladeMeta": {},
             "isActivated": true,
             "GUID": "7c3325ce-c9c4-4ad6-9287-8c1e2084ab9a",
+            "refDescription": "Stores the billing address associated with the customer. It is used for invoicing and payment processing, ensuring that billing information is accurate and up to date. The bill-to address may differ from the shipping address and is crucial for financial record-keeping.",
             "compositeKey": [
               "compositePrimaryKey",
               "compositeUniqueKey"
@@ -1236,6 +1248,7 @@
                     "hackoladeMeta": {},
                     "isActivated": true,
                     "GUID": "473443ff-5b77-557d-8f38-e2fc3887ec6c",
+                    "description": "Specifies the street name and number, providing detailed location information within a city or town.",
                     "mode": "",
                     "compositeKey": [
                       "compositePrimaryKey",
@@ -1256,6 +1269,7 @@
                     "GUID": "4d854aca-6c5b-5379-80e8-4fee9c366232",
                     "foreignCollection": "",
                     "foreignField": [],
+                    "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
                     "mode": "",
                     "compositeKey": [
                       "compositePrimaryKey",
@@ -1276,6 +1290,7 @@
                     "GUID": "5c335a67-1c92-5902-ae42-a807a09e38f9",
                     "foreignCollection": "",
                     "foreignField": [],
+                    "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
                     "mode": "",
                     "compositeKey": [
                       "compositePrimaryKey",
@@ -1311,6 +1326,7 @@
             "primaryKey": false,
             "required": false,
             "GUID": "a569060a-b3b2-4f73-95c7-7c2e2145c273",
+            "description": "Holds a list of potential shipping addresses registered by the customer. Customers can maintain multiple shipping addresses for convenience and flexibility, allowing them to select a preferred address when placing an order. This feature enhances the user experience by accommodating different delivery locations, such as home, work, or gift recipients.",
             "compositeKey": [
               "compositePrimaryKey",
               "compositeUniqueKey"
@@ -1401,6 +1417,7 @@
               "compositeUniqueKey"
             ],
             "GUID": "0431087b-df8c-58a7-8eee-ab609a981696",
+            "description": "Specifies the street name and number, providing detailed location information within a city or town.",
             "error": {}
           },
           {
@@ -1416,12 +1433,10 @@
               "compositeUniqueKey"
             ],
             "GUID": "6a41d821-8e8b-5d8f-a603-a5aec19cb00f",
-            "error": {
-              "name": false,
-              "code": false
-            },
             "foreignCollection": "",
-            "foreignField": []
+            "foreignField": [],
+            "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
+            "error": {}
           },
           {
             "name": "City",
@@ -1438,6 +1453,7 @@
             "GUID": "4e207b90-234d-51bb-b3d9-d87dcacadbf8",
             "foreignCollection": "",
             "foreignField": [],
+            "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
             "error": {}
           }
         ],
@@ -1474,10 +1490,11 @@
           "compositeUniqueKey"
         ],
         "GUID": "268d0db8-65bc-4a7a-a9f6-5348a7934439",
-        "error": {},
         "childRelationships": [
           "170fd180-4f35-44ca-8389-7519c1aa9e0b"
         ],
+        "description": "A unique identifier assigned to each product for inventory management and tracking purposes. It helps differentiate products and streamline the ordering process.",
+        "error": {},
         "link": "../merchandising/Product-Polyglot.hck.json",
         "fieldRelativePath": "#/Product management/Product/properties/SKU",
         "kind": "relativePath",
@@ -1660,8 +1677,8 @@
       "normalization": false
     }
   ],
-  "lastModifTS": "2025-01-10T14:01:46.922Z",
-  "persistenceSchemaVersion": "7",
+  "lastModifTS": "2025-02-19T11:07:28.260Z",
+  "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
     "pluginName": "Polyglot",
@@ -1669,9 +1686,14 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "7.9.5"
+    "version": "8.0.1"
   },
-  "hackoladeMeta": {},
+  "hackoladeMeta": {
+    "validationErrors": {
+      "description": false
+    }
+  },
+  "description": "This Model serves as a basic example of reusable definitions within a data modeling context.\n\nIt is intended for illustration purposes only and simplifies the complexities of order management, omitting certain variations and best practices relevant to real-world applications.",
   "settings": {
     "centralPane": {
       "dbLevel": {
