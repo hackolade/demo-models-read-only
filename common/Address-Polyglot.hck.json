@@ -111,7 +111,7 @@
   "creationTS": "2024-12-31T10:50:34.735Z",
   "GUID": "251c1cc6-cb0b-4efc-bbc7-56d5a47c2515",
   "isLineageEnabled": false,
-  "lastModifTS": "2025-02-19T11:03:59.978Z",
+  "lastModifTS": "2025-02-19T11:11:17.449Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -124,10 +124,10 @@
   },
   "hackoladeMeta": {
     "validationErrors": {
-      "comments": false
+      "description": false
     }
   },
-  "comments": "This Model serves as a basic example of reusable definitions within a data modeling context.\n\nIt is intended for illustration purposes only and simplifies the complexities of address data management, omitting certain variations and best practices relevant to real-world applications.",
+  "description": "This Model serves as a basic example of reusable definitions within a data modeling context.\n\nIt is intended for illustration purposes only and simplifies the complexities of address data management, omitting certain variations and best practices relevant to real-world applications.",
   "settings": {
     "centralPane": {
       "dbLevel": {
