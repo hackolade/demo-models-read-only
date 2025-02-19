@@ -14,7 +14,7 @@
       ],
       "isActivated": true,
       "collectionName": "Order",
-      "code": "Order",
+      "code": "order",
       "bucketId": "751eaf1f-e126-4b4e-ac49-142180c51a10",
       "properties": [],
       "definitions": {
@@ -22,37 +22,54 @@
         "GUID": "d79eb44a-daa3-44fb-b90a-c94b2aa5e3aa"
       },
       "hackoladeMeta": {
-        "namingConvention": "code"
+        "namingConvention": "code",
+        "validationErrors": {}
       },
       "additionalProperties": false,
       "referenceDiff": {
         "properties": [
           {
-            "GUID": "2dc5cd19-9bb7-4405-a00f-69af0c39ea24"
+            "GUID": "2dc5cd19-9bb7-4405-a00f-69af0c39ea24",
+            "hackoladeMeta": {},
+            "error": {}
           },
           {
-            "GUID": "17ee1d91-fa06-4638-831b-a7766df0e191"
+            "GUID": "17ee1d91-fa06-4638-831b-a7766df0e191",
+            "hackoladeMeta": {},
+            "error": {}
           },
           {
-            "GUID": "6dac6534-e11a-49ac-a049-30f3b1207b88"
+            "GUID": "6dac6534-e11a-49ac-a049-30f3b1207b88",
+            "hackoladeMeta": {},
+            "error": {}
           },
           {
-            "GUID": "d8e8b56d-827d-4fd1-bea0-07bd5bab9c2e"
+            "GUID": "d8e8b56d-827d-4fd1-bea0-07bd5bab9c2e",
+            "hackoladeMeta": {},
+            "error": {}
           },
           {
-            "GUID": "9e4faa2d-6567-4c55-908d-59f30426bdc1"
+            "GUID": "9e4faa2d-6567-4c55-908d-59f30426bdc1",
+            "hackoladeMeta": {},
+            "error": {}
           },
           {
-            "GUID": "fad47821-c108-4728-ac06-edd87399a408"
+            "GUID": "fad47821-c108-4728-ac06-edd87399a408",
+            "hackoladeMeta": {},
+            "error": {}
           },
           {
             "GUID": "72bc07b9-d511-42e0-966a-7e5f14513040",
             "properties": [
               {
                 "GUID": "eae27a5b-3644-46dd-a3d1-01afce2a245d",
-                "properties": []
+                "properties": [],
+                "hackoladeMeta": {},
+                "error": {}
               }
-            ]
+            ],
+            "hackoladeMeta": {},
+            "error": {}
           }
         ]
       },
@@ -75,7 +92,7 @@
         "e863d79d-6e38-4098-a01e-46d6249501f8"
       ],
       "isActivated": true,
-      "code": "Ordermanagement",
+      "code": "orderManagement",
       "backgroundColor": {
         "r": 0,
         "g": 188,
@@ -88,9 +105,7 @@
       ],
       "hackoladeMeta": {
         "namingConvention": "code",
-        "validationErrors": {
-          "name": true
-        }
+        "validationErrors": {}
       }
     }
   ],
@@ -119,22 +134,243 @@
     "type": "polyglotDefinitions",
     "properties": [
       {
-        "code": "",
+        "name": "Customer",
+        "hackoladeMeta": {
+          "namingConvention": "code"
+        },
+        "isActivated": true,
+        "type": "document",
+        "properties": [
+          {
+            "type": "string",
+            "name": "First name",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            },
+            "isActivated": true,
+            "primaryKey": false,
+            "required": false,
+            "GUID": "e8a58173-1262-4752-859c-10ceec5598aa",
+            "code": "firstName",
+            "error": {}
+          },
+          {
+            "type": "string",
+            "name": "Last name",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            },
+            "isActivated": true,
+            "primaryKey": false,
+            "required": false,
+            "GUID": "872c6f47-1c90-4b97-ad5e-2c446d854243",
+            "code": "lastName",
+            "error": {}
+          },
+          {
+            "type": "string",
+            "name": "email",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            },
+            "isActivated": true,
+            "primaryKey": true,
+            "required": true,
+            "GUID": "18d05aa0-70b0-4f8e-9736-ffbc7104f778",
+            "code": "email",
+            "error": {}
+          },
+          {
+            "type": "string",
+            "name": "Phone number",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            },
+            "isActivated": true,
+            "primaryKey": false,
+            "required": false,
+            "GUID": "bb57e423-15a3-43d2-bb4f-81c084e50416",
+            "code": "phoneNumber",
+            "error": {}
+          },
+          {
+            "type": "date",
+            "primaryKey": false,
+            "name": "Registration date",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            },
+            "isActivated": true,
+            "required": false,
+            "GUID": "7fa9c279-fe3c-4864-83e9-10df93832aef",
+            "code": "registrationDate",
+            "error": {}
+          },
+          {
+            "type": "document",
+            "properties": [
+              {
+                "type": "string",
+                "name": "Street",
+                "hackoladeMeta": {
+                  "namingConvention": "code"
+                },
+                "isActivated": true,
+                "primaryKey": false,
+                "required": false,
+                "GUID": "ecbb43ea-0993-5816-a4ed-88245fc6aa74",
+                "code": "street",
+                "error": {}
+              },
+              {
+                "type": "string",
+                "name": "Postal code",
+                "hackoladeMeta": {
+                  "namingConvention": "code"
+                },
+                "isActivated": true,
+                "primaryKey": false,
+                "required": false,
+                "GUID": "1b1a3d76-edce-5c06-bb4f-2ce2d8af2680",
+                "foreignCollection": "",
+                "foreignField": [],
+                "code": "postalCode",
+                "error": {}
+              },
+              {
+                "type": "string",
+                "name": "City",
+                "hackoladeMeta": {
+                  "namingConvention": "code"
+                },
+                "isActivated": true,
+                "primaryKey": false,
+                "required": false,
+                "GUID": "46719528-1e8c-5df1-8362-9794cbdb696b",
+                "foreignCollection": "",
+                "foreignField": [],
+                "code": "city",
+                "error": {}
+              }
+            ],
+            "additionalProperties": false,
+            "name": "Bill-to address",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            },
+            "isActivated": true,
+            "GUID": "7c3325ce-c9c4-4ad6-9287-8c1e2084ab9a",
+            "code": "bill_toAddress",
+            "error": {}
+          },
+          {
+            "type": "array",
+            "properties": [
+              {
+                "type": "document",
+                "properties": [
+                  {
+                    "type": "string",
+                    "name": "Street",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    },
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "required": false,
+                    "GUID": "473443ff-5b77-557d-8f38-e2fc3887ec6c",
+                    "code": "street",
+                    "error": {}
+                  },
+                  {
+                    "type": "string",
+                    "name": "Postal code",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    },
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "required": false,
+                    "GUID": "4d854aca-6c5b-5379-80e8-4fee9c366232",
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "code": "postalCode",
+                    "error": {}
+                  },
+                  {
+                    "type": "string",
+                    "name": "City",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    },
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "required": false,
+                    "GUID": "5c335a67-1c92-5902-ae42-a807a09e38f9",
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "code": "city",
+                    "error": {}
+                  }
+                ],
+                "additionalProperties": false,
+                "hackoladeMeta": {
+                  "namingConvention": "code"
+                },
+                "isActivated": true,
+                "GUID": "8678843b-3325-445b-9161-00f739973a3b",
+                "displayName": "Address",
+                "arrayItem": true,
+                "error": {}
+              }
+            ],
+            "additionalItems": true,
+            "name": "Ship-to addresses",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            },
+            "isActivated": true,
+            "primaryKey": false,
+            "required": false,
+            "GUID": "a569060a-b3b2-4f73-95c7-7c2e2145c273",
+            "code": "ship_toAddresses",
+            "error": {}
+          }
+        ],
+        "additionalProperties": false,
+        "color": "#555555",
+        "GUID": "5cc94e26-8eb9-4b1c-a78d-a870d9f640db",
+        "code": "customer",
+        "description": "",
+        "comments": "",
+        "definitionEntityType": "field",
+        "fieldRelativePath": "#/Customer management/Customer",
+        "link": "../common/Customer-Polyglot.hck.json",
+        "kind": "relativePath",
+        "fileType": "hackoladeSchema",
+        "definitionRefs": [],
+        "error": {}
+      },
+      {
+        "code": "order",
         "GUID": "46385b4a-a728-4579-8b09-10e9e7c52c99",
         "collectionName": "Order",
         "type": "object",
         "properties": [
           {
-            "code": "",
+            "code": "identifier",
             "type": "string",
             "name": "Identifier",
             "isActivated": true,
             "primaryKey": true,
             "required": true,
-            "GUID": "2dc5cd19-9bb7-4405-a00f-69af0c39ea24"
+            "GUID": "2dc5cd19-9bb7-4405-a00f-69af0c39ea24",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            }
           },
           {
-            "code": "",
+            "code": "totalAmount",
             "type": "numeric",
             "name": "Total amount",
             "isActivated": true,
@@ -143,43 +379,55 @@
             "primaryKey": false,
             "required": false,
             "GUID": "17ee1d91-fa06-4638-831b-a7766df0e191",
-            "mode": "decimal128"
+            "mode": "decimal128",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            }
           },
           {
-            "code": "",
+            "code": "status",
             "type": "string",
             "name": "Status",
             "isActivated": true,
             "required": false,
             "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
             "primaryKey": false,
-            "GUID": "6dac6534-e11a-49ac-a049-30f3b1207b88"
+            "GUID": "6dac6534-e11a-49ac-a049-30f3b1207b88",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            }
           },
           {
-            "code": "",
+            "code": "trackingNumber",
             "type": "string",
             "name": "Tracking number",
             "isActivated": true,
             "primaryKey": false,
             "required": false,
-            "GUID": "d8e8b56d-827d-4fd1-bea0-07bd5bab9c2e"
+            "GUID": "d8e8b56d-827d-4fd1-bea0-07bd5bab9c2e",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            }
           },
           {
-            "code": "",
+            "code": "ship_toAddress",
             "type": "document",
             "properties": [
               {
-                "code": "",
+                "code": "street",
                 "type": "string",
                 "name": "Street",
                 "isActivated": true,
                 "primaryKey": false,
                 "required": false,
                 "GUID": "99f6874d-0ce2-5b47-8ab9-42d7c3702219",
-                "description": "Specifies the street name and number, providing detailed location information within a city or town."
+                "description": "Specifies the street name and number, providing detailed location information within a city or town.",
+                "hackoladeMeta": {
+                  "namingConvention": "code"
+                }
               },
               {
-                "code": "",
+                "code": "postalCode",
                 "type": "string",
                 "name": "Postal code",
                 "isActivated": true,
@@ -188,10 +436,13 @@
                 "GUID": "e1cf9617-3aab-51fb-a0bf-11c788dc0179",
                 "foreignCollection": "",
                 "foreignField": [],
-                "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification."
+                "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
+                "hackoladeMeta": {
+                  "namingConvention": "code"
+                }
               },
               {
-                "code": "",
+                "code": "city",
                 "type": "string",
                 "name": "City",
                 "isActivated": true,
@@ -200,23 +451,29 @@
                 "GUID": "93594ede-d2dc-51d6-bfb2-06fcfee72d2b",
                 "foreignCollection": "",
                 "foreignField": [],
-                "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region."
+                "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
+                "hackoladeMeta": {
+                  "namingConvention": "code"
+                }
               }
             ],
             "additionalProperties": false,
             "name": "Ship-to address",
             "isActivated": true,
-            "GUID": "9e4faa2d-6567-4c55-908d-59f30426bdc1"
+            "GUID": "9e4faa2d-6567-4c55-908d-59f30426bdc1",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            }
           },
           {
-            "code": "",
+            "code": "payments",
             "type": "array",
             "properties": [
               {
                 "type": "document",
                 "properties": [
                   {
-                    "code": "",
+                    "code": "amount",
                     "type": "numeric",
                     "isActivated": true,
                     "exclusiveMinimum": false,
@@ -227,10 +484,13 @@
                     "mode": "decimal128",
                     "foreignCollection": "",
                     "foreignField": [],
-                    "name": "Amount"
+                    "name": "Amount",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    }
                   },
                   {
-                    "code": "",
+                    "code": "timestamp",
                     "type": "timestamp",
                     "name": "Timestamp",
                     "isActivated": true,
@@ -238,10 +498,13 @@
                     "required": false,
                     "GUID": "b2f61376-69c8-46f5-9f61-8e68a0dae68d",
                     "foreignCollection": "",
-                    "foreignField": []
+                    "foreignField": [],
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    }
                   },
                   {
-                    "code": "",
+                    "code": "paymentMethod",
                     "type": "string",
                     "name": "Payment method",
                     "isActivated": true,
@@ -250,10 +513,13 @@
                     "primaryKey": false,
                     "GUID": "37ecefbe-69cd-4c46-bfe2-bdb2fea3be1c",
                     "foreignCollection": "",
-                    "foreignField": []
+                    "foreignField": [],
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    }
                   },
                   {
-                    "code": "",
+                    "code": "status",
                     "type": "string",
                     "name": "Status",
                     "isActivated": true,
@@ -262,7 +528,10 @@
                     "primaryKey": false,
                     "GUID": "4b11b953-edb3-4c2d-8e36-a17406cb7b26",
                     "foreignCollection": "",
-                    "foreignField": []
+                    "foreignField": [],
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    }
                   }
                 ],
                 "additionalProperties": false,
@@ -282,17 +551,20 @@
             "isActivated": true,
             "primaryKey": false,
             "required": false,
-            "GUID": "fad47821-c108-4728-ac06-edd87399a408"
+            "GUID": "fad47821-c108-4728-ac06-edd87399a408",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            }
           },
           {
-            "code": "",
+            "code": "orderedItems",
             "type": "array",
             "properties": [
               {
                 "type": "document",
                 "properties": [
                   {
-                    "code": "",
+                    "code": "quantity",
                     "type": "numeric",
                     "name": "Quantity",
                     "isActivated": true,
@@ -301,10 +573,13 @@
                     "primaryKey": false,
                     "required": false,
                     "GUID": "e16e89ec-42c0-4647-ab3f-4225a2c9df1c",
-                    "mode": ""
+                    "mode": "",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    }
                   },
                   {
-                    "code": "",
+                    "code": "sku",
                     "type": "string",
                     "name": "SKU",
                     "isActivated": true,
@@ -317,28 +592,37 @@
                       "f7ceef84-81de-57ff-9055-5bb0b3337f02",
                       "a32b91a4-33c4-5028-815c-b44e4800f498"
                     ],
-                    "relationshipType": "Foreign Master"
+                    "relationshipType": "Foreign Master",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    }
                   },
                   {
-                    "code": "",
+                    "code": "name",
                     "type": "string",
                     "name": "Name",
                     "isActivated": true,
                     "primaryKey": false,
                     "required": false,
-                    "GUID": "39a652f4-defc-4297-8814-d16fdb749d18"
+                    "GUID": "39a652f4-defc-4297-8814-d16fdb749d18",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    }
                   },
                   {
-                    "code": "",
+                    "code": "description",
                     "type": "string",
                     "name": "Description",
                     "isActivated": true,
                     "primaryKey": false,
                     "required": false,
-                    "GUID": "6d536af4-ae07-48db-923e-3fd215300a8c"
+                    "GUID": "6d536af4-ae07-48db-923e-3fd215300a8c",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    }
                   },
                   {
-                    "code": "",
+                    "code": "currency",
                     "type": "string",
                     "name": "Currency",
                     "isActivated": true,
@@ -361,10 +645,13 @@
                       "SGD",
                       "HKD"
                     ],
-                    "GUID": "c7ccd811-1374-4a95-96b8-1bbb7eda7590"
+                    "GUID": "c7ccd811-1374-4a95-96b8-1bbb7eda7590",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    }
                   },
                   {
-                    "code": "",
+                    "code": "amount",
                     "type": "numeric",
                     "name": "Amount",
                     "isActivated": true,
@@ -375,7 +662,10 @@
                     "mode": "decimal128",
                     "foreignCollection": "",
                     "foreignField": [],
-                    "GUID": "cf7c7d06-9e2a-490d-852d-29010e9eefd8"
+                    "GUID": "cf7c7d06-9e2a-490d-852d-29010e9eefd8",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    }
                   }
                 ],
                 "additionalProperties": false,
@@ -395,7 +685,10 @@
             "isActivated": true,
             "primaryKey": false,
             "required": false,
-            "GUID": "72bc07b9-d511-42e0-966a-7e5f14513040"
+            "GUID": "72bc07b9-d511-42e0-966a-7e5f14513040",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            }
           }
         ],
         "definitions": {
@@ -415,7 +708,10 @@
         ],
         "kind": "relativePath",
         "link": "Order management-Polyglot.hck.json",
-        "fieldRelativePath": "#/Order management/Order"
+        "fieldRelativePath": "#/Order management/Order",
+        "hackoladeMeta": {
+          "namingConvention": "code"
+        }
       },
       {
         "name": "Product management",
@@ -439,11 +735,11 @@
         "hackoladeMeta": {
           "namingConvention": "code"
         },
-        "code": "Productmanagement",
+        "code": "productManagement",
         "definitionRefs": []
       },
       {
-        "code": "",
+        "code": "orderManagement",
         "name": "Order management",
         "type": "bucket",
         "collectionIds": [
@@ -468,7 +764,10 @@
         ],
         "kind": "relativePath",
         "link": "Order management-Polyglot.hck.json",
-        "fieldRelativePath": "#/Order management"
+        "fieldRelativePath": "#/Order management",
+        "hackoladeMeta": {
+          "namingConvention": "code"
+        }
       },
       {
         "type": "bucket",
@@ -492,185 +791,7 @@
         "hackoladeMeta": {
           "namingConvention": "code"
         },
-        "code": "Customermanagement",
-        "definitionRefs": []
-      },
-      {
-        "name": "Customer",
-        "hackoladeMeta": {
-          "namingConvention": "code"
-        },
-        "isActivated": true,
-        "type": "document",
-        "properties": [
-          {
-            "type": "string",
-            "name": "First name",
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            },
-            "isActivated": true,
-            "primaryKey": false,
-            "required": false,
-            "GUID": "e8a58173-1262-4752-859c-10ceec5598aa"
-          },
-          {
-            "type": "string",
-            "name": "Last name",
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            },
-            "isActivated": true,
-            "primaryKey": false,
-            "required": false,
-            "GUID": "872c6f47-1c90-4b97-ad5e-2c446d854243"
-          },
-          {
-            "type": "string",
-            "name": "email",
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            },
-            "isActivated": true,
-            "primaryKey": true,
-            "required": true,
-            "GUID": "18d05aa0-70b0-4f8e-9736-ffbc7104f778"
-          },
-          {
-            "type": "string",
-            "name": "Phone number",
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            },
-            "isActivated": true,
-            "primaryKey": false,
-            "required": false,
-            "GUID": "bb57e423-15a3-43d2-bb4f-81c084e50416"
-          },
-          {
-            "type": "date",
-            "primaryKey": false,
-            "name": "Registration date",
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            },
-            "isActivated": true,
-            "required": false,
-            "GUID": "7fa9c279-fe3c-4864-83e9-10df93832aef"
-          },
-          {
-            "type": "document",
-            "properties": [
-              {
-                "type": "string",
-                "name": "Street",
-                "hackoladeMeta": {},
-                "isActivated": true,
-                "primaryKey": false,
-                "required": false,
-                "GUID": "ecbb43ea-0993-5816-a4ed-88245fc6aa74"
-              },
-              {
-                "type": "string",
-                "name": "Postal code",
-                "hackoladeMeta": {},
-                "isActivated": true,
-                "primaryKey": false,
-                "required": false,
-                "GUID": "1b1a3d76-edce-5c06-bb4f-2ce2d8af2680",
-                "foreignCollection": "",
-                "foreignField": []
-              },
-              {
-                "type": "string",
-                "name": "City",
-                "hackoladeMeta": {},
-                "isActivated": true,
-                "primaryKey": false,
-                "required": false,
-                "GUID": "46719528-1e8c-5df1-8362-9794cbdb696b",
-                "foreignCollection": "",
-                "foreignField": []
-              }
-            ],
-            "additionalProperties": false,
-            "name": "Bill-to address",
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            },
-            "isActivated": true,
-            "GUID": "7c3325ce-c9c4-4ad6-9287-8c1e2084ab9a"
-          },
-          {
-            "type": "array",
-            "properties": [
-              {
-                "type": "document",
-                "properties": [
-                  {
-                    "type": "string",
-                    "name": "Street",
-                    "hackoladeMeta": {},
-                    "isActivated": true,
-                    "primaryKey": false,
-                    "required": false,
-                    "GUID": "473443ff-5b77-557d-8f38-e2fc3887ec6c"
-                  },
-                  {
-                    "type": "string",
-                    "name": "Postal code",
-                    "hackoladeMeta": {},
-                    "isActivated": true,
-                    "primaryKey": false,
-                    "required": false,
-                    "GUID": "4d854aca-6c5b-5379-80e8-4fee9c366232",
-                    "foreignCollection": "",
-                    "foreignField": []
-                  },
-                  {
-                    "type": "string",
-                    "name": "City",
-                    "hackoladeMeta": {},
-                    "isActivated": true,
-                    "primaryKey": false,
-                    "required": false,
-                    "GUID": "5c335a67-1c92-5902-ae42-a807a09e38f9",
-                    "foreignCollection": "",
-                    "foreignField": []
-                  }
-                ],
-                "additionalProperties": false,
-                "hackoladeMeta": {
-                  "namingConvention": "code"
-                },
-                "isActivated": true,
-                "GUID": "8678843b-3325-445b-9161-00f739973a3b",
-                "displayName": "Address",
-                "arrayItem": true
-              }
-            ],
-            "additionalItems": true,
-            "name": "Ship-to addresses",
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            },
-            "isActivated": true,
-            "primaryKey": false,
-            "required": false,
-            "GUID": "a569060a-b3b2-4f73-95c7-7c2e2145c273"
-          }
-        ],
-        "additionalProperties": false,
-        "color": "#555555",
-        "GUID": "5cc94e26-8eb9-4b1c-a78d-a870d9f640db",
-        "code": "",
-        "description": "",
-        "comments": "",
-        "definitionEntityType": "field",
-        "fieldRelativePath": "#/Customer management/Customer",
-        "link": "../common/Customer-Polyglot.hck.json",
-        "kind": "relativePath",
-        "fileType": "hackoladeSchema",
+        "code": "customerManagement",
         "definitionRefs": []
       }
     ],
@@ -688,7 +809,11 @@
       "name": "Disclaimer",
       "type": "annotation",
       "disableInitialFocus": true,
-      "value": "This MongoDB Webshop Model is intended for illustration purposes only and provides a simplified representation for a\nwebshop within a document database.\n\nWhile it captures essential entities and relationships, it does not encompass all potential complexities, or best practices that may be applicable in a comprehensive system Implementation."
+      "value": "This MongoDB Webshop Model is intended for illustration purposes only and provides a simplified representation for a\nwebshop within a document database.\n\nWhile it captures essential entities and relationships, it does not encompass all potential complexities, or best practices that may be applicable in a comprehensive system Implementation.",
+      "hackoladeMeta": {
+        "namingConvention": "code"
+      },
+      "code": "disclaimer"
     }
   ],
   "dbVersion": "v7.x",
@@ -704,7 +829,7 @@
     "customPropertiesUpdated": true
   },
   "isLineageEnabled": false,
-  "code": "Webshop",
+  "code": "webshop",
   "polyglotModelPaths": [
     {
       "GUID": "048f3b53-cce4-4874-bc0f-d4eca15f2635",
@@ -713,7 +838,7 @@
       "normalization": false
     }
   ],
-  "lastModifTS": "2025-02-19T11:08:53.556Z",
+  "lastModifTS": "2025-02-19T11:15:33.654Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -731,8 +856,8 @@
             "GUID": "f4d3c81f-3ecb-45f0-9c66-247f24dff2b0",
             "x": 1378.5380761523052,
             "y": 798.3563794255192,
-            "width": 494,
-            "height": 670,
+            "width": 304,
+            "height": 429,
             "color": {
               "hex": "#2196F3"
             }
@@ -782,8 +907,8 @@
         "nestedCollectionsLayout": "horizontal",
         "options": [
           {
-            "autoWidth": false,
-            "autoHeight": false,
+            "autoWidth": true,
+            "autoHeight": true,
             "GUID": "f4d3c81f-3ecb-45f0-9c66-247f24dff2b0"
           }
         ],
