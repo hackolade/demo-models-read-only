@@ -60,7 +60,8 @@
           "foreignField": [
             "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
             "97db87db-8fbe-41bb-8850-34193c9ee07e"
-          ]
+          ],
+          "relationshipType": "Foreign Master"
         },
         {
           "name": "Description",
@@ -321,7 +322,8 @@
           "foreignField": [
             "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
             "6b6386de-f9dc-46d9-9fc2-16d3c2c58340"
-          ]
+          ],
+          "relationshipType": "Foreign Master"
         },
         {
           "name": "Available quantity",
@@ -402,7 +404,8 @@
               "compositePrimaryKey": false,
               "compositeUniqueKey": false,
               "error": {
-                "refDescription": false
+                "refDescription": false,
+                "refPath": false
               },
               "refDescription": "The physical address of the warehouse, which is important for logistics and shipping purposes."
             }
@@ -559,7 +562,7 @@
   "relationships": [
     {
       "name": "is located at",
-      "relationshipType": "",
+      "relationshipType": "Foreign Master",
       "parentField": [],
       "parentCardinality": "1",
       "childField": [],
@@ -603,7 +606,7 @@
     },
     {
       "name": "contains",
-      "relationshipType": "",
+      "relationshipType": "Foreign Master",
       "parentField": [
         [
           "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
@@ -657,7 +660,7 @@
     },
     {
       "name": "is valid in",
-      "relationshipType": "",
+      "relationshipType": "Foreign Master",
       "parentField": [],
       "parentCardinality": "0..n",
       "childField": [],
@@ -701,7 +704,7 @@
     },
     {
       "name": "has",
-      "relationshipType": "",
+      "relationshipType": "Foreign Master",
       "parentField": [
         [
           "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
@@ -755,7 +758,7 @@
     },
     {
       "name": "is issued by",
-      "relationshipType": "",
+      "relationshipType": "Foreign Master",
       "parentField": [],
       "parentCardinality": "1..n",
       "childField": [],
@@ -867,6 +870,7 @@
               "compositeUniqueKey"
             ],
             "GUID": "2909b0ea-4d3f-5c8d-ba12-a21d45df9cac",
+            "description": "Specifies the street name and number, providing detailed location information within a city or town.",
             "error": {}
           },
           {
@@ -882,12 +886,10 @@
               "compositeUniqueKey"
             ],
             "GUID": "fdb1f874-9875-5ec1-8ce5-45da79156966",
-            "error": {
-              "name": false,
-              "code": false
-            },
             "foreignCollection": "",
-            "foreignField": []
+            "foreignField": [],
+            "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
+            "error": {}
           },
           {
             "name": "City",
@@ -904,6 +906,7 @@
             "GUID": "47ce865a-e0ff-51b6-857b-28104af58278",
             "foreignCollection": "",
             "foreignField": [],
+            "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
             "error": {}
           }
         ],
@@ -952,8 +955,8 @@
   "GUID": "530c923e-219d-470a-b2f9-1c2a82d43bb0",
   "isLineageEnabled": false,
   "polyglotModelPaths": [],
-  "lastModifTS": "2025-01-16T06:50:42.797Z",
-  "persistenceSchemaVersion": "7",
+  "lastModifTS": "2025-02-19T11:05:55.555Z",
+  "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
     "pluginName": "Polyglot",
@@ -961,9 +964,14 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "7.9.6"
+    "version": "8.0.1"
   },
-  "hackoladeMeta": {},
+  "hackoladeMeta": {
+    "validationErrors": {
+      "comments": false
+    }
+  },
+  "comments": "This Model serves as a basic example of reusable definitions within a data modeling context.\n\nIt is intended for illustration purposes only and simplifies the complexities of product management, omitting certain variations and best practices relevant to real-world applications.",
   "settings": {
     "centralPane": {
       "dbLevel": {

@@ -290,7 +290,7 @@
         ]
       },
       "name": "has",
-      "relationshipType": "",
+      "relationshipType": "Foreign Master",
       "parentCardinality": "1",
       "isActivated": true,
       "childCardinality": "0..n",
@@ -332,7 +332,7 @@
         ]
       },
       "name": "belongs to",
-      "relationshipType": "",
+      "relationshipType": "Foreign Master",
       "parentCardinality": "1",
       "isActivated": true,
       "childCardinality": "0..n",
@@ -454,6 +454,7 @@
             "isActivated": true,
             "primaryKey": false,
             "GUID": "7fa9c279-fe3c-4864-83e9-10df93832aef",
+            "description": "Records the date when the customer registered on the e-commerce platform. It is essential for tracking customer lifecycle stages, analyzing customer acquisition trends, and managing loyalty programs.",
             "compositeKey": [
               "compositePrimaryKey",
               "compositeUniqueKey"
@@ -473,6 +474,7 @@
                 "hackoladeMeta": {},
                 "isActivated": true,
                 "GUID": "ecbb43ea-0993-5816-a4ed-88245fc6aa74",
+                "description": "Specifies the street name and number, providing detailed location information within a city or town.",
                 "mode": "",
                 "compositeKey": [
                   "compositePrimaryKey",
@@ -493,6 +495,7 @@
                 "GUID": "1b1a3d76-edce-5c06-bb4f-2ce2d8af2680",
                 "foreignCollection": "",
                 "foreignField": [],
+                "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
                 "mode": "",
                 "compositeKey": [
                   "compositePrimaryKey",
@@ -513,6 +516,7 @@
                 "GUID": "46719528-1e8c-5df1-8362-9794cbdb696b",
                 "foreignCollection": "",
                 "foreignField": [],
+                "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
                 "mode": "",
                 "compositeKey": [
                   "compositePrimaryKey",
@@ -530,6 +534,7 @@
             "hackoladeMeta": {},
             "isActivated": true,
             "GUID": "7c3325ce-c9c4-4ad6-9287-8c1e2084ab9a",
+            "refDescription": "Stores the billing address associated with the customer. It is used for invoicing and payment processing, ensuring that billing information is accurate and up to date. The bill-to address may differ from the shipping address and is crucial for financial record-keeping.",
             "compositeKey": [
               "compositePrimaryKey",
               "compositeUniqueKey"
@@ -551,6 +556,7 @@
                     "hackoladeMeta": {},
                     "isActivated": true,
                     "GUID": "473443ff-5b77-557d-8f38-e2fc3887ec6c",
+                    "description": "Specifies the street name and number, providing detailed location information within a city or town.",
                     "mode": "",
                     "compositeKey": [
                       "compositePrimaryKey",
@@ -571,6 +577,7 @@
                     "GUID": "4d854aca-6c5b-5379-80e8-4fee9c366232",
                     "foreignCollection": "",
                     "foreignField": [],
+                    "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
                     "mode": "",
                     "compositeKey": [
                       "compositePrimaryKey",
@@ -591,6 +598,7 @@
                     "GUID": "5c335a67-1c92-5902-ae42-a807a09e38f9",
                     "foreignCollection": "",
                     "foreignField": [],
+                    "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
                     "mode": "",
                     "compositeKey": [
                       "compositePrimaryKey",
@@ -626,6 +634,7 @@
             "primaryKey": false,
             "required": false,
             "GUID": "a569060a-b3b2-4f73-95c7-7c2e2145c273",
+            "description": "Holds a list of potential shipping addresses registered by the customer. Customers can maintain multiple shipping addresses for convenience and flexibility, allowing them to select a preferred address when placing an order. This feature enhances the user experience by accommodating different delivery locations, such as home, work, or gift recipients.",
             "compositeKey": [
               "compositePrimaryKey",
               "compositeUniqueKey"
@@ -720,8 +729,8 @@
       "normalization": false
     }
   ],
-  "lastModifTS": "2025-01-10T12:47:33.585Z",
-  "persistenceSchemaVersion": "7",
+  "lastModifTS": "2025-02-19T11:06:37.049Z",
+  "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
     "pluginName": "Polyglot",
@@ -729,9 +738,14 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "7.9.5"
+    "version": "8.0.1"
   },
-  "hackoladeMeta": {},
+  "hackoladeMeta": {
+    "validationErrors": {
+      "description": false
+    }
+  },
+  "description": "This Model serves as a basic example of reusable definitions within a data modeling context.\n\nIt is intended for illustration purposes only and simplifies the complexities of loyalty management, omitting certain variations and best practices relevant to real-world applications.\n",
   "settings": {
     "centralPane": {
       "dbLevel": {

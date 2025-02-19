@@ -104,7 +104,8 @@
           "compositePrimaryKey": false,
           "compositeUniqueKey": false,
           "error": {
-            "refDescription": false
+            "refDescription": false,
+            "refPath": false
           },
           "refDescription": "Stores the billing address associated with the customer. It is used for invoicing and payment processing, ensuring that billing information is accurate and up to date. The bill-to address may differ from the shipping address and is crucial for financial record-keeping."
         },
@@ -230,6 +231,7 @@
               "compositeUniqueKey"
             ],
             "GUID": "b29d271d-2c57-54e1-bc42-581191bcbd2d",
+            "description": "Specifies the street name and number, providing detailed location information within a city or town.",
             "error": {}
           },
           {
@@ -245,12 +247,10 @@
               "compositeUniqueKey"
             ],
             "GUID": "9faf5e23-73b7-5a47-8cd4-260b145b0d71",
-            "error": {
-              "name": false,
-              "code": false
-            },
             "foreignCollection": "",
-            "foreignField": []
+            "foreignField": [],
+            "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
+            "error": {}
           },
           {
             "name": "City",
@@ -267,6 +267,7 @@
             "GUID": "7a05b042-1c77-5911-b5e0-43c3834164c9",
             "foreignCollection": "",
             "foreignField": [],
+            "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
             "error": {}
           }
         ],
@@ -319,8 +320,8 @@
   "GUID": "dca9ade7-ee0b-4953-b408-cc0e6b806e82",
   "isLineageEnabled": false,
   "polyglotModelPaths": [],
-  "lastModifTS": "2025-01-16T06:34:39.596Z",
-  "persistenceSchemaVersion": "7",
+  "lastModifTS": "2025-02-19T11:05:26.287Z",
+  "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
     "pluginName": "Polyglot",
@@ -328,14 +329,15 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "7.9.6"
+    "version": "8.0.1"
   },
   "hackoladeMeta": {
     "validationErrors": {
-      "description": false
+      "comments": false
     }
   },
   "description": "The **Customer** entity represents individuals or organizations that engage with the e-commerce platform. This entity captures essential information about customers, allowing for effective management of customer relationships, order processing, and personalized marketing efforts.",
+  "comments": "This Model serves as a basic example of reusable definitions within a data modeling context\n\nIt is intended for illustration purposes only and simplifies the complexities of customer data management, omitting certain variations and best practices relevant to real-world applications.",
   "settings": {
     "centralPane": {
       "dbLevel": {

@@ -119,126 +119,105 @@
     "type": "polyglotDefinitions",
     "properties": [
       {
+        "code": "",
         "GUID": "46385b4a-a728-4579-8b09-10e9e7c52c99",
         "collectionName": "Order",
         "type": "object",
         "properties": [
           {
+            "code": "",
             "type": "string",
             "name": "Identifier",
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            },
             "isActivated": true,
             "primaryKey": true,
             "required": true,
-            "GUID": "2dc5cd19-9bb7-4405-a00f-69af0c39ea24",
-            "code": "Identifier"
+            "GUID": "2dc5cd19-9bb7-4405-a00f-69af0c39ea24"
           },
           {
+            "code": "",
             "type": "numeric",
             "name": "Total amount",
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            },
             "isActivated": true,
             "exclusiveMinimum": false,
             "exclusiveMaximum": false,
             "primaryKey": false,
             "required": false,
             "GUID": "17ee1d91-fa06-4638-831b-a7766df0e191",
-            "mode": "decimal128",
-            "code": "Totalamount"
+            "mode": "decimal128"
           },
           {
+            "code": "",
             "type": "string",
             "name": "Status",
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            },
             "isActivated": true,
             "required": false,
             "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
             "primaryKey": false,
-            "GUID": "6dac6534-e11a-49ac-a049-30f3b1207b88",
-            "code": "Status"
+            "GUID": "6dac6534-e11a-49ac-a049-30f3b1207b88"
           },
           {
+            "code": "",
             "type": "string",
             "name": "Tracking number",
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            },
             "isActivated": true,
             "primaryKey": false,
             "required": false,
-            "GUID": "d8e8b56d-827d-4fd1-bea0-07bd5bab9c2e",
-            "code": "Trackingnumber"
+            "GUID": "d8e8b56d-827d-4fd1-bea0-07bd5bab9c2e"
           },
           {
+            "code": "",
             "type": "document",
             "properties": [
               {
+                "code": "",
                 "type": "string",
                 "name": "Street",
-                "hackoladeMeta": {
-                  "namingConvention": "code"
-                },
                 "isActivated": true,
                 "primaryKey": false,
                 "required": false,
                 "GUID": "99f6874d-0ce2-5b47-8ab9-42d7c3702219",
-                "code": "Street"
+                "description": "Specifies the street name and number, providing detailed location information within a city or town."
               },
               {
+                "code": "",
                 "type": "string",
                 "name": "Postal code",
-                "hackoladeMeta": {
-                  "namingConvention": "code"
-                },
                 "isActivated": true,
                 "primaryKey": false,
                 "required": false,
                 "GUID": "e1cf9617-3aab-51fb-a0bf-11c788dc0179",
                 "foreignCollection": "",
                 "foreignField": [],
-                "code": "Postalcode"
+                "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification."
               },
               {
+                "code": "",
                 "type": "string",
                 "name": "City",
-                "hackoladeMeta": {
-                  "namingConvention": "code"
-                },
                 "isActivated": true,
                 "primaryKey": false,
                 "required": false,
                 "GUID": "93594ede-d2dc-51d6-bfb2-06fcfee72d2b",
                 "foreignCollection": "",
                 "foreignField": [],
-                "code": "City"
+                "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region."
               }
             ],
             "additionalProperties": false,
             "name": "Ship-to address",
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            },
             "isActivated": true,
-            "GUID": "9e4faa2d-6567-4c55-908d-59f30426bdc1",
-            "code": "Shiptoaddress"
+            "GUID": "9e4faa2d-6567-4c55-908d-59f30426bdc1"
           },
           {
+            "code": "",
             "type": "array",
             "properties": [
               {
                 "type": "document",
                 "properties": [
                   {
+                    "code": "",
                     "type": "numeric",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    },
                     "isActivated": true,
                     "exclusiveMinimum": false,
                     "exclusiveMaximum": false,
@@ -248,52 +227,42 @@
                     "mode": "decimal128",
                     "foreignCollection": "",
                     "foreignField": [],
-                    "name": "Amount",
-                    "code": "Amount"
+                    "name": "Amount"
                   },
                   {
+                    "code": "",
                     "type": "timestamp",
                     "name": "Timestamp",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    },
                     "isActivated": true,
                     "primaryKey": false,
                     "required": false,
                     "GUID": "b2f61376-69c8-46f5-9f61-8e68a0dae68d",
                     "foreignCollection": "",
-                    "foreignField": [],
-                    "code": "Timestamp"
+                    "foreignField": []
                   },
                   {
+                    "code": "",
                     "type": "string",
                     "name": "Payment method",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    },
                     "isActivated": true,
                     "required": false,
                     "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
                     "primaryKey": false,
                     "GUID": "37ecefbe-69cd-4c46-bfe2-bdb2fea3be1c",
                     "foreignCollection": "",
-                    "foreignField": [],
-                    "code": "Paymentmethod"
+                    "foreignField": []
                   },
                   {
+                    "code": "",
                     "type": "string",
                     "name": "Status",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    },
                     "isActivated": true,
                     "required": false,
                     "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
                     "primaryKey": false,
                     "GUID": "4b11b953-edb3-4c2d-8e36-a17406cb7b26",
                     "foreignCollection": "",
-                    "foreignField": [],
-                    "code": "Status"
+                    "foreignField": []
                   }
                 ],
                 "additionalProperties": false,
@@ -310,83 +279,68 @@
             ],
             "additionalItems": true,
             "name": "Payments",
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            },
             "isActivated": true,
             "primaryKey": false,
             "required": false,
-            "GUID": "fad47821-c108-4728-ac06-edd87399a408",
-            "code": "Payments"
+            "GUID": "fad47821-c108-4728-ac06-edd87399a408"
           },
           {
+            "code": "",
             "type": "array",
             "properties": [
               {
                 "type": "document",
                 "properties": [
                   {
+                    "code": "",
                     "type": "numeric",
                     "name": "Quantity",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    },
                     "isActivated": true,
                     "exclusiveMinimum": false,
                     "exclusiveMaximum": false,
                     "primaryKey": false,
                     "required": false,
                     "GUID": "e16e89ec-42c0-4647-ab3f-4225a2c9df1c",
-                    "mode": "",
-                    "code": "Quantity"
+                    "mode": ""
                   },
                   {
+                    "code": "",
                     "type": "string",
                     "name": "SKU",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    },
                     "isActivated": true,
                     "primaryKey": true,
                     "required": true,
+                    "description": "A unique identifier assigned to each product for inventory management and tracking purposes. It helps differentiate products and streamline the ordering process.",
                     "GUID": "acdd584f-e173-4126-a669-6ea2f414ffd0",
-                    "code": "SKU",
                     "foreignCollection": "f7ceef84-81de-57ff-9055-5bb0b3337f02",
                     "foreignField": [
                       "f7ceef84-81de-57ff-9055-5bb0b3337f02",
                       "a32b91a4-33c4-5028-815c-b44e4800f498"
-                    ]
+                    ],
+                    "relationshipType": "Foreign Master"
                   },
                   {
+                    "code": "",
                     "type": "string",
                     "name": "Name",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    },
                     "isActivated": true,
                     "primaryKey": false,
                     "required": false,
-                    "GUID": "39a652f4-defc-4297-8814-d16fdb749d18",
-                    "code": "Name"
+                    "GUID": "39a652f4-defc-4297-8814-d16fdb749d18"
                   },
                   {
+                    "code": "",
                     "type": "string",
                     "name": "Description",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    },
                     "isActivated": true,
                     "primaryKey": false,
                     "required": false,
-                    "GUID": "6d536af4-ae07-48db-923e-3fd215300a8c",
-                    "code": "Description"
+                    "GUID": "6d536af4-ae07-48db-923e-3fd215300a8c"
                   },
                   {
+                    "code": "",
                     "type": "string",
                     "name": "Currency",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    },
                     "isActivated": true,
                     "required": true,
                     "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
@@ -407,15 +361,12 @@
                       "SGD",
                       "HKD"
                     ],
-                    "GUID": "c7ccd811-1374-4a95-96b8-1bbb7eda7590",
-                    "code": "Currency"
+                    "GUID": "c7ccd811-1374-4a95-96b8-1bbb7eda7590"
                   },
                   {
+                    "code": "",
                     "type": "numeric",
                     "name": "Amount",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    },
                     "isActivated": true,
                     "exclusiveMinimum": false,
                     "exclusiveMaximum": false,
@@ -424,8 +375,7 @@
                     "mode": "decimal128",
                     "foreignCollection": "",
                     "foreignField": [],
-                    "GUID": "cf7c7d06-9e2a-490d-852d-29010e9eefd8",
-                    "code": "Amount"
+                    "GUID": "cf7c7d06-9e2a-490d-852d-29010e9eefd8"
                   }
                 ],
                 "additionalProperties": false,
@@ -442,14 +392,10 @@
             ],
             "additionalItems": true,
             "name": "Ordered items",
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            },
             "isActivated": true,
             "primaryKey": false,
             "required": false,
-            "GUID": "72bc07b9-d511-42e0-966a-7e5f14513040",
-            "code": "Ordereditems"
+            "GUID": "72bc07b9-d511-42e0-966a-7e5f14513040"
           }
         ],
         "definitions": {
@@ -460,10 +406,6 @@
         "isActivated": true,
         "additionalProperties": false,
         "bucketId": "e863d79d-6e38-4098-a01e-46d6249501f8",
-        "hackoladeMeta": {
-          "namingConvention": "code"
-        },
-        "code": "Order",
         "definitionEntityType": "collection",
         "fileType": "hackoladeSchema",
         "definitionRefs": [
@@ -501,6 +443,7 @@
         "definitionRefs": []
       },
       {
+        "code": "",
         "name": "Order management",
         "type": "bucket",
         "collectionIds": [
@@ -516,10 +459,6 @@
         "isActivated": true,
         "indexes": [],
         "GUID": "e863d79d-6e38-4098-a01e-46d6249501f8",
-        "hackoladeMeta": {
-          "namingConvention": "code"
-        },
-        "code": "Ordermanagement",
         "definitionEntityType": "bucket",
         "fileType": "hackoladeSchema",
         "definitionRefs": [
@@ -760,7 +699,7 @@
   "hackoladeMeta": {
     "namingConvention": "code",
     "validationErrors": {
-      "modelName": false
+      "description": false
     },
     "customPropertiesUpdated": true
   },
@@ -774,15 +713,16 @@
       "normalization": false
     }
   ],
-  "lastModifTS": "2025-01-10T14:00:48.782Z",
-  "persistenceSchemaVersion": "7",
+  "lastModifTS": "2025-02-19T11:08:53.556Z",
+  "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "7.9.5"
+    "version": "8.0.1"
   },
+  "description": "This MongoDB Webshop Model is intended for illustration purposes only and provides a simplified representation for a\nwebshop within a document database.\n\nWhile it captures essential entities and relationships, it does not encompass all potential complexities, or best practices that may be applicable in a comprehensive system Implementation.",
   "settings": {
     "centralPane": {
       "dbLevel": {
@@ -849,6 +789,7 @@
         ],
         "relationshipUpdateDisabled": false,
         "displayOptions": {
+          "dndHandles": false,
           "hideErdRelationshipsNames": false
         }
       },
