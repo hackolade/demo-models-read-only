@@ -515,7 +515,14 @@
                 "childType": "List",
                 "type": "array",
                 "GUID": "042dd4e3-b15a-4d6b-9292-01e5496a50c7",
-                "error": {}
+                "error": {},
+                "arguments": [
+                  {
+                    "GUID": "534102d4-e338-4e80-adee-dffbbe9eabe5",
+                    "name": "rating",
+                    "type": "c51a55c0-ccbd-4ac8-b414-25ea9e5255f9"
+                  }
+                ]
               }
             ],
             "ignore_z_value": true,
@@ -835,16 +842,16 @@
       "modelName": false
     }
   },
-  "lastModifTS": "2025-02-19T07:42:58.092Z",
+  "lastModifTS": "2025-02-19T09:22:04.556Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
     "pluginName": "GraphQL",
-    "pluginVersion": "0.2.0",
+    "pluginVersion": "0.2.2",
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.0.1"
+    "version": "8.0.2"
   },
   "settings": {
     "centralPane": {
@@ -854,8 +861,8 @@
             "GUID": "e824274f-abc8-459c-8080-ec0ccba4a984",
             "x": 1080,
             "y": 891,
-            "width": 402,
-            "height": 346,
+            "width": 434,
+            "height": 441,
             "color": {}
           },
           {
