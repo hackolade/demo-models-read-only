@@ -883,10 +883,10 @@
   "isLineageEnabled": false,
   "hackoladeMeta": {
     "validationErrors": {
-      "modelName": false
+      "description": false
     }
   },
-  "lastModifTS": "2025-02-19T13:14:49.492Z",
+  "lastModifTS": "2025-02-19T16:09:09.445Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -897,6 +897,7 @@
   "applicationInformation": {
     "version": "8.0.2"
   },
+  "description": "This GraphQL Review Management Model is intended for illustration purposes only and provides a simplified representation of a review management system within an ecommerce bike platform.\n\nWhile it captures essential entities, operations, and relationships through GraphQL concepts (queries, mutations, subscriptions, interfaces, etc.), it does not encompass all potential complexities or best practices that may be applicable in a comprehensive production system implementation.",
   "settings": {
     "centralPane": {
       "dbLevel": {
