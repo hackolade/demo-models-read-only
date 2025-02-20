@@ -955,7 +955,7 @@
   "GUID": "530c923e-219d-470a-b2f9-1c2a82d43bb0",
   "isLineageEnabled": false,
   "polyglotModelPaths": [],
-  "lastModifTS": "2025-02-19T11:05:55.555Z",
+  "lastModifTS": "2025-02-20T06:51:54.607Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -964,14 +964,14 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.0.1"
+    "version": "8.0.2"
   },
   "hackoladeMeta": {
     "validationErrors": {
       "comments": false
     }
   },
-  "comments": "This Model serves as a basic example of reusable definitions within a data modeling context.\n\nIt is intended for illustration purposes only and simplifies the complexities of product management, omitting certain variations and best practices relevant to real-world applications.",
+  "description": "This Model serves as a basic example of reusable definitions within a data modeling context.\n\nIt is intended for illustration purposes only and simplifies the complexities of product management, omitting certain variations and best practices relevant to real-world applications.",
   "settings": {
     "centralPane": {
       "dbLevel": {
