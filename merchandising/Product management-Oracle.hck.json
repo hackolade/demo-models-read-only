@@ -106,10 +106,12 @@
           },
           {
             "GUID": "4d678e93-e8cb-434c-9789-0d411b30a433",
-            "error": {
-              "name": false
+            "error": {},
+            "hackoladeMeta": {
+              "namingConvention": "code"
             },
-            "hackoladeMeta": {}
+            "name": "Category name",
+            "code": "Category_Name"
           },
           {
             "GUID": "6ef810f9-c366-426b-9aa7-97f54138905f",
@@ -420,9 +422,7 @@
           },
           {
             "GUID": "8ee85d26-2d69-49d4-82b9-1d2b12c7966d",
-            "error": {
-              "name": false
-            },
+            "error": {},
             "hackoladeMeta": {}
           },
           {
@@ -497,10 +497,12 @@
           },
           {
             "GUID": "71d44276-326c-526e-a406-81076072e148",
-            "error": {
-              "name": false
+            "error": {},
+            "hackoladeMeta": {
+              "namingConvention": "code"
             },
-            "hackoladeMeta": {}
+            "name": "Postal code",
+            "code": "Postal_Code"
           }
         ]
       },
@@ -1040,11 +1042,11 @@
             "y": 1434.868281925692
           },
           {
-            "x": 1872.8804004214965,
+            "x": 1872.3804004214965,
             "y": 1434.868281925692
           },
           {
-            "x": 1872.8804004214965,
+            "x": 1872.3804004214965,
             "y": 1383.743940990516
           }
         ],
@@ -1180,7 +1182,7 @@
       }
     },
     {
-      "name": "is issued by",
+      "name": "is_issued_by",
       "relationshipType": "Foreign Master",
       "parentField": [
         [
@@ -1243,9 +1245,7 @@
       "ref": "742e1275-de2e-4675-a75e-5902b8832233",
       "GUID": "019a5d84-8470-44b8-beb6-5b35edc7b9a3",
       "hackoladeMeta": {
-        "validationErrors": {
-          "name": true
-        }
+        "validationErrors": {}
       }
     }
   ],
@@ -1269,7 +1269,7 @@
     "021aefa8-d5f1-4a55-8449-b940c71f8bd2": "fk_Address_id_to_Supplier_Address",
     "758cdfb2-7717-4487-b6af-5a2057a5a0fb": "contains",
     "9547a392-9459-43cc-b3ff-b40ce569e12f": "has",
-    "019a5d84-8470-44b8-beb6-5b35edc7b9a3": "is issued by",
+    "019a5d84-8470-44b8-beb6-5b35edc7b9a3": "is_issued_by",
     "d6d76faa-ff30-5a41-8c60-02eea4dbeb34": "",
     "55e67346-9510-4ad0-9431-ab96ef358ec3": "Product Category Duality View",
     "65c775b4-7fcd-4dec-82ae-1a954389c70c": "Name",
@@ -1300,7 +1300,9 @@
     "532b75ce-ae07-4134-a683-069a9f94b007": "Amount",
     "597f3b94-103a-48ef-9178-07b627c8752f": "Loyalty campaign ext ref",
     "25011a2e-f6be-4f65-a2d2-eec437c99b90": "new_column",
-    "ff5e20a6-3704-4223-b580-5600e76d33ba": "new_column1"
+    "ff5e20a6-3704-4223-b580-5600e76d33ba": "new_column1",
+    "4d678e93-e8cb-434c-9789-0d411b30a433": "Category name",
+    "71d44276-326c-526e-a406-81076072e148": "Postal code"
   },
   "definitions": {
     "type": "definitions",
@@ -1955,7 +1957,7 @@
         "definitions": {
           "type": "definitions",
           "properties": [],
-          "GUID": "71cb9a5f-2fcf-42c2-8a03-335d5a3e482d"
+          "GUID": "2b16dc47-4034-4d42-a155-391a9fabe251"
         },
         "isActivated": true,
         "additionalProperties": false,
@@ -2080,7 +2082,7 @@
         "definitions": {
           "type": "definitions",
           "properties": [],
-          "GUID": "a3036e0c-8313-4595-855c-90411882f2dd"
+          "GUID": "08e22895-113e-49cf-94b2-426c2bf75b41"
         },
         "isActivated": true,
         "additionalProperties": false,
@@ -2502,7 +2504,7 @@
         "definitions": {
           "type": "definitions",
           "properties": [],
-          "GUID": "4cb43bcb-8267-49c0-9ab7-4ae4bf0281fc"
+          "GUID": "64599ab2-947d-4f8d-b63e-ae40b5dd2398"
         },
         "isActivated": true,
         "additionalProperties": false,
@@ -2917,7 +2919,9 @@
   "GUID": "8726fe59-875c-4786-812d-4e206135a9a3",
   "isLineageEnabled": false,
   "hackoladeMeta": {
-    "validationErrors": {},
+    "validationErrors": {
+      "description": false
+    },
     "namingConvention": "code"
   },
   "polyglotModelPaths": [
@@ -2928,7 +2932,7 @@
       "normalization": true
     }
   ],
-  "lastModifTS": "2025-02-19T11:17:24.653Z",
+  "lastModifTS": "2025-02-19T16:49:00.478Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -2940,6 +2944,7 @@
     "version": "8.0.1"
   },
   "code": "Product_Management",
+  "description": "This Oracle Model for Product Management is intended for illustration purposes only and provides a simplified representation of the product management process within a relational database.\n\nWhile it captures essential entities and relationships, it does not encompass all potential complexities, or best practices that may be applicable in a comprehensive system implementation.\n\nOptions used:\n- Normalization from Polyglot:\n  - 2 address objects\n  - Price as object\n- Duality view from one single table\n",
   "settings": {
     "centralPane": {
       "dbLevel": {
@@ -3004,7 +3009,7 @@
             "GUID": "b6aafcc0-2209-4b49-904a-65a07dd45a8f",
             "x": 1739.3804004214965,
             "y": 1281.743940990516,
-            "width": 267,
+            "width": 266,
             "height": 102,
             "color": {}
           },
