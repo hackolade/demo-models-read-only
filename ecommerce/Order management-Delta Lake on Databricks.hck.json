@@ -1931,7 +1931,7 @@
   "isCreatedByPlugin": true,
   "pluginInformation": {
     "pluginName": "DeltaLake",
-    "pluginVersion": "0.2.18",
+    "pluginVersion": "0.2.17",
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
