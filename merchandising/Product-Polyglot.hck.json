@@ -2,6 +2,57 @@
   "modelName": "Product Polyglot",
   "collections": [
     {
+      "GUID": "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
+      "collectionName": "Category",
+      "type": "object",
+      "properties": [
+        {
+          "name": "Name",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "required": true,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "GUID": "97db87db-8fbe-41bb-8850-34193c9ee07e",
+          "childRelationships": [
+            "0d5d62f2-6a6d-4288-8f4a-d8413e910460"
+          ],
+          "description": " serves as the primary identifier for grouping related products. Examples include **Bikes**, **Accessories**, and **Apparel**.",
+          "error": {}
+        },
+        {
+          "name": "Description",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "GUID": "b0919d69-0355-438b-b7aa-759e6fe9632c",
+          "description": "A brief overview of the category, providing additional context and details about the types of products included. This attribute can help customers understand the category's focus and offerings.",
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "eef2d743-9c10-4efd-a735-4905de0029bf"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "bucketId": "4631c9fb-41fb-4647-a18e-f22367a656c5",
+      "description": "Classifies products into distinct groups based on shared characteristics or purposes, such as **Bikes**, **Accessories**, or **Apparel**. This categorization aids customers in navigating the product offerings and enhances the shopping experience by allowing for easier product discovery and filtering."
+    },
+    {
       "GUID": "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
       "collectionName": "Product",
       "type": "object",
@@ -246,57 +297,6 @@
       "additionalProperties": false,
       "bucketId": "4631c9fb-41fb-4647-a18e-f22367a656c5",
       "description": "Represents the items available for sale in the e-commerce platform. It encompasses essential details about each product, including its **name**, **description**, **pricing**, and associations with **categories** and **suppliers**. This entity is crucial for managing inventory and facilitating sales transactions."
-    },
-    {
-      "GUID": "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
-      "collectionName": "Category",
-      "type": "object",
-      "properties": [
-        {
-          "name": "Name",
-          "hackoladeMeta": {},
-          "isActivated": true,
-          "primaryKey": true,
-          "required": true,
-          "childType": "varchar",
-          "type": "string",
-          "compositeKey": [
-            "compositePrimaryKey",
-            "compositeUniqueKey"
-          ],
-          "GUID": "97db87db-8fbe-41bb-8850-34193c9ee07e",
-          "childRelationships": [
-            "0d5d62f2-6a6d-4288-8f4a-d8413e910460"
-          ],
-          "description": " serves as the primary identifier for grouping related products. Examples include **Bikes**, **Accessories**, and **Apparel**.",
-          "error": {}
-        },
-        {
-          "name": "Description",
-          "hackoladeMeta": {},
-          "isActivated": true,
-          "primaryKey": false,
-          "required": false,
-          "childType": "varchar",
-          "type": "string",
-          "compositeKey": [
-            "compositePrimaryKey",
-            "compositeUniqueKey"
-          ],
-          "GUID": "b0919d69-0355-438b-b7aa-759e6fe9632c",
-          "description": "A brief overview of the category, providing additional context and details about the types of products included. This attribute can help customers understand the category's focus and offerings.",
-          "error": {}
-        }
-      ],
-      "definitions": {
-        "type": "definitions",
-        "properties": [],
-        "GUID": "eef2d743-9c10-4efd-a735-4905de0029bf"
-      },
-      "isActivated": true,
-      "additionalProperties": false,
-      "bucketId": "4631c9fb-41fb-4647-a18e-f22367a656c5",
-      "description": "Classifies products into distinct groups based on shared characteristics or purposes, such as **Bikes**, **Accessories**, or **Apparel**. This categorization aids customers in navigating the product offerings and enhances the shopping experience by allowing for easier product discovery and filtering."
     },
     {
       "GUID": "14dd0530-7fdc-4567-a3c4-2177fc0bd660",
@@ -955,7 +955,7 @@
   "GUID": "530c923e-219d-470a-b2f9-1c2a82d43bb0",
   "isLineageEnabled": false,
   "polyglotModelPaths": [],
-  "lastModifTS": "2025-02-19T16:46:09.481Z",
+  "lastModifTS": "2025-02-20T08:01:02.265Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -971,7 +971,7 @@
       "comments": false
     }
   },
-  "comments": "This Model serves as a basic example of reusable definitions within a data modeling context.\n\nIt is intended for illustration purposes only and simplifies the complexities of product management, omitting certain variations and best practices relevant to real-world applications.",
+  "description": "This Model serves as a basic example of reusable definitions within a data modeling context.\n\nIt is intended for illustration purposes only and simplifies the complexities of product management, omitting certain variations and best practices relevant to real-world applications.",
   "settings": {
     "centralPane": {
       "dbLevel": {
@@ -1017,12 +1017,6 @@
             }
           }
         ],
-        "erdDefinitions": {
-          "erd": [],
-          "rootPath": [],
-          "entities": [],
-          "decorativeSymbols": []
-        },
         "buckets": [
           {
             "x": 948.8978087549588,
@@ -1030,14 +1024,19 @@
             "GUID": "4631c9fb-41fb-4647-a18e-f22367a656c5"
           }
         ],
-        "collapsedNodes": [],
-        "activeRelationship": "",
-        "activeRelationshipFields": {
-          "childField": [],
-          "parentField": []
-        },
-        "selectedCollections": [],
-        "displayColorPicker": false,
+        "diagramViews": [],
+        "decorativeSymbols": [
+          {
+            "GUID": "1ba4fbbc-36c8-44ee-938d-55054b0f6d7e",
+            "x": 953.8998006388216,
+            "y": 834.6910045763855,
+            "height": 145,
+            "width": 400,
+            "color": {
+              "hex": "#fec107"
+            }
+          }
+        ],
         "graphView": {
           "erd": [
             {
@@ -1083,44 +1082,7 @@
           ],
           "forceLayout": true,
           "defaultLinkLength": 300
-        },
-        "diagramViews": [],
-        "decorativeSymbols": [
-          {
-            "GUID": "1ba4fbbc-36c8-44ee-938d-55054b0f6d7e",
-            "x": 953.8998006388216,
-            "y": 834.6910045763855,
-            "height": 145,
-            "width": 400,
-            "color": {
-              "hex": "#fec107"
-            }
-          }
-        ],
-        "nestedCollectionsLayout": "horizontal",
-        "options": [
-          {
-            "autoWidth": false,
-            "autoHeight": false,
-            "GUID": "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b"
-          },
-          {
-            "autoWidth": false,
-            "autoHeight": false,
-            "GUID": "1eec2f02-271b-45e3-b874-b47ac00ca585"
-          },
-          {
-            "autoWidth": false,
-            "autoHeight": false,
-            "GUID": "14dd0530-7fdc-4567-a3c4-2177fc0bd660"
-          },
-          {
-            "autoWidth": false,
-            "autoHeight": false,
-            "GUID": "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f"
-          }
-        ],
-        "relationshipUpdateDisabled": false
+        }
       },
       "collectionLevel": {},
       "changed": false
@@ -1129,5 +1091,6 @@
       "collapsedNodes": [],
       "shouldDistributeCollections": false
     }
-  }
+  },
+  "comments": "This Model serves as a basic example of reusable definitions within a data modeling context.\n\nIt is intended for illustration purposes only and simplifies the complexities of product management, omitting certain variations and best practices relevant to real-world applications."
 }
