@@ -125,6 +125,9 @@
       "referenceDiff": {
         "properties": [
           {
+            "GUID": "474aad96-8691-4159-86d0-7ef5ffa5daed"
+          },
+          {
             "GUID": "8178177d-7442-4b00-8678-1a40439f8fab",
             "relationshipType": "Foreign Key",
             "foreignCollection": "f22a3e7d-5adf-48dd-b736-243710525b9b",
@@ -134,6 +137,34 @@
               "6b6386de-f9dc-46d9-9fc2-16d3c2c58340"
             ],
             "parentRelationship": "d4541457-9f1d-46e3-9e5d-1458ccf541e6"
+          },
+          {
+            "name": "url",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            },
+            "isActivated": true,
+            "primaryKey": false,
+            "unique": true,
+            "mode": "varchar2",
+            "length": 20,
+            "subtype": "string",
+            "required": true,
+            "childType": "char",
+            "type": "string",
+            "compositeKey": [
+              "partitionKey",
+              "compositePartitionKey",
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ],
+            "partitionKey": false,
+            "compositePartitionKey": false,
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "GUID": "2e2189a8-e091-4908-a894-bffc15d3c2b0",
+            "code": "url",
+            "error": {}
           }
         ]
       },
@@ -854,25 +885,25 @@
         "dataType": "",
         "shape": [
           {
-            "x": 1329.7547115952268,
-            "y": 1122.6751033339583
+            "x": 1347.548501351147,
+            "y": 1100.1587262484404
           },
           {
-            "x": 1329.7547115952268,
-            "y": 1157.9401192836417
+            "x": 1408.3742506755734,
+            "y": 1100.1587262484404
           },
           {
-            "x": 1585.5333333333333,
-            "y": 1157.9401192836417
+            "x": 1408.3742506755734,
+            "y": 1253.2051352333253
           },
           {
-            "x": 1585.5333333333333,
-            "y": 1193.2051352333253
+            "x": 1469.2,
+            "y": 1253.2051352333253
           }
         ],
         "sides": [
-          "bottom",
-          "top"
+          "right",
+          "left"
         ]
       }
     },
@@ -920,11 +951,11 @@
         "dataType": "",
         "shape": [
           {
-            "x": 1797.8164651195984,
+            "x": 1810.3164651195984,
             "y": 1428.9470556373685
           },
           {
-            "x": 1797.8164651195984,
+            "x": 1810.3164651195984,
             "y": 1371.0760954353468
           },
           {
@@ -1106,11 +1137,11 @@
         "dataType": "",
         "shape": [
           {
-            "x": 1701.8666666666668,
+            "x": 1643.7,
             "y": 1193.2051352333253
           },
           {
-            "x": 1701.8666666666668,
+            "x": 1643.7,
             "y": 1162.5916352560316
           },
           {
@@ -1354,7 +1385,8 @@
     "ce08baeb-0250-4a27-b686-35bc7b00de6f": "Supplier",
     "f0c25308-99d2-4f98-a0f7-f34e6f7aa4dc": "Company name",
     "12802890-c1ed-4061-860e-f971bf87bcea": "Company code",
-    "dd024d6c-9ff7-4dee-9a4d-ea301263113d": "email"
+    "dd024d6c-9ff7-4dee-9a4d-ea301263113d": "email",
+    "2e2189a8-e091-4908-a894-bffc15d3c2b0": "url"
   },
   "definitions": {
     "type": "definitions",
@@ -3133,7 +3165,7 @@
       "normalization": true
     }
   ],
-  "lastModifTS": "2025-02-21T15:01:01.681Z",
+  "lastModifTS": "2025-02-21T15:06:43.910Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -3191,18 +3223,18 @@
           },
           {
             "GUID": "5da15a69-1229-4f32-8d8a-4210e877ea54",
-            "x": 1221.7547115952268,
-            "y": 1056.6751033339583,
-            "width": 216,
-            "height": 66,
+            "x": 1104.548501351147,
+            "y": 1058.1587262484404,
+            "width": 243,
+            "height": 84,
             "color": {}
           },
           {
             "GUID": "8e22bca6-7766-4398-8dac-f5a879a8a7bd",
             "x": 1672.3164651195984,
             "y": 1428.9470556373685,
-            "width": 251,
-            "height": 120,
+            "width": 276,
+            "height": 121,
             "color": {}
           },
           {
@@ -3239,7 +3271,7 @@
         "buckets": [
           {
             "x": 837.9918541092006,
-            "y": 1016.6751033339583,
+            "y": 1018.1587262484404,
             "GUID": "27d230a7-a7da-4a2b-aedf-6afa5bb0d139"
           }
         ],
@@ -3292,6 +3324,16 @@
             "autoWidth": false,
             "autoHeight": false,
             "GUID": "842dd4c1-f54f-4167-b52a-c02dd7b8005b"
+          },
+          {
+            "autoWidth": false,
+            "autoHeight": false,
+            "GUID": "8e22bca6-7766-4398-8dac-f5a879a8a7bd"
+          },
+          {
+            "autoWidth": false,
+            "autoHeight": false,
+            "GUID": "5da15a69-1229-4f32-8d8a-4210e877ea54"
           }
         ],
         "relationshipUpdateDisabled": false,
