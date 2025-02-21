@@ -115,6 +115,25 @@
           "relationshipType": "Foreign Key"
         },
         {
+          "name": "Supplier code",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "GUID": "a898b734-3304-48c1-b45d-98c1f7cc3808",
+          "error": {},
+          "childRelationships": [
+            "742e1275-de2e-4675-a75e-5902b8832233"
+          ]
+        },
+        {
           "name": "Description",
           "hackoladeMeta": {},
           "isActivated": true,
@@ -307,8 +326,8 @@
           "name": "Product SKU",
           "hackoladeMeta": {},
           "isActivated": true,
-          "primaryKey": false,
-          "required": false,
+          "primaryKey": true,
+          "required": true,
           "childType": "varchar",
           "type": "string",
           "compositeKey": [
@@ -316,14 +335,14 @@
             "compositeUniqueKey"
           ],
           "GUID": "6f007354-8393-4d66-99c6-53161f2b6041",
-          "error": {},
           "parentRelationship": "170fd180-4f35-44ca-8389-7519c1aa9e0b",
           "foreignCollection": "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
           "foreignField": [
             "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
             "6b6386de-f9dc-46d9-9fc2-16d3c2c58340"
           ],
-          "relationshipType": "Foreign Key"
+          "relationshipType": "Foreign Key",
+          "error": {}
         },
         {
           "name": "Available quantity",
@@ -439,6 +458,28 @@
       "collectionName": "Supplier",
       "type": "object",
       "properties": [
+        {
+          "name": "Company code",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "required": true,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "GUID": "d138a990-ba4d-4cf7-b998-b57f5d576902",
+          "error": {},
+          "parentRelationship": "742e1275-de2e-4675-a75e-5902b8832233",
+          "foreignCollection": "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
+          "foreignField": [
+            "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
+            "a898b734-3304-48c1-b45d-98c1f7cc3808"
+          ],
+          "relationshipType": "Foreign Key"
+        },
         {
           "name": "Company name",
           "hackoladeMeta": {},
@@ -592,15 +633,15 @@
         "dataType": "",
         "shape": [
           {
-            "x": 1341,
-            "y": 1202
+            "x": 1389,
+            "y": 1218.6666666666667
           },
           {
-            "x": 1439.9469309674228,
-            "y": 1202
+            "x": 1463.9469309674228,
+            "y": 1218.6666666666667
           },
           {
-            "x": 1439.9469309674228,
+            "x": 1463.9469309674228,
             "y": 1299.2793540182593
           },
           {
@@ -650,16 +691,16 @@
             "y": 1123.430278881021
           },
           {
-            "x": 1417.5005640612756,
+            "x": 1441.5005640612756,
             "y": 1123.430278881021
           },
           {
-            "x": 1417.5005640612756,
-            "y": 1126
+            "x": 1441.5005640612756,
+            "y": 1134.3333333333333
           },
           {
-            "x": 1341,
-            "y": 1126
+            "x": 1389,
+            "y": 1134.3333333333333
           }
         ],
         "sides": [
@@ -671,9 +712,19 @@
     {
       "name": "is issued by",
       "relationshipType": "Foreign Key",
-      "parentField": [],
+      "parentField": [
+        [
+          "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
+          "a898b734-3304-48c1-b45d-98c1f7cc3808"
+        ]
+      ],
       "parentCardinality": "1..n",
-      "childField": [],
+      "childField": [
+        [
+          "1eec2f02-271b-45e3-b874-b47ac00ca585",
+          "d138a990-ba4d-4cf7-b998-b57f5d576902"
+        ]
+      ],
       "isActivated": true,
       "childCardinality": "1",
       "level": "field",
@@ -690,20 +741,20 @@
         "dataType": "",
         "shape": [
           {
-            "x": 1110.3978087549588,
-            "y": 1345.9092629511329
+            "x": 1366.2486241170195,
+            "y": 1385.560485077721
           },
           {
-            "x": 1110.3978087549588,
-            "y": 1311.9546314755664
+            "x": 1366.2486241170195,
+            "y": 1344.2802425388604
           },
           {
-            "x": 1195.5,
-            "y": 1311.9546314755664
+            "x": 1219.5,
+            "y": 1344.2802425388604
           },
           {
-            "x": 1195.5,
-            "y": 1278
+            "x": 1219.5,
+            "y": 1303
           }
         ],
         "sides": [
@@ -746,7 +797,9 @@
     "ee4486fd-34d7-4b0b-9828-3c421f8de5df": "Name",
     "e486e793-d174-4dde-a091-f01158f80e86": "Address",
     "4d678e93-e8cb-434c-9789-0d411b30a433": "Category name",
-    "6f007354-8393-4d66-99c6-53161f2b6041": "Product SKU"
+    "6f007354-8393-4d66-99c6-53161f2b6041": "Product SKU",
+    "d138a990-ba4d-4cf7-b998-b57f5d576902": "Company code",
+    "a898b734-3304-48c1-b45d-98c1f7cc3808": "Supplier code"
   },
   "definitions": {
     "type": "definitions",
@@ -865,7 +918,7 @@
   "GUID": "530c923e-219d-470a-b2f9-1c2a82d43bb0",
   "isLineageEnabled": false,
   "polyglotModelPaths": [],
-  "lastModifTS": "2025-02-21T10:33:11.984Z",
+  "lastModifTS": "2025-02-21T10:41:32.381Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -891,8 +944,8 @@
             "GUID": "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
             "x": 1050,
             "y": 1050,
-            "width": 291,
-            "height": 228,
+            "width": 339,
+            "height": 253,
             "color": {
               "hex": "#2196F3"
             }
@@ -919,10 +972,10 @@
           },
           {
             "GUID": "1eec2f02-271b-45e3-b874-b47ac00ca585",
-            "x": 988.8978087549588,
-            "y": 1345.9092629511329,
-            "width": 243,
-            "height": 173,
+            "x": 1200.7486241170195,
+            "y": 1385.560485077721,
+            "width": 331,
+            "height": 216,
             "color": {
               "hex": "#2196F3"
             }
@@ -936,13 +989,13 @@
         },
         "buckets": [
           {
-            "x": 948.8978087549588,
+            "x": 1010,
             "y": 988.930278881021,
             "GUID": "4631c9fb-41fb-4647-a18e-f22367a656c5"
           }
         ],
         "collapsedNodes": [],
-        "activeRelationship": "",
+        "activeRelationship": "0d5d62f2-6a6d-4288-8f4a-d8413e910460",
         "activeRelationshipFields": {
           "childField": [],
           "parentField": []
@@ -1009,8 +1062,22 @@
           }
         ],
         "nestedCollectionsLayout": "horizontal",
-        "options": [],
-        "relationshipUpdateDisabled": false
+        "options": [
+          {
+            "autoWidth": false,
+            "autoHeight": false,
+            "GUID": "1eec2f02-271b-45e3-b874-b47ac00ca585"
+          },
+          {
+            "autoWidth": false,
+            "autoHeight": false,
+            "GUID": "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b"
+          }
+        ],
+        "relationshipUpdateDisabled": false,
+        "displayOptions": {
+          "hideErdRelationshipsNames": false
+        }
       },
       "collectionLevel": {},
       "changed": false
