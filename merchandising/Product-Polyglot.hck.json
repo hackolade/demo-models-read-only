@@ -61,7 +61,7 @@
             "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
             "97db87db-8fbe-41bb-8850-34193c9ee07e"
           ],
-          "relationshipType": "Foreign Master"
+          "relationshipType": "Foreign Key"
         },
         {
           "name": "Description",
@@ -323,7 +323,7 @@
             "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
             "6b6386de-f9dc-46d9-9fc2-16d3c2c58340"
           ],
-          "relationshipType": "Foreign Master"
+          "relationshipType": "Foreign Key"
         },
         {
           "name": "Available quantity",
@@ -561,52 +561,8 @@
   "views": [],
   "relationships": [
     {
-      "name": "is located at",
-      "relationshipType": "Foreign Master",
-      "parentField": [],
-      "parentCardinality": "1",
-      "childField": [],
-      "isActivated": true,
-      "childCardinality": "1",
-      "level": "field",
-      "GUID": "e1a936f9-0a54-4f68-9c40-2b53dd123428",
-      "lineSize": 2,
-      "parentCollection": "1eec2f02-271b-45e3-b874-b47ac00ca585",
-      "childCollection": "",
-      "hackoladeStyles": {
-        "GUID": "01dfe715-18e0-4ea0-8c5b-f88ab5bcdbf1",
-        "autoPositioning": true,
-        "type": "Orthogonal",
-        "thickness": 2,
-        "color": "#79c4ff",
-        "dataType": "",
-        "shape": [
-          {
-            "x": 1222.8521508110625,
-            "y": 1557.1177618825493
-          },
-          {
-            "x": 1222.8521508110625,
-            "y": 1517.9223328233302
-          },
-          {
-            "x": 1128.3413702948615,
-            "y": 1517.9223328233302
-          },
-          {
-            "x": 1128.3413702948615,
-            "y": 1478.7269037641108
-          }
-        ],
-        "sides": [
-          "top",
-          "bottom"
-        ]
-      }
-    },
-    {
       "name": "contains",
-      "relationshipType": "Foreign Master",
+      "relationshipType": "Foreign Key",
       "parentField": [
         [
           "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
@@ -659,52 +615,8 @@
       }
     },
     {
-      "name": "is valid in",
-      "relationshipType": "Foreign Master",
-      "parentField": [],
-      "parentCardinality": "0..n",
-      "childField": [],
-      "isActivated": true,
-      "childCardinality": "1..n",
-      "level": "field",
-      "GUID": "4aaac7e6-5e6d-4ed4-97bd-0e9d8177d7da",
-      "lineSize": 2,
-      "parentCollection": "",
-      "childCollection": "",
-      "hackoladeStyles": {
-        "GUID": "3c1f0027-a34d-42f6-aa16-95c296bdd002",
-        "autoPositioning": true,
-        "type": "Orthogonal",
-        "thickness": 2,
-        "color": "#79c4ff",
-        "dataType": "",
-        "shape": [
-          {
-            "x": 1995.8071129233222,
-            "y": 1427.3704340808683
-          },
-          {
-            "x": 1995.8071129233222,
-            "y": 1297.4345233038844
-          },
-          {
-            "x": 1855.4805848151907,
-            "y": 1297.4345233038844
-          },
-          {
-            "x": 1855.4805848151907,
-            "y": 1167.4986125269004
-          }
-        ],
-        "sides": [
-          "top",
-          "bottom"
-        ]
-      }
-    },
-    {
       "name": "has",
-      "relationshipType": "Foreign Master",
+      "relationshipType": "Foreign Key",
       "parentField": [
         [
           "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
@@ -758,7 +670,7 @@
     },
     {
       "name": "is issued by",
-      "relationshipType": "Foreign Master",
+      "relationshipType": "Foreign Key",
       "parentField": [],
       "parentCardinality": "1..n",
       "childField": [],
@@ -817,13 +729,11 @@
     "1eec2f02-271b-45e3-b874-b47ac00ca585": "Supplier",
     "8ee85d26-2d69-49d4-82b9-1d2b12c7966d": "Company name",
     "ba154f30-0f46-41b7-bbd0-b5e106f2cf32": "Contact name",
-    "e1a936f9-0a54-4f68-9c40-2b53dd123428": "is located at",
     "dc12c121-c011-42fd-865f-1a0fcd657fc0": "Images",
     "9cc886b2-1216-4d95-bef9-d48290b0e804": "email",
     "3a79b59c-1d60-4c86-a484-a20deb6fcd95": "Phone number",
     "8b6314e5-b395-43b9-a367-4fbde307f10d": "Warehouse",
     "0d5d62f2-6a6d-4288-8f4a-d8413e910460": "contains",
-    "4aaac7e6-5e6d-4ed4-97bd-0e9d8177d7da": "is valid in",
     "170fd180-4f35-44ca-8389-7519c1aa9e0b": "has",
     "742e1275-de2e-4675-a75e-5902b8832233": "is issued by",
     "4631c9fb-41fb-4647-a18e-f22367a656c5": "Product management",
@@ -955,7 +865,7 @@
   "GUID": "530c923e-219d-470a-b2f9-1c2a82d43bb0",
   "isLineageEnabled": false,
   "polyglotModelPaths": [],
-  "lastModifTS": "2025-02-20T06:51:54.607Z",
+  "lastModifTS": "2025-02-21T10:25:36.897Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
