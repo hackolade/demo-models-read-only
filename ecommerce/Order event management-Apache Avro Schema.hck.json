@@ -29,7 +29,7 @@
           "code": "",
           "name": "update_timestamp",
           "isActivated": true,
-          "required": true,
+          "required": false,
           "exclusiveMinimum": false,
           "exclusiveMaximum": false,
           "primaryKey": false,
@@ -38,10 +38,12 @@
           "type": "numeric",
           "GUID": "bb3a75b5-8925-4be2-8911-b02d7e9084bc",
           "description": "The exact time at which the update occurred, recorded as the number of milliseconds since the Unix epoch. This helps in maintaining an accurate audit trail of order changes.",
-          "error": {}
+          "error": {
+            "default": true
+          }
         },
         {
-          "required": true,
+          "required": false,
           "type": "choice",
           "properties": [
             {
@@ -52,79 +54,118 @@
               "childType": "record",
               "properties": [
                 {
-                  "name": "product_updates",
-                  "hackoladeMeta": {},
-                  "isActivated": true,
                   "required": true,
-                  "primaryKey": false,
+                  "type": "choice",
                   "properties": [
                     {
-                      "name": "added_products",
-                      "hackoladeMeta": {},
+                      "subschema": true,
                       "isActivated": true,
-                      "required": true,
+                      "type": "document",
+                      "GUID": "a93d17f0-aa02-45c3-9517-56b1951fe6ce",
+                      "childType": "record",
                       "properties": [
                         {
-                          "GUID": "3542b496-374f-48a1-a355-cfdc64bdac49",
-                          "name": "Product",
-                          "type": "reference",
-                          "$ref": "#model/definitions/Product",
-                          "refType": "model",
-                          "ref": "98075241-cb45-45ae-98fe-9c30ceada171",
-                          "refIdPath": [
-                            "777fbee0-73a1-43a3-8272-fa6b5eb58dac",
-                            "e52e142e-01ac-497e-90f7-53bb93482870",
-                            "98075241-cb45-45ae-98fe-9c30ceada171"
-                          ],
+                          "name": "no_product_update",
+                          "hackoladeMeta": {},
                           "isActivated": true,
                           "required": true,
-                          "hackoladeMeta": {},
-                          "displayName": "Product",
-                          "arrayItem": true
-                        }
-                      ],
-                      "primaryKey": false,
-                      "additionalItems": true,
-                      "uniqueItems": false,
-                      "childType": "array",
-                      "type": "array",
-                      "GUID": "c183d9c8-1fdc-4e1b-912b-8367fedf8bd7",
-                      "description": "A list of product identifiers that were added to the order.",
-                      "error": {}
-                    },
-                    {
-                      "name": "removed_products",
-                      "hackoladeMeta": {},
-                      "isActivated": true,
-                      "required": true,
-                      "properties": [
-                        {
-                          "hackoladeMeta": {},
-                          "isActivated": true,
+                          "type": "null",
                           "primaryKey": false,
-                          "type": "string",
-                          "GUID": "078324a9-f71c-4185-844d-38e7af789ada",
-                          "arrayItem": true,
-                          "displayName": "product_id",
+                          "GUID": "2f829adc-a1de-493c-8520-6ccce761d002",
                           "error": {}
                         }
                       ],
-                      "primaryKey": false,
-                      "additionalItems": true,
-                      "uniqueItems": false,
-                      "childType": "array",
-                      "type": "array",
-                      "GUID": "a01a2037-53bd-4c39-9951-220a6f5e795b",
-                      "description": "A list of product identifiers that were removed from the order.",
-                      "error": {}
+                      "additionalProperties": true
+                    },
+                    {
+                      "subschema": true,
+                      "isActivated": true,
+                      "type": "document",
+                      "GUID": "6481e16a-856e-4363-ba52-e0b699ad632e",
+                      "childType": "record",
+                      "properties": [
+                        {
+                          "name": "product_updates",
+                          "hackoladeMeta": {},
+                          "isActivated": true,
+                          "required": true,
+                          "primaryKey": false,
+                          "properties": [
+                            {
+                              "name": "added_products",
+                              "hackoladeMeta": {},
+                              "isActivated": true,
+                              "required": true,
+                              "properties": [
+                                {
+                                  "GUID": "3542b496-374f-48a1-a355-cfdc64bdac49",
+                                  "name": "Product",
+                                  "type": "reference",
+                                  "$ref": "#model/definitions/Product",
+                                  "refType": "model",
+                                  "ref": "98075241-cb45-45ae-98fe-9c30ceada171",
+                                  "refIdPath": [
+                                    "777fbee0-73a1-43a3-8272-fa6b5eb58dac",
+                                    "e52e142e-01ac-497e-90f7-53bb93482870",
+                                    "98075241-cb45-45ae-98fe-9c30ceada171"
+                                  ],
+                                  "isActivated": true,
+                                  "required": true,
+                                  "hackoladeMeta": {},
+                                  "displayName": "Product",
+                                  "arrayItem": true
+                                }
+                              ],
+                              "primaryKey": false,
+                              "additionalItems": true,
+                              "uniqueItems": false,
+                              "childType": "array",
+                              "type": "array",
+                              "GUID": "c183d9c8-1fdc-4e1b-912b-8367fedf8bd7",
+                              "description": "A list of product identifiers that were added to the order.",
+                              "error": {}
+                            },
+                            {
+                              "name": "removed_products",
+                              "hackoladeMeta": {},
+                              "isActivated": true,
+                              "required": true,
+                              "properties": [
+                                {
+                                  "hackoladeMeta": {},
+                                  "isActivated": true,
+                                  "primaryKey": false,
+                                  "type": "string",
+                                  "GUID": "078324a9-f71c-4185-844d-38e7af789ada",
+                                  "arrayItem": true,
+                                  "displayName": "product_id",
+                                  "error": {}
+                                }
+                              ],
+                              "primaryKey": false,
+                              "additionalItems": true,
+                              "uniqueItems": false,
+                              "childType": "array",
+                              "type": "array",
+                              "GUID": "a01a2037-53bd-4c39-9951-220a6f5e795b",
+                              "description": "A list of product identifiers that were removed from the order.",
+                              "error": {}
+                            }
+                          ],
+                          "additionalProperties": false,
+                          "childType": "record",
+                          "type": "document",
+                          "GUID": "29f5480c-560e-4bb3-aaff-fe9c7bba20f8",
+                          "description": "Captures modifications to the list of products within the order.",
+                          "error": {}
+                        }
+                      ],
+                      "additionalProperties": true
                     }
                   ],
-                  "additionalProperties": false,
-                  "childType": "record",
-                  "type": "document",
-                  "GUID": "29f5480c-560e-4bb3-aaff-fe9c7bba20f8",
-                  "description": "Captures modifications to the list of products within the order.",
-                  "error": {}
+                  "isActivated": true,
+                  "choice": "oneOf",
+                  "GUID": "b09bd63d-b0a0-4cbf-bd25-91cd00d7c11d"
                 }
               ],
               "additionalProperties": true,
@@ -185,10 +226,7 @@
           "GUID": "47cdd38c-6b32-4294-9841-fda6864edebc",
           "description": "This field utilizes a union type to represent one of two possible update details: **product_updates** or **status_update**.",
           "hackoladeMeta": {},
-          "error": {
-            "name": false,
-            "code": false
-          }
+          "error": {}
         }
       ],
       "definitions": {
@@ -394,29 +432,57 @@
           "error": {}
         },
         {
-          "code": "",
           "name": "cancellation_reason",
+          "type": "multiple",
+          "properties": [],
+          "multipleTypes": [
+            {
+              "isActivated": true,
+              "type": "null",
+              "GUID": "3ccfb5a7-ad6a-4427-9b4e-462a842c208c"
+            },
+            {
+              "type": "string",
+              "GUID": "d88861f9-4f1e-4048-90c4-8c55a0969a1f",
+              "error": {}
+            }
+          ],
           "isActivated": true,
-          "required": true,
           "primaryKey": false,
-          "type": "string",
           "GUID": "285f5b23-6a09-405e-802b-eb33eb469d1a",
+          "code": "",
           "description": "Provides a textual explanation for why the order was cancelled. This may include reasons such as customer request, stock unavailability, or payment issues, and is useful for both customer service and operational analysis.",
+          "required": false,
+          "default": null,
           "error": {}
         },
         {
-          "code": "",
           "name": "cancellation_timestamp",
+          "type": "multiple",
+          "properties": [],
+          "multipleTypes": [
+            {
+              "isActivated": true,
+              "type": "null",
+              "GUID": "817d1708-a395-475a-95cc-5888b41dd09e"
+            },
+            {
+              "exclusiveMinimum": false,
+              "exclusiveMaximum": false,
+              "mode": "long",
+              "childType": "number",
+              "type": "numeric",
+              "GUID": "abfecd54-60ce-4f83-8f82-71a8529d2610",
+              "error": {}
+            }
+          ],
           "isActivated": true,
-          "required": true,
-          "exclusiveMinimum": false,
-          "exclusiveMaximum": false,
           "primaryKey": false,
-          "mode": "long",
-          "childType": "number",
-          "type": "numeric",
           "GUID": "5688a03c-e6e5-4c19-86ae-f3af92d58e26",
+          "code": "",
           "description": "The timestamp marking when the order cancellation occurred, given as milliseconds since the Unix epoch. This field is crucial for audit logs and time-based analytics.",
+          "required": false,
+          "default": null,
           "error": {}
         }
       ],
@@ -486,7 +552,9 @@
     "3d49a16d-8a5b-4586-8705-330ebf282b83": "OrderCancelled",
     "93a88793-edd8-4255-aa88-6a92e5e9bd83": "Product",
     "98075241-cb45-45ae-98fe-9c30ceada171": "Product",
-    "47cdd38c-6b32-4294-9841-fda6864edebc": ""
+    "47cdd38c-6b32-4294-9841-fda6864edebc": "",
+    "2f829adc-a1de-493c-8520-6ccce761d002": "no_product_update",
+    "29f5480c-560e-4bb3-aaff-fe9c7bba20f8": "product_updates"
   },
   "definitions": {
     "type": "definitions",
@@ -541,6 +609,8 @@
             "30f43a54-5e73-4f88-8b7a-2901a5790a14",
             "47cdd38c-6b32-4294-9841-fda6864edebc",
             "4b55ec5c-a45a-4f61-a6ad-4fbb129dc828",
+            "b09bd63d-b0a0-4cbf-bd25-91cd00d7c11d",
+            "6481e16a-856e-4363-ba52-e0b699ad632e",
             "29f5480c-560e-4bb3-aaff-fe9c7bba20f8",
             "c183d9c8-1fdc-4e1b-912b-8367fedf8bd7",
             "3542b496-374f-48a1-a355-cfdc64bdac49"
@@ -569,6 +639,13 @@
       "bucketId": "",
       "disableInitialFocus": true,
       "value": "This Avro Kafka Order Management Model is intended for illustration purposes only and provides a simplified representation of an event-driven order management system within an ecommerce platform.\n\nWhile it captures essential events and Avro schema definitions, it does not encompass all potential complexities or best practices that may be applicable in a comprehensive production implementation."
+    },
+    {
+      "GUID": "0e5cfeda-db0d-4281-bd98-ef17a3f44db9",
+      "name": "New annotation",
+      "type": "annotation",
+      "disableInitialFocus": true,
+      "value": "multi null default BWFW (elearning video)\nother case with Polyglot derive"
     }
   ],
   "dbVendor": "Avro",
@@ -577,7 +654,7 @@
   "creationTS": "2025-02-19T13:28:59.048Z",
   "GUID": "777fbee0-73a1-43a3-8272-fa6b5eb58dac",
   "isLineageEnabled": false,
-  "lastModifTS": "2025-02-19T16:03:36.753Z",
+  "lastModifTS": "2025-02-21T11:15:32.521Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -600,25 +677,25 @@
         "erd": [
           {
             "GUID": "30f43a54-5e73-4f88-8b7a-2901a5790a14",
-            "x": 1065.3999999999999,
-            "y": 1428.6000000000001,
-            "width": 353,
-            "height": 303,
+            "x": 922.3999999999999,
+            "y": 1431.6000000000001,
+            "width": 660,
+            "height": 384,
             "color": {}
           },
           {
             "GUID": "1e046ba4-262c-46cf-a6c8-a5a5283f264d",
-            "x": 1061,
-            "y": 1193,
+            "x": 928,
+            "y": 1194,
             "width": 312,
             "height": 173,
             "color": {}
           },
           {
             "GUID": "3d49a16d-8a5b-4586-8705-330ebf282b83",
-            "x": 1079.8,
-            "y": 1794.0000000000002,
-            "width": 277,
+            "x": 946.8,
+            "y": 1844.0000000000002,
+            "width": 299,
             "height": 83,
             "color": {}
           }
@@ -631,8 +708,8 @@
         },
         "buckets": [
           {
-            "x": 1021,
-            "y": 1153,
+            "x": 882.3999999999999,
+            "y": 1154,
             "GUID": "0ce79e7c-133c-45e0-adcb-bf6f2de69d56"
           }
         ],
@@ -662,6 +739,13 @@
             "color": {
               "hex": "#fec107"
             }
+          },
+          {
+            "GUID": "0e5cfeda-db0d-4281-bd98-ef17a3f44db9",
+            "x": 1495,
+            "y": 1315,
+            "height": 150,
+            "width": 300
           }
         ],
         "nestedCollectionsLayout": "horizontal",
@@ -675,6 +759,11 @@
             "autoWidth": false,
             "autoHeight": false,
             "GUID": "1e046ba4-262c-46cf-a6c8-a5a5283f264d"
+          },
+          {
+            "autoWidth": false,
+            "autoHeight": false,
+            "GUID": "3d49a16d-8a5b-4586-8705-330ebf282b83"
           }
         ],
         "relationshipUpdateDisabled": false,
