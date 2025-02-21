@@ -2,6 +2,57 @@
   "modelName": "Product Polyglot",
   "collections": [
     {
+      "GUID": "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
+      "collectionName": "Category",
+      "type": "object",
+      "properties": [
+        {
+          "name": "Name",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "required": true,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "GUID": "97db87db-8fbe-41bb-8850-34193c9ee07e",
+          "childRelationships": [
+            "0d5d62f2-6a6d-4288-8f4a-d8413e910460"
+          ],
+          "description": " serves as the primary identifier for grouping related products. Examples include **Bikes**, **Accessories**, and **Apparel**.",
+          "error": {}
+        },
+        {
+          "name": "Description",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "GUID": "b0919d69-0355-438b-b7aa-759e6fe9632c",
+          "description": "A brief overview of the category, providing additional context and details about the types of products included. This attribute can help customers understand the category's focus and offerings.",
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "eef2d743-9c10-4efd-a735-4905de0029bf"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "bucketId": "4631c9fb-41fb-4647-a18e-f22367a656c5",
+      "description": "Classifies products into distinct groups based on shared characteristics or purposes, such as **Bikes**, **Accessories**, or **Apparel**. This categorization aids customers in navigating the product offerings and enhances the shopping experience by allowing for easier product discovery and filtering."
+    },
+    {
       "GUID": "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
       "collectionName": "Product",
       "type": "object",
@@ -61,7 +112,7 @@
             "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
             "97db87db-8fbe-41bb-8850-34193c9ee07e"
           ],
-          "relationshipType": "Foreign Key"
+          "relationshipType": "Foreign Master"
         },
         {
           "name": "Description",
@@ -248,57 +299,6 @@
       "description": "Represents the items available for sale in the e-commerce platform. It encompasses essential details about each product, including its **name**, **description**, **pricing**, and associations with **categories** and **suppliers**. This entity is crucial for managing inventory and facilitating sales transactions."
     },
     {
-      "GUID": "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
-      "collectionName": "Category",
-      "type": "object",
-      "properties": [
-        {
-          "name": "Name",
-          "hackoladeMeta": {},
-          "isActivated": true,
-          "primaryKey": true,
-          "required": true,
-          "childType": "varchar",
-          "type": "string",
-          "compositeKey": [
-            "compositePrimaryKey",
-            "compositeUniqueKey"
-          ],
-          "GUID": "97db87db-8fbe-41bb-8850-34193c9ee07e",
-          "childRelationships": [
-            "0d5d62f2-6a6d-4288-8f4a-d8413e910460"
-          ],
-          "description": " serves as the primary identifier for grouping related products. Examples include **Bikes**, **Accessories**, and **Apparel**.",
-          "error": {}
-        },
-        {
-          "name": "Description",
-          "hackoladeMeta": {},
-          "isActivated": true,
-          "primaryKey": false,
-          "required": false,
-          "childType": "varchar",
-          "type": "string",
-          "compositeKey": [
-            "compositePrimaryKey",
-            "compositeUniqueKey"
-          ],
-          "GUID": "b0919d69-0355-438b-b7aa-759e6fe9632c",
-          "description": "A brief overview of the category, providing additional context and details about the types of products included. This attribute can help customers understand the category's focus and offerings.",
-          "error": {}
-        }
-      ],
-      "definitions": {
-        "type": "definitions",
-        "properties": [],
-        "GUID": "eef2d743-9c10-4efd-a735-4905de0029bf"
-      },
-      "isActivated": true,
-      "additionalProperties": false,
-      "bucketId": "4631c9fb-41fb-4647-a18e-f22367a656c5",
-      "description": "Classifies products into distinct groups based on shared characteristics or purposes, such as **Bikes**, **Accessories**, or **Apparel**. This categorization aids customers in navigating the product offerings and enhances the shopping experience by allowing for easier product discovery and filtering."
-    },
-    {
       "GUID": "14dd0530-7fdc-4567-a3c4-2177fc0bd660",
       "collectionName": "Stock",
       "type": "object",
@@ -323,7 +323,7 @@
             "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
             "6b6386de-f9dc-46d9-9fc2-16d3c2c58340"
           ],
-          "relationshipType": "Foreign Key"
+          "relationshipType": "Foreign Master"
         },
         {
           "name": "Available quantity",
@@ -561,8 +561,52 @@
   "views": [],
   "relationships": [
     {
+      "name": "is located at",
+      "relationshipType": "Foreign Master",
+      "parentField": [],
+      "parentCardinality": "1",
+      "childField": [],
+      "isActivated": true,
+      "childCardinality": "1",
+      "level": "field",
+      "GUID": "e1a936f9-0a54-4f68-9c40-2b53dd123428",
+      "lineSize": 2,
+      "parentCollection": "1eec2f02-271b-45e3-b874-b47ac00ca585",
+      "childCollection": "",
+      "hackoladeStyles": {
+        "GUID": "01dfe715-18e0-4ea0-8c5b-f88ab5bcdbf1",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1222.8521508110625,
+            "y": 1557.1177618825493
+          },
+          {
+            "x": 1222.8521508110625,
+            "y": 1517.9223328233302
+          },
+          {
+            "x": 1128.3413702948615,
+            "y": 1517.9223328233302
+          },
+          {
+            "x": 1128.3413702948615,
+            "y": 1478.7269037641108
+          }
+        ],
+        "sides": [
+          "top",
+          "bottom"
+        ]
+      }
+    },
+    {
       "name": "contains",
-      "relationshipType": "Foreign Key",
+      "relationshipType": "Foreign Master",
       "parentField": [
         [
           "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
@@ -615,8 +659,52 @@
       }
     },
     {
+      "name": "is valid in",
+      "relationshipType": "Foreign Master",
+      "parentField": [],
+      "parentCardinality": "0..n",
+      "childField": [],
+      "isActivated": true,
+      "childCardinality": "1..n",
+      "level": "field",
+      "GUID": "4aaac7e6-5e6d-4ed4-97bd-0e9d8177d7da",
+      "lineSize": 2,
+      "parentCollection": "",
+      "childCollection": "",
+      "hackoladeStyles": {
+        "GUID": "3c1f0027-a34d-42f6-aa16-95c296bdd002",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1995.8071129233222,
+            "y": 1427.3704340808683
+          },
+          {
+            "x": 1995.8071129233222,
+            "y": 1297.4345233038844
+          },
+          {
+            "x": 1855.4805848151907,
+            "y": 1297.4345233038844
+          },
+          {
+            "x": 1855.4805848151907,
+            "y": 1167.4986125269004
+          }
+        ],
+        "sides": [
+          "top",
+          "bottom"
+        ]
+      }
+    },
+    {
       "name": "has",
-      "relationshipType": "Foreign Key",
+      "relationshipType": "Foreign Master",
       "parentField": [
         [
           "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
@@ -670,7 +758,7 @@
     },
     {
       "name": "is issued by",
-      "relationshipType": "Foreign Key",
+      "relationshipType": "Foreign Master",
       "parentField": [],
       "parentCardinality": "1..n",
       "childField": [],
@@ -729,11 +817,13 @@
     "1eec2f02-271b-45e3-b874-b47ac00ca585": "Supplier",
     "8ee85d26-2d69-49d4-82b9-1d2b12c7966d": "Company name",
     "ba154f30-0f46-41b7-bbd0-b5e106f2cf32": "Contact name",
+    "e1a936f9-0a54-4f68-9c40-2b53dd123428": "is located at",
     "dc12c121-c011-42fd-865f-1a0fcd657fc0": "Images",
     "9cc886b2-1216-4d95-bef9-d48290b0e804": "email",
     "3a79b59c-1d60-4c86-a484-a20deb6fcd95": "Phone number",
     "8b6314e5-b395-43b9-a367-4fbde307f10d": "Warehouse",
     "0d5d62f2-6a6d-4288-8f4a-d8413e910460": "contains",
+    "4aaac7e6-5e6d-4ed4-97bd-0e9d8177d7da": "is valid in",
     "170fd180-4f35-44ca-8389-7519c1aa9e0b": "has",
     "742e1275-de2e-4675-a75e-5902b8832233": "is issued by",
     "4631c9fb-41fb-4647-a18e-f22367a656c5": "Product management",
@@ -865,7 +955,7 @@
   "GUID": "530c923e-219d-470a-b2f9-1c2a82d43bb0",
   "isLineageEnabled": false,
   "polyglotModelPaths": [],
-  "lastModifTS": "2025-02-21T10:25:36.897Z",
+  "lastModifTS": "2025-02-20T08:01:02.265Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -874,7 +964,7 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.0.2"
+    "version": "8.0.1"
   },
   "hackoladeMeta": {
     "validationErrors": {
@@ -927,12 +1017,6 @@
             }
           }
         ],
-        "erdDefinitions": {
-          "erd": [],
-          "rootPath": [],
-          "entities": [],
-          "decorativeSymbols": []
-        },
         "buckets": [
           {
             "x": 948.8978087549588,
@@ -940,45 +1024,50 @@
             "GUID": "4631c9fb-41fb-4647-a18e-f22367a656c5"
           }
         ],
-        "collapsedNodes": [],
-        "activeRelationship": "",
-        "activeRelationshipFields": {
-          "childField": [],
-          "parentField": []
-        },
-        "selectedCollections": [],
-        "displayColorPicker": false,
+        "diagramViews": [],
+        "decorativeSymbols": [
+          {
+            "GUID": "1ba4fbbc-36c8-44ee-938d-55054b0f6d7e",
+            "x": 953.8998006388216,
+            "y": 834.6910045763855,
+            "height": 145,
+            "width": 400,
+            "color": {
+              "hex": "#fec107"
+            }
+          }
+        ],
         "graphView": {
           "erd": [
             {
               "GUID": "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
               "size": 100,
-              "x": 1040,
-              "y": 1040
+              "x": 1091.258124061373,
+              "y": 1176.326936736433
             },
             {
               "GUID": "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
               "size": 100,
-              "x": 1040,
-              "y": 1040
+              "x": 993.1738971493444,
+              "y": 892.5655360700084
             },
             {
               "GUID": "14dd0530-7fdc-4567-a3c4-2177fc0bd660",
               "size": 100,
-              "x": 1057,
-              "y": 1052
+              "x": 1291.137903031344,
+              "y": 952.2887341193846
             },
             {
               "GUID": "1eec2f02-271b-45e3-b874-b47ac00ca585",
               "size": 100,
-              "x": 1057,
-              "y": 1052
+              "x": 870.2457346583097,
+              "y": 973.0932144512353
             }
           ],
           "buckets": [
             {
-              "x": 914,
-              "y": 937,
+              "x": 832.6995390777295,
+              "y": 852.3030817456622,
               "GUID": "4631c9fb-41fb-4647-a18e-f22367a656c5"
             }
           ],
@@ -993,44 +1082,7 @@
           ],
           "forceLayout": true,
           "defaultLinkLength": 300
-        },
-        "diagramViews": [],
-        "decorativeSymbols": [
-          {
-            "GUID": "1ba4fbbc-36c8-44ee-938d-55054b0f6d7e",
-            "x": 953.8998006388216,
-            "y": 834.6910045763855,
-            "height": 145,
-            "width": 400,
-            "color": {
-              "hex": "#fec107"
-            }
-          }
-        ],
-        "nestedCollectionsLayout": "horizontal",
-        "options": [
-          {
-            "autoWidth": false,
-            "autoHeight": false,
-            "GUID": "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b"
-          },
-          {
-            "autoWidth": false,
-            "autoHeight": false,
-            "GUID": "1eec2f02-271b-45e3-b874-b47ac00ca585"
-          },
-          {
-            "autoWidth": false,
-            "autoHeight": false,
-            "GUID": "14dd0530-7fdc-4567-a3c4-2177fc0bd660"
-          },
-          {
-            "autoWidth": false,
-            "autoHeight": false,
-            "GUID": "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f"
-          }
-        ],
-        "relationshipUpdateDisabled": false
+        }
       },
       "collectionLevel": {},
       "changed": false
@@ -1039,5 +1091,6 @@
       "collapsedNodes": [],
       "shouldDistributeCollections": false
     }
-  }
+  },
+  "comments": "This Model serves as a basic example of reusable definitions within a data modeling context.\n\nIt is intended for illustration purposes only and simplifies the complexities of product management, omitting certain variations and best practices relevant to real-world applications."
 }

@@ -19,6 +19,7 @@
             "compositeUniqueKey"
           ],
           "GUID": "2dc5cd19-9bb7-4405-a00f-69af0c39ea24",
+          "description": "A unique reference number or code assigned to the order for tracking and identification.",
           "error": {}
         },
         {
@@ -50,7 +51,6 @@
           "symbols": [
             "Y"
           ],
-          "alternateKey": false,
           "childType": "enum",
           "type": "string",
           "compositeKey": [
@@ -58,9 +58,15 @@
             "compositeUniqueKey"
           ],
           "compositePrimaryKey": false,
-          "compositeUniqueKey": false,
-          "error": {},
-          "GUID": "6dac6534-e11a-49ac-a049-30f3b1207b88"
+          "GUID": "6dac6534-e11a-49ac-a049-30f3b1207b88",
+          "description": "The current state of the order (e.g., Pending, Shipped, Delivered, Canceled).",
+          "enum": [
+            "Pending",
+            "Shipped",
+            "Delivered",
+            "Canceled"
+          ],
+          "error": {}
         },
         {
           "name": "Tracking number",
@@ -75,6 +81,7 @@
             "compositeUniqueKey"
           ],
           "GUID": "d8e8b56d-827d-4fd1-bea0-07bd5bab9c2e",
+          "description": "A unique code provided by the shipping carrier to track the delivery status of the order.",
           "error": {}
         },
         {
@@ -97,9 +104,9 @@
           "compositePrimaryKey": false,
           "compositeUniqueKey": false,
           "error": {
-            "name": false,
-            "refPath": false
-          }
+            "refDescription": false
+          },
+          "refDescription": "The destination address where the order is to be delivered."
         },
         {
           "name": "Payments",
@@ -127,13 +134,11 @@
                   ],
                   "GUID": "42c71b66-59d1-4f73-b821-a9034764f127",
                   "mode": "decimal",
-                  "error": {
-                    "code": false,
-                    "name": false
-                  },
                   "foreignCollection": "",
                   "foreignField": [],
-                  "name": "Amount"
+                  "name": "Amount",
+                  "description": "The total cost of the payment, net of applicable taxes and fees.",
+                  "error": {}
                 },
                 {
                   "name": "Timestamp",
@@ -148,13 +153,11 @@
                     "compositePrimaryKey",
                     "compositeUniqueKey"
                   ],
-                  "error": {
-                    "name": false,
-                    "code": false
-                  },
                   "GUID": "b2f61376-69c8-46f5-9f61-8e68a0dae68d",
                   "foreignCollection": "",
-                  "foreignField": []
+                  "foreignField": [],
+                  "description": "The date and time when the payment was received.",
+                  "error": {}
                 },
                 {
                   "name": "Payment method",
@@ -172,13 +175,23 @@
                     "compositePrimaryKey",
                     "compositeUniqueKey"
                   ],
-                  "error": {
-                    "name": false,
-                    "code": false
-                  },
                   "GUID": "37ecefbe-69cd-4c46-bfe2-bdb2fea3be1c",
                   "foreignCollection": "",
-                  "foreignField": []
+                  "foreignField": [],
+                  "description": "The method used for payment (e.g., Credit Card, PayPal, Bank Transfer).",
+                  "error": {
+                    "enum": false,
+                    "enums": [
+                      false,
+                      false,
+                      false
+                    ]
+                  },
+                  "enum": [
+                    "CreditCard",
+                    "PayPal",
+                    "BankTransfer"
+                  ]
                 },
                 {
                   "name": "Status",
@@ -196,13 +209,16 @@
                     "compositePrimaryKey",
                     "compositeUniqueKey"
                   ],
-                  "error": {
-                    "name": false,
-                    "code": false
-                  },
                   "GUID": "4b11b953-edb3-4c2d-8e36-a17406cb7b26",
                   "foreignCollection": "",
-                  "foreignField": []
+                  "foreignField": [],
+                  "description": "Indicates whether the payment has been completed, pending, or failed.",
+                  "enum": [
+                    "completed",
+                    "pending",
+                    "failed"
+                  ],
+                  "error": {}
                 }
               ],
               "additionalProperties": false,
@@ -223,7 +239,6 @@
               "displayName": "Payment"
             }
           ],
-          "alternateKey": false,
           "childType": "array",
           "type": "array",
           "compositeKey": [
@@ -231,11 +246,11 @@
             "compositeUniqueKey"
           ],
           "compositePrimaryKey": false,
-          "compositeUniqueKey": false,
-          "error": {},
           "primaryKey": false,
           "required": false,
-          "GUID": "fad47821-c108-4728-ac06-edd87399a408"
+          "GUID": "fad47821-c108-4728-ac06-edd87399a408",
+          "description": "A record of financial transactions associated with the order.",
+          "error": {}
         },
         {
           "name": "Ordered items",
@@ -256,7 +271,6 @@
                   "exclusiveMaximum": false,
                   "primaryKey": false,
                   "required": false,
-                  "alternateKey": false,
                   "childType": "number",
                   "type": "numeric",
                   "compositeKey": [
@@ -264,9 +278,9 @@
                     "compositeUniqueKey"
                   ],
                   "compositePrimaryKey": false,
-                  "compositeUniqueKey": false,
-                  "error": {},
-                  "GUID": "e16e89ec-42c0-4647-ab3f-4225a2c9df1c"
+                  "GUID": "e16e89ec-42c0-4647-ab3f-4225a2c9df1c",
+                  "description": "The number of units for each ordered item.",
+                  "error": {}
                 },
                 {
                   "GUID": "acdd584f-e173-4126-a669-6ea2f414ffd0",
@@ -414,7 +428,6 @@
               "error": {}
             }
           ],
-          "alternateKey": false,
           "childType": "array",
           "type": "array",
           "compositeKey": [
@@ -422,11 +435,11 @@
             "compositeUniqueKey"
           ],
           "compositePrimaryKey": false,
-          "compositeUniqueKey": false,
-          "error": {},
           "primaryKey": false,
           "required": false,
-          "GUID": "72bc07b9-d511-42e0-966a-7e5f14513040"
+          "GUID": "72bc07b9-d511-42e0-966a-7e5f14513040",
+          "description": "A list of products included in the order, detailing the purchased goods.",
+          "error": {}
         }
       ],
       "definitions": {
@@ -436,7 +449,8 @@
       },
       "isActivated": true,
       "additionalProperties": false,
-      "bucketId": "e863d79d-6e38-4098-a01e-46d6249501f8"
+      "bucketId": "e863d79d-6e38-4098-a01e-46d6249501f8",
+      "description": "Represents a purchase transaction, including details about the items ordered, shipping information, payment details, and order status."
     },
     {
       "GUID": "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648",
@@ -1677,7 +1691,7 @@
       "normalization": false
     }
   ],
-  "lastModifTS": "2025-02-19T11:07:28.260Z",
+  "lastModifTS": "2025-02-19T11:31:23.099Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
