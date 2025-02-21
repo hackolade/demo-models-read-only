@@ -57,6 +57,12 @@
                 ]
               }
             ]
+          },
+          {
+            "GUID": "18d05aa0-70b0-4f8e-9736-ffbc7104f778",
+            "childRelationships": [
+              "d028ee1a-a542-4adf-898b-bf5ef757feac"
+            ]
           }
         ]
       },
@@ -66,22 +72,22 @@
       "type": "object",
       "properties": [
         {
-          "primaryKey": false,
+          "primaryKey": true,
           "required": true,
-          "alternateKey": false,
           "childType": "varchar",
           "type": "string",
-          "compositePrimaryKey": false,
-          "compositeUniqueKey": false,
           "name": "Name",
           "hackoladeMeta": {},
           "isActivated": true,
           "GUID": "52b23ea1-067c-4f56-a31f-ad924ae36667",
-          "unique": true,
           "mode": "",
           "compositeKey": [
             "compositePrimaryKey",
             "compositeUniqueKey"
+          ],
+          "error": {},
+          "childRelationships": [
+            "39c772d3-dec9-42ae-8fca-f030b060db29"
           ]
         },
         {
@@ -117,6 +123,29 @@
     {
       "type": "object",
       "properties": [
+        {
+          "name": "Campaign name",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "required": true,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "GUID": "8de1e23f-3abe-471d-ab3c-068f4df58dd5",
+          "error": {},
+          "compositePrimaryKey": true,
+          "parentRelationship": "39c772d3-dec9-42ae-8fca-f030b060db29",
+          "relationshipType": "Foreign Key",
+          "foreignCollection": "138a8017-4801-441d-bdfe-e54f867faed2",
+          "foreignField": [
+            "138a8017-4801-441d-bdfe-e54f867faed2",
+            "52b23ea1-067c-4f56-a31f-ad924ae36667"
+          ]
+        },
         {
           "exclusiveMinimum": false,
           "exclusiveMaximum": false,
@@ -190,6 +219,23 @@
             "compositePrimaryKey",
             "compositeUniqueKey"
           ]
+        },
+        {
+          "name": "Customer reference",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "required": true,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "GUID": "caa81b5c-c83f-48d4-98be-3e7304ea6f6d",
+          "error": {},
+          "parentRelationship": "d028ee1a-a542-4adf-898b-bf5ef757feac",
+          "compositePrimaryKey": true
         }
       ],
       "definitions": {
@@ -201,7 +247,21 @@
       "isActivated": true,
       "collectionName": "Customer loyalty points",
       "additionalProperties": false,
-      "bucketId": "11956698-cdd6-44b8-855f-cd59a50e4665"
+      "bucketId": "11956698-cdd6-44b8-855f-cd59a50e4665",
+      "uniqueKey": [],
+      "primaryKey": [
+        {
+          "GUID": "2a64ea48-0839-43bd-864f-3fd8e2839aa3",
+          "compositePrimaryKey": [
+            {
+              "keyId": "8de1e23f-3abe-471d-ab3c-068f4df58dd5"
+            },
+            {
+              "keyId": "caa81b5c-c83f-48d4-98be-3e7304ea6f6d"
+            }
+          ]
+        }
+      ]
     }
   ],
   "buckets": [
@@ -251,9 +311,19 @@
   "views": [],
   "relationships": [
     {
-      "parentField": [],
+      "parentField": [
+        [
+          "317a2e84-5f9c-4f59-8bda-ed2df628354a",
+          "5cc94e26-8eb9-4b1c-a78d-a870d9f640db",
+          "18d05aa0-70b0-4f8e-9736-ffbc7104f778"
+        ]
+      ],
       "childField": [
-        []
+        [],
+        [
+          "12222410-3b51-46a4-8c5a-c72edd77e24d",
+          "caa81b5c-c83f-48d4-98be-3e7304ea6f6d"
+        ]
       ],
       "level": "field",
       "lineSize": 2,
@@ -268,16 +338,16 @@
         "dataType": "",
         "shape": [
           {
-            "x": 1513,
-            "y": 1429
+            "x": 1516,
+            "y": 1430
           },
           {
-            "x": 1513,
-            "y": 1356.2170706006323
+            "x": 1516,
+            "y": 1356.7170706006323
           },
           {
             "x": 1314.1085353003136,
-            "y": 1356.2170706006323
+            "y": 1356.7170706006323
           },
           {
             "x": 1314.1085353003136,
@@ -290,16 +360,24 @@
         ]
       },
       "name": "has",
-      "relationshipType": "Foreign Master",
+      "relationshipType": "Foreign Key",
       "parentCardinality": "1",
       "isActivated": true,
       "childCardinality": "0..n",
       "GUID": "d028ee1a-a542-4adf-898b-bf5ef757feac"
     },
     {
-      "parentField": [],
+      "parentField": [
+        [
+          "138a8017-4801-441d-bdfe-e54f867faed2",
+          "52b23ea1-067c-4f56-a31f-ad924ae36667"
+        ]
+      ],
       "childField": [
-        []
+        [
+          "12222410-3b51-46a4-8c5a-c72edd77e24d",
+          "8de1e23f-3abe-471d-ab3c-068f4df58dd5"
+        ]
       ],
       "level": "field",
       "lineSize": 2,
@@ -314,25 +392,29 @@
         "dataType": "",
         "shape": [
           {
-            "x": 1656,
-            "y": 1486
+            "x": 1662,
+            "y": 1503.5
           },
           {
-            "x": 1812,
-            "y": 1486
+            "x": 1745.2147946848745,
+            "y": 1503.5
           },
           {
-            "x": 1812,
-            "y": 1560
+            "x": 1745.2147946848745,
+            "y": 1511.4724004132795
+          },
+          {
+            "x": 1828.4295893697492,
+            "y": 1511.4724004132795
           }
         ],
         "sides": [
           "right",
-          "top"
+          "left"
         ]
       },
       "name": "belongs to",
-      "relationshipType": "Foreign Master",
+      "relationshipType": "Foreign Key",
       "parentCardinality": "1",
       "isActivated": true,
       "childCardinality": "0..n",
@@ -355,7 +437,9 @@
     "f29ec549-bdc4-48fc-ae32-8961f523108d": "Description",
     "1be970c9-a83a-41b1-bdd5-ed045231c1bc": "Customer management",
     "c2faf611-b4fb-4453-84a7-14037cc26ecc": "Disclaimer",
-    "11956698-cdd6-44b8-855f-cd59a50e4665": "Loyalty management"
+    "11956698-cdd6-44b8-855f-cd59a50e4665": "Loyalty management",
+    "caa81b5c-c83f-48d4-98be-3e7304ea6f6d": "Customer reference",
+    "8de1e23f-3abe-471d-ab3c-068f4df58dd5": "Campaign name"
   },
   "definitions": {
     "type": "definitions",
@@ -729,7 +813,7 @@
       "normalization": false
     }
   ],
-  "lastModifTS": "2025-02-19T11:06:37.049Z",
+  "lastModifTS": "2025-02-21T14:16:01.199Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -738,7 +822,7 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.0.1"
+    "version": "8.0.2"
   },
   "hackoladeMeta": {
     "validationErrors": {
@@ -762,9 +846,9 @@
           },
           {
             "GUID": "138a8017-4801-441d-bdfe-e54f867faed2",
-            "x": 1698,
-            "y": 1560,
-            "width": 228,
+            "x": 1828.4295893697492,
+            "y": 1474.4724004132795,
+            "width": 230,
             "height": 74,
             "color": {
               "hex": "#2196F3"
@@ -774,8 +858,8 @@
             "GUID": "12222410-3b51-46a4-8c5a-c72edd77e24d",
             "x": 1370,
             "y": 1430,
-            "width": 286,
-            "height": 112,
+            "width": 292,
+            "height": 147,
             "color": {
               "hex": "#2196F3"
             }
@@ -871,9 +955,22 @@
             "autoWidth": false,
             "autoHeight": false,
             "GUID": "317a2e84-5f9c-4f59-8bda-ed2df628354a"
+          },
+          {
+            "autoWidth": false,
+            "autoHeight": false,
+            "GUID": "12222410-3b51-46a4-8c5a-c72edd77e24d"
+          },
+          {
+            "autoWidth": false,
+            "autoHeight": false,
+            "GUID": "138a8017-4801-441d-bdfe-e54f867faed2"
           }
         ],
-        "relationshipUpdateDisabled": false
+        "relationshipUpdateDisabled": false,
+        "displayOptions": {
+          "hideErdRelationshipsNames": false
+        }
       },
       "collectionLevel": {},
       "changed": false
