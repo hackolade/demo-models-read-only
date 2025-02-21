@@ -23,6 +23,30 @@
           "error": {}
         },
         {
+          "name": "Customer reference",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "GUID": "6adc1c99-dca5-4d92-88fd-6e27edf175ce",
+          "error": {},
+          "parentRelationship": "f8f34cd7-4027-46ad-9160-b0dcaa29a509",
+          "foreignCollection": "e2ba0994-1763-4b13-8b19-e7a0d9f95edb",
+          "foreignField": [
+            "e2ba0994-1763-4b13-8b19-e7a0d9f95edb",
+            "5cc94e26-8eb9-4b1c-a78d-a870d9f640db",
+            "18d05aa0-70b0-4f8e-9736-ffbc7104f778"
+          ],
+          "relationshipType": "Foreign Key"
+        },
+        {
           "name": "Total amount",
           "hackoladeMeta": {},
           "isActivated": true,
@@ -312,7 +336,7 @@
                     "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
                     "6b6386de-f9dc-46d9-9fc2-16d3c2c58340"
                   ],
-                  "relationshipType": "Foreign Master"
+                  "relationshipType": "Foreign Key"
                 },
                 {
                   "GUID": "39a652f4-defc-4297-8814-d16fdb749d18",
@@ -450,7 +474,12 @@
       "isActivated": true,
       "additionalProperties": false,
       "bucketId": "e863d79d-6e38-4098-a01e-46d6249501f8",
-      "description": "Represents a purchase transaction, including details about the items ordered, shipping information, payment details, and order status."
+      "description": "Represents a purchase transaction, including details about the items ordered, shipping information, payment details, and order status.",
+      "uniqueKey": [
+        {
+          "GUID": "53cbcce4-2637-470e-9bba-debbe6fb564d"
+        }
+      ]
     },
     {
       "GUID": "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648",
@@ -512,6 +541,16 @@
       "additionalProperties": false,
       "error": {
         "refPath": false
+      },
+      "referenceDiff": {
+        "properties": [
+          {
+            "GUID": "18d05aa0-70b0-4f8e-9736-ffbc7104f778",
+            "childRelationships": [
+              "f8f34cd7-4027-46ad-9160-b0dcaa29a509"
+            ]
+          }
+        ]
       }
     }
   ],
@@ -579,10 +618,21 @@
   "relationships": [
     {
       "name": "placed",
-      "relationshipType": "Foreign Master",
-      "parentField": [],
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "e2ba0994-1763-4b13-8b19-e7a0d9f95edb",
+          "5cc94e26-8eb9-4b1c-a78d-a870d9f640db",
+          "18d05aa0-70b0-4f8e-9736-ffbc7104f778"
+        ]
+      ],
       "parentCardinality": "1",
-      "childField": [],
+      "childField": [
+        [
+          "46385b4a-a728-4579-8b09-10e9e7c52c99",
+          "6adc1c99-dca5-4d92-88fd-6e27edf175ce"
+        ]
+      ],
       "isActivated": true,
       "childCardinality": "1..n",
       "level": "field",
@@ -600,11 +650,11 @@
         "shape": [
           {
             "x": 1378.5380761523052,
-            "y": 1013.8563794255192
+            "y": 1027.8563794255192
           },
           {
             "x": 1299.1670048954331,
-            "y": 1013.8563794255192
+            "y": 1027.8563794255192
           },
           {
             "x": 1299.1670048954331,
@@ -623,7 +673,7 @@
     },
     {
       "name": "concerns",
-      "relationshipType": "Foreign Master",
+      "relationshipType": "Foreign Key",
       "parentField": [
         [
           "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648",
@@ -656,15 +706,15 @@
         "dataType": "",
         "shape": [
           {
-            "x": 1813.5380761523052,
-            "y": 1013.8563794255192
+            "x": 1817.5380761523052,
+            "y": 1027.8563794255192
           },
           {
-            "x": 1897.9854805518949,
-            "y": 1013.8563794255192
+            "x": 1899.9854805518949,
+            "y": 1027.8563794255192
           },
           {
-            "x": 1897.9854805518949,
+            "x": 1899.9854805518949,
             "y": 1039.7561443430177
           },
           {
@@ -804,7 +854,8 @@
     "cb06164d-25df-4016-ba43-fe0a45921e6e": "Currency",
     "c7ccd811-1374-4a95-96b8-1bbb7eda7590": "Currency",
     "91f49cfb-0486-4406-9e30-f5b68d67f1fe": "Amount",
-    "cf7c7d06-9e2a-490d-852d-29010e9eefd8": "Amount"
+    "cf7c7d06-9e2a-490d-852d-29010e9eefd8": "Amount",
+    "6adc1c99-dca5-4d92-88fd-6e27edf175ce": "Customer reference"
   },
   "definitions": {
     "type": "definitions",
@@ -1691,7 +1742,7 @@
       "normalization": false
     }
   ],
-  "lastModifTS": "2025-02-19T11:31:23.099Z",
+  "lastModifTS": "2025-02-21T14:19:01.648Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -1700,7 +1751,7 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.0.1"
+    "version": "8.0.2"
   },
   "hackoladeMeta": {
     "validationErrors": {
@@ -1736,8 +1787,8 @@
             "GUID": "46385b4a-a728-4579-8b09-10e9e7c52c99",
             "x": 1378.5380761523052,
             "y": 798.3563794255192,
-            "width": 435,
-            "height": 431,
+            "width": 439,
+            "height": 459,
             "color": {
               "hex": "#2196F3"
             }
