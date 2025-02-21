@@ -41,14 +41,17 @@
             "parentRelationship": ""
           },
           {
-            "GUID": "7c3325ce-c9c4-4ad6-9287-8c1e2084ab9a",
+            "GUID": "7fa9c279-fe3c-4864-83e9-10df93832aef",
             "referenceDiffDeleted": true
           },
           {
-            "GUID": "7fa9c279-fe3c-4864-83e9-10df93832aef",
+            "GUID": "7c3325ce-c9c4-4ad6-9287-8c1e2084ab9a",
             "referenceDiffDeleted": true
           }
         ]
+      },
+      "error": {
+        "refPath": false
       }
     },
     {
@@ -107,12 +110,6 @@
             "error": {}
           },
           {
-            "GUID": "dc12c121-c011-42fd-865f-1a0fcd657fc0",
-            "referenceDiffDeleted": true,
-            "hackoladeMeta": {},
-            "error": {}
-          },
-          {
             "GUID": "097524b6-a4e7-4091-bf57-be02308a2816",
             "properties": [
               {
@@ -130,6 +127,12 @@
                 ]
               }
             ]
+          },
+          {
+            "GUID": "dc12c121-c011-42fd-865f-1a0fcd657fc0",
+            "referenceDiffDeleted": true,
+            "hackoladeMeta": {},
+            "error": {}
           }
         ]
       },
@@ -560,7 +563,7 @@
       "properties": [
         {
           "code": "order_id",
-          "GUID": "362f7019-57f5-4d56-b93d-12e738fbcf61",
+          "GUID": "6167e733-4842-4c19-93c8-b67d64a69bde",
           "type": "reference",
           "name": "order_id",
           "ref": "5c484468-25c0-4e9a-ae7f-7f4b5fb1eefb",
@@ -580,7 +583,7 @@
         },
         {
           "code": "customer_reference",
-          "GUID": "658a83df-1ed9-42cc-be96-b5ebe48eec30",
+          "GUID": "42645c72-7beb-419a-9084-3aebfb310e8c",
           "type": "reference",
           "name": "customer_reference",
           "ref": "aaab868d-9533-45bc-a7f2-a66c58adac7a",
@@ -594,13 +597,13 @@
             "namingConvention": "code"
           },
           "error": {
-            "required": false
-          },
-          "required": true
+            "name": false,
+            "code": false
+          }
         },
         {
           "code": "order_date",
-          "GUID": "f6e83f2e-f3cb-4d57-82ff-cb915b124840",
+          "GUID": "ff9ad6d8-d1aa-417f-8e4b-bec0c7074cf7",
           "type": "reference",
           "name": "order_date",
           "ref": "ed69e76e-6457-4a10-9784-8917f306c0f1",
@@ -620,7 +623,7 @@
         },
         {
           "code": "order_status",
-          "GUID": "f16658fd-1ab8-410c-8bfc-225953571a57",
+          "GUID": "edc350da-0643-43f4-a122-1ac94096b106",
           "type": "reference",
           "name": "order_status",
           "ref": "a3000e73-eec7-443f-b376-70db89d62af4",
@@ -636,16 +639,47 @@
           "error": {
             "name": false,
             "code": false
-          },
-          "generatedDefaultValue": {
-            "GUID": "609c62a6-5acb-46ea-b0b6-ca990e56bad5"
           }
         },
         {
-          "code": "total_amount",
-          "GUID": "2f49e74f-5082-488a-8900-5d0c1de118b0",
+          "code": "order_item_id",
+          "GUID": "e4e66cf6-ae23-4364-834d-79d799c9d95b",
           "type": "reference",
-          "name": "total_amount",
+          "name": "order_item_id",
+          "ref": null,
+          "refType": "collectionReference",
+          "refIdPath": [],
+          "isActivated": true,
+          "hackoladeMeta": {
+            "namingConvention": "code"
+          },
+          "error": {
+            "name": false,
+            "code": false
+          }
+        },
+        {
+          "code": "product_sku",
+          "GUID": "d3165a70-fad2-486d-8b1d-b09eab69ee15",
+          "type": "reference",
+          "name": "product_sku",
+          "ref": null,
+          "refType": "collectionReference",
+          "refIdPath": [],
+          "isActivated": true,
+          "hackoladeMeta": {
+            "namingConvention": "code"
+          },
+          "error": {
+            "name": false,
+            "code": false
+          }
+        },
+        {
+          "code": "quantity",
+          "GUID": "0124ac7f-550b-41f4-8fe7-21ea43ddbcc7",
+          "type": "reference",
+          "name": "quantity",
           "ref": "69d743ab-a834-4463-80f0-7fea8eb75bac",
           "refType": "collectionReference",
           "refIdPath": [
@@ -654,10 +688,24 @@
           ],
           "isActivated": true,
           "hackoladeMeta": {
-            "namingConvention": "code",
-            "styles": {
-              "color": "#f54337"
-            }
+            "namingConvention": "code"
+          },
+          "error": {
+            "name": false,
+            "code": false
+          }
+        },
+        {
+          "code": "applied_unit_price",
+          "GUID": "a5d0a104-d637-4618-bc94-9c83cab493dc",
+          "type": "reference",
+          "name": "applied_unit_price",
+          "ref": null,
+          "refType": "collectionReference",
+          "refIdPath": [],
+          "isActivated": true,
+          "hackoladeMeta": {
+            "namingConvention": "code"
           },
           "error": {
             "name": false,
@@ -683,7 +731,7 @@
         "namingConvention": "code"
       },
       "additionalProperties": false,
-      "selectStatement": "SELECT\n  o.order_id,\n  o.customer_reference,\n  o.order_date,\n  o.order_status,\n  SUM(oi.quantity * oi.applied_unit_price) AS total_amount\nFROM order_management.`order` o\nJOIN order_management.order_items oi ON o.order_id = oi.order_id\nGROUP BY\n  o.order_id,\n  o.customer_reference,\n  o.order_date,\n  o.order_status;",
+      "selectStatement": "SELECT\n  o.order_id,\n  o.customer_reference,\n  o.order_date,\n  o.order_status,\n  oi.order_item_id,\n oi.product_sku,\n oi.quantity,\n oi.applied_unit_price\nFROM order_management.`order` o\nJOIN order_management.order_items oi ON o.order_id = oi.order_id\nGROUP BY\n  o.order_id,\n  o.customer_reference,\n  o.order_date,\n  o.order_status;",
       "code": "order_summary",
       "description": "This view aggregates data from the orders and order items tables to provide a financial summary of each order."
     }
@@ -784,15 +832,15 @@
           },
           {
             "x": 1700,
-            "y": 1223.5
+            "y": 1215.5
           },
           {
             "x": 1448,
-            "y": 1223.5
+            "y": 1215.5
           },
           {
             "x": 1448,
-            "y": 1189
+            "y": 1173
           }
         ],
         "sides": [
@@ -903,7 +951,19 @@
     "658a83df-1ed9-42cc-be96-b5ebe48eec30": "customer_reference",
     "f6e83f2e-f3cb-4d57-82ff-cb915b124840": "order_date",
     "f16658fd-1ab8-410c-8bfc-225953571a57": "order_status",
-    "2f49e74f-5082-488a-8900-5d0c1de118b0": "total_amount"
+    "2a9548ab-8975-4b93-a31e-eae7bcb5f981": "New view",
+    "3e9baa82-22b8-4500-b685-a70289f7e9d1": "First name",
+    "e00f1cde-9ffa-42ea-b053-cb08cde828f5": "SKU",
+    "fd4efe15-d777-4973-abe6-71f7649c52ec": "Description",
+    "739e94ef-4111-43f8-84de-5d19c06b6eff": "Order Id",
+    "6167e733-4842-4c19-93c8-b67d64a69bde": "order_id",
+    "42645c72-7beb-419a-9084-3aebfb310e8c": "customer_reference",
+    "ff9ad6d8-d1aa-417f-8e4b-bec0c7074cf7": "order_date",
+    "edc350da-0643-43f4-a122-1ac94096b106": "order_status",
+    "e4e66cf6-ae23-4364-834d-79d799c9d95b": "order_item_id",
+    "d3165a70-fad2-486d-8b1d-b09eab69ee15": "product_sku",
+    "0124ac7f-550b-41f4-8fe7-21ea43ddbcc7": "quantity",
+    "a5d0a104-d637-4618-bc94-9c83cab493dc": "applied_unit_price"
   },
   "definitions": {
     "type": "definitions",
@@ -1082,20 +1142,20 @@
         "isActivated": true,
         "additionalProperties": false,
         "bucketId": "81137752-f86d-41e7-bb91-6d3e9fdb9628",
-        "definitionEntityType": "collection",
-        "link": "../common/Customer-Polyglot.hck.json",
-        "kind": "relativePath",
-        "fieldRelativePath": "#/Customer management/Customer",
-        "fileType": "hackoladeSchema",
         "hackoladeMeta": {
           "namingConvention": "code"
         },
         "code": "customer",
+        "definitionEntityType": "collection",
+        "fileType": "hackoladeSchema",
         "definitionRefs": [
           [
             "599af4ff-e20c-4231-87df-6f81a6332231"
           ]
-        ]
+        ],
+        "kind": "relativePath",
+        "link": "../common/Customer-Polyglot.hck.json",
+        "fieldRelativePath": "#/Customer management/Customer"
       },
       {
         "GUID": "843cb1e4-1c83-49db-86fb-52ac4194367e",
@@ -1213,26 +1273,26 @@
         "definitions": {
           "type": "definitions",
           "properties": [],
-          "GUID": "ebb4d3aa-38d7-4ec0-b039-ef6167bb4baf"
+          "GUID": "4d825012-aa63-4f62-82d5-8ef8f64e94f0"
         },
         "isActivated": true,
         "additionalProperties": false,
         "collectionUsers": [],
         "tableIfNotExists": true,
         "code": "bill_to_address",
-        "normalizationSourceFieldId": "7c3325ce-c9c4-4ad6-9287-8c1e2084ab9a",
         "primaryKey": [],
-        "definitionEntityType": "collection",
-        "bucketId": "81137752-f86d-41e7-bb91-6d3e9fdb9628",
-        "normalizationSourceCollection": "5cc94e26-8eb9-4b1c-a78d-a870d9f640db",
-        "link": "../common/Customer-Polyglot.hck.json",
-        "kind": "relativePath",
-        "fileType": "hackoladeSchema",
-        "fieldRelativePath": "#/Customer management/Customer/properties/Bill-to address",
         "hackoladeMeta": {
           "namingConvention": "code"
         },
-        "definitionRefs": []
+        "definitionEntityType": "collection",
+        "fileType": "hackoladeSchema",
+        "definitionRefs": [],
+        "kind": "relativePath",
+        "link": "../common/Customer-Polyglot.hck.json",
+        "fieldRelativePath": "#/Customer management/Customer/properties/Bill-to address",
+        "normalizationSourceCollection": "5cc94e26-8eb9-4b1c-a78d-a870d9f640db",
+        "normalizationSourceFieldId": "7c3325ce-c9c4-4ad6-9287-8c1e2084ab9a",
+        "bucketId": "81137752-f86d-41e7-bb91-6d3e9fdb9628"
       },
       {
         "GUID": "5f867c84-0d03-4da0-a49f-20cbd2b0b8fc",
@@ -1381,25 +1441,25 @@
         "definitions": {
           "type": "definitions",
           "properties": [],
-          "GUID": "03ce1ae3-cd2b-445b-927b-670880223334"
+          "GUID": "c76ba42f-2960-47b2-9334-eacfb7d3fb74"
         },
         "isActivated": true,
         "additionalProperties": false,
         "collectionUsers": [],
         "tableIfNotExists": true,
         "code": "ship_to_addresses",
-        "normalizationSourceFieldId": "a569060a-b3b2-4f73-95c7-7c2e2145c273",
-        "definitionEntityType": "collection",
-        "bucketId": "81137752-f86d-41e7-bb91-6d3e9fdb9628",
-        "normalizationSourceCollection": "5cc94e26-8eb9-4b1c-a78d-a870d9f640db",
-        "link": "../common/Customer-Polyglot.hck.json",
-        "kind": "relativePath",
-        "fileType": "hackoladeSchema",
-        "fieldRelativePath": "#/Customer management/Customer/properties/Ship-to addresses",
         "hackoladeMeta": {
           "namingConvention": "code"
         },
-        "definitionRefs": []
+        "definitionEntityType": "collection",
+        "fileType": "hackoladeSchema",
+        "definitionRefs": [],
+        "kind": "relativePath",
+        "link": "../common/Customer-Polyglot.hck.json",
+        "fieldRelativePath": "#/Customer management/Customer/properties/Ship-to addresses",
+        "normalizationSourceCollection": "5cc94e26-8eb9-4b1c-a78d-a870d9f640db",
+        "normalizationSourceFieldId": "a569060a-b3b2-4f73-95c7-7c2e2145c273",
+        "bucketId": "81137752-f86d-41e7-bb91-6d3e9fdb9628"
       },
       {
         "name": "fk_Bill-to address_id_to_Customer_Bill-to address",
@@ -1489,20 +1549,20 @@
         "isActivated": true,
         "indexes": [],
         "GUID": "81137752-f86d-41e7-bb91-6d3e9fdb9628",
-        "definitionEntityType": "bucket",
-        "link": "../common/Customer-Polyglot.hck.json",
-        "kind": "relativePath",
-        "fieldRelativePath": "#/Customer management",
-        "fileType": "hackoladeSchema",
         "hackoladeMeta": {
           "namingConvention": "code"
         },
         "code": "customer_management",
+        "definitionEntityType": "bucket",
+        "fileType": "hackoladeSchema",
         "definitionRefs": [
           [
             "7ff8f7e4-c267-44b2-9cbc-c7d1d6d7a00e"
           ]
-        ]
+        ],
+        "kind": "relativePath",
+        "link": "../common/Customer-Polyglot.hck.json",
+        "fieldRelativePath": "#/Customer management"
       },
       {
         "GUID": "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
@@ -1582,7 +1642,7 @@
               "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
               "97db87db-8fbe-41bb-8850-34193c9ee07e"
             ],
-            "relationshipType": "Foreign Master",
+            "relationshipType": "Foreign Key",
             "compositeKey": [
               "compositePartitionKey",
               "compositeClusteringKey",
@@ -1590,6 +1650,31 @@
               "compositeUniqueKey"
             ],
             "code": "category_name"
+          },
+          {
+            "primaryKey": false,
+            "mode": "string",
+            "subtype": "string",
+            "required": false,
+            "childType": "text",
+            "type": "string",
+            "compositePartitionKey": false,
+            "compositeClusteringKey": false,
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "Supplier code",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            },
+            "isActivated": true,
+            "GUID": "a898b734-3304-48c1-b45d-98c1f7cc3808",
+            "compositeKey": [
+              "compositePartitionKey",
+              "compositeClusteringKey",
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ],
+            "code": "supplier_code"
           },
           {
             "primaryKey": false,
@@ -1926,12 +2011,12 @@
     }
   ],
   "description": "This Delta Lake on Databricks Order Management Model is intended for illustration purposes only and provides a simplified representation of an ecommerce order management system using Delta Lake on Databricks.\n\nWhile it captures essential entities, fields, relationships, and key Delta Lake features, it does not encompass all potential complexities or best practices that may be applicable in a comprehensive production system implementation.",
-  "lastModifTS": "2025-02-20T07:33:53.820Z",
+  "lastModifTS": "2025-02-21T14:23:37.220Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
     "pluginName": "DeltaLake",
-    "pluginVersion": "0.2.17",
+    "pluginVersion": "0.2.18",
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
@@ -1966,7 +2051,7 @@
             "x": 1308,
             "y": 1050,
             "width": 280,
-            "height": 139,
+            "height": 123,
             "color": {}
           },
           {
@@ -1979,10 +2064,10 @@
           },
           {
             "GUID": "200cad92-e107-42b1-a883-f6213faecba6",
-            "x": 1252,
-            "y": 1275,
-            "width": 286,
-            "height": 125,
+            "x": 1202.1039831440048,
+            "y": 1237.4828751299272,
+            "width": 299,
+            "height": 172,
             "color": {}
           }
         ],
@@ -2004,7 +2089,7 @@
             "GUID": "9662a7b4-826e-4939-b84b-987dde15a8d1"
           },
           {
-            "x": 1212,
+            "x": 1162.1039831440048,
             "y": 1010,
             "GUID": "8678835b-2058-4f87-86fc-dce2cec1113d"
           }
