@@ -271,50 +271,6 @@
       }
     },
     {
-      "GUID": "67dc8f02-6fa5-4716-816b-a1e65559bea7",
-      "type": "reference",
-      "$ref": "#external/definitions/Address",
-      "refType": "polyglot",
-      "ref": "4b9dbb3f-4e74-44df-a4b8-6461e63311e9",
-      "refIdPath": [
-        "870a3142-3dd9-4787-8562-3acb4f7e1d00",
-        "0db0a639-f954-4b00-b8b8-2b06a8167c05",
-        "4b9dbb3f-4e74-44df-a4b8-6461e63311e9"
-      ],
-      "isActivated": true,
-      "collectionName": "Address",
-      "code": "Address",
-      "bucketId": "27d230a7-a7da-4a2b-aedf-6afa5bb0d139",
-      "properties": [],
-      "definitions": {
-        "properties": [],
-        "GUID": "ed7eb74e-bd6d-4b56-919a-090ca366bc36"
-      },
-      "hackoladeMeta": {
-        "namingConvention": "code"
-      },
-      "additionalProperties": false,
-      "referenceDiff": {
-        "properties": [
-          {
-            "GUID": "1075ccd3-ea1b-4d8d-972e-1bbddd00f18d",
-            "childRelationships": [
-              "0cf632bd-af3b-48b3-a5e9-367ebeaee52a",
-              "f4bafb82-2ad9-4595-87be-df48332ede64"
-            ]
-          },
-          {
-            "GUID": "1abed38b-0cfa-59f8-80bc-2872d1861800",
-            "primaryKey": true,
-            "childRelationships": []
-          }
-        ]
-      },
-      "error": {
-        "refPath": false
-      }
-    },
-    {
       "GUID": "6dd2fc84-f7ee-4846-ac72-e78ec354d754",
       "type": "reference",
       "$ref": "#external/definitions/Warehouse",
@@ -348,14 +304,7 @@
           },
           {
             "GUID": "e486e793-d174-4dde-a091-f01158f80e86",
-            "relationshipType": "Foreign Key",
-            "foreignCollection": "67dc8f02-6fa5-4716-816b-a1e65559bea7",
-            "foreignField": [
-              "67dc8f02-6fa5-4716-816b-a1e65559bea7",
-              "4b9dbb3f-4e74-44df-a4b8-6461e63311e9",
-              "1075ccd3-ea1b-4d8d-972e-1bbddd00f18d"
-            ],
-            "parentRelationship": "0cf632bd-af3b-48b3-a5e9-367ebeaee52a"
+            "referenceDiffDeleted": true
           }
         ]
       },
@@ -403,10 +352,7 @@
           },
           {
             "GUID": "b9d5da76-8812-4308-8bf6-0ac6a34c938f",
-            "relationshipType": "",
-            "foreignCollection": "",
-            "foreignField": [],
-            "parentRelationship": ""
+            "referenceDiffDeleted": true
           }
         ]
       },
@@ -443,7 +389,6 @@
         "5da15a69-1229-4f32-8d8a-4210e877ea54",
         "8e22bca6-7766-4398-8dac-f5a879a8a7bd",
         "5b943276-e17c-4e4f-be9a-3bcb08639023",
-        "67dc8f02-6fa5-4716-816b-a1e65559bea7",
         "6dd2fc84-f7ee-4846-ac72-e78ec354d754",
         "750ee66e-8ef4-4312-93a9-af1f189e6618"
       ],
@@ -1022,86 +967,20 @@
           },
           {
             "x": 1322.7697367994242,
-            "y": 1630.5536419674186
+            "y": 1593.886975300752
           },
           {
-            "x": 1496.0001475921406,
-            "y": 1630.5536419674186
+            "x": 1500.0001475921404,
+            "y": 1593.886975300752
           },
           {
-            "x": 1496.0001475921406,
-            "y": 1734.9532278887511
+            "x": 1500.0001475921404,
+            "y": 1661.619894555418
           }
         ],
         "sides": [
           "bottom",
           "top"
-        ]
-      }
-    },
-    {
-      "name": "fk_Address_id_to_Warehouse_Address",
-      "relationshipType": "Foreign Key",
-      "parentField": [
-        [
-          "67dc8f02-6fa5-4716-816b-a1e65559bea7",
-          "4b9dbb3f-4e74-44df-a4b8-6461e63311e9",
-          "1075ccd3-ea1b-4d8d-972e-1bbddd00f18d"
-        ]
-      ],
-      "parentCardinality": "1",
-      "childField": [
-        [
-          "6dd2fc84-f7ee-4846-ac72-e78ec354d754",
-          "27b41494-4b17-417a-8444-3c20cb265978",
-          "e486e793-d174-4dde-a091-f01158f80e86"
-        ]
-      ],
-      "isActivated": true,
-      "childCardinality": "0..1",
-      "parentCollection": "67dc8f02-6fa5-4716-816b-a1e65559bea7",
-      "childCollection": "6dd2fc84-f7ee-4846-ac72-e78ec354d754",
-      "hackoladeMeta": {
-        "namingConvention": "code"
-      },
-      "type": "reference",
-      "refType": "polyglot",
-      "$ref": "#external/definitions/fk_Address_id_to_Warehouse_Address",
-      "refIdPath": [
-        "870a3142-3dd9-4787-8562-3acb4f7e1d00",
-        "0db0a639-f954-4b00-b8b8-2b06a8167c05",
-        "7c7e6aad-a278-4a4a-ac01-108da9257659"
-      ],
-      "ref": "7c7e6aad-a278-4a4a-ac01-108da9257659",
-      "GUID": "0cf632bd-af3b-48b3-a5e9-367ebeaee52a",
-      "hackoladeStyles": {
-        "GUID": "8974bf2f-0470-453b-aeb7-ded5bcc2b3e9",
-        "autoPositioning": true,
-        "type": "Orthogonal",
-        "thickness": 2,
-        "color": "#79c4ff",
-        "dataType": "",
-        "shape": [
-          {
-            "x": 1636.0001475921406,
-            "y": 1775.9532278887511
-          },
-          {
-            "x": 1791.7841051375058,
-            "y": 1775.9532278887511
-          },
-          {
-            "x": 1791.7841051375058,
-            "y": 1782.4711903387156
-          },
-          {
-            "x": 1947.568062682871,
-            "y": 1782.4711903387156
-          }
-        ],
-        "sides": [
-          "right",
-          "left"
         ]
       }
     },
@@ -1212,11 +1091,11 @@
             "y": 1368.6795956397057
           },
           {
-            "x": 1585.5333333333333,
+            "x": 1643.7,
             "y": 1368.6795956397057
           },
           {
-            "x": 1585.5333333333333,
+            "x": 1643.7,
             "y": 1313.2051352333253
           }
         ],
@@ -1301,54 +1180,6 @@
       ],
       "ref": "742e1275-de2e-4675-a75e-5902b8832233",
       "GUID": "5d510e65-638b-46a9-8de7-b78d2006e54b"
-    },
-    {
-      "name": "fk_Address_Street_to_Supplier_Address",
-      "relationshipType": "Foreign Key",
-      "parentField": [
-        [
-          "67dc8f02-6fa5-4716-816b-a1e65559bea7",
-          "4b9dbb3f-4e74-44df-a4b8-6461e63311e9",
-          "1075ccd3-ea1b-4d8d-972e-1bbddd00f18d"
-        ]
-      ],
-      "parentCardinality": "1",
-      "childField": [],
-      "isActivated": true,
-      "childCardinality": "0..n",
-      "parentCollection": "67dc8f02-6fa5-4716-816b-a1e65559bea7",
-      "childCollection": "750ee66e-8ef4-4312-93a9-af1f189e6618",
-      "GUID": "f4bafb82-2ad9-4595-87be-df48332ede64",
-      "hackoladeStyles": {
-        "GUID": "0b3eaf50-caa4-4cf3-a75d-6e446a39c919",
-        "autoPositioning": true,
-        "type": "Orthogonal",
-        "thickness": 2,
-        "color": "#79c4ff",
-        "dataType": "",
-        "shape": [
-          {
-            "x": 2148.2945922888784,
-            "y": 1491.3850961327596
-          },
-          {
-            "x": 2148.2945922888784,
-            "y": 1611.4281432357375
-          },
-          {
-            "x": 2076.0680626828707,
-            "y": 1611.4281432357375
-          },
-          {
-            "x": 2076.0680626828707,
-            "y": 1731.4711903387156
-          }
-        ],
-        "sides": [
-          "bottom",
-          "top"
-        ]
-      }
     }
   ],
   "users": [],
@@ -1359,18 +1190,15 @@
     "5da15a69-1229-4f32-8d8a-4210e877ea54": "Images",
     "8e22bca6-7766-4398-8dac-f5a879a8a7bd": "Prices",
     "5b943276-e17c-4e4f-be9a-3bcb08639023": "Stock",
-    "67dc8f02-6fa5-4716-816b-a1e65559bea7": "Address",
     "6dd2fc84-f7ee-4846-ac72-e78ec354d754": "Warehouse",
     "750ee66e-8ef4-4312-93a9-af1f189e6618": "Supplier",
     "27d230a7-a7da-4a2b-aedf-6afa5bb0d139": "Product management",
     "d4541457-9f1d-46e3-9e5d-1458ccf541e6": "fk_Product_SKU_to_Images_SKU",
     "308d45ac-429d-455e-8c85-a8f9352c4384": "fk_Product_SKU_to_Prices_SKU",
     "caea8abc-eeb1-4b0f-9317-ef3e358d5dcd": "fk_Warehouse_id_to_Stock_Warehouse",
-    "0cf632bd-af3b-48b3-a5e9-367ebeaee52a": "fk_Address_id_to_Warehouse_Address",
     "768cae49-3e62-41c8-b864-1e8b5c2153ab": "contains",
     "b0b94700-72f8-4412-bd50-05225426ea50": "has",
     "5d510e65-638b-46a9-8de7-b78d2006e54b": "is_issued_by",
-    "f4bafb82-2ad9-4595-87be-df48332ede64": "fk_Address_Street_to_Supplier_Address",
     "842dd4c1-f54f-4167-b52a-c02dd7b8005b": "Product Catalog View",
     "4f821ad0-d6aa-4fff-95ef-9e1ab30e3482": "Name",
     "66e9f696-460f-40b5-bd07-89cec0f0c9db": "Description",
@@ -2296,11 +2124,7 @@
         },
         "definitionEntityType": "collection",
         "fileType": "hackoladeSchema",
-        "definitionRefs": [
-          [
-            "67dc8f02-6fa5-4716-816b-a1e65559bea7"
-          ]
-        ],
+        "definitionRefs": [],
         "kind": "relativePath",
         "link": "Product-Polyglot.hck.json",
         "fieldRelativePath": "#/Product management/Stock/properties/Warehouse/properties/Address",
@@ -2502,11 +2326,7 @@
         "hackoladeMeta": {
           "namingConvention": "code"
         },
-        "definitionRefs": [
-          [
-            "0cf632bd-af3b-48b3-a5e9-367ebeaee52a"
-          ]
-        ]
+        "definitionRefs": []
       },
       {
         "GUID": "1eec2f02-271b-45e3-b874-b47ac00ca585",
@@ -3165,12 +2985,12 @@
       "normalization": true
     }
   ],
-  "lastModifTS": "2025-02-21T15:06:43.910Z",
+  "lastModifTS": "2025-02-24T13:06:11.005Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
     "pluginName": "Oracle",
-    "pluginVersion": "0.2.30",
+    "pluginVersion": "0.2.31",
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
@@ -3238,17 +3058,9 @@
             "color": {}
           },
           {
-            "GUID": "67dc8f02-6fa5-4716-816b-a1e65559bea7",
-            "x": 1947.568062682871,
-            "y": 1731.4711903387156,
-            "width": 257,
-            "height": 102,
-            "color": {}
-          },
-          {
             "GUID": "6dd2fc84-f7ee-4846-ac72-e78ec354d754",
-            "x": 1356.0001475921406,
-            "y": 1734.9532278887511,
+            "x": 1360.0001475921404,
+            "y": 1661.619894555418,
             "width": 280,
             "height": 82,
             "color": {}
