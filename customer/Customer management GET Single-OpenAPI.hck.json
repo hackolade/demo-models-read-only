@@ -1,5 +1,5 @@
 {
-  "modelName": "customer",
+  "modelName": "Customer management Get Single",
   "collections": [
     {
       "GUID": "f17f9287-5b11-4f47-94ca-1885ae97514e",
@@ -1044,7 +1044,7 @@
   "creationTS": "2025-02-24T10:52:12.322Z",
   "GUID": "5b87d931-af65-4496-8576-698532d04eb8",
   "isLineageEnabled": false,
-  "lastModifTS": "2025-02-24T11:21:06.432Z",
+  "lastModifTS": "2025-02-24T11:31:57.297Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -1057,7 +1057,7 @@
   },
   "hackoladeMeta": {
     "validationErrors": {
-      "description": false
+      "modelName": false
     }
   },
   "scopesExtensions": [],
