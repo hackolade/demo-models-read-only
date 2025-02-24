@@ -426,28 +426,6 @@
           }
         },
         {
-          "code": "Description",
-          "GUID": "66e9f696-460f-40b5-bd07-89cec0f0c9db",
-          "type": "reference",
-          "name": "Description",
-          "ref": "b0919d69-0355-438b-b7aa-759e6fe9632c",
-          "refType": "collectionReference",
-          "refIdPath": [
-            "8b4973b9-193f-4a0d-8355-563aaa50fa5a",
-            "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
-            "b0919d69-0355-438b-b7aa-759e6fe9632c"
-          ],
-          "isActivated": true,
-          "referencedColumnName": "Description",
-          "hackoladeMeta": {
-            "namingConvention": "code"
-          },
-          "error": {
-            "name": false,
-            "code": false
-          }
-        },
-        {
           "GUID": "ae860594-1c68-4661-bb73-5169d429ac97",
           "type": "array",
           "childType": "joinSubquery",
@@ -499,28 +477,6 @@
                   ],
                   "isActivated": true,
                   "referencedColumnName": "Name",
-                  "hackoladeMeta": {
-                    "namingConvention": "code"
-                  },
-                  "error": {
-                    "name": false,
-                    "code": false
-                  }
-                },
-                {
-                  "code": "Description",
-                  "GUID": "d009bb17-3ced-42f8-bdff-3df0708e7872",
-                  "type": "reference",
-                  "name": "Description",
-                  "ref": "6ef810f9-c366-426b-9aa7-97f54138905f",
-                  "refType": "collectionReference",
-                  "refIdPath": [
-                    "f22a3e7d-5adf-48dd-b736-243710525b9b",
-                    "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
-                    "6ef810f9-c366-426b-9aa7-97f54138905f"
-                  ],
-                  "isActivated": true,
-                  "referencedColumnName": "Description",
                   "hackoladeMeta": {
                     "namingConvention": "code"
                   },
@@ -638,93 +594,6 @@
                   ],
                   "additionalItems": true,
                   "sqlJsonFunction": "",
-                  "error": {
-                    "name": false,
-                    "code": false
-                  }
-                },
-                {
-                  "GUID": "ce08baeb-0250-4a27-b686-35bc7b00de6f",
-                  "type": "document",
-                  "childType": "joinSubquery",
-                  "subtype": "object",
-                  "isActivated": true,
-                  "properties": [
-                    {
-                      "code": "Company_name",
-                      "GUID": "f0c25308-99d2-4f98-a0f7-f34e6f7aa4dc",
-                      "type": "reference",
-                      "name": "Company name",
-                      "ref": "8ee85d26-2d69-49d4-82b9-1d2b12c7966d",
-                      "refType": "collectionReference",
-                      "refIdPath": [
-                        "750ee66e-8ef4-4312-93a9-af1f189e6618",
-                        "1eec2f02-271b-45e3-b874-b47ac00ca585",
-                        "8ee85d26-2d69-49d4-82b9-1d2b12c7966d"
-                      ],
-                      "isActivated": true,
-                      "referencedColumnName": "Company name",
-                      "hackoladeMeta": {
-                        "namingConvention": "code"
-                      },
-                      "error": {
-                        "name": false,
-                        "code": false
-                      }
-                    },
-                    {
-                      "code": "Company_code",
-                      "GUID": "12802890-c1ed-4061-860e-f971bf87bcea",
-                      "type": "reference",
-                      "name": "Company code",
-                      "ref": "d138a990-ba4d-4cf7-b998-b57f5d576902",
-                      "refType": "collectionReference",
-                      "refIdPath": [
-                        "750ee66e-8ef4-4312-93a9-af1f189e6618",
-                        "1eec2f02-271b-45e3-b874-b47ac00ca585",
-                        "d138a990-ba4d-4cf7-b998-b57f5d576902"
-                      ],
-                      "isActivated": true,
-                      "referencedColumnName": "Company code",
-                      "hackoladeMeta": {
-                        "namingConvention": "code"
-                      },
-                      "error": {
-                        "name": false,
-                        "code": false
-                      }
-                    },
-                    {
-                      "code": "email",
-                      "GUID": "dd024d6c-9ff7-4dee-9a4d-ea301263113d",
-                      "type": "reference",
-                      "name": "email",
-                      "ref": "9cc886b2-1216-4d95-bef9-d48290b0e804",
-                      "refType": "collectionReference",
-                      "refIdPath": [
-                        "750ee66e-8ef4-4312-93a9-af1f189e6618",
-                        "1eec2f02-271b-45e3-b874-b47ac00ca585",
-                        "9cc886b2-1216-4d95-bef9-d48290b0e804"
-                      ],
-                      "isActivated": true,
-                      "referencedColumnName": "email",
-                      "hackoladeMeta": {
-                        "namingConvention": "code"
-                      },
-                      "error": {
-                        "name": false,
-                        "code": false
-                      }
-                    }
-                  ],
-                  "name": "Supplier",
-                  "hackoladeMeta": {
-                    "namingConvention": "code"
-                  },
-                  "code": "Supplier",
-                  "joinedCollectionRefIdPath": [
-                    "750ee66e-8ef4-4312-93a9-af1f189e6618"
-                  ],
                   "error": {
                     "name": false,
                     "code": false
@@ -1201,19 +1070,13 @@
     "5d510e65-638b-46a9-8de7-b78d2006e54b": "is_issued_by",
     "842dd4c1-f54f-4167-b52a-c02dd7b8005b": "Product Catalog View",
     "4f821ad0-d6aa-4fff-95ef-9e1ab30e3482": "Name",
-    "66e9f696-460f-40b5-bd07-89cec0f0c9db": "Description",
     "ae860594-1c68-4661-bb73-5169d429ac97": "Products",
     "e4f8510e-dc1f-4a2f-bc23-b2f24e8fe497": "SKU",
     "91454f75-27e4-4faf-bd6b-0ac856605b72": "Name",
-    "d009bb17-3ced-42f8-bdff-3df0708e7872": "Description",
     "213a9391-03af-4211-a314-b970b79dd795": "Prices",
     "8e99944a-e29a-4e32-a0cf-46f5e10f3c7f": "Amount",
     "95293f71-06ab-4344-9414-b38ac326a995": "Effective date",
     "c4596455-a984-46ab-a808-65ee818ca83b": "Currency",
-    "ce08baeb-0250-4a27-b686-35bc7b00de6f": "Supplier",
-    "f0c25308-99d2-4f98-a0f7-f34e6f7aa4dc": "Company name",
-    "12802890-c1ed-4061-860e-f971bf87bcea": "Company code",
-    "dd024d6c-9ff7-4dee-9a4d-ea301263113d": "email",
     "2e2189a8-e091-4908-a894-bffc15d3c2b0": "url"
   },
   "definitions": {
@@ -2985,7 +2848,7 @@
       "normalization": true
     }
   ],
-  "lastModifTS": "2025-02-24T13:06:11.005Z",
+  "lastModifTS": "2025-02-24T13:08:31.539Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -3069,8 +2932,8 @@
             "GUID": "842dd4c1-f54f-4167-b52a-c02dd7b8005b",
             "x": 877.9918541092006,
             "y": 1578.6227439629658,
-            "width": 395,
-            "height": 321,
+            "width": 321,
+            "height": 219,
             "color": {}
           }
         ],
