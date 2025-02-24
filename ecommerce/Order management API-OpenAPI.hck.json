@@ -1,5 +1,5 @@
 {
-  "modelName": "openapi_bike",
+  "modelName": "Order management API",
   "collections": [
     {
       "GUID": "bf9ffe64-6ccc-4ca6-9612-c03131215fb3",
@@ -3727,11 +3727,13 @@
   "GUID": "bdfc46e7-6559-4f0a-b8ed-ff6775343d69",
   "hackoladeMeta": {
     "namingConvention": "code",
-    "validationErrors": {}
+    "validationErrors": {
+      "modelName": false
+    }
   },
   "isLineageEnabled": false,
-  "code": "opnp_bk",
-  "lastModifTS": "2025-02-24T10:35:53.511Z",
+  "code": "Ordr mngmnt AP",
+  "lastModifTS": "2025-02-24T10:39:14.106Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
