@@ -924,7 +924,25 @@
               "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
               "97db87db-8fbe-41bb-8850-34193c9ee07e"
             ],
-            "relationshipType": "Foreign Master",
+            "relationshipType": "Foreign Key",
+            "mode": "",
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ]
+          },
+          {
+            "primaryKey": false,
+            "required": false,
+            "alternateKey": false,
+            "childType": "varchar",
+            "type": "string",
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "Supplier code",
+            "hackoladeMeta": {},
+            "isActivated": true,
+            "GUID": "a898b734-3304-48c1-b45d-98c1f7cc3808",
             "mode": "",
             "compositeKey": [
               "compositePrimaryKey",
@@ -1742,7 +1760,7 @@
       "normalization": false
     }
   ],
-  "lastModifTS": "2025-02-21T14:19:01.648Z",
+  "lastModifTS": "2025-02-24T10:17:43.631Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {

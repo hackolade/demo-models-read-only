@@ -886,7 +886,7 @@
       "description": false
     }
   },
-  "lastModifTS": "2025-02-19T16:09:09.445Z",
+  "lastModifTS": "2025-02-21T11:26:45.735Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -939,7 +939,11 @@
           "erd": [],
           "rootPath": [],
           "entities": [],
-          "decorativeSymbols": []
+          "decorativeSymbols": [],
+          "displayOptions": {
+            "dndHandles": false,
+            "hideErdRelationshipsNames": false
+          }
         },
         "buckets": [
           {
