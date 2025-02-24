@@ -70,7 +70,6 @@
           {
             "GUID": "6b6386de-f9dc-46d9-9fc2-16d3c2c58340",
             "childRelationships": [
-              "d4541457-9f1d-46e3-9e5d-1458ccf541e6",
               "308d45ac-429d-455e-8c85-a8f9352c4384",
               "b0b94700-72f8-4412-bd50-05225426ea50"
             ]
@@ -91,80 +90,6 @@
             "childRelationships": [
               "5d510e65-638b-46a9-8de7-b78d2006e54b"
             ]
-          }
-        ]
-      },
-      "error": {
-        "refPath": false
-      }
-    },
-    {
-      "GUID": "5da15a69-1229-4f32-8d8a-4210e877ea54",
-      "type": "reference",
-      "$ref": "#external/definitions/Images",
-      "refType": "polyglot",
-      "ref": "18efa0fe-85b0-4883-b2b8-9359fe7ded74",
-      "refIdPath": [
-        "870a3142-3dd9-4787-8562-3acb4f7e1d00",
-        "0db0a639-f954-4b00-b8b8-2b06a8167c05",
-        "18efa0fe-85b0-4883-b2b8-9359fe7ded74"
-      ],
-      "isActivated": true,
-      "collectionName": "Images",
-      "code": "Images",
-      "bucketId": "27d230a7-a7da-4a2b-aedf-6afa5bb0d139",
-      "properties": [],
-      "definitions": {
-        "properties": [],
-        "GUID": "6c16cffe-0f2b-41c3-a202-b88ac6b97e19"
-      },
-      "hackoladeMeta": {
-        "namingConvention": "code"
-      },
-      "additionalProperties": false,
-      "referenceDiff": {
-        "properties": [
-          {
-            "GUID": "474aad96-8691-4159-86d0-7ef5ffa5daed"
-          },
-          {
-            "GUID": "8178177d-7442-4b00-8678-1a40439f8fab",
-            "relationshipType": "Foreign Key",
-            "foreignCollection": "f22a3e7d-5adf-48dd-b736-243710525b9b",
-            "foreignField": [
-              "f22a3e7d-5adf-48dd-b736-243710525b9b",
-              "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
-              "6b6386de-f9dc-46d9-9fc2-16d3c2c58340"
-            ],
-            "parentRelationship": "d4541457-9f1d-46e3-9e5d-1458ccf541e6"
-          },
-          {
-            "name": "url",
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            },
-            "isActivated": true,
-            "primaryKey": false,
-            "unique": true,
-            "mode": "varchar2",
-            "length": 20,
-            "subtype": "string",
-            "required": true,
-            "childType": "char",
-            "type": "string",
-            "compositeKey": [
-              "partitionKey",
-              "compositePartitionKey",
-              "compositePrimaryKey",
-              "compositeUniqueKey"
-            ],
-            "partitionKey": false,
-            "compositePartitionKey": false,
-            "compositePrimaryKey": false,
-            "compositeUniqueKey": false,
-            "GUID": "2e2189a8-e091-4908-a894-bffc15d3c2b0",
-            "code": "url",
-            "error": {}
           }
         ]
       },
@@ -386,7 +311,6 @@
       "collectionIds": [
         "8b4973b9-193f-4a0d-8355-563aaa50fa5a",
         "f22a3e7d-5adf-48dd-b736-243710525b9b",
-        "5da15a69-1229-4f32-8d8a-4210e877ea54",
         "8e22bca6-7766-4398-8dac-f5a879a8a7bd",
         "5b943276-e17c-4e4f-be9a-3bcb08639023",
         "6dd2fc84-f7ee-4846-ac72-e78ec354d754",
@@ -656,72 +580,6 @@
   ],
   "relationships": [
     {
-      "name": "fk_Product_SKU_to_Images_SKU",
-      "relationshipType": "Foreign Key",
-      "parentField": [
-        [
-          "f22a3e7d-5adf-48dd-b736-243710525b9b",
-          "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
-          "6b6386de-f9dc-46d9-9fc2-16d3c2c58340"
-        ]
-      ],
-      "parentCardinality": "1",
-      "childField": [
-        [
-          "5da15a69-1229-4f32-8d8a-4210e877ea54",
-          "18efa0fe-85b0-4883-b2b8-9359fe7ded74",
-          "8178177d-7442-4b00-8678-1a40439f8fab"
-        ]
-      ],
-      "isActivated": true,
-      "childCardinality": "0..n",
-      "parentCollection": "f22a3e7d-5adf-48dd-b736-243710525b9b",
-      "childCollection": "5da15a69-1229-4f32-8d8a-4210e877ea54",
-      "hackoladeMeta": {
-        "namingConvention": "code"
-      },
-      "type": "reference",
-      "refType": "polyglot",
-      "$ref": "#external/definitions/fk_Product_SKU_to_Images_SKU",
-      "refIdPath": [
-        "870a3142-3dd9-4787-8562-3acb4f7e1d00",
-        "0db0a639-f954-4b00-b8b8-2b06a8167c05",
-        "0d1f478d-a08f-4fc1-a38d-276a6fb7ebbd"
-      ],
-      "ref": "0d1f478d-a08f-4fc1-a38d-276a6fb7ebbd",
-      "GUID": "d4541457-9f1d-46e3-9e5d-1458ccf541e6",
-      "hackoladeStyles": {
-        "GUID": "89f115bd-ee60-40c3-b6b6-1d5e53a89565",
-        "autoPositioning": true,
-        "type": "Orthogonal",
-        "thickness": 2,
-        "color": "#79c4ff",
-        "dataType": "",
-        "shape": [
-          {
-            "x": 1347.548501351147,
-            "y": 1100.1587262484404
-          },
-          {
-            "x": 1408.3742506755734,
-            "y": 1100.1587262484404
-          },
-          {
-            "x": 1408.3742506755734,
-            "y": 1253.2051352333253
-          },
-          {
-            "x": 1469.2,
-            "y": 1253.2051352333253
-          }
-        ],
-        "sides": [
-          "right",
-          "left"
-        ]
-      }
-    },
-    {
       "name": "fk_Product_SKU_to_Prices_SKU",
       "relationshipType": "Foreign Key",
       "parentField": [
@@ -960,11 +818,11 @@
             "y": 1368.6795956397057
           },
           {
-            "x": 1643.7,
+            "x": 1585.5333333333333,
             "y": 1368.6795956397057
           },
           {
-            "x": 1643.7,
+            "x": 1585.5333333333333,
             "y": 1313.2051352333253
           }
         ],
@@ -1056,13 +914,11 @@
   "idToNameHashTable": {
     "8b4973b9-193f-4a0d-8355-563aaa50fa5a": "Category",
     "f22a3e7d-5adf-48dd-b736-243710525b9b": "Product",
-    "5da15a69-1229-4f32-8d8a-4210e877ea54": "Images",
     "8e22bca6-7766-4398-8dac-f5a879a8a7bd": "Prices",
     "5b943276-e17c-4e4f-be9a-3bcb08639023": "Stock",
     "6dd2fc84-f7ee-4846-ac72-e78ec354d754": "Warehouse",
     "750ee66e-8ef4-4312-93a9-af1f189e6618": "Supplier",
     "27d230a7-a7da-4a2b-aedf-6afa5bb0d139": "Product management",
-    "d4541457-9f1d-46e3-9e5d-1458ccf541e6": "fk_Product_SKU_to_Images_SKU",
     "308d45ac-429d-455e-8c85-a8f9352c4384": "fk_Product_SKU_to_Prices_SKU",
     "caea8abc-eeb1-4b0f-9317-ef3e358d5dcd": "fk_Warehouse_id_to_Stock_Warehouse",
     "768cae49-3e62-41c8-b864-1e8b5c2153ab": "contains",
@@ -1422,11 +1278,7 @@
         },
         "definitionEntityType": "collection",
         "fileType": "hackoladeSchema",
-        "definitionRefs": [
-          [
-            "5da15a69-1229-4f32-8d8a-4210e877ea54"
-          ]
-        ],
+        "definitionRefs": [],
         "kind": "relativePath",
         "link": "Product-Polyglot.hck.json",
         "fieldRelativePath": "#/Product management/Product/properties/Images",
@@ -1655,11 +1507,7 @@
         "hackoladeMeta": {
           "namingConvention": "code"
         },
-        "definitionRefs": [
-          [
-            "d4541457-9f1d-46e3-9e5d-1458ccf541e6"
-          ]
-        ]
+        "definitionRefs": []
       },
       {
         "name": "fk_Product_SKU_to_Prices_SKU",
@@ -2848,7 +2696,7 @@
       "normalization": true
     }
   ],
-  "lastModifTS": "2025-02-24T13:08:31.539Z",
+  "lastModifTS": "2025-02-24T13:09:49.742Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -2905,14 +2753,6 @@
             }
           },
           {
-            "GUID": "5da15a69-1229-4f32-8d8a-4210e877ea54",
-            "x": 1104.548501351147,
-            "y": 1058.1587262484404,
-            "width": 243,
-            "height": 84,
-            "color": {}
-          },
-          {
             "GUID": "8e22bca6-7766-4398-8dac-f5a879a8a7bd",
             "x": 1672.3164651195984,
             "y": 1428.9470556373685,
@@ -2946,7 +2786,7 @@
         "buckets": [
           {
             "x": 837.9918541092006,
-            "y": 1018.1587262484404,
+            "y": 1025.9781352787377,
             "GUID": "27d230a7-a7da-4a2b-aedf-6afa5bb0d139"
           }
         ],
@@ -3004,11 +2844,6 @@
             "autoWidth": false,
             "autoHeight": false,
             "GUID": "8e22bca6-7766-4398-8dac-f5a879a8a7bd"
-          },
-          {
-            "autoWidth": false,
-            "autoHeight": false,
-            "GUID": "5da15a69-1229-4f32-8d8a-4210e877ea54"
           }
         ],
         "relationshipUpdateDisabled": false,
