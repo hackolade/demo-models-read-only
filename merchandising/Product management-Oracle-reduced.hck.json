@@ -87,9 +87,7 @@
           },
           {
             "GUID": "a898b734-3304-48c1-b45d-98c1f7cc3808",
-            "childRelationships": [
-              "5d510e65-638b-46a9-8de7-b78d2006e54b"
-            ]
+            "childRelationships": []
           }
         ]
       },
@@ -190,54 +188,6 @@
       "error": {
         "refPath": false
       }
-    },
-    {
-      "GUID": "750ee66e-8ef4-4312-93a9-af1f189e6618",
-      "type": "reference",
-      "$ref": "#external/definitions/Supplier",
-      "refType": "polyglot",
-      "ref": "1eec2f02-271b-45e3-b874-b47ac00ca585",
-      "refIdPath": [
-        "870a3142-3dd9-4787-8562-3acb4f7e1d00",
-        "0db0a639-f954-4b00-b8b8-2b06a8167c05",
-        "1eec2f02-271b-45e3-b874-b47ac00ca585"
-      ],
-      "isActivated": true,
-      "collectionName": "Supplier",
-      "code": "Supplier",
-      "bucketId": "27d230a7-a7da-4a2b-aedf-6afa5bb0d139",
-      "properties": [],
-      "definitions": {
-        "properties": [],
-        "GUID": "da71b9f7-0479-47c8-9a73-3a5555d55287"
-      },
-      "hackoladeMeta": {
-        "namingConvention": "code"
-      },
-      "additionalProperties": false,
-      "description": "Represents the vendors or manufacturers that provide products. Contains essential information about each supplier, including their **contact details** and the **products** they supply. This entity is important for managing supplier relationships, tracking product sourcing, and ensuring timely inventory replenishment.",
-      "referenceDiff": {
-        "properties": [
-          {
-            "GUID": "d138a990-ba4d-4cf7-b998-b57f5d576902",
-            "relationshipType": "Foreign Key",
-            "foreignCollection": "f22a3e7d-5adf-48dd-b736-243710525b9b",
-            "foreignField": [
-              "f22a3e7d-5adf-48dd-b736-243710525b9b",
-              "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
-              "a898b734-3304-48c1-b45d-98c1f7cc3808"
-            ],
-            "parentRelationship": "5d510e65-638b-46a9-8de7-b78d2006e54b"
-          },
-          {
-            "GUID": "b9d5da76-8812-4308-8bf6-0ac6a34c938f",
-            "referenceDiffDeleted": true
-          }
-        ]
-      },
-      "error": {
-        "refPath": false
-      }
     }
   ],
   "buckets": [
@@ -266,8 +216,7 @@
         "8b4973b9-193f-4a0d-8355-563aaa50fa5a",
         "f22a3e7d-5adf-48dd-b736-243710525b9b",
         "8e22bca6-7766-4398-8dac-f5a879a8a7bd",
-        "5b943276-e17c-4e4f-be9a-3bcb08639023",
-        "750ee66e-8ef4-4312-93a9-af1f189e6618"
+        "5b943276-e17c-4e4f-be9a-3bcb08639023"
       ],
       "hackoladeMeta": {
         "namingConvention": "code"
@@ -731,69 +680,6 @@
       ],
       "ref": "170fd180-4f35-44ca-8389-7519c1aa9e0b",
       "GUID": "b0b94700-72f8-4412-bd50-05225426ea50"
-    },
-    {
-      "name": "is_issued_by",
-      "relationshipType": "Foreign Key",
-      "parentField": [
-        [
-          "f22a3e7d-5adf-48dd-b736-243710525b9b",
-          "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
-          "a898b734-3304-48c1-b45d-98c1f7cc3808"
-        ]
-      ],
-      "parentCardinality": "1..n",
-      "childField": [
-        [
-          "750ee66e-8ef4-4312-93a9-af1f189e6618",
-          "1eec2f02-271b-45e3-b874-b47ac00ca585",
-          "d138a990-ba4d-4cf7-b998-b57f5d576902"
-        ]
-      ],
-      "isActivated": true,
-      "childCardinality": "1",
-      "lineSize": 2,
-      "parentCollection": "f22a3e7d-5adf-48dd-b736-243710525b9b",
-      "childCollection": "750ee66e-8ef4-4312-93a9-af1f189e6618",
-      "hackoladeStyles": {
-        "GUID": "63f5d819-9996-4ab0-a791-dce0f196d1bb",
-        "autoPositioning": false,
-        "type": "Orthogonal",
-        "thickness": 2,
-        "color": "#79c4ff",
-        "dataType": "",
-        "shape": [
-          {
-            "x": 2191.1681899186406,
-            "y": 1353.3850961327596
-          },
-          {
-            "y": 1250.41022410001,
-            "x": 2191.1681899186406
-          },
-          {
-            "x": 1818.2,
-            "y": 1250.41022410001
-          }
-        ],
-        "sides": [
-          "top",
-          "right"
-        ]
-      },
-      "hackoladeMeta": {
-        "namingConvention": "code"
-      },
-      "type": "reference",
-      "refType": "polyglot",
-      "$ref": "#external/definitions/is issued by",
-      "refIdPath": [
-        "870a3142-3dd9-4787-8562-3acb4f7e1d00",
-        "0db0a639-f954-4b00-b8b8-2b06a8167c05",
-        "742e1275-de2e-4675-a75e-5902b8832233"
-      ],
-      "ref": "742e1275-de2e-4675-a75e-5902b8832233",
-      "GUID": "5d510e65-638b-46a9-8de7-b78d2006e54b"
     }
   ],
   "users": [],
@@ -803,12 +689,10 @@
     "f22a3e7d-5adf-48dd-b736-243710525b9b": "Product",
     "8e22bca6-7766-4398-8dac-f5a879a8a7bd": "Prices",
     "5b943276-e17c-4e4f-be9a-3bcb08639023": "Stock",
-    "750ee66e-8ef4-4312-93a9-af1f189e6618": "Supplier",
     "27d230a7-a7da-4a2b-aedf-6afa5bb0d139": "Product management",
     "308d45ac-429d-455e-8c85-a8f9352c4384": "fk_Product_SKU_to_Prices_SKU",
     "768cae49-3e62-41c8-b864-1e8b5c2153ab": "contains",
     "b0b94700-72f8-4412-bd50-05225426ea50": "has",
-    "5d510e65-638b-46a9-8de7-b78d2006e54b": "is_issued_by",
     "842dd4c1-f54f-4167-b52a-c02dd7b8005b": "Product Catalog View",
     "4f821ad0-d6aa-4fff-95ef-9e1ab30e3482": "Name",
     "ae860594-1c68-4661-bb73-5169d429ac97": "Products",
@@ -2105,11 +1989,7 @@
         "code": "Supplier",
         "definitionEntityType": "collection",
         "fileType": "hackoladeSchema",
-        "definitionRefs": [
-          [
-            "750ee66e-8ef4-4312-93a9-af1f189e6618"
-          ]
-        ],
+        "definitionRefs": [],
         "kind": "relativePath",
         "link": "Product-Polyglot.hck.json",
         "fieldRelativePath": "#/Product management/Supplier"
@@ -2485,11 +2365,7 @@
         },
         "definitionEntityType": "relationship",
         "fileType": "hackoladeSchema",
-        "definitionRefs": [
-          [
-            "5d510e65-638b-46a9-8de7-b78d2006e54b"
-          ]
-        ],
+        "definitionRefs": [],
         "kind": "relativePath",
         "link": "Product-Polyglot.hck.json",
         "fieldRelativePath": "#/relationships/is issued by"
@@ -2573,7 +2449,7 @@
       "normalization": true
     }
   ],
-  "lastModifTS": "2025-02-24T13:25:44.432Z",
+  "lastModifTS": "2025-02-24T13:26:53.824Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -2615,16 +2491,6 @@
             "y": 1424.154056046086,
             "width": 345,
             "height": 102,
-            "color": {
-              "hex": "#2196F3"
-            }
-          },
-          {
-            "GUID": "750ee66e-8ef4-4312-93a9-af1f189e6618",
-            "x": 1989.2945922888782,
-            "y": 1353.3850961327596,
-            "width": 318,
-            "height": 138,
             "color": {
               "hex": "#2196F3"
             }
@@ -2689,11 +2555,6 @@
         ],
         "nestedCollectionsLayout": "horizontal",
         "options": [
-          {
-            "GUID": "750ee66e-8ef4-4312-93a9-af1f189e6618",
-            "autoWidth": false,
-            "autoHeight": false
-          },
           {
             "GUID": "f22a3e7d-5adf-48dd-b736-243710525b9b",
             "autoWidth": false,
