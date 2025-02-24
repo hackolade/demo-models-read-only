@@ -1,5 +1,5 @@
 {
-  "modelName": "customer",
+  "modelName": "Customer management POST",
   "collections": [
     {
       "GUID": "953ab768-3383-4775-b801-bedbf33eef48",
@@ -27,9 +27,7 @@
           "nullable": false,
           "childType": "array",
           "type": "array",
-          "code": "",
-          "GUID": "31a9a45f-9a18-477e-8502-96a0ba1797d1",
-          "error": {}
+          "GUID": "3893c068-feb4-4dfd-be03-7e1e06fb323a"
         },
         {
           "code": "",
@@ -150,15 +148,15 @@
           },
           "isActivated": true,
           "schemeType": "apiKey",
+          "required": false,
           "ignore_z_value": true,
-          "additionalProperties": true,
+          "additionalProperties": false,
           "structureType": true,
           "properties": [],
           "childType": "operationObject",
           "type": "document",
           "subtype": "callback",
-          "GUID": "c9f05d56-fd1b-4a67-9b43-aa5313b6630e",
-          "error": {}
+          "GUID": "0764f7b5-1410-4c28-a478-e03f7e03b966"
         }
       ],
       "definitions": {
@@ -547,13 +545,11 @@
     "dfb53299-1de5-4e34-b0ff-35d83660be04": "Specification Extensions",
     "3220b8c3-72be-42ac-992f-2de99960576a": "Customer",
     "d440f585-8b75-4dad-b23c-f3238b088931": "/customers",
-    "31a9a45f-9a18-477e-8502-96a0ba1797d1": "parameters",
     "70b3daf5-8f59-4721-96db-cf1aa906adaa": "requestBody",
     "be668b11-bb5a-4554-9ac9-4d2b4687aa70": "application/json",
     "c046ba7b-4944-4232-97b4-24acedd69837": "schema",
     "7f6ded86-39a1-497a-a1d9-3e238e8302db": "examples",
     "6643591d-abeb-4c58-aeb7-e75b4ae40dee": "encoding",
-    "c9f05d56-fd1b-4a67-9b43-aa5313b6630e": "callbacks",
     "953ab768-3383-4775-b801-bedbf33eef48": "post",
     "0734d9a0-0291-4448-afa2-2a5be68f5a26": "response",
     "bcdf446b-9c4e-4a39-bf76-81b65266a40a": "headers",
@@ -568,7 +564,9 @@
     "707f30cd-ed1f-453d-8925-ba8d48dd442f": "headers",
     "bfe47cbf-4060-4177-a07c-a0379ef8165e": "content",
     "1fcd0111-0415-49d1-adb0-5b8c9a5c7613": "links",
-    "2a728cc7-b730-46d2-a7c8-1801fe8172a1": "400"
+    "2a728cc7-b730-46d2-a7c8-1801fe8172a1": "400",
+    "0764f7b5-1410-4c28-a478-e03f7e03b966": "callbacks",
+    "3893c068-feb4-4dfd-be03-7e1e06fb323a": "parameters"
   },
   "definitions": {
     "type": "definitions",
@@ -1053,14 +1051,22 @@
     "GUID": "d5fd6ebf-bb10-42c5-9977-23f5871c859e"
   },
   "sources": [],
-  "decorativeSymbols": [],
+  "decorativeSymbols": [
+    {
+      "GUID": "419161f3-045c-4074-9d3a-d8bd715fd40d",
+      "name": "Disclaimer",
+      "type": "annotation",
+      "disableInitialFocus": true,
+      "value": "This OpenAPI eCommerce Order Model is intended for illustration purposes only and provides a simplified representation of an order management system within a REST-based API.\n\nWhile it covers essential endpoints, data definitions, and typical workflows for an eCommerce context, it does not encompass all potential complexities or best practices that may be applicable in a comprehensive production system implementation.\n\nIn addition, due to object-count limitations in the free community edition of Hackolade Studio, the model is split by HTTP methods (e.g., separate files/endpoints for GET, PUT, DELETE, etc.). Although this approach may appear unconventional, it is purely for demonstration and does not reflect a recommended best practice for production-ready APIs."
+    }
+  ],
   "dbVersion": "3.1.0",
   "dbVendor": "OpenAPI",
   "appTarget": "OPENAPI",
   "creationTS": "2025-02-24T10:52:12.322Z",
   "GUID": "5b87d931-af65-4496-8576-698532d04eb8",
   "isLineageEnabled": false,
-  "lastModifTS": "2025-02-24T11:00:39.231Z",
+  "lastModifTS": "2025-02-24T11:19:04.466Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -1071,11 +1077,16 @@
   "applicationInformation": {
     "version": "8.0.2"
   },
-  "hackoladeMeta": {},
+  "hackoladeMeta": {
+    "validationErrors": {
+      "description": false
+    }
+  },
   "scopesExtensions": [],
   "modelVersion": "1.0.0",
   "title": "Ecommerce Bike Platform - Customer API",
   "infoExtensions": [],
+  "description": "This OpenAPI eCommerce Order Model is intended for illustration purposes only and provides a simplified representation of an order management system within a REST-based API.\n\nWhile it covers essential endpoints, data definitions, and typical workflows for an eCommerce context, it does not encompass all potential complexities or best practices that may be applicable in a comprehensive production system implementation.\n\nIn addition, due to object-count limitations in the free community edition of Hackolade Studio, the model is split by HTTP methods (e.g., separate files/endpoints for GET, PUT, DELETE, etc.). Although this approach may appear unconventional, it is purely for demonstration and does not reflect a recommended best practice for production-ready APIs.",
   "settings": {
     "centralPane": {
       "dbLevel": {
@@ -1113,8 +1124,8 @@
         },
         "buckets": [
           {
-            "x": 1000,
-            "y": 1000,
+            "x": 1010,
+            "y": 1010,
             "GUID": "d440f585-8b75-4dad-b23c-f3238b088931"
           }
         ],
@@ -1134,7 +1145,18 @@
           "defaultLinkLength": 300
         },
         "diagramViews": [],
-        "decorativeSymbols": [],
+        "decorativeSymbols": [
+          {
+            "GUID": "419161f3-045c-4074-9d3a-d8bd715fd40d",
+            "x": 1735.5406283856983,
+            "y": 1023.8613217768151,
+            "height": 316,
+            "width": 383,
+            "color": {
+              "hex": "#fec107"
+            }
+          }
+        ],
         "nestedCollectionsLayout": "horizontal",
         "options": [
           {

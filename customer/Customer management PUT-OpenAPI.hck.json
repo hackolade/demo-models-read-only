@@ -1,5 +1,5 @@
 {
-  "modelName": "customer",
+  "modelName": "Customer management PUT",
   "collections": [
     {
       "GUID": "305ecb70-4022-4689-816e-5e919ec5098c",
@@ -338,14 +338,14 @@
                       "GUID": "2ebef8ed-50a6-4c3a-8116-96524740fa2d",
                       "name": "schema",
                       "type": "reference",
-                      "$ref": "#model/definitions/schemas/Customer",
+                      "$ref": "#model/definitions/schemas/Updated customer",
                       "refType": "model",
-                      "ref": "3220b8c3-72be-42ac-992f-2de99960576a",
+                      "ref": "d4328d78-b61f-4050-8f08-321bff4387f7",
                       "refIdPath": [
                         "5b87d931-af65-4496-8576-698532d04eb8",
                         "a1d13652-1494-4454-8dce-5c012fb7ecca",
                         "5210d2f5-2fbb-4ac6-a027-af86ead2774f",
-                        "3220b8c3-72be-42ac-992f-2de99960576a"
+                        "d4328d78-b61f-4050-8f08-321bff4387f7"
                       ],
                       "isActivated": true,
                       "code": ""
@@ -658,7 +658,10 @@
     "79c75558-c6ce-4162-99b6-ff0c0bec6f09": "headers",
     "6a8e3030-ad24-4dda-a184-b200e4c41c18": "content",
     "b4eaf3fb-dc60-45f3-8b30-14514e51b5f6": "links",
-    "d1013cbb-5aad-4adf-ac00-51307587e037": "404"
+    "d1013cbb-5aad-4adf-ac00-51307587e037": "404",
+    "d4328d78-b61f-4050-8f08-321bff4387f7": "Updated customer",
+    "939cded8-5498-469d-9118-db280d25239d": "First name",
+    "18f8deec-7034-4401-a15a-6a94733ad776": "Last name"
   },
   "definitions": {
     "type": "definitions",
@@ -697,7 +700,82 @@
                 "3d340d3c-2e48-4157-831f-0f7fa23f7ac3",
                 "9cebcf47-7285-41c5-a93e-a4c39ec7002b",
                 "f587eea2-febc-4d77-934f-9b0804be86df"
-              ],
+              ]
+            ]
+          },
+          {
+            "name": "Updated customer",
+            "hackoladeMeta": {
+              "disableDelete": false,
+              "disableAppend": false,
+              "resetInsteadOfDelete": false,
+              "displayNameFromField": false
+            },
+            "isActivated": true,
+            "schemeType": "apiKey",
+            "required": false,
+            "primaryKey": false,
+            "properties": [
+              {
+                "name": "email",
+                "hackoladeMeta": {
+                  "disableAppend": false,
+                  "disableDelete": false,
+                  "disableReference": false,
+                  "resetInsteadOfDelete": false
+                },
+                "isActivated": true,
+                "schemeType": "apiKey",
+                "required": true,
+                "primaryKey": false,
+                "type": "string",
+                "GUID": "6151fabe-a6f2-47b6-b9fe-87a09a2267fb",
+                "error": {}
+              },
+              {
+                "name": "First name",
+                "hackoladeMeta": {
+                  "disableAppend": false,
+                  "disableDelete": false,
+                  "disableReference": false,
+                  "resetInsteadOfDelete": false
+                },
+                "isActivated": true,
+                "schemeType": "apiKey",
+                "required": false,
+                "primaryKey": false,
+                "type": "string",
+                "GUID": "939cded8-5498-469d-9118-db280d25239d",
+                "error": {}
+              },
+              {
+                "name": "Last name",
+                "hackoladeMeta": {
+                  "disableAppend": false,
+                  "disableDelete": false,
+                  "disableReference": false,
+                  "resetInsteadOfDelete": false
+                },
+                "isActivated": true,
+                "schemeType": "apiKey",
+                "required": false,
+                "primaryKey": false,
+                "type": "string",
+                "GUID": "18f8deec-7034-4401-a15a-6a94733ad776",
+                "error": {}
+              }
+            ],
+            "additionalProperties": false,
+            "additionalPropControl": "Boolean",
+            "additionalPropertiesObjectType": "integer",
+            "additionalPropertiesIntegerFormat": "int32",
+            "subtype": "schema",
+            "nullable": false,
+            "childType": "object",
+            "type": "document",
+            "error": {},
+            "GUID": "d4328d78-b61f-4050-8f08-321bff4387f7",
+            "definitionRefs": [
               [
                 "e063880b-5c3d-48cd-b95a-24c568997c56",
                 "8e5bf42a-23c3-4d68-ace0-fcd79bd128a3",
@@ -1143,14 +1221,22 @@
     "GUID": "d5fd6ebf-bb10-42c5-9977-23f5871c859e"
   },
   "sources": [],
-  "decorativeSymbols": [],
+  "decorativeSymbols": [
+    {
+      "GUID": "36a14984-f794-4b02-a3c8-9f37751d1f79",
+      "name": "Disclaimer",
+      "type": "annotation",
+      "disableInitialFocus": true,
+      "value": "This OpenAPI eCommerce Order Model is intended for illustration purposes only and provides a simplified representation of an order management system within a REST-based API.\n\nWhile it covers essential endpoints, data definitions, and typical workflows for an eCommerce context, it does not encompass all potential complexities or best practices that may be applicable in a comprehensive production system implementation.\n\nIn addition, due to object-count limitations in the free community edition of Hackolade Studio, the model is split by HTTP methods (e.g., separate files/endpoints for GET, PUT, DELETE, etc.). Although this approach may appear unconventional, it is purely for demonstration and does not reflect a recommended best practice for production-ready APIs."
+    }
+  ],
   "dbVersion": "3.1.0",
   "dbVendor": "OpenAPI",
   "appTarget": "OPENAPI",
   "creationTS": "2025-02-24T10:52:12.322Z",
   "GUID": "5b87d931-af65-4496-8576-698532d04eb8",
   "isLineageEnabled": false,
-  "lastModifTS": "2025-02-24T11:01:02.373Z",
+  "lastModifTS": "2025-02-24T11:17:44.122Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -1161,18 +1247,23 @@
   "applicationInformation": {
     "version": "8.0.2"
   },
-  "hackoladeMeta": {},
+  "hackoladeMeta": {
+    "validationErrors": {
+      "description": false
+    }
+  },
   "scopesExtensions": [],
   "modelVersion": "1.0.0",
   "title": "Ecommerce Bike Platform - Customer API",
   "infoExtensions": [],
+  "description": "This OpenAPI eCommerce Order Model is intended for illustration purposes only and provides a simplified representation of an order management system within a REST-based API.\n\nWhile it covers essential endpoints, data definitions, and typical workflows for an eCommerce context, it does not encompass all potential complexities or best practices that may be applicable in a comprehensive production system implementation.\n\nIn addition, due to object-count limitations in the free community edition of Hackolade Studio, the model is split by HTTP methods (e.g., separate files/endpoints for GET, PUT, DELETE, etc.). Although this approach may appear unconventional, it is purely for demonstration and does not reflect a recommended best practice for production-ready APIs.",
   "settings": {
     "centralPane": {
       "dbLevel": {
         "erd": [
           {
             "GUID": "305ecb70-4022-4689-816e-5e919ec5098c",
-            "x": 1166.5,
+            "x": 1144,
             "y": 1050,
             "width": 356,
             "height": 480,
@@ -1182,13 +1273,13 @@
             "GUID": "e063880b-5c3d-48cd-b95a-24c568997c56",
             "x": 1050,
             "y": 1560,
-            "width": 367,
-            "height": 426,
+            "width": 322,
+            "height": 227,
             "color": {}
           },
           {
             "GUID": "d1013cbb-5aad-4adf-ac00-51307587e037",
-            "x": 1447,
+            "x": 1402,
             "y": 1560,
             "width": 192,
             "height": 101,
@@ -1203,8 +1294,8 @@
         },
         "buckets": [
           {
-            "x": 1000,
-            "y": 1000,
+            "x": 1010,
+            "y": 1010,
             "GUID": "9a3fef4c-767a-4e81-bd1a-4e942ae2e2f2"
           }
         ],
@@ -1224,7 +1315,18 @@
           "defaultLinkLength": 300
         },
         "diagramViews": [],
-        "decorativeSymbols": [],
+        "decorativeSymbols": [
+          {
+            "GUID": "36a14984-f794-4b02-a3c8-9f37751d1f79",
+            "x": 1686.1982665222104,
+            "y": 1100.845070422536,
+            "height": 215,
+            "width": 555,
+            "color": {
+              "hex": "#fec107"
+            }
+          }
+        ],
         "nestedCollectionsLayout": "horizontal",
         "options": [
           {

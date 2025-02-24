@@ -1,5 +1,5 @@
 {
-  "modelName": "customer",
+  "modelName": "Customer management GET List",
   "collections": [
     {
       "GUID": "640aabeb-50e4-47b6-be3f-6ec268e6fa6f",
@@ -834,14 +834,22 @@
     "GUID": "d5fd6ebf-bb10-42c5-9977-23f5871c859e"
   },
   "sources": [],
-  "decorativeSymbols": [],
+  "decorativeSymbols": [
+    {
+      "GUID": "5560f95d-d3cb-4345-964d-a3d0211e824b",
+      "name": "Disclaimer",
+      "type": "annotation",
+      "disableInitialFocus": true,
+      "value": "This OpenAPI eCommerce Order Model is intended for illustration purposes only and provides a simplified representation of an order management system within a REST-based API.\n\nWhile it covers essential endpoints, data definitions, and typical workflows for an eCommerce context, it does not encompass all potential complexities or best practices that may be applicable in a comprehensive production system implementation.\n\nIn addition, due to object-count limitations in the free community edition of Hackolade Studio, the model is split by HTTP methods (e.g., separate files/endpoints for GET, PUT, DELETE, etc.). Although this approach may appear unconventional, it is purely for demonstration and does not reflect a recommended best practice for production-ready APIs."
+    }
+  ],
   "dbVersion": "3.1.0",
   "dbVendor": "OpenAPI",
   "appTarget": "OPENAPI",
   "creationTS": "2025-02-24T10:52:12.322Z",
   "GUID": "5b87d931-af65-4496-8576-698532d04eb8",
   "isLineageEnabled": false,
-  "lastModifTS": "2025-02-24T11:05:20.021Z",
+  "lastModifTS": "2025-02-24T11:20:30.647Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -852,11 +860,16 @@
   "applicationInformation": {
     "version": "8.0.2"
   },
-  "hackoladeMeta": {},
+  "hackoladeMeta": {
+    "validationErrors": {
+      "modelName": false
+    }
+  },
   "scopesExtensions": [],
   "modelVersion": "1.0.0",
   "title": "Ecommerce Bike Platform - Customer API",
   "infoExtensions": [],
+  "description": "This OpenAPI eCommerce Order Model is intended for illustration purposes only and provides a simplified representation of an order management system within a REST-based API.\n\nWhile it covers essential endpoints, data definitions, and typical workflows for an eCommerce context, it does not encompass all potential complexities or best practices that may be applicable in a comprehensive production system implementation.\n\nIn addition, due to object-count limitations in the free community edition of Hackolade Studio, the model is split by HTTP methods (e.g., separate files/endpoints for GET, PUT, DELETE, etc.). Although this approach may appear unconventional, it is purely for demonstration and does not reflect a recommended best practice for production-ready APIs.",
   "settings": {
     "centralPane": {
       "dbLevel": {
@@ -886,8 +899,8 @@
         },
         "buckets": [
           {
-            "x": 1000,
-            "y": 1000,
+            "x": 1010,
+            "y": 1010,
             "GUID": "d440f585-8b75-4dad-b23c-f3238b088931"
           }
         ],
@@ -907,7 +920,18 @@
           "defaultLinkLength": 300
         },
         "diagramViews": [],
-        "decorativeSymbols": [],
+        "decorativeSymbols": [
+          {
+            "GUID": "5560f95d-d3cb-4345-964d-a3d0211e824b",
+            "x": 1507,
+            "y": 1015,
+            "height": 288,
+            "width": 399,
+            "color": {
+              "hex": "#fec107"
+            }
+          }
+        ],
         "nestedCollectionsLayout": "horizontal",
         "options": [
           {

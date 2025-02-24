@@ -87,15 +87,7 @@
         {
           "GUID": "7c3325ce-c9c4-4ad6-9287-8c1e2084ab9a",
           "name": "Bill-to address",
-          "type": "reference",
-          "$ref": "#external/definitions/Address",
-          "refType": "external",
-          "ref": "9ef4d443-9c95-45f0-883a-6ec491d51efc",
-          "refIdPath": [
-            "dca9ade7-ee0b-4953-b408-cc0e6b806e82",
-            "993e567a-09e9-47db-9254-e71c2dccbfc4",
-            "9ef4d443-9c95-45f0-883a-6ec491d51efc"
-          ],
+          "type": "document",
           "isActivated": true,
           "compositeKey": [
             "compositePrimaryKey",
@@ -104,10 +96,68 @@
           "compositePrimaryKey": false,
           "compositeUniqueKey": false,
           "error": {
-            "refDescription": false,
-            "refPath": false
+            "refDescription": false
           },
-          "refDescription": "Stores the billing address associated with the customer. It is used for invoicing and payment processing, ensuring that billing information is accurate and up to date. The bill-to address may differ from the shipping address and is crucial for financial record-keeping."
+          "refDescription": "Stores the billing address associated with the customer. It is used for invoicing and payment processing, ensuring that billing information is accurate and up to date. The bill-to address may differ from the shipping address and is crucial for financial record-keeping.",
+          "hackoladeMeta": {},
+          "properties": [
+            {
+              "name": "Street",
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "primaryKey": false,
+              "required": false,
+              "childType": "varchar",
+              "type": "string",
+              "compositeKey": [
+                "compositePrimaryKey",
+                "compositeUniqueKey"
+              ],
+              "GUID": "c5857260-3656-58d4-b243-67712a507c70",
+              "description": "Specifies the street name and number, providing detailed location information within a city or town.",
+              "error": {}
+            },
+            {
+              "name": "Postal code",
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "primaryKey": false,
+              "required": false,
+              "childType": "varchar",
+              "type": "string",
+              "compositeKey": [
+                "compositePrimaryKey",
+                "compositeUniqueKey"
+              ],
+              "GUID": "a251d071-f920-5a2d-9cb5-e65f3dcaed6b",
+              "foreignCollection": "",
+              "foreignField": [],
+              "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
+              "error": {}
+            },
+            {
+              "name": "City",
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "primaryKey": false,
+              "required": false,
+              "childType": "varchar",
+              "type": "string",
+              "compositeKey": [
+                "compositePrimaryKey",
+                "compositeUniqueKey"
+              ],
+              "GUID": "7b74c1ad-b71a-5c8d-b51a-8cba71e13633",
+              "foreignCollection": "",
+              "foreignField": [],
+              "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
+              "error": {}
+            }
+          ],
+          "additionalProperties": false,
+          "childType": "object",
+          "parentRelationship": "",
+          "childRelationships": []
         },
         {
           "name": "Ship-to addresses",
@@ -117,15 +167,7 @@
           "properties": [
             {
               "GUID": "8678843b-3325-445b-9161-00f739973a3b",
-              "type": "reference",
-              "$ref": "#external/definitions/Address",
-              "refType": "external",
-              "ref": "9ef4d443-9c95-45f0-883a-6ec491d51efc",
-              "refIdPath": [
-                "dca9ade7-ee0b-4953-b408-cc0e6b806e82",
-                "993e567a-09e9-47db-9254-e71c2dccbfc4",
-                "9ef4d443-9c95-45f0-883a-6ec491d51efc"
-              ],
+              "type": "document",
               "isActivated": true,
               "compositeKey": [
                 "compositePrimaryKey",
@@ -134,10 +176,67 @@
               "compositePrimaryKey": false,
               "compositeUniqueKey": false,
               "displayName": "Address",
+              "error": {},
+              "hackoladeMeta": {},
+              "properties": [
+                {
+                  "name": "Street",
+                  "hackoladeMeta": {},
+                  "isActivated": true,
+                  "primaryKey": false,
+                  "required": false,
+                  "childType": "varchar",
+                  "type": "string",
+                  "compositeKey": [
+                    "compositePrimaryKey",
+                    "compositeUniqueKey"
+                  ],
+                  "GUID": "bb7e9343-303e-5b06-a179-60cfdb0ea1be",
+                  "description": "Specifies the street name and number, providing detailed location information within a city or town.",
+                  "error": {}
+                },
+                {
+                  "name": "Postal code",
+                  "hackoladeMeta": {},
+                  "isActivated": true,
+                  "primaryKey": false,
+                  "required": false,
+                  "childType": "varchar",
+                  "type": "string",
+                  "compositeKey": [
+                    "compositePrimaryKey",
+                    "compositeUniqueKey"
+                  ],
+                  "GUID": "91673053-00fa-5132-ab09-b96d8381db4a",
+                  "foreignCollection": "",
+                  "foreignField": [],
+                  "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
+                  "error": {}
+                },
+                {
+                  "name": "City",
+                  "hackoladeMeta": {},
+                  "isActivated": true,
+                  "primaryKey": false,
+                  "required": false,
+                  "childType": "varchar",
+                  "type": "string",
+                  "compositeKey": [
+                    "compositePrimaryKey",
+                    "compositeUniqueKey"
+                  ],
+                  "GUID": "44a160cb-ded8-578a-8712-b8432b9b8188",
+                  "foreignCollection": "",
+                  "foreignField": [],
+                  "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
+                  "error": {}
+                }
+              ],
+              "additionalProperties": false,
+              "childType": "object",
               "arrayItem": true,
-              "error": {
-                "refPath": false
-              }
+              "parentRelationship": "",
+              "childRelationships": []
             }
           ],
           "childType": "array",
@@ -320,7 +419,7 @@
   "GUID": "dca9ade7-ee0b-4953-b408-cc0e6b806e82",
   "isLineageEnabled": false,
   "polyglotModelPaths": [],
-  "lastModifTS": "2025-02-19T11:05:26.287Z",
+  "lastModifTS": "2025-02-24T11:06:55.915Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -329,7 +428,7 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.0.1"
+    "version": "8.0.2"
   },
   "hackoladeMeta": {
     "validationErrors": {

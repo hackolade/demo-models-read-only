@@ -929,14 +929,22 @@
     "GUID": "d5fd6ebf-bb10-42c5-9977-23f5871c859e"
   },
   "sources": [],
-  "decorativeSymbols": [],
+  "decorativeSymbols": [
+    {
+      "GUID": "47b48548-25da-4e3d-8270-ba388af4dbb1",
+      "name": "Disclaimer",
+      "type": "annotation",
+      "disableInitialFocus": true,
+      "value": "This OpenAPI eCommerce Order Model is intended for illustration purposes only and provides a simplified representation of an order management system within a REST-based API.\n\nWhile it covers essential endpoints, data definitions, and typical workflows for an eCommerce context, it does not encompass all potential complexities or best practices that may be applicable in a comprehensive production system implementation.\n\nIn addition, due to object-count limitations in the free community edition of Hackolade Studio, the model is split by HTTP methods (e.g., separate files/endpoints for GET, PUT, DELETE, etc.). Although this approach may appear unconventional, it is purely for demonstration and does not reflect a recommended best practice for production-ready APIs."
+    }
+  ],
   "dbVersion": "3.1.0",
   "dbVendor": "OpenAPI",
   "appTarget": "OPENAPI",
   "creationTS": "2025-02-24T10:52:12.322Z",
   "GUID": "5b87d931-af65-4496-8576-698532d04eb8",
   "isLineageEnabled": false,
-  "lastModifTS": "2025-02-24T10:59:24.065Z",
+  "lastModifTS": "2025-02-24T11:21:52.660Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -947,11 +955,16 @@
   "applicationInformation": {
     "version": "8.0.2"
   },
-  "hackoladeMeta": {},
+  "hackoladeMeta": {
+    "validationErrors": {
+      "description": false
+    }
+  },
   "scopesExtensions": [],
   "modelVersion": "1.0.0",
   "title": "Ecommerce Bike Platform - Customer API",
   "infoExtensions": [],
+  "description": "This OpenAPI eCommerce Order Model is intended for illustration purposes only and provides a simplified representation of an order management system within a REST-based API.\n\nWhile it covers essential endpoints, data definitions, and typical workflows for an eCommerce context, it does not encompass all potential complexities or best practices that may be applicable in a comprehensive production system implementation.\n\nIn addition, due to object-count limitations in the free community edition of Hackolade Studio, the model is split by HTTP methods (e.g., separate files/endpoints for GET, PUT, DELETE, etc.). Although this approach may appear unconventional, it is purely for demonstration and does not reflect a recommended best practice for production-ready APIs.",
   "settings": {
     "centralPane": {
       "dbLevel": {
@@ -989,8 +1002,8 @@
         },
         "buckets": [
           {
-            "x": 1000,
-            "y": 1000,
+            "x": 1010,
+            "y": 1010,
             "GUID": "9a3fef4c-767a-4e81-bd1a-4e942ae2e2f2"
           }
         ],
@@ -1010,7 +1023,18 @@
           "defaultLinkLength": 300
         },
         "diagramViews": [],
-        "decorativeSymbols": [],
+        "decorativeSymbols": [
+          {
+            "GUID": "47b48548-25da-4e3d-8270-ba388af4dbb1",
+            "x": 1530,
+            "y": 1007,
+            "height": 261,
+            "width": 445,
+            "color": {
+              "hex": "#fec107"
+            }
+          }
+        ],
         "nestedCollectionsLayout": "horizontal",
         "options": [],
         "relationshipUpdateDisabled": false,
