@@ -180,10 +180,7 @@
           },
           {
             "GUID": "8b6314e5-b395-43b9-a367-4fbde307f10d",
-            "relationshipType": "",
-            "foreignCollection": "",
-            "foreignField": [],
-            "parentRelationship": ""
+            "referenceDiffDeleted": true
           }
         ]
       },
@@ -219,13 +216,6 @@
       "referenceDiff": {
         "properties": [
           {
-            "GUID": "b9d5da76-8812-4308-8bf6-0ac6a34c938f",
-            "relationshipType": "",
-            "foreignCollection": "",
-            "foreignField": [],
-            "parentRelationship": ""
-          },
-          {
             "GUID": "d138a990-ba4d-4cf7-b998-b57f5d576902",
             "relationshipType": "Foreign Key",
             "foreignCollection": "f22a3e7d-5adf-48dd-b736-243710525b9b",
@@ -235,6 +225,14 @@
               "a898b734-3304-48c1-b45d-98c1f7cc3808"
             ],
             "parentRelationship": "cb50680b-b6f4-4a2e-b7a2-1ab0c6473a5a"
+          },
+          {
+            "GUID": "b9d5da76-8812-4308-8bf6-0ac6a34c938f",
+            "referenceDiffDeleted": true
+          },
+          {
+            "GUID": "3a79b59c-1d60-4c86-a484-a20deb6fcd95",
+            "referenceDiffDeleted": true
           }
         ]
       }
@@ -2763,7 +2761,7 @@
       "normalization": true
     }
   ],
-  "lastModifTS": "2025-02-24T13:35:05.242Z",
+  "lastModifTS": "2025-02-24T13:35:58.434Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
