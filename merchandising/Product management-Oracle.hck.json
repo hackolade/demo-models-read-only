@@ -180,55 +180,6 @@
           },
           {
             "GUID": "8b6314e5-b395-43b9-a367-4fbde307f10d",
-            "relationshipType": "Foreign Key",
-            "foreignCollection": "6dd2fc84-f7ee-4846-ac72-e78ec354d754",
-            "foreignField": [
-              "6dd2fc84-f7ee-4846-ac72-e78ec354d754",
-              "27b41494-4b17-417a-8444-3c20cb265978",
-              "8a3bbd3c-b148-4306-9da3-e84c938855d0"
-            ],
-            "parentRelationship": "caea8abc-eeb1-4b0f-9317-ef3e358d5dcd"
-          }
-        ]
-      },
-      "error": {
-        "refPath": false
-      }
-    },
-    {
-      "GUID": "6dd2fc84-f7ee-4846-ac72-e78ec354d754",
-      "type": "reference",
-      "$ref": "#external/definitions/Warehouse",
-      "refType": "polyglot",
-      "ref": "27b41494-4b17-417a-8444-3c20cb265978",
-      "refIdPath": [
-        "870a3142-3dd9-4787-8562-3acb4f7e1d00",
-        "0db0a639-f954-4b00-b8b8-2b06a8167c05",
-        "27b41494-4b17-417a-8444-3c20cb265978"
-      ],
-      "isActivated": true,
-      "collectionName": "Warehouse",
-      "code": "Warehouse",
-      "bucketId": "27d230a7-a7da-4a2b-aedf-6afa5bb0d139",
-      "properties": [],
-      "definitions": {
-        "properties": [],
-        "GUID": "cce2d2b1-64f6-4522-b9d7-7115ae24ffd0"
-      },
-      "hackoladeMeta": {
-        "namingConvention": "code"
-      },
-      "additionalProperties": false,
-      "referenceDiff": {
-        "properties": [
-          {
-            "GUID": "8a3bbd3c-b148-4306-9da3-e84c938855d0",
-            "childRelationships": [
-              "caea8abc-eeb1-4b0f-9317-ef3e358d5dcd"
-            ]
-          },
-          {
-            "GUID": "e486e793-d174-4dde-a091-f01158f80e86",
             "referenceDiffDeleted": true
           }
         ]
@@ -278,6 +229,14 @@
           {
             "GUID": "b9d5da76-8812-4308-8bf6-0ac6a34c938f",
             "referenceDiffDeleted": true
+          },
+          {
+            "GUID": "3a79b59c-1d60-4c86-a484-a20deb6fcd95",
+            "referenceDiffDeleted": true
+          },
+          {
+            "GUID": "ba154f30-0f46-41b7-bbd0-b5e106f2cf32",
+            "referenceDiffDeleted": true
           }
         ]
       },
@@ -313,7 +272,6 @@
         "f22a3e7d-5adf-48dd-b736-243710525b9b",
         "8e22bca6-7766-4398-8dac-f5a879a8a7bd",
         "5b943276-e17c-4e4f-be9a-3bcb08639023",
-        "6dd2fc84-f7ee-4846-ac72-e78ec354d754",
         "750ee66e-8ef4-4312-93a9-af1f189e6618"
       ],
       "hackoladeMeta": {
@@ -646,72 +604,6 @@
       }
     },
     {
-      "name": "fk_Warehouse_id_to_Stock_Warehouse",
-      "relationshipType": "Foreign Key",
-      "parentField": [
-        [
-          "6dd2fc84-f7ee-4846-ac72-e78ec354d754",
-          "27b41494-4b17-417a-8444-3c20cb265978",
-          "8a3bbd3c-b148-4306-9da3-e84c938855d0"
-        ]
-      ],
-      "parentCardinality": "1",
-      "childField": [
-        [
-          "5b943276-e17c-4e4f-be9a-3bcb08639023",
-          "14dd0530-7fdc-4567-a3c4-2177fc0bd660",
-          "8b6314e5-b395-43b9-a367-4fbde307f10d"
-        ]
-      ],
-      "isActivated": true,
-      "childCardinality": "1",
-      "parentCollection": "6dd2fc84-f7ee-4846-ac72-e78ec354d754",
-      "childCollection": "5b943276-e17c-4e4f-be9a-3bcb08639023",
-      "hackoladeMeta": {
-        "namingConvention": "code"
-      },
-      "type": "reference",
-      "refType": "polyglot",
-      "$ref": "#external/definitions/fk_Warehouse_id_to_Stock_Warehouse",
-      "refIdPath": [
-        "870a3142-3dd9-4787-8562-3acb4f7e1d00",
-        "0db0a639-f954-4b00-b8b8-2b06a8167c05",
-        "24821368-0853-4290-abc4-f457f087c46f"
-      ],
-      "ref": "24821368-0853-4290-abc4-f457f087c46f",
-      "GUID": "caea8abc-eeb1-4b0f-9317-ef3e358d5dcd",
-      "hackoladeStyles": {
-        "GUID": "8fbbc3d0-f391-4910-8fcd-37679abc1b04",
-        "autoPositioning": true,
-        "type": "Orthogonal",
-        "thickness": 2,
-        "color": "#79c4ff",
-        "dataType": "",
-        "shape": [
-          {
-            "x": 1322.7697367994242,
-            "y": 1526.154056046086
-          },
-          {
-            "x": 1322.7697367994242,
-            "y": 1593.886975300752
-          },
-          {
-            "x": 1500.0001475921404,
-            "y": 1593.886975300752
-          },
-          {
-            "x": 1500.0001475921404,
-            "y": 1661.619894555418
-          }
-        ],
-        "sides": [
-          "bottom",
-          "top"
-        ]
-      }
-    },
-    {
       "name": "contains",
       "relationshipType": "Foreign Key",
       "parentField": [
@@ -810,11 +702,11 @@
         "dataType": "",
         "shape": [
           {
-            "x": 1322.7697367994242,
+            "x": 1333.2697367994242,
             "y": 1424.154056046086
           },
           {
-            "x": 1322.7697367994242,
+            "x": 1333.2697367994242,
             "y": 1368.6795956397057
           },
           {
@@ -877,12 +769,12 @@
         "dataType": "",
         "shape": [
           {
-            "x": 2191.1681899186406,
+            "x": 2180.9494426754954,
             "y": 1353.3850961327596
           },
           {
             "y": 1250.41022410001,
-            "x": 2191.1681899186406
+            "x": 2180.9494426754954
           },
           {
             "x": 1818.2,
@@ -916,11 +808,9 @@
     "f22a3e7d-5adf-48dd-b736-243710525b9b": "Product",
     "8e22bca6-7766-4398-8dac-f5a879a8a7bd": "Prices",
     "5b943276-e17c-4e4f-be9a-3bcb08639023": "Stock",
-    "6dd2fc84-f7ee-4846-ac72-e78ec354d754": "Warehouse",
     "750ee66e-8ef4-4312-93a9-af1f189e6618": "Supplier",
     "27d230a7-a7da-4a2b-aedf-6afa5bb0d139": "Product management",
     "308d45ac-429d-455e-8c85-a8f9352c4384": "fk_Product_SKU_to_Prices_SKU",
-    "caea8abc-eeb1-4b0f-9317-ef3e358d5dcd": "fk_Warehouse_id_to_Stock_Warehouse",
     "768cae49-3e62-41c8-b864-1e8b5c2153ab": "contains",
     "b0b94700-72f8-4412-bd50-05225426ea50": "has",
     "5d510e65-638b-46a9-8de7-b78d2006e54b": "is_issued_by",
@@ -1959,11 +1849,7 @@
         },
         "definitionEntityType": "collection",
         "fileType": "hackoladeSchema",
-        "definitionRefs": [
-          [
-            "6dd2fc84-f7ee-4846-ac72-e78ec354d754"
-          ]
-        ],
+        "definitionRefs": [],
         "kind": "relativePath",
         "link": "Product-Polyglot.hck.json",
         "fieldRelativePath": "#/Product management/Stock/properties/Warehouse",
@@ -2001,11 +1887,7 @@
         "hackoladeMeta": {
           "namingConvention": "code"
         },
-        "definitionRefs": [
-          [
-            "caea8abc-eeb1-4b0f-9317-ef3e358d5dcd"
-          ]
-        ]
+        "definitionRefs": []
       },
       {
         "name": "fk_Address_id_to_Warehouse_Address",
@@ -2696,7 +2578,7 @@
       "normalization": true
     }
   ],
-  "lastModifTS": "2025-02-24T13:09:49.742Z",
+  "lastModifTS": "2025-02-24T13:40:53.618Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -2736,8 +2618,8 @@
             "GUID": "5b943276-e17c-4e4f-be9a-3bcb08639023",
             "x": 1150.2697367994242,
             "y": 1424.154056046086,
-            "width": 345,
-            "height": 102,
+            "width": 366,
+            "height": 88,
             "color": {
               "hex": "#2196F3"
             }
@@ -2746,8 +2628,8 @@
             "GUID": "750ee66e-8ef4-4312-93a9-af1f189e6618",
             "x": 1989.2945922888782,
             "y": 1353.3850961327596,
-            "width": 318,
-            "height": 138,
+            "width": 302,
+            "height": 97,
             "color": {
               "hex": "#2196F3"
             }
@@ -2758,14 +2640,6 @@
             "y": 1428.9470556373685,
             "width": 276,
             "height": 121,
-            "color": {}
-          },
-          {
-            "GUID": "6dd2fc84-f7ee-4846-ac72-e78ec354d754",
-            "x": 1360.0001475921404,
-            "y": 1661.619894555418,
-            "width": 280,
-            "height": 82,
             "color": {}
           },
           {
@@ -2833,17 +2707,17 @@
           {
             "autoWidth": false,
             "autoHeight": false,
-            "GUID": "6dd2fc84-f7ee-4846-ac72-e78ec354d754"
-          },
-          {
-            "autoWidth": false,
-            "autoHeight": false,
             "GUID": "842dd4c1-f54f-4167-b52a-c02dd7b8005b"
           },
           {
             "autoWidth": false,
             "autoHeight": false,
             "GUID": "8e22bca6-7766-4398-8dac-f5a879a8a7bd"
+          },
+          {
+            "autoWidth": false,
+            "autoHeight": false,
+            "GUID": "5b943276-e17c-4e4f-be9a-3bcb08639023"
           }
         ],
         "relationshipUpdateDisabled": false,
