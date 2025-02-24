@@ -1,5 +1,5 @@
 {
-  "modelName": "customer",
+  "modelName": "Customer management DELETE",
   "collections": [
     {
       "GUID": "dd5b9ff0-7be6-4cc2-8883-8b1da4bd54f5",
@@ -944,7 +944,7 @@
   "creationTS": "2025-02-24T10:52:12.322Z",
   "GUID": "5b87d931-af65-4496-8576-698532d04eb8",
   "isLineageEnabled": false,
-  "lastModifTS": "2025-02-24T11:21:52.660Z",
+  "lastModifTS": "2025-02-24T11:32:46.835Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -957,7 +957,7 @@
   },
   "hackoladeMeta": {
     "validationErrors": {
-      "description": false
+      "modelName": false
     }
   },
   "scopesExtensions": [],
