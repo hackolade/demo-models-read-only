@@ -11,7 +11,7 @@
           "hackoladeMeta": {},
           "isActivated": true,
           "primaryKey": false,
-          "required": false,
+          "required": true,
           "childType": "varchar",
           "type": "string",
           "compositeKey": [
@@ -27,7 +27,7 @@
           "hackoladeMeta": {},
           "isActivated": true,
           "primaryKey": false,
-          "required": false,
+          "required": true,
           "childType": "varchar",
           "type": "string",
           "compositeKey": [
@@ -45,7 +45,7 @@
           "hackoladeMeta": {},
           "isActivated": true,
           "primaryKey": false,
-          "required": false,
+          "required": true,
           "childType": "varchar",
           "type": "string",
           "compositeKey": [
@@ -111,7 +111,7 @@
   "creationTS": "2024-12-31T10:50:34.735Z",
   "GUID": "251c1cc6-cb0b-4efc-bbc7-56d5a47c2515",
   "isLineageEnabled": false,
-  "lastModifTS": "2025-02-19T11:11:17.449Z",
+  "lastModifTS": "2025-02-25T14:42:50.145Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -120,7 +120,7 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.0.1"
+    "version": "8.0.2"
   },
   "hackoladeMeta": {
     "validationErrors": {
@@ -136,8 +136,8 @@
             "GUID": "50ec3adc-dd4a-4ddf-bab7-572b8e9b8bf7",
             "x": 1263,
             "y": 1084,
-            "width": 237,
-            "height": 97,
+            "width": 247,
+            "height": 90,
             "color": {
               "hex": "#2196F3"
             }
