@@ -19,6 +19,7 @@
             "compositeUniqueKey"
           ],
           "GUID": "e8a58173-1262-4752-859c-10ceec5598aa",
+          "description": "The customer’s given name, used for personalization and identification.",
           "error": {}
         },
         {
@@ -34,6 +35,7 @@
             "compositeUniqueKey"
           ],
           "GUID": "872c6f47-1c90-4b97-ad5e-2c446d854243",
+          "description": "The customer’s surname or family name.",
           "error": {}
         },
         {
@@ -49,6 +51,7 @@
             "compositeUniqueKey"
           ],
           "GUID": "18d05aa0-70b0-4f8e-9736-ffbc7104f778",
+          "description": "The unique email address of the customer, serving as the primary key and primary contact method. Often used for authentication and login purposes.",
           "error": {}
         },
         {
@@ -64,6 +67,7 @@
             "compositeUniqueKey"
           ],
           "GUID": "bb57e423-15a3-43d2-bb4f-81c084e50416",
+          "description": "The primary telephone or mobile number for contacting the customer. Format may vary based on locale.",
           "error": {}
         },
         {
@@ -85,9 +89,17 @@
           "error": {}
         },
         {
-          "GUID": "7c3325ce-c9c4-4ad6-9287-8c1e2084ab9a",
+          "GUID": "299ad0aa-01de-43f1-a266-bd803d9d7616",
           "name": "Bill-to address",
-          "type": "document",
+          "type": "reference",
+          "$ref": "#external/definitions/Address",
+          "refType": "external",
+          "ref": "08a8411a-1281-468b-9ec4-cbe9179336a3",
+          "refIdPath": [
+            "dca9ade7-ee0b-4953-b408-cc0e6b806e82",
+            "993e567a-09e9-47db-9254-e71c2dccbfc4",
+            "08a8411a-1281-468b-9ec4-cbe9179336a3"
+          ],
           "isActivated": true,
           "compositeKey": [
             "compositePrimaryKey",
@@ -98,66 +110,7 @@
           "error": {
             "refDescription": false
           },
-          "refDescription": "Stores the billing address associated with the customer. It is used for invoicing and payment processing, ensuring that billing information is accurate and up to date. The bill-to address may differ from the shipping address and is crucial for financial record-keeping.",
-          "hackoladeMeta": {},
-          "properties": [
-            {
-              "name": "Street",
-              "hackoladeMeta": {},
-              "isActivated": true,
-              "primaryKey": false,
-              "required": false,
-              "childType": "varchar",
-              "type": "string",
-              "compositeKey": [
-                "compositePrimaryKey",
-                "compositeUniqueKey"
-              ],
-              "GUID": "c5857260-3656-58d4-b243-67712a507c70",
-              "description": "Specifies the street name and number, providing detailed location information within a city or town.",
-              "error": {}
-            },
-            {
-              "name": "Postal code",
-              "hackoladeMeta": {},
-              "isActivated": true,
-              "primaryKey": false,
-              "required": false,
-              "childType": "varchar",
-              "type": "string",
-              "compositeKey": [
-                "compositePrimaryKey",
-                "compositeUniqueKey"
-              ],
-              "GUID": "a251d071-f920-5a2d-9cb5-e65f3dcaed6b",
-              "foreignCollection": "",
-              "foreignField": [],
-              "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
-              "error": {}
-            },
-            {
-              "name": "City",
-              "hackoladeMeta": {},
-              "isActivated": true,
-              "primaryKey": false,
-              "required": false,
-              "childType": "varchar",
-              "type": "string",
-              "compositeKey": [
-                "compositePrimaryKey",
-                "compositeUniqueKey"
-              ],
-              "GUID": "7b74c1ad-b71a-5c8d-b51a-8cba71e13633",
-              "foreignCollection": "",
-              "foreignField": [],
-              "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
-              "error": {}
-            }
-          ],
-          "additionalProperties": false,
-          "childType": "object",
-          "parentRelationship": "",
-          "childRelationships": []
+          "refDescription": "Stores the default billing address for the customer. Used for invoicing, payment processing, and tax calculations."
         },
         {
           "name": "Ship-to addresses",
@@ -166,8 +119,16 @@
           "additionalItems": true,
           "properties": [
             {
-              "GUID": "8678843b-3325-445b-9161-00f739973a3b",
-              "type": "document",
+              "GUID": "3ff559e8-d20f-432c-9ad8-5b93be0f1055",
+              "type": "reference",
+              "$ref": "#external/definitions/Address",
+              "refType": "external",
+              "ref": "08a8411a-1281-468b-9ec4-cbe9179336a3",
+              "refIdPath": [
+                "dca9ade7-ee0b-4953-b408-cc0e6b806e82",
+                "993e567a-09e9-47db-9254-e71c2dccbfc4",
+                "08a8411a-1281-468b-9ec4-cbe9179336a3"
+              ],
               "isActivated": true,
               "compositeKey": [
                 "compositePrimaryKey",
@@ -176,67 +137,8 @@
               "compositePrimaryKey": false,
               "compositeUniqueKey": false,
               "displayName": "Address",
-              "error": {},
-              "hackoladeMeta": {},
-              "properties": [
-                {
-                  "name": "Street",
-                  "hackoladeMeta": {},
-                  "isActivated": true,
-                  "primaryKey": false,
-                  "required": false,
-                  "childType": "varchar",
-                  "type": "string",
-                  "compositeKey": [
-                    "compositePrimaryKey",
-                    "compositeUniqueKey"
-                  ],
-                  "GUID": "bb7e9343-303e-5b06-a179-60cfdb0ea1be",
-                  "description": "Specifies the street name and number, providing detailed location information within a city or town.",
-                  "error": {}
-                },
-                {
-                  "name": "Postal code",
-                  "hackoladeMeta": {},
-                  "isActivated": true,
-                  "primaryKey": false,
-                  "required": false,
-                  "childType": "varchar",
-                  "type": "string",
-                  "compositeKey": [
-                    "compositePrimaryKey",
-                    "compositeUniqueKey"
-                  ],
-                  "GUID": "91673053-00fa-5132-ab09-b96d8381db4a",
-                  "foreignCollection": "",
-                  "foreignField": [],
-                  "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
-                  "error": {}
-                },
-                {
-                  "name": "City",
-                  "hackoladeMeta": {},
-                  "isActivated": true,
-                  "primaryKey": false,
-                  "required": false,
-                  "childType": "varchar",
-                  "type": "string",
-                  "compositeKey": [
-                    "compositePrimaryKey",
-                    "compositeUniqueKey"
-                  ],
-                  "GUID": "44a160cb-ded8-578a-8712-b8432b9b8188",
-                  "foreignCollection": "",
-                  "foreignField": [],
-                  "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
-                  "error": {}
-                }
-              ],
-              "additionalProperties": false,
-              "childType": "object",
               "arrayItem": true,
-              "parentRelationship": "",
-              "childRelationships": []
+              "error": {}
             }
           ],
           "childType": "array",
@@ -260,7 +162,8 @@
       },
       "isActivated": true,
       "additionalProperties": false,
-      "bucketId": "81137752-f86d-41e7-bb91-6d3e9fdb9628"
+      "bucketId": "81137752-f86d-41e7-bb91-6d3e9fdb9628",
+      "description": "The Customer entity represents an individual or organization using the ecommerce platform to browse, purchase, and manage orders. It stores essential contact information, registration data, and address details for billing and shipping."
     }
   ],
   "buckets": [
@@ -279,7 +182,8 @@
       "show": true,
       "isActivated": true,
       "indexes": [],
-      "GUID": "81137752-f86d-41e7-bb91-6d3e9fdb9628"
+      "GUID": "81137752-f86d-41e7-bb91-6d3e9fdb9628",
+      "description": "The Customer Management container encompasses all entities and relationships associated with users of the ecommerce platform. It covers personal information, contact details, and addresses needed to fulfill orders, provide customer support, and maintain communication preferences."
     }
   ],
   "views": [],
@@ -294,9 +198,10 @@
     "bb57e423-15a3-43d2-bb4f-81c084e50416": "Phone number",
     "7fa9c279-fe3c-4864-83e9-10df93832aef": "Registration date",
     "9ef4d443-9c95-45f0-883a-6ec491d51efc": "Address",
-    "7c3325ce-c9c4-4ad6-9287-8c1e2084ab9a": "Bill-to address",
     "a569060a-b3b2-4f73-95c7-7c2e2145c273": "Ship-to addresses",
-    "81137752-f86d-41e7-bb91-6d3e9fdb9628": "Customer management"
+    "81137752-f86d-41e7-bb91-6d3e9fdb9628": "Customer management",
+    "08a8411a-1281-468b-9ec4-cbe9179336a3": "Address",
+    "299ad0aa-01de-43f1-a266-bd803d9d7616": "Bill-to address"
   },
   "definitions": {
     "type": "definitions",
@@ -329,7 +234,7 @@
               "compositePrimaryKey",
               "compositeUniqueKey"
             ],
-            "GUID": "b29d271d-2c57-54e1-bc42-581191bcbd2d",
+            "GUID": "e39309ef-bddf-5ad6-a9f2-28eed3a97e6b",
             "description": "Specifies the street name and number, providing detailed location information within a city or town.",
             "error": {}
           },
@@ -345,7 +250,7 @@
               "compositePrimaryKey",
               "compositeUniqueKey"
             ],
-            "GUID": "9faf5e23-73b7-5a47-8cd4-260b145b0d71",
+            "GUID": "ed47b834-37f8-5b6c-a099-4c12f5ab2524",
             "foreignCollection": "",
             "foreignField": [],
             "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
@@ -363,7 +268,7 @@
               "compositePrimaryKey",
               "compositeUniqueKey"
             ],
-            "GUID": "7a05b042-1c77-5911-b5e0-43c3834164c9",
+            "GUID": "36e43dd7-de6b-520a-87b4-9b61bc5c8260",
             "foreignCollection": "",
             "foreignField": [],
             "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
@@ -377,28 +282,23 @@
         ],
         "compositePrimaryKey": false,
         "compositeUniqueKey": false,
-        "GUID": "9ef4d443-9c95-45f0-883a-6ec491d51efc",
-        "fieldRelativePath": "#/Address",
-        "fileType": "hackoladeSchema",
-        "kind": "relativePath",
-        "link": "Address-Polyglot.hck.json",
-        "childType": "object",
+        "GUID": "08a8411a-1281-468b-9ec4-cbe9179336a3",
         "definitionRefs": [
           [
             "5cc94e26-8eb9-4b1c-a78d-a870d9f640db",
-            "7c3325ce-c9c4-4ad6-9287-8c1e2084ab9a"
+            "299ad0aa-01de-43f1-a266-bd803d9d7616"
           ],
           [
             "5cc94e26-8eb9-4b1c-a78d-a870d9f640db",
             "a569060a-b3b2-4f73-95c7-7c2e2145c273",
-            "319af9da-219b-4475-b4ab-d2b640a24b55"
-          ],
-          [
-            "5cc94e26-8eb9-4b1c-a78d-a870d9f640db",
-            "a569060a-b3b2-4f73-95c7-7c2e2145c273",
-            "8678843b-3325-445b-9161-00f739973a3b"
+            "3ff559e8-d20f-432c-9ad8-5b93be0f1055"
           ]
-        ]
+        ],
+        "childType": "object",
+        "link": "Address-Polyglot.hck.json",
+        "fieldRelativePath": "#/Address",
+        "kind": "relativePath",
+        "fileType": "hackoladeSchema"
       }
     ],
     "GUID": "993e567a-09e9-47db-9254-e71c2dccbfc4"
@@ -419,7 +319,7 @@
   "GUID": "dca9ade7-ee0b-4953-b408-cc0e6b806e82",
   "isLineageEnabled": false,
   "polyglotModelPaths": [],
-  "lastModifTS": "2025-02-24T11:06:55.915Z",
+  "lastModifTS": "2025-02-25T07:52:47.944Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
