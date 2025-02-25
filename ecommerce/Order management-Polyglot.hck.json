@@ -529,7 +529,8 @@
             ]
           }
         ]
-      }
+      },
+      "description": "The Customer entity represents an individual or organization using the ecommerce platform to browse, purchase, and manage orders. It stores essential contact information, registration data, and address details for billing and shipping."
     },
     {
       "GUID": "3ef82e26-0f96-48f1-9603-4c737037815d",
@@ -817,6 +818,7 @@
             "hackoladeMeta": {},
             "isActivated": true,
             "GUID": "e8a58173-1262-4752-859c-10ceec5598aa",
+            "description": "The customer’s given name, used for personalization and identification.",
             "mode": "",
             "compositeKey": [
               "compositePrimaryKey",
@@ -835,6 +837,7 @@
             "hackoladeMeta": {},
             "isActivated": true,
             "GUID": "872c6f47-1c90-4b97-ad5e-2c446d854243",
+            "description": "The customer’s surname or family name.",
             "mode": "",
             "compositeKey": [
               "compositePrimaryKey",
@@ -853,6 +856,7 @@
             "hackoladeMeta": {},
             "isActivated": true,
             "GUID": "18d05aa0-70b0-4f8e-9736-ffbc7104f778",
+            "description": "The unique email address of the customer, serving as the primary key and primary contact method. Often used for authentication and login purposes.",
             "mode": "",
             "compositeKey": [
               "compositePrimaryKey",
@@ -871,6 +875,7 @@
             "hackoladeMeta": {},
             "isActivated": true,
             "GUID": "bb57e423-15a3-43d2-bb4f-81c084e50416",
+            "description": "The primary telephone or mobile number for contacting the customer. Format may vary based on locale.",
             "mode": "",
             "compositeKey": [
               "compositePrimaryKey",
@@ -908,7 +913,7 @@
                 "name": "Street",
                 "hackoladeMeta": {},
                 "isActivated": true,
-                "GUID": "c5857260-3656-58d4-b243-67712a507c70",
+                "GUID": "a67178d1-2b76-5521-a4c3-d6fd453f0f74",
                 "description": "Specifies the street name and number, providing detailed location information within a city or town.",
                 "mode": "",
                 "compositeKey": [
@@ -927,7 +932,7 @@
                 "name": "Postal code",
                 "hackoladeMeta": {},
                 "isActivated": true,
-                "GUID": "a251d071-f920-5a2d-9cb5-e65f3dcaed6b",
+                "GUID": "7c7e4aed-3aa9-5bd2-bccb-4430d94e0834",
                 "foreignCollection": "",
                 "foreignField": [],
                 "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
@@ -948,7 +953,7 @@
                 "name": "City",
                 "hackoladeMeta": {},
                 "isActivated": true,
-                "GUID": "7b74c1ad-b71a-5c8d-b51a-8cba71e13633",
+                "GUID": "0e1b934a-42c4-5d75-8fdc-07f8d0129925",
                 "foreignCollection": "",
                 "foreignField": [],
                 "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
@@ -965,11 +970,11 @@
             "type": "document",
             "compositePrimaryKey": false,
             "compositeUniqueKey": false,
-            "GUID": "7c3325ce-c9c4-4ad6-9287-8c1e2084ab9a",
             "name": "Bill-to address",
-            "isActivated": true,
-            "refDescription": "Stores the billing address associated with the customer. It is used for invoicing and payment processing, ensuring that billing information is accurate and up to date. The bill-to address may differ from the shipping address and is crucial for financial record-keeping.",
             "hackoladeMeta": {},
+            "isActivated": true,
+            "GUID": "299ad0aa-01de-43f1-a266-bd803d9d7616",
+            "refDescription": "Stores the default billing address for the customer. Used for invoicing, payment processing, and tax calculations.",
             "compositeKey": [
               "compositePrimaryKey",
               "compositeUniqueKey"
@@ -990,7 +995,7 @@
                     "name": "Street",
                     "hackoladeMeta": {},
                     "isActivated": true,
-                    "GUID": "bb7e9343-303e-5b06-a179-60cfdb0ea1be",
+                    "GUID": "f1fde62f-2224-5c53-bdd5-815c2369d986",
                     "description": "Specifies the street name and number, providing detailed location information within a city or town.",
                     "mode": "",
                     "compositeKey": [
@@ -1009,7 +1014,7 @@
                     "name": "Postal code",
                     "hackoladeMeta": {},
                     "isActivated": true,
-                    "GUID": "91673053-00fa-5132-ab09-b96d8381db4a",
+                    "GUID": "03048688-44ef-5286-9d37-e87d6ca8cdf8",
                     "foreignCollection": "",
                     "foreignField": [],
                     "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
@@ -1030,7 +1035,7 @@
                     "name": "City",
                     "hackoladeMeta": {},
                     "isActivated": true,
-                    "GUID": "44a160cb-ded8-578a-8712-b8432b9b8188",
+                    "GUID": "24a64b44-cec0-54fc-8e94-f6287864ebcc",
                     "foreignCollection": "",
                     "foreignField": [],
                     "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
@@ -1047,10 +1052,10 @@
                 "type": "document",
                 "compositePrimaryKey": false,
                 "compositeUniqueKey": false,
-                "GUID": "8678843b-3325-445b-9161-00f739973a3b",
-                "isActivated": true,
-                "displayName": "Address",
                 "hackoladeMeta": {},
+                "isActivated": true,
+                "GUID": "3ff559e8-d20f-432c-9ad8-5b93be0f1055",
+                "displayName": "Address",
                 "arrayItem": true,
                 "compositeKey": [
                   "compositePrimaryKey",
@@ -1084,6 +1089,7 @@
         "isActivated": true,
         "additionalProperties": false,
         "bucketId": "81137752-f86d-41e7-bb91-6d3e9fdb9628",
+        "description": "The Customer entity represents an individual or organization using the ecommerce platform to browse, purchase, and manage orders. It stores essential contact information, registration data, and address details for billing and shipping.",
         "definitionEntityType": "collection",
         "fileType": "hackoladeSchema",
         "definitionRefs": [
@@ -1735,7 +1741,7 @@
       "normalization": false
     }
   ],
-  "lastModifTS": "2025-02-25T07:42:53.344Z",
+  "lastModifTS": "2025-02-25T07:57:25.176Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
