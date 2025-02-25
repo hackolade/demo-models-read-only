@@ -566,6 +566,14 @@
           {
             "GUID": "6ef810f9-c366-426b-9aa7-97f54138905f",
             "referenceDiffDeleted": true
+          },
+          {
+            "GUID": "4d678e93-e8cb-434c-9789-0d411b30a433",
+            "referenceDiffDeleted": true
+          },
+          {
+            "GUID": "a898b734-3304-48c1-b45d-98c1f7cc3808",
+            "referenceDiffDeleted": true
           }
         ]
       },
@@ -737,19 +745,19 @@
         "shape": [
           {
             "x": 2061.347586735294,
-            "y": 1138.0861891492136
+            "y": 1073.9195224825469
           },
           {
             "x": 1944.4428314437996,
-            "y": 1138.0861891492136
+            "y": 1073.9195224825469
           },
           {
             "x": 1944.4428314437996,
-            "y": 1136.3563794255192
+            "y": 1051.8563794255192
           },
           {
             "x": 1827.5380761523052,
-            "y": 1136.3563794255192
+            "y": 1051.8563794255192
           }
         ],
         "sides": [
@@ -1746,7 +1754,7 @@
       "normalization": false
     }
   ],
-  "lastModifTS": "2025-02-25T15:38:27.510Z",
+  "lastModifTS": "2025-02-25T15:39:24.866Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -1771,8 +1779,8 @@
             "GUID": "3ef82e26-0f96-48f1-9603-4c737037815d",
             "x": 2061.347586735294,
             "y": 969.4195224825469,
-            "width": 339,
-            "height": 253,
+            "width": 329,
+            "height": 209,
             "color": {
               "hex": "#2196F3"
             }
@@ -1895,7 +1903,9 @@
         "nestedCollectionsLayout": "horizontal",
         "options": [
           {
-            "GUID": "3ef82e26-0f96-48f1-9603-4c737037815d"
+            "GUID": "3ef82e26-0f96-48f1-9603-4c737037815d",
+            "autoWidth": false,
+            "autoHeight": false
           }
         ],
         "relationshipUpdateDisabled": false
