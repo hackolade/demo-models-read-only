@@ -89,6 +89,7 @@
             "compositeUniqueKey"
           ],
           "GUID": "c5f20bbd-e577-4a70-b532-13e319e3ef18",
+          "description": "The name of the product or service as displayed to the customer.",
           "error": {}
         },
         {
@@ -105,14 +106,15 @@
           ],
           "compositePrimaryKey": false,
           "GUID": "4d678e93-e8cb-434c-9789-0d411b30a433",
-          "error": {},
           "parentRelationship": "0d5d62f2-6a6d-4288-8f4a-d8413e910460",
           "foreignCollection": "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
           "foreignField": [
             "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
             "97db87db-8fbe-41bb-8850-34193c9ee07e"
           ],
-          "relationshipType": "Foreign Key"
+          "relationshipType": "Foreign Key",
+          "description": "References the category or product group to which this item belongs. This links to a separate Category entity that stores hierarchical or descriptive data about product categories.",
+          "error": {}
         },
         {
           "name": "Supplier code",
@@ -128,10 +130,11 @@
           ],
           "compositePrimaryKey": false,
           "GUID": "a898b734-3304-48c1-b45d-98c1f7cc3808",
-          "error": {},
           "childRelationships": [
             "742e1275-de2e-4675-a75e-5902b8832233"
-          ]
+          ],
+          "description": "References the unique code of the supplier who provides or manufactures the product. Ties to the Supplier entity, facilitating supplier relationship management and inventory tracking.",
+          "error": {}
         },
         {
           "name": "Description",
@@ -146,6 +149,7 @@
             "compositeUniqueKey"
           ],
           "GUID": "6ef810f9-c366-426b-9aa7-97f54138905f",
+          "description": "A longer text providing additional details about the product. May be omitted if product details are referenced externally.",
           "error": {}
         },
         {
@@ -168,6 +172,7 @@
               "GUID": "eb09feb9-6460-4193-b564-2d31c3ca40b4",
               "arrayItem": true,
               "displayName": "url",
+              "description": "The direct link or path to the image file. Ensures the platform can retrieve and display product images across various channels.",
               "error": {}
             }
           ],
@@ -227,6 +232,7 @@
                     "SGD",
                     "HKD"
                   ],
+                  "description": "Indicates the currency in which the product price is set.",
                   "error": {}
                 },
                 {
@@ -246,12 +252,10 @@
                   ],
                   "GUID": "bfcda36f-8a7b-421b-ba98-8a9b313affc6",
                   "mode": "decimal",
-                  "error": {
-                    "name": false,
-                    "code": false
-                  },
                   "foreignCollection": "",
-                  "foreignField": []
+                  "foreignField": [],
+                  "description": "The numeric value of the product’s price in the specified currency.",
+                  "error": {}
                 },
                 {
                   "name": "Effective date",
@@ -267,12 +271,10 @@
                   ],
                   "primaryKey": false,
                   "GUID": "2c86253b-1d80-4798-ad2b-3bef74fa239c",
-                  "error": {
-                    "name": false,
-                    "code": false
-                  },
                   "foreignCollection": "",
-                  "foreignField": []
+                  "foreignField": [],
+                  "description": "The date or date/time from which the specified price becomes valid. Enables time-based pricing and helps maintain a historical record of price changes.",
+                  "error": {}
                 }
               ],
               "additionalProperties": false,
@@ -342,6 +344,7 @@
             "6b6386de-f9dc-46d9-9fc2-16d3c2c58340"
           ],
           "relationshipType": "Foreign Key",
+          "description": "A unique identifier for the product in stock. Serves as a foreign key linking to the Product entity, ensuring that each stock record is associated with an existing product.",
           "error": {}
         },
         {
@@ -439,7 +442,7 @@
           "primaryKey": false,
           "required": false,
           "GUID": "8b6314e5-b395-43b9-a367-4fbde307f10d",
-          "description": "Cntains information about the storage location of the product.",
+          "description": "Represents the location where the stock is physically stored. Captures essential details for distribution and logistics.",
           "error": {}
         }
       ],
@@ -471,14 +474,15 @@
             "compositeUniqueKey"
           ],
           "GUID": "d138a990-ba4d-4cf7-b998-b57f5d576902",
-          "error": {},
           "parentRelationship": "742e1275-de2e-4675-a75e-5902b8832233",
           "foreignCollection": "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
           "foreignField": [
             "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
             "a898b734-3304-48c1-b45d-98c1f7cc3808"
           ],
-          "relationshipType": "Foreign Key"
+          "relationshipType": "Foreign Key",
+          "description": "A unique code identifying the supplier company. This serves as the primary key for the Supplier entity, and may also be used as a foreign key to link to a broader Company entity or domain if one exists.",
+          "error": {}
         },
         {
           "name": "Company name",
@@ -493,6 +497,7 @@
             "compositeUniqueKey"
           ],
           "GUID": "8ee85d26-2d69-49d4-82b9-1d2b12c7966d",
+          "description": "The official or registered name of the supplier company.",
           "error": {}
         },
         {
@@ -508,6 +513,7 @@
             "compositeUniqueKey"
           ],
           "GUID": "ba154f30-0f46-41b7-bbd0-b5e106f2cf32",
+          "description": "The primary point of contact’s full name. This individual typically handles order-related queries, negotiations, or partnership details.",
           "error": {}
         },
         {
@@ -523,6 +529,7 @@
             "compositeUniqueKey"
           ],
           "GUID": "9cc886b2-1216-4d95-bef9-d48290b0e804",
+          "description": "The main email address for communicating with the supplier. Should be validated to ensure correct formatting.",
           "error": {}
         },
         {
@@ -538,6 +545,7 @@
             "compositeUniqueKey"
           ],
           "GUID": "3a79b59c-1d60-4c86-a484-a20deb6fcd95",
+          "description": "The primary telephone or mobile number for reaching the supplier. Formats may vary by region; it is recommended to store this in a standardized format if possible.",
           "error": {}
         },
         {
@@ -560,9 +568,10 @@
           "compositePrimaryKey": false,
           "compositeUniqueKey": false,
           "error": {
-            "name": false,
+            "refDescription": false,
             "refPath": false
-          }
+          },
+          "refDescription": "Encapsulates the supplier’s main business address or headquarters location. Storing this as an object ensures address details remain logically grouped."
         }
       ],
       "definitions": {
@@ -634,19 +643,19 @@
         "shape": [
           {
             "x": 1389,
-            "y": 1218.6666666666667
+            "y": 1220.8650835695087
           },
           {
             "x": 1463.9469309674228,
-            "y": 1218.6666666666667
+            "y": 1220.8650835695087
           },
           {
             "x": 1463.9469309674228,
-            "y": 1299.2793540182593
+            "y": 1301.4777709211012
           },
           {
             "x": 1538.8938619348455,
-            "y": 1299.2793540182593
+            "y": 1301.4777709211012
           }
         ],
         "sides": [
@@ -688,19 +697,19 @@
         "shape": [
           {
             "x": 1494.001128122551,
-            "y": 1123.430278881021
+            "y": 1125.628695783863
           },
           {
             "x": 1441.5005640612756,
-            "y": 1123.430278881021
+            "y": 1125.628695783863
           },
           {
             "x": 1441.5005640612756,
-            "y": 1134.3333333333333
+            "y": 1136.5317502361752
           },
           {
             "x": 1389,
-            "y": 1134.3333333333333
+            "y": 1136.5317502361752
           }
         ],
         "sides": [
@@ -742,19 +751,19 @@
         "shape": [
           {
             "x": 1366.2486241170195,
-            "y": 1385.560485077721
+            "y": 1387.758901980563
           },
           {
             "x": 1366.2486241170195,
-            "y": 1344.2802425388604
+            "y": 1346.4786594417023
           },
           {
             "x": 1219.5,
-            "y": 1344.2802425388604
+            "y": 1346.4786594417023
           },
           {
             "x": 1219.5,
-            "y": 1303
+            "y": 1305.198416902842
           }
         ],
         "sides": [
@@ -918,7 +927,7 @@
   "GUID": "530c923e-219d-470a-b2f9-1c2a82d43bb0",
   "isLineageEnabled": false,
   "polyglotModelPaths": [],
-  "lastModifTS": "2025-02-21T10:41:32.381Z",
+  "lastModifTS": "2025-02-25T07:44:37.500Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -943,7 +952,7 @@
           {
             "GUID": "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
             "x": 1050,
-            "y": 1050,
+            "y": 1051.099208451421,
             "width": 339,
             "height": 253,
             "color": {
@@ -953,7 +962,7 @@
           {
             "GUID": "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
             "x": 1538.8938619348455,
-            "y": 1263.7793540182593,
+            "y": 1264.8785624696802,
             "width": 272,
             "height": 71,
             "color": {
@@ -963,7 +972,7 @@
           {
             "GUID": "14dd0530-7fdc-4567-a3c4-2177fc0bd660",
             "x": 1494.001128122551,
-            "y": 1028.930278881021,
+            "y": 1030.029487332442,
             "width": 329,
             "height": 189,
             "color": {
@@ -973,7 +982,7 @@
           {
             "GUID": "1eec2f02-271b-45e3-b874-b47ac00ca585",
             "x": 1200.7486241170195,
-            "y": 1385.560485077721,
+            "y": 1386.659693529142,
             "width": 331,
             "height": 216,
             "color": {
@@ -990,12 +999,12 @@
         "buckets": [
           {
             "x": 1010,
-            "y": 988.930278881021,
+            "y": 990.0294873324419,
             "GUID": "4631c9fb-41fb-4647-a18e-f22367a656c5"
           }
         ],
         "collapsedNodes": [],
-        "activeRelationship": "0d5d62f2-6a6d-4288-8f4a-d8413e910460",
+        "activeRelationship": "",
         "activeRelationshipFields": {
           "childField": [],
           "parentField": []
