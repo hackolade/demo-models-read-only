@@ -9,212 +9,118 @@
       "additionalProperties": true,
       "collectionUsers": [],
       "bucketId": "0ce79e7c-133c-45e0-adcb-bf6f2de69d56",
-      "code": "",
       "$schema": "http://json-schema.org/draft-04/schema#",
-      "schemaNameStrategy": "TopicNameStrategy",
-      "hackoladeMeta": {},
+      "hackoladeMeta": {
+        "namingConvention": ""
+      },
       "properties": [
         {
-          "code": "",
+          "code": "order_id",
           "name": "order_id",
           "isActivated": true,
           "required": true,
-          "primaryKey": false,
+          "primaryKey": true,
           "type": "string",
           "GUID": "f48efb72-3d8b-4734-9bbb-c761633d1281",
-          "description": "The unique identifier of the order that is being updated, ensuring that the update event can be linked back to the correct order.",
-          "error": {}
+          "description": "A unique identifier for the order being updated. This field links the update event to a specific order within the system.",
+          "error": {},
+          "hackoladeMeta": {
+            "namingConvention": "code"
+          }
         },
         {
-          "code": "",
+          "code": "update_timestamp",
           "name": "update_timestamp",
           "isActivated": true,
-          "required": false,
+          "required": true,
           "exclusiveMinimum": false,
           "exclusiveMaximum": false,
-          "primaryKey": false,
+          "primaryKey": true,
           "mode": "long",
           "childType": "number",
           "type": "numeric",
           "GUID": "bb3a75b5-8925-4be2-8911-b02d7e9084bc",
-          "description": "The exact time at which the update occurred, recorded as the number of milliseconds since the Unix epoch. This helps in maintaining an accurate audit trail of order changes.",
-          "error": {
-            "default": true
+          "description": "The precise timestamp of when the update occurred, represented as the number of milliseconds since the Unix epoch. This field is crucial for maintaining an accurate audit trail of order modifications.",
+          "error": {},
+          "hackoladeMeta": {
+            "namingConvention": "code"
           }
         },
         {
-          "required": false,
+          "required": true,
           "type": "choice",
           "properties": [
             {
               "subschema": true,
               "isActivated": true,
               "type": "document",
-              "GUID": "4b55ec5c-a45a-4f61-a6ad-4fbb129dc828",
+              "GUID": "256c219c-0562-475e-8928-50fcf1ec34f6",
               "childType": "record",
               "properties": [
                 {
-                  "required": true,
-                  "type": "choice",
-                  "properties": [
-                    {
-                      "subschema": true,
-                      "isActivated": true,
-                      "type": "document",
-                      "GUID": "a93d17f0-aa02-45c3-9517-56b1951fe6ce",
-                      "childType": "record",
-                      "properties": [
-                        {
-                          "name": "no_product_update",
-                          "hackoladeMeta": {},
-                          "isActivated": true,
-                          "required": true,
-                          "type": "null",
-                          "primaryKey": false,
-                          "GUID": "2f829adc-a1de-493c-8520-6ccce761d002",
-                          "error": {}
-                        }
-                      ],
-                      "additionalProperties": true
-                    },
-                    {
-                      "subschema": true,
-                      "isActivated": true,
-                      "type": "document",
-                      "GUID": "6481e16a-856e-4363-ba52-e0b699ad632e",
-                      "childType": "record",
-                      "properties": [
-                        {
-                          "name": "product_updates",
-                          "hackoladeMeta": {},
-                          "isActivated": true,
-                          "required": true,
-                          "primaryKey": false,
-                          "properties": [
-                            {
-                              "name": "added_products",
-                              "hackoladeMeta": {},
-                              "isActivated": true,
-                              "required": true,
-                              "properties": [
-                                {
-                                  "GUID": "3542b496-374f-48a1-a355-cfdc64bdac49",
-                                  "name": "Product",
-                                  "type": "reference",
-                                  "$ref": "#model/definitions/Product",
-                                  "refType": "model",
-                                  "ref": "98075241-cb45-45ae-98fe-9c30ceada171",
-                                  "refIdPath": [
-                                    "777fbee0-73a1-43a3-8272-fa6b5eb58dac",
-                                    "e52e142e-01ac-497e-90f7-53bb93482870",
-                                    "98075241-cb45-45ae-98fe-9c30ceada171"
-                                  ],
-                                  "isActivated": true,
-                                  "required": true,
-                                  "hackoladeMeta": {},
-                                  "displayName": "Product",
-                                  "arrayItem": true
-                                }
-                              ],
-                              "primaryKey": false,
-                              "additionalItems": true,
-                              "uniqueItems": false,
-                              "childType": "array",
-                              "type": "array",
-                              "GUID": "c183d9c8-1fdc-4e1b-912b-8367fedf8bd7",
-                              "description": "A list of product identifiers that were added to the order.",
-                              "error": {}
-                            },
-                            {
-                              "name": "removed_products",
-                              "hackoladeMeta": {},
-                              "isActivated": true,
-                              "required": true,
-                              "properties": [
-                                {
-                                  "hackoladeMeta": {},
-                                  "isActivated": true,
-                                  "primaryKey": false,
-                                  "type": "string",
-                                  "GUID": "078324a9-f71c-4185-844d-38e7af789ada",
-                                  "arrayItem": true,
-                                  "displayName": "product_id",
-                                  "error": {}
-                                }
-                              ],
-                              "primaryKey": false,
-                              "additionalItems": true,
-                              "uniqueItems": false,
-                              "childType": "array",
-                              "type": "array",
-                              "GUID": "a01a2037-53bd-4c39-9951-220a6f5e795b",
-                              "description": "A list of product identifiers that were removed from the order.",
-                              "error": {}
-                            }
-                          ],
-                          "additionalProperties": false,
-                          "childType": "record",
-                          "type": "document",
-                          "GUID": "29f5480c-560e-4bb3-aaff-fe9c7bba20f8",
-                          "description": "Captures modifications to the list of products within the order.",
-                          "error": {}
-                        }
-                      ],
-                      "additionalProperties": true
-                    }
-                  ],
+                  "hackoladeMeta": {
+                    "namingConvention": "code"
+                  },
                   "isActivated": true,
-                  "choice": "oneOf",
-                  "GUID": "b09bd63d-b0a0-4cbf-bd25-91cd00d7c11d"
+                  "required": true,
+                  "type": "null",
+                  "primaryKey": false,
+                  "GUID": "2896aca8-8ee6-4527-872a-ef7dd11c528c",
+                  "name": "no product update",
+                  "code": "no_product_update",
+                  "error": {}
                 }
               ],
               "additionalProperties": true,
-              "hackoladeMeta": {},
               "error": {}
             },
             {
               "subschema": true,
               "isActivated": true,
               "type": "document",
-              "GUID": "806da283-9b3c-4457-b2ec-50d3e5190cec",
+              "GUID": "07d66b8a-af16-4ce7-843e-2e26d0339a46",
               "childType": "record",
               "properties": [
                 {
-                  "name": "status_update",
-                  "hackoladeMeta": {},
+                  "hackoladeMeta": {
+                    "namingConvention": "code"
+                  },
                   "isActivated": true,
                   "required": true,
-                  "primaryKey": false,
                   "properties": [
                     {
-                      "name": "previous_status",
-                      "hackoladeMeta": {},
+                      "GUID": "3542b496-374f-48a1-a355-cfdc64bdac49",
+                      "name": "Product",
+                      "type": "reference",
+                      "$ref": "#model/definitions/Product",
+                      "refType": "model",
+                      "ref": "98075241-cb45-45ae-98fe-9c30ceada171",
+                      "refIdPath": [
+                        "777fbee0-73a1-43a3-8272-fa6b5eb58dac",
+                        "e52e142e-01ac-497e-90f7-53bb93482870",
+                        "98075241-cb45-45ae-98fe-9c30ceada171"
+                      ],
                       "isActivated": true,
                       "required": true,
-                      "primaryKey": false,
-                      "type": "string",
-                      "GUID": "d2df36c6-36e3-47f9-94a6-212c3022dbc5",
-                      "description": "The previous status of the order before the update.",
-                      "error": {}
-                    },
-                    {
-                      "name": "new_status",
-                      "hackoladeMeta": {},
-                      "isActivated": true,
-                      "required": true,
-                      "primaryKey": false,
-                      "type": "string",
-                      "GUID": "a66eec5a-a5ed-4d3b-aacc-6e90765c9be3",
-                      "description": "The updated status of the order after the change.",
+                      "hackoladeMeta": {
+                        "namingConvention": "code"
+                      },
+                      "displayName": "Product",
+                      "arrayItem": true,
+                      "dependencies": [],
+                      "code": "product",
                       "error": {}
                     }
                   ],
-                  "additionalProperties": false,
-                  "childType": "record",
-                  "type": "document",
-                  "GUID": "1a104ab2-a5de-405e-9e62-16294bc082b9",
-                  "description": "Captures changes to the order's status.",
-                  "error": {}
+                  "primaryKey": false,
+                  "additionalItems": true,
+                  "uniqueItems": false,
+                  "childType": "array",
+                  "type": "array",
+                  "GUID": "b917d2dc-4b38-4842-b649-a1412f95d72c",
+                  "error": {},
+                  "name": "updated_product_list",
+                  "code": "updated_product_list"
                 }
               ],
               "additionalProperties": true,
@@ -223,10 +129,111 @@
           ],
           "isActivated": true,
           "choice": "oneOf",
-          "GUID": "47cdd38c-6b32-4294-9841-fda6864edebc",
-          "description": "This field utilizes a union type to represent one of two possible update details: **product_updates** or **status_update**.",
-          "hackoladeMeta": {},
-          "error": {}
+          "GUID": "b56995bd-208f-46fd-a30e-e66edbba6ea0",
+          "name": "product_update",
+          "description": "An optional field that, if present, contains an array of product update details.\n\nUsage Note:\nThis field is null if there is no product-related update for the order.",
+          "error": {},
+          "hackoladeMeta": {
+            "namingConvention": "code"
+          },
+          "code": "product_update"
+        },
+        {
+          "required": true,
+          "type": "choice",
+          "properties": [
+            {
+              "subschema": true,
+              "isActivated": true,
+              "type": "document",
+              "GUID": "b5a88829-601e-4c2a-9c1a-e2f0889aefa3",
+              "childType": "record",
+              "properties": [
+                {
+                  "hackoladeMeta": {
+                    "namingConvention": "code"
+                  },
+                  "isActivated": true,
+                  "required": true,
+                  "type": "null",
+                  "primaryKey": false,
+                  "GUID": "0a136afe-5e5e-4143-ae0c-d301889f5a48",
+                  "name": "no status update",
+                  "code": "no_status_update",
+                  "error": {}
+                }
+              ],
+              "additionalProperties": true,
+              "error": {}
+            },
+            {
+              "subschema": true,
+              "isActivated": true,
+              "type": "document",
+              "GUID": "4f1e9f49-7560-4fc3-a1fe-be95b5320c6c",
+              "childType": "record",
+              "properties": [
+                {
+                  "name": "status_update",
+                  "hackoladeMeta": {
+                    "namingConvention": "code"
+                  },
+                  "isActivated": true,
+                  "required": true,
+                  "primaryKey": false,
+                  "properties": [
+                    {
+                      "name": "previous_status",
+                      "hackoladeMeta": {
+                        "namingConvention": "code"
+                      },
+                      "isActivated": true,
+                      "required": true,
+                      "primaryKey": false,
+                      "type": "string",
+                      "GUID": "d2df36c6-36e3-47f9-94a6-212c3022dbc5",
+                      "description": "The previous status of the order before the update.",
+                      "error": {},
+                      "code": "previous_status"
+                    },
+                    {
+                      "name": "new_status",
+                      "hackoladeMeta": {
+                        "namingConvention": "code"
+                      },
+                      "isActivated": true,
+                      "required": true,
+                      "primaryKey": false,
+                      "type": "string",
+                      "GUID": "a66eec5a-a5ed-4d3b-aacc-6e90765c9be3",
+                      "description": "The updated status of the order after the change.",
+                      "error": {},
+                      "code": "new_status"
+                    }
+                  ],
+                  "additionalProperties": false,
+                  "childType": "record",
+                  "type": "document",
+                  "GUID": "1a104ab2-a5de-405e-9e62-16294bc082b9",
+                  "description": "Captures changes to the order's status.",
+                  "error": {},
+                  "code": "status_update"
+                }
+              ],
+              "additionalProperties": true,
+              "error": {}
+            }
+          ],
+          "isActivated": true,
+          "choice": "oneOf",
+          "GUID": "3ae3c4bc-9c45-45b7-8720-b42439eb5164",
+          "name": "status_update",
+          "description": "An optional field that, if present, captures changes to the order’s status.\n\nUsage Note:\nThis field is null if the update does not involve a status change.",
+          "error": {},
+          "hackoladeMeta": {
+            "namingConvention": "code"
+          },
+          "code": "status_update"
         }
       ],
       "definitions": {
@@ -234,7 +241,7 @@
         "GUID": "a90a07c1-6ed1-4f61-bb0b-4916c3137207",
         "properties": []
       },
-      "description": "This event represents modifications made to an existing order. It captures the order's unique identifier, the precise timestamp of the update, and the details of the update encapsulated in a union field. The union field, update_detail, demonstrates Avro’s \"one-of\" functionality by allowing exactly one of several update types to be present.",
+      "description": "The OrderUpdated record represents an event that signifies modifications made to an existing order within the e-commerce system. It captures the unique order identifier, the exact timestamp of the update, and the details of the update. Update details are provided through two optional fields—product_update and status_update—each of which can be null if not applicable.",
       "error": {}
     },
     {
@@ -243,18 +250,21 @@
       "type": "object",
       "properties": [
         {
-          "code": "",
+          "code": "order_id",
           "name": "order_id",
           "isActivated": true,
           "required": true,
-          "primaryKey": false,
+          "primaryKey": true,
           "type": "string",
           "GUID": "2a0b8869-64ce-4844-8b33-f6f5342452ab",
           "description": "A unique identifier for the order. This field is critical for tracking the order across its lifecycle and correlating it with other related events.",
-          "error": {}
+          "error": {},
+          "hackoladeMeta": {
+            "namingConvention": "code"
+          }
         },
         {
-          "code": "",
+          "code": "customer_id",
           "name": "customer_id",
           "isActivated": true,
           "required": true,
@@ -262,10 +272,40 @@
           "type": "string",
           "GUID": "6c14bb19-b623-4d6e-a98e-518957dad949",
           "description": "Identifies the customer who placed the order. It links the order to the customer management system, ensuring that customer-specific data can be accessed when needed.",
+          "error": {},
+          "hackoladeMeta": {
+            "namingConvention": "code"
+          }
+        },
+        {
+          "name": "customer_comment",
+          "type": "multiple",
+          "properties": [],
+          "multipleTypes": [
+            {
+              "type": "null",
+              "GUID": "5cd16ac8-8e0d-46be-914d-54f2a91e4c8a",
+              "error": {}
+            },
+            {
+              "type": "string",
+              "GUID": "1fd784f7-dbec-4a9b-b3f1-9c74eae66849"
+            }
+          ],
+          "isActivated": true,
+          "primaryKey": false,
+          "GUID": "7d90e2a4-b172-482f-ab2f-05d88a956f28",
+          "code": "customer_comment",
+          "hackoladeMeta": {
+            "namingConvention": "code"
+          },
+          "required": false,
+          "default": null,
+          "comments": "An optional comment provided by the customer during order placement. This may include special instructions, delivery notes, or any additional information the customer wishes to convey about the order.",
           "error": {}
         },
         {
-          "code": "",
+          "code": "products",
           "name": "products",
           "isActivated": true,
           "required": true,
@@ -283,11 +323,14 @@
                 "98075241-cb45-45ae-98fe-9c30ceada171"
               ],
               "isActivated": true,
-              "code": "",
+              "code": "product",
               "displayName": "Product",
               "required": true,
-              "hackoladeMeta": {},
-              "arrayItem": true
+              "hackoladeMeta": {
+                "namingConvention": "code"
+              },
+              "arrayItem": true,
+              "error": {}
             }
           ],
           "primaryKey": false,
@@ -297,10 +340,13 @@
           "type": "array",
           "GUID": "52e1cb36-b264-40d1-b683-70ad1b714d08",
           "description": "A collection representing the products included in the order. Each element in the array details an individual product line item.",
-          "error": {}
+          "error": {},
+          "hackoladeMeta": {
+            "namingConvention": "code"
+          }
         },
         {
-          "code": "",
+          "code": "order_timestamp",
           "name": "order_timestamp",
           "isActivated": true,
           "required": true,
@@ -312,10 +358,13 @@
           "type": "numeric",
           "GUID": "4d4bcf3d-3508-4af2-8c05-4c138387f0f9",
           "description": "The creation time of the order, expressed as the number of milliseconds since the Unix epoch. This timestamp is essential for tracking order timelines and for auditing purposes.",
-          "error": {}
+          "error": {},
+          "hackoladeMeta": {
+            "namingConvention": "code"
+          }
         },
         {
-          "code": "",
+          "code": "status",
           "name": "status",
           "isActivated": true,
           "required": true,
@@ -329,10 +378,11 @@
             "9fa80b8e-cfb7-4f07-871e-4b39bc619a40"
           ],
           "ref": "9fa80b8e-cfb7-4f07-871e-4b39bc619a40",
-          "error": {
-            "refDescription": false
-          },
-          "refDescription": "Indicates the current state of the order upon creation. Using an enumeration ensures that only predefined, valid states are assigned."
+          "error": {},
+          "refDescription": "Indicates the current state of the order upon creation. Using an enumeration ensures that only predefined, valid states are assigned.",
+          "hackoladeMeta": {
+            "namingConvention": "code"
+          }
         }
       ],
       "definitions": {
@@ -340,14 +390,14 @@
         "GUID": "7fd6c359-2cc3-4641-8170-b8850c44ccb4",
         "properties": [
           {
-            "code": "",
+            "code": "product",
             "name": "Product",
             "isActivated": true,
             "required": true,
             "primaryKey": false,
             "properties": [
               {
-                "code": "",
+                "code": "product_id",
                 "name": "product_id",
                 "isActivated": true,
                 "required": true,
@@ -355,10 +405,13 @@
                 "type": "string",
                 "GUID": "53400cc4-e3fd-4bed-97c4-c40b8097431b",
                 "description": "A unique identifier for the product, used to reference the product in the catalog or inventory system.",
-                "error": {}
+                "error": {},
+                "hackoladeMeta": {
+                  "namingConvention": "code"
+                }
               },
               {
-                "code": "",
+                "code": "quantity",
                 "name": "quantity",
                 "isActivated": true,
                 "required": true,
@@ -370,7 +423,10 @@
                 "type": "numeric",
                 "GUID": "d3a0cdcb-fb6c-45e6-91d2-b5e9db44f57b",
                 "description": "Specifies the number of units ordered for the corresponding product, ensuring accurate order fulfillment and inventory management.",
-                "error": {}
+                "error": {},
+                "hackoladeMeta": {
+                  "namingConvention": "code"
+                }
               }
             ],
             "additionalProperties": true,
@@ -378,10 +434,13 @@
             "type": "document",
             "GUID": "8d9f2aa4-db09-4984-8ff4-539f25fbce0f",
             "definitionRefs": [],
-            "error": {}
+            "error": {},
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            }
           },
           {
-            "code": "",
+            "code": "orderstatus",
             "name": "OrderStatus",
             "isActivated": true,
             "required": true,
@@ -401,7 +460,10 @@
                 "b4cff297-5ccc-489b-84db-6bcb87dcc0df"
               ]
             ],
-            "error": {}
+            "error": {},
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            }
           }
         ]
       },
@@ -409,10 +471,10 @@
       "additionalProperties": true,
       "collectionUsers": [],
       "bucketId": "0ce79e7c-133c-45e0-adcb-bf6f2de69d56",
-      "code": "",
       "$schema": "http://json-schema.org/draft-04/schema#",
-      "schemaNameStrategy": "TopicNameStrategy",
-      "hackoladeMeta": {},
+      "hackoladeMeta": {
+        "namingConvention": ""
+      },
       "description": "Represents an event triggered when a new order is placed within the ecommerce bike platform. This record captures the essential details of the order at the moment of creation, including customer information, the list of products ordered, the creation timestamp, and the initial order status."
     },
     {
@@ -421,15 +483,18 @@
       "type": "object",
       "properties": [
         {
-          "code": "",
+          "code": "order_id",
           "name": "order_id",
           "isActivated": true,
           "required": true,
-          "primaryKey": false,
+          "primaryKey": true,
           "type": "string",
           "GUID": "aacbc986-3cc1-4468-b9e6-6351d643980d",
           "description": "A unique identifier for the cancelled order, allowing for precise association with the original order record.",
-          "error": {}
+          "error": {},
+          "hackoladeMeta": {
+            "namingConvention": "code"
+          }
         },
         {
           "name": "cancellation_reason",
@@ -450,40 +515,33 @@
           "isActivated": true,
           "primaryKey": false,
           "GUID": "285f5b23-6a09-405e-802b-eb33eb469d1a",
-          "code": "",
+          "code": "cancellation_reason",
           "description": "Provides a textual explanation for why the order was cancelled. This may include reasons such as customer request, stock unavailability, or payment issues, and is useful for both customer service and operational analysis.",
           "required": false,
           "default": null,
-          "error": {}
+          "error": {},
+          "hackoladeMeta": {
+            "namingConvention": "code"
+          }
         },
         {
           "name": "cancellation_timestamp",
-          "type": "multiple",
-          "properties": [],
-          "multipleTypes": [
-            {
-              "isActivated": true,
-              "type": "null",
-              "GUID": "817d1708-a395-475a-95cc-5888b41dd09e"
-            },
-            {
-              "exclusiveMinimum": false,
-              "exclusiveMaximum": false,
-              "mode": "long",
-              "childType": "number",
-              "type": "numeric",
-              "GUID": "abfecd54-60ce-4f83-8f82-71a8529d2610",
-              "error": {}
-            }
-          ],
+          "type": "numeric",
           "isActivated": true,
           "primaryKey": false,
           "GUID": "5688a03c-e6e5-4c19-86ae-f3af92d58e26",
-          "code": "",
+          "code": "cancellation_timestamp",
           "description": "The timestamp marking when the order cancellation occurred, given as milliseconds since the Unix epoch. This field is crucial for audit logs and time-based analytics.",
-          "required": false,
-          "default": null,
-          "error": {}
+          "required": true,
+          "error": {},
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "long",
+          "childType": "number",
+          "default": "",
+          "hackoladeMeta": {
+            "namingConvention": "code"
+          }
         }
       ],
       "definitions": {
@@ -495,10 +553,10 @@
       "additionalProperties": true,
       "collectionUsers": [],
       "bucketId": "0ce79e7c-133c-45e0-adcb-bf6f2de69d56",
-      "code": "",
       "$schema": "http://json-schema.org/draft-04/schema#",
-      "schemaNameStrategy": "TopicNameStrategy",
-      "hackoladeMeta": {},
+      "hackoladeMeta": {
+        "namingConvention": ""
+      },
       "description": "Represents the event generated when an order is cancelled. This record includes key information such as the reason for cancellation and the timestamp, ensuring that the cancellation is properly documented and can be analyzed for future improvements."
     }
   ],
@@ -521,8 +579,11 @@
       "isActivated": true,
       "indexes": [],
       "GUID": "0ce79e7c-133c-45e0-adcb-bf6f2de69d56",
-      "hackoladeMeta": {},
-      "code": "",
+      "hackoladeMeta": {
+        "namingConvention": "code",
+        "validationErrors": {}
+      },
+      "code": "com.ecommerce.bike.orders",
       "addFieldsToBucket": true,
       "isPlugin": true
     }
@@ -552,22 +613,27 @@
     "3d49a16d-8a5b-4586-8705-330ebf282b83": "OrderCancelled",
     "93a88793-edd8-4255-aa88-6a92e5e9bd83": "Product",
     "98075241-cb45-45ae-98fe-9c30ceada171": "Product",
-    "47cdd38c-6b32-4294-9841-fda6864edebc": "",
-    "2f829adc-a1de-493c-8520-6ccce761d002": "no_product_update",
-    "29f5480c-560e-4bb3-aaff-fe9c7bba20f8": "product_updates"
+    "7d90e2a4-b172-482f-ab2f-05d88a956f28": "customer_comment",
+    "b56995bd-208f-46fd-a30e-e66edbba6ea0": "product_update",
+    "2896aca8-8ee6-4527-872a-ef7dd11c528c": "no product update",
+    "f450d84e-87a5-4bcb-bc36-48ab99f493ef": "New_field",
+    "b917d2dc-4b38-4842-b649-a1412f95d72c": "updated_product_list",
+    "3ae3c4bc-9c45-45b7-8720-b42439eb5164": "status_update",
+    "0a136afe-5e5e-4143-ae0c-d301889f5a48": "no status update",
+    "1a104ab2-a5de-405e-9e62-16294bc082b9": "status_update"
   },
   "definitions": {
     "type": "definitions",
     "properties": [
       {
-        "code": "",
+        "code": "product",
         "name": "Product",
         "isActivated": true,
         "required": true,
         "primaryKey": false,
         "properties": [
           {
-            "code": "",
+            "code": "product_id",
             "name": "product_id",
             "isActivated": true,
             "required": true,
@@ -575,10 +641,13 @@
             "type": "string",
             "GUID": "da40cc03-d854-4c75-a4ad-32245ca2dc42",
             "description": "A unique identifier for the product, used to reference the product in the catalog or inventory system.",
-            "error": {}
+            "error": {},
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            }
           },
           {
-            "code": "",
+            "code": "quantity",
             "name": "quantity",
             "isActivated": true,
             "required": true,
@@ -590,7 +659,10 @@
             "type": "numeric",
             "GUID": "361d158c-1038-4511-a7c9-7c0244f87b9a",
             "description": "Specifies the number of units ordered for the corresponding product, ensuring accurate order fulfillment and inventory management.",
-            "error": {}
+            "error": {},
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            }
           }
         ],
         "additionalProperties": true,
@@ -598,7 +670,9 @@
         "type": "document",
         "error": {},
         "GUID": "98075241-cb45-45ae-98fe-9c30ceada171",
-        "hackoladeMeta": {},
+        "hackoladeMeta": {
+          "namingConvention": "code"
+        },
         "definitionRefs": [
           [
             "1e046ba4-262c-46cf-a6c8-a5a5283f264d",
@@ -607,12 +681,9 @@
           ],
           [
             "30f43a54-5e73-4f88-8b7a-2901a5790a14",
-            "47cdd38c-6b32-4294-9841-fda6864edebc",
-            "4b55ec5c-a45a-4f61-a6ad-4fbb129dc828",
-            "b09bd63d-b0a0-4cbf-bd25-91cd00d7c11d",
-            "6481e16a-856e-4363-ba52-e0b699ad632e",
-            "29f5480c-560e-4bb3-aaff-fe9c7bba20f8",
-            "c183d9c8-1fdc-4e1b-912b-8367fedf8bd7",
+            "b56995bd-208f-46fd-a30e-e66edbba6ea0",
+            "07d66b8a-af16-4ce7-843e-2e26d0339a46",
+            "b917d2dc-4b38-4842-b649-a1412f95d72c",
             "3542b496-374f-48a1-a355-cfdc64bdac49"
           ]
         ]
@@ -638,14 +709,11 @@
       "type": "annotation",
       "bucketId": "",
       "disableInitialFocus": true,
-      "value": "This Avro Kafka Order Management Model is intended for illustration purposes only and provides a simplified representation of an event-driven order management system within an ecommerce platform.\n\nWhile it captures essential events and Avro schema definitions, it does not encompass all potential complexities or best practices that may be applicable in a comprehensive production implementation."
-    },
-    {
-      "GUID": "0e5cfeda-db0d-4281-bd98-ef17a3f44db9",
-      "name": "New annotation",
-      "type": "annotation",
-      "disableInitialFocus": true,
-      "value": "multi null default BWFW (elearning video)\nother case with Polyglot derive"
+      "value": "This Avro Kafka Order Management Model is intended for illustration purposes only and provides a simplified representation of an event-driven order management system within an ecommerce platform.\n\nWhile it captures essential events and Avro schema definitions, it does not encompass all potential complexities or best practices that may be applicable in a comprehensive production implementation.",
+      "hackoladeMeta": {
+        "namingConvention": "code"
+      },
+      "code": "disclaimer"
     }
   ],
   "dbVendor": "Avro",
@@ -654,12 +722,12 @@
   "creationTS": "2025-02-19T13:28:59.048Z",
   "GUID": "777fbee0-73a1-43a3-8272-fa6b5eb58dac",
   "isLineageEnabled": false,
-  "lastModifTS": "2025-02-21T11:15:32.521Z",
+  "lastModifTS": "2025-02-25T14:54:05.459Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
     "pluginName": "Avro",
-    "pluginVersion": "0.2.9",
+    "pluginVersion": "0.2.10",
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
@@ -668,35 +736,37 @@
   "hackoladeMeta": {
     "validationErrors": {
       "modelName": false
-    }
+    },
+    "namingConvention": "code"
   },
   "description": "This Avro Kafka Order Management Model is intended for illustration purposes only and provides a simplified representation of an event-driven order management system within an ecommerce platform.\n\nWhile it captures essential events and Avro schema definitions, it does not encompass all potential complexities or best practices that may be applicable in a comprehensive production implementation.",
+  "code": "order_event_management",
   "settings": {
     "centralPane": {
       "dbLevel": {
         "erd": [
           {
             "GUID": "30f43a54-5e73-4f88-8b7a-2901a5790a14",
-            "x": 922.3999999999999,
-            "y": 1431.6000000000001,
-            "width": 660,
-            "height": 384,
+            "x": 1255.2000000000019,
+            "y": 1197.999999999999,
+            "width": 349,
+            "height": 348,
             "color": {}
           },
           {
             "GUID": "1e046ba4-262c-46cf-a6c8-a5a5283f264d",
-            "x": 928,
+            "x": 927.2,
             "y": 1194,
-            "width": 312,
-            "height": 173,
+            "width": 294,
+            "height": 200,
             "color": {}
           },
           {
             "GUID": "3d49a16d-8a5b-4586-8705-330ebf282b83",
-            "x": 946.8,
-            "y": 1844.0000000000002,
-            "width": 299,
-            "height": 83,
+            "x": 934.7999999999997,
+            "y": 1426.3999999999992,
+            "width": 302,
+            "height": 84,
             "color": {}
           }
         ],
@@ -708,7 +778,7 @@
         },
         "buckets": [
           {
-            "x": 882.3999999999999,
+            "x": 887.2,
             "y": 1154,
             "GUID": "0ce79e7c-133c-45e0-adcb-bf6f2de69d56"
           }
@@ -739,13 +809,6 @@
             "color": {
               "hex": "#fec107"
             }
-          },
-          {
-            "GUID": "0e5cfeda-db0d-4281-bd98-ef17a3f44db9",
-            "x": 1495,
-            "y": 1315,
-            "height": 150,
-            "width": 300
           }
         ],
         "nestedCollectionsLayout": "horizontal",
