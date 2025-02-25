@@ -613,7 +613,10 @@
                 "be668b11-bb5a-4554-9ac9-4d2b4687aa70",
                 "c046ba7b-4944-4232-97b4-24acedd69837"
               ]
-            ]
+            ],
+            "error": {
+              "refPath": false
+            }
           }
         ],
         "childType": "componentObject",
@@ -841,51 +844,55 @@
             "nullable": false,
             "type": "string",
             "name": "First name",
+            "hackoladeMeta": {},
             "isActivated": true,
             "required": false,
             "GUID": "e8a58173-1262-4752-859c-10ceec5598aa",
-            "hackoladeMeta": {}
+            "description": "The customer’s given name, used for personalization and identification."
           },
           {
             "primaryKey": false,
             "nullable": false,
             "type": "string",
             "name": "Last name",
+            "hackoladeMeta": {},
             "isActivated": true,
             "required": false,
             "GUID": "872c6f47-1c90-4b97-ad5e-2c446d854243",
-            "hackoladeMeta": {}
+            "description": "The customer’s surname or family name."
           },
           {
             "primaryKey": true,
             "nullable": false,
             "type": "string",
             "name": "email",
+            "hackoladeMeta": {},
             "isActivated": true,
             "required": true,
             "GUID": "18d05aa0-70b0-4f8e-9736-ffbc7104f778",
-            "hackoladeMeta": {}
+            "description": "The unique email address of the customer, serving as the primary key and primary contact method. Often used for authentication and login purposes."
           },
           {
             "primaryKey": false,
             "nullable": false,
             "type": "string",
             "name": "Phone number",
+            "hackoladeMeta": {},
             "isActivated": true,
             "required": false,
             "GUID": "bb57e423-15a3-43d2-bb4f-81c084e50416",
-            "hackoladeMeta": {}
+            "description": "The primary telephone or mobile number for contacting the customer. Format may vary based on locale."
           },
           {
             "primaryKey": false,
             "nullable": false,
             "type": "string",
             "name": "Registration date",
+            "hackoladeMeta": {},
             "isActivated": true,
-            "description": "Records the date when the customer registered on the e-commerce platform. It is essential for tracking customer lifecycle stages, analyzing customer acquisition trends, and managing loyalty programs.",
             "required": false,
             "GUID": "7fa9c279-fe3c-4864-83e9-10df93832aef",
-            "hackoladeMeta": {},
+            "description": "Records the date when the customer registered on the e-commerce platform. It is essential for tracking customer lifecycle stages, analyzing customer acquisition trends, and managing loyalty programs.",
             "format": "date"
           },
           {
@@ -896,37 +903,37 @@
                 "nullable": false,
                 "type": "string",
                 "name": "Street",
+                "hackoladeMeta": {},
                 "isActivated": true,
-                "description": "Specifies the street name and number, providing detailed location information within a city or town.",
                 "required": false,
-                "GUID": "c5857260-3656-58d4-b243-67712a507c70",
-                "hackoladeMeta": {}
+                "GUID": "a67178d1-2b76-5521-a4c3-d6fd453f0f74",
+                "description": "Specifies the street name and number, providing detailed location information within a city or town."
               },
               {
                 "primaryKey": false,
                 "nullable": false,
                 "type": "string",
                 "name": "Postal code",
+                "hackoladeMeta": {},
                 "isActivated": true,
-                "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
                 "required": false,
+                "GUID": "7c7e4aed-3aa9-5bd2-bccb-4430d94e0834",
                 "foreignCollection": "",
                 "foreignField": [],
-                "GUID": "a251d071-f920-5a2d-9cb5-e65f3dcaed6b",
-                "hackoladeMeta": {}
+                "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification."
               },
               {
                 "primaryKey": false,
                 "nullable": false,
                 "type": "string",
                 "name": "City",
+                "hackoladeMeta": {},
                 "isActivated": true,
-                "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
                 "required": false,
+                "GUID": "0e1b934a-42c4-5d75-8fdc-07f8d0129925",
                 "foreignCollection": "",
                 "foreignField": [],
-                "GUID": "7b74c1ad-b71a-5c8d-b51a-8cba71e13633",
-                "hackoladeMeta": {}
+                "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region."
               }
             ],
             "additionalProperties": false,
@@ -938,10 +945,10 @@
             "childType": "object",
             "type": "document",
             "name": "Bill-to address",
+            "hackoladeMeta": {},
             "isActivated": true,
-            "refDescription": "Stores the billing address associated with the customer. It is used for invoicing and payment processing, ensuring that billing information is accurate and up to date. The bill-to address may differ from the shipping address and is crucial for financial record-keeping.",
-            "GUID": "7c3325ce-c9c4-4ad6-9287-8c1e2084ab9a",
-            "hackoladeMeta": {}
+            "GUID": "299ad0aa-01de-43f1-a266-bd803d9d7616",
+            "refDescription": "Stores the default billing address for the customer. Used for invoicing, payment processing, and tax calculations."
           },
           {
             "properties": [
@@ -953,37 +960,37 @@
                     "nullable": false,
                     "type": "string",
                     "name": "Street",
+                    "hackoladeMeta": {},
                     "isActivated": true,
-                    "description": "Specifies the street name and number, providing detailed location information within a city or town.",
                     "required": false,
-                    "GUID": "bb7e9343-303e-5b06-a179-60cfdb0ea1be",
-                    "hackoladeMeta": {}
+                    "GUID": "f1fde62f-2224-5c53-bdd5-815c2369d986",
+                    "description": "Specifies the street name and number, providing detailed location information within a city or town."
                   },
                   {
                     "primaryKey": false,
                     "nullable": false,
                     "type": "string",
                     "name": "Postal code",
+                    "hackoladeMeta": {},
                     "isActivated": true,
-                    "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
                     "required": false,
+                    "GUID": "03048688-44ef-5286-9d37-e87d6ca8cdf8",
                     "foreignCollection": "",
                     "foreignField": [],
-                    "GUID": "91673053-00fa-5132-ab09-b96d8381db4a",
-                    "hackoladeMeta": {}
+                    "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification."
                   },
                   {
                     "primaryKey": false,
                     "nullable": false,
                     "type": "string",
                     "name": "City",
+                    "hackoladeMeta": {},
                     "isActivated": true,
-                    "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
                     "required": false,
+                    "GUID": "24a64b44-cec0-54fc-8e94-f6287864ebcc",
                     "foreignCollection": "",
                     "foreignField": [],
-                    "GUID": "44a160cb-ded8-578a-8712-b8432b9b8188",
-                    "hackoladeMeta": {}
+                    "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region."
                   }
                 ],
                 "additionalProperties": false,
@@ -994,10 +1001,10 @@
                 "nullable": false,
                 "childType": "object",
                 "type": "document",
-                "displayName": "Address",
-                "isActivated": true,
-                "GUID": "8678843b-3325-445b-9161-00f739973a3b",
                 "hackoladeMeta": {},
+                "isActivated": true,
+                "GUID": "3ff559e8-d20f-432c-9ad8-5b93be0f1055",
+                "displayName": "Address",
                 "arrayItem": true
               }
             ],
@@ -1009,11 +1016,11 @@
             "childType": "array",
             "type": "array",
             "name": "Ship-to addresses",
+            "hackoladeMeta": {},
             "isActivated": true,
-            "description": "Holds a list of potential shipping addresses registered by the customer. Customers can maintain multiple shipping addresses for convenience and flexibility, allowing them to select a preferred address when placing an order. This feature enhances the user experience by accommodating different delivery locations, such as home, work, or gift recipients.",
             "required": false,
             "GUID": "a569060a-b3b2-4f73-95c7-7c2e2145c273",
-            "hackoladeMeta": {}
+            "description": "Holds a list of potential shipping addresses registered by the customer. Customers can maintain multiple shipping addresses for convenience and flexibility, allowing them to select a preferred address when placing an order. This feature enhances the user experience by accommodating different delivery locations, such as home, work, or gift recipients."
           }
         ],
         "additionalProperties": false,
@@ -1025,13 +1032,11 @@
         "childType": "object",
         "type": "document",
         "GUID": "5cc94e26-8eb9-4b1c-a78d-a870d9f640db",
-        "description": "",
+        "code": "",
+        "description": "The Customer entity represents an individual or organization using the ecommerce platform to browse, purchase, and manage orders. It stores essential contact information, registration data, and address details for billing and shipping.",
         "comments": "",
         "required": false,
         "definitionEntityType": "field",
-        "fieldRelativePath": "#/Customer",
-        "link": "../common/Customer-Polyglot.hck.json",
-        "kind": "relativePath",
         "fileType": "hackoladeSchema",
         "definitionRefs": [
           [
@@ -1040,7 +1045,10 @@
             "5210d2f5-2fbb-4ac6-a027-af86ead2774f",
             "3220b8c3-72be-42ac-992f-2de99960576a"
           ]
-        ]
+        ],
+        "kind": "relativePath",
+        "link": "../common/Customer-Polyglot.hck.json",
+        "fieldRelativePath": "#/Customer"
       }
     ],
     "GUID": "d37163c1-c825-469a-921a-e21a26e97425"
@@ -1066,7 +1074,7 @@
   "creationTS": "2025-02-24T10:52:12.322Z",
   "GUID": "5b87d931-af65-4496-8576-698532d04eb8",
   "isLineageEnabled": false,
-  "lastModifTS": "2025-02-24T11:19:04.466Z",
+  "lastModifTS": "2025-02-25T07:54:59.019Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
