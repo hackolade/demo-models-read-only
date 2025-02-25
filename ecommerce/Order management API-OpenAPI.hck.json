@@ -2796,7 +2796,20 @@
               "5cc94e26-8eb9-4b1c-a78d-a870d9f640db",
               "18d05aa0-70b0-4f8e-9736-ffbc7104f778"
             ],
-            "relationshipType": "Foreign Key"
+            "relationshipType": "Foreign Key",
+            "description": "References the unique identifier of the Customer entity. Associates the order with the customer who placed it."
+          },
+          {
+            "primaryKey": false,
+            "nullable": false,
+            "type": "string",
+            "name": "Order date",
+            "hackoladeMeta": {},
+            "isActivated": true,
+            "required": false,
+            "GUID": "3a550c04-6ca2-4876-8ec9-89aa76ea1d13",
+            "description": "The date and time at which the order was placed. Used for chronological reporting and status tracking.",
+            "format": "date"
           },
           {
             "primaryKey": false,
@@ -2812,7 +2825,8 @@
             "exclusiveMinimum": false,
             "exclusiveMaximum": false,
             "required": false,
-            "GUID": "17ee1d91-fa06-4638-831b-a7766df0e191"
+            "GUID": "17ee1d91-fa06-4638-831b-a7766df0e191",
+            "description": "The aggregated cost of all ordered items, including any taxes, fees, or discounts applied to the order. Should reflect the final amount the customer is expected to pay."
           },
           {
             "primaryKey": false,
@@ -2857,7 +2871,7 @@
                 "name": "Street",
                 "hackoladeMeta": {},
                 "isActivated": true,
-                "required": false,
+                "required": true,
                 "GUID": "99f6874d-0ce2-5b47-8ab9-42d7c3702219",
                 "description": "Specifies the street name and number, providing detailed location information within a city or town."
               },
@@ -2868,7 +2882,7 @@
                 "name": "Postal code",
                 "hackoladeMeta": {},
                 "isActivated": true,
-                "required": false,
+                "required": true,
                 "GUID": "e1cf9617-3aab-51fb-a0bf-11c788dc0179",
                 "foreignCollection": "",
                 "foreignField": [],
@@ -2881,7 +2895,7 @@
                 "name": "City",
                 "hackoladeMeta": {},
                 "isActivated": true,
-                "required": false,
+                "required": true,
                 "GUID": "93594ede-d2dc-51d6-bfb2-06fcfee72d2b",
                 "foreignCollection": "",
                 "foreignField": [],
@@ -3055,13 +3069,9 @@
                     "required": true,
                     "description": "A unique identifier assigned to each product for inventory management and tracking purposes. It helps differentiate products and streamline the ordering process.",
                     "GUID": "acdd584f-e173-4126-a669-6ea2f414ffd0",
-                    "foreignCollection": "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648",
-                    "foreignField": [
-                      "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648",
-                      "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
-                      "6b6386de-f9dc-46d9-9fc2-16d3c2c58340"
-                    ],
-                    "relationshipType": "Foreign Key"
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "relationshipType": ""
                   },
                   {
                     "primaryKey": false,
@@ -3073,6 +3083,7 @@
                     },
                     "isActivated": true,
                     "required": false,
+                    "description": "The name of the product or service as displayed to the customer.",
                     "GUID": "39a652f4-defc-4297-8814-d16fdb749d18"
                   },
                   {
@@ -3085,6 +3096,7 @@
                     },
                     "isActivated": true,
                     "required": false,
+                    "description": "A longer text providing additional details about the product. May be omitted if product details are referenced externally.",
                     "GUID": "6d536af4-ae07-48db-923e-3fd215300a8c"
                   },
                   {
@@ -3114,6 +3126,7 @@
                       "SGD",
                       "HKD"
                     ],
+                    "description": "Indicates the currency in which the product price is set.",
                     "GUID": "c7ccd811-1374-4a95-96b8-1bbb7eda7590"
                   },
                   {
@@ -3132,6 +3145,7 @@
                     "required": true,
                     "foreignCollection": "",
                     "foreignField": [],
+                    "description": "The numeric value of the product’s price in the specified currency.",
                     "GUID": "cf7c7d06-9e2a-490d-852d-29010e9eefd8"
                   }
                 ],
@@ -3714,7 +3728,7 @@
   },
   "isLineageEnabled": false,
   "code": "Ordr mngmnt AP",
-  "lastModifTS": "2025-02-24T11:27:49.347Z",
+  "lastModifTS": "2025-02-25T15:11:19.255Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {

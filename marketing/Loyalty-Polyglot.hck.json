@@ -26,47 +26,19 @@
       "referenceDiff": {
         "properties": [
           {
-            "GUID": "7c3325ce-c9c4-4ad6-9287-8c1e2084ab9a",
-            "properties": [
-              {
-                "GUID": "ecbb43ea-0993-5816-a4ed-88245fc6aa74"
-              },
-              {
-                "GUID": "1b1a3d76-edce-5c06-bb4f-2ce2d8af2680"
-              },
-              {
-                "GUID": "46719528-1e8c-5df1-8362-9794cbdb696b"
-              }
-            ]
-          },
-          {
-            "GUID": "a569060a-b3b2-4f73-95c7-7c2e2145c273",
-            "properties": [
-              {
-                "GUID": "8678843b-3325-445b-9161-00f739973a3b",
-                "properties": [
-                  {
-                    "GUID": "473443ff-5b77-557d-8f38-e2fc3887ec6c"
-                  },
-                  {
-                    "GUID": "4d854aca-6c5b-5379-80e8-4fee9c366232"
-                  },
-                  {
-                    "GUID": "5c335a67-1c92-5902-ae42-a807a09e38f9"
-                  }
-                ]
-              }
-            ]
-          },
-          {
             "GUID": "18d05aa0-70b0-4f8e-9736-ffbc7104f778",
             "childRelationships": [
               "d028ee1a-a542-4adf-898b-bf5ef757feac"
             ]
+          },
+          {
+            "GUID": "a569060a-b3b2-4f73-95c7-7c2e2145c273",
+            "properties": []
           }
         ]
       },
-      "bucketId": "1be970c9-a83a-41b1-bdd5-ed045231c1bc"
+      "bucketId": "1be970c9-a83a-41b1-bdd5-ed045231c1bc",
+      "description": "The Customer entity represents an individual or organization using the ecommerce platform to browse, purchase, and manage orders. It stores essential contact information, registration data, and address details for billing and shipping."
     },
     {
       "type": "object",
@@ -85,19 +57,18 @@
             "compositePrimaryKey",
             "compositeUniqueKey"
           ],
-          "error": {},
           "childRelationships": [
             "39c772d3-dec9-42ae-8fca-f030b060db29"
-          ]
+          ],
+          "description": "The unique identifier for the loyalty campaign. Used by external systems and internal references to track campaign-specific data.",
+          "error": {}
         },
         {
           "primaryKey": false,
           "required": false,
-          "alternateKey": false,
           "childType": "varchar",
           "type": "string",
           "compositePrimaryKey": false,
-          "compositeUniqueKey": false,
           "name": "Description",
           "hackoladeMeta": {},
           "isActivated": true,
@@ -106,7 +77,9 @@
           "compositeKey": [
             "compositePrimaryKey",
             "compositeUniqueKey"
-          ]
+          ],
+          "description": "A textual overview of the loyalty campaign’s rules, goals, or benefits. May include promotional details or terms and conditions.",
+          "error": {}
         }
       ],
       "definitions": {
@@ -118,7 +91,8 @@
       "isActivated": true,
       "collectionName": "Loyalty campaign",
       "additionalProperties": false,
-      "bucketId": "11956698-cdd6-44b8-855f-cd59a50e4665"
+      "bucketId": "11956698-cdd6-44b8-855f-cd59a50e4665",
+      "description": "The Loyalty Campaign entity defines a specific rewards program or promotional campaign, including its key identifying attributes and descriptive details. Each campaign can be tied to multiple customers through loyalty points accrual."
     },
     {
       "type": "object",
@@ -136,7 +110,6 @@
             "compositeUniqueKey"
           ],
           "GUID": "8de1e23f-3abe-471d-ab3c-068f4df58dd5",
-          "error": {},
           "compositePrimaryKey": true,
           "parentRelationship": "39c772d3-dec9-42ae-8fca-f030b060db29",
           "relationshipType": "Foreign Key",
@@ -144,18 +117,18 @@
           "foreignField": [
             "138a8017-4801-441d-bdfe-e54f867faed2",
             "52b23ea1-067c-4f56-a31f-ad924ae36667"
-          ]
+          ],
+          "description": "References the Name of the Loyalty Campaign entity. In conjunction with Customer Reference, it forms a composite key to uniquely identify a customer’s points record for a given campaign.",
+          "error": {}
         },
         {
           "exclusiveMinimum": false,
           "exclusiveMaximum": false,
           "primaryKey": false,
           "required": false,
-          "alternateKey": false,
           "childType": "number",
           "type": "numeric",
           "compositePrimaryKey": false,
-          "compositeUniqueKey": false,
           "name": "Current points",
           "hackoladeMeta": {},
           "isActivated": true,
@@ -164,18 +137,18 @@
           "compositeKey": [
             "compositePrimaryKey",
             "compositeUniqueKey"
-          ]
+          ],
+          "description": "The current balance of loyalty points the customer holds in the specified campaign. Adjusted when points are earned, redeemed, or expired.",
+          "error": {}
         },
         {
           "exclusiveMinimum": false,
           "exclusiveMaximum": false,
           "primaryKey": false,
           "required": false,
-          "alternateKey": false,
           "childType": "number",
           "type": "numeric",
           "compositePrimaryKey": false,
-          "compositeUniqueKey": false,
           "name": "Initial points",
           "hackoladeMeta": {},
           "isActivated": true,
@@ -184,15 +157,15 @@
           "compositeKey": [
             "compositePrimaryKey",
             "compositeUniqueKey"
-          ]
+          ],
+          "description": "The starting points assigned to the customer for this campaign, which could be zero or a bonus amount granted upon enrollment.",
+          "error": {}
         },
         {
           "required": true,
-          "alternateKey": false,
           "childType": "date",
           "type": "string",
           "compositePrimaryKey": false,
-          "compositeUniqueKey": false,
           "name": "Validity start date",
           "hackoladeMeta": {},
           "isActivated": true,
@@ -201,15 +174,15 @@
           "compositeKey": [
             "compositePrimaryKey",
             "compositeUniqueKey"
-          ]
+          ],
+          "description": "The date from which the loyalty points become active or valid. Used to prevent usage before the campaign or points are officially granted.",
+          "error": {}
         },
         {
           "required": true,
-          "alternateKey": false,
           "childType": "date",
           "type": "string",
           "compositePrimaryKey": false,
-          "compositeUniqueKey": false,
           "name": "Validity end date",
           "hackoladeMeta": {},
           "isActivated": true,
@@ -218,7 +191,9 @@
           "compositeKey": [
             "compositePrimaryKey",
             "compositeUniqueKey"
-          ]
+          ],
+          "description": "The date on which the loyalty points expire or the campaign eligibility ends. Ensures unused points do not remain indefinitely in the customer’s balance.",
+          "error": {}
         },
         {
           "name": "Customer reference",
@@ -233,9 +208,10 @@
             "compositeUniqueKey"
           ],
           "GUID": "caa81b5c-c83f-48d4-98be-3e7304ea6f6d",
-          "error": {},
           "parentRelationship": "d028ee1a-a542-4adf-898b-bf5ef757feac",
-          "compositePrimaryKey": true
+          "compositePrimaryKey": true,
+          "description": "Links to the unique identifier of the Customer entity. Used to associate loyalty points with a specific customer account.",
+          "error": {}
         }
       ],
       "definitions": {
@@ -261,7 +237,8 @@
             }
           ]
         }
-      ]
+      ],
+      "description": "The Customer Loyalty Points entity tracks the points a particular customer has earned under a specific loyalty campaign. It supports the ability to set starting points, track current balances, and define validity periods."
     }
   ],
   "buckets": [
@@ -287,7 +264,8 @@
       "show": true,
       "collectionIds": [
         "317a2e84-5f9c-4f59-8bda-ed2df628354a"
-      ]
+      ],
+      "description": "The Customer Management container encompasses all entities and relationships associated with users of the ecommerce platform. It covers personal information, contact details, and addresses needed to fulfill orders, provide customer support, and maintain communication preferences."
     },
     {
       "name": "Loyalty management",
@@ -305,7 +283,8 @@
       "show": true,
       "isActivated": true,
       "indexes": [],
-      "GUID": "11956698-cdd6-44b8-855f-cd59a50e4665"
+      "GUID": "11956698-cdd6-44b8-855f-cd59a50e4665",
+      "description": "The Loyalty Management container encompasses all entities and relationships that support customer rewards and incentive programs. It manages loyalty campaigns, points accrual, and redemption periods, integrating with the broader platform (e.g., Customer Management and Order Management) to encourage repeat business and enhance customer engagement."
     }
   ],
   "views": [],
@@ -439,7 +418,8 @@
     "c2faf611-b4fb-4453-84a7-14037cc26ecc": "Disclaimer",
     "11956698-cdd6-44b8-855f-cd59a50e4665": "Loyalty management",
     "caa81b5c-c83f-48d4-98be-3e7304ea6f6d": "Customer reference",
-    "8de1e23f-3abe-471d-ab3c-068f4df58dd5": "Campaign name"
+    "8de1e23f-3abe-471d-ab3c-068f4df58dd5": "Campaign name",
+    "f9368974-13f1-40a2-a26e-e13712ed7967": "Disclaimer"
   },
   "definitions": {
     "type": "definitions",
@@ -466,6 +446,7 @@
             "hackoladeMeta": {},
             "isActivated": true,
             "GUID": "e8a58173-1262-4752-859c-10ceec5598aa",
+            "description": "The customer’s given name, used for personalization and identification.",
             "mode": "",
             "compositeKey": [
               "compositePrimaryKey",
@@ -484,6 +465,7 @@
             "hackoladeMeta": {},
             "isActivated": true,
             "GUID": "872c6f47-1c90-4b97-ad5e-2c446d854243",
+            "description": "The customer’s surname or family name.",
             "mode": "",
             "compositeKey": [
               "compositePrimaryKey",
@@ -502,6 +484,7 @@
             "hackoladeMeta": {},
             "isActivated": true,
             "GUID": "18d05aa0-70b0-4f8e-9736-ffbc7104f778",
+            "description": "The unique email address of the customer, serving as the primary key and primary contact method. Often used for authentication and login purposes.",
             "mode": "",
             "compositeKey": [
               "compositePrimaryKey",
@@ -520,6 +503,7 @@
             "hackoladeMeta": {},
             "isActivated": true,
             "GUID": "bb57e423-15a3-43d2-bb4f-81c084e50416",
+            "description": "The primary telephone or mobile number for contacting the customer. Format may vary based on locale.",
             "mode": "",
             "compositeKey": [
               "compositePrimaryKey",
@@ -548,7 +532,7 @@
             "properties": [
               {
                 "primaryKey": false,
-                "required": false,
+                "required": true,
                 "alternateKey": false,
                 "childType": "varchar",
                 "type": "string",
@@ -557,7 +541,7 @@
                 "name": "Street",
                 "hackoladeMeta": {},
                 "isActivated": true,
-                "GUID": "ecbb43ea-0993-5816-a4ed-88245fc6aa74",
+                "GUID": "a67178d1-2b76-5521-a4c3-d6fd453f0f74",
                 "description": "Specifies the street name and number, providing detailed location information within a city or town.",
                 "mode": "",
                 "compositeKey": [
@@ -567,7 +551,7 @@
               },
               {
                 "primaryKey": false,
-                "required": false,
+                "required": true,
                 "alternateKey": false,
                 "childType": "varchar",
                 "type": "string",
@@ -576,7 +560,7 @@
                 "name": "Postal code",
                 "hackoladeMeta": {},
                 "isActivated": true,
-                "GUID": "1b1a3d76-edce-5c06-bb4f-2ce2d8af2680",
+                "GUID": "7c7e4aed-3aa9-5bd2-bccb-4430d94e0834",
                 "foreignCollection": "",
                 "foreignField": [],
                 "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
@@ -588,7 +572,7 @@
               },
               {
                 "primaryKey": false,
-                "required": false,
+                "required": true,
                 "alternateKey": false,
                 "childType": "varchar",
                 "type": "string",
@@ -597,7 +581,7 @@
                 "name": "City",
                 "hackoladeMeta": {},
                 "isActivated": true,
-                "GUID": "46719528-1e8c-5df1-8362-9794cbdb696b",
+                "GUID": "0e1b934a-42c4-5d75-8fdc-07f8d0129925",
                 "foreignCollection": "",
                 "foreignField": [],
                 "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
@@ -617,8 +601,8 @@
             "name": "Bill-to address",
             "hackoladeMeta": {},
             "isActivated": true,
-            "GUID": "7c3325ce-c9c4-4ad6-9287-8c1e2084ab9a",
-            "refDescription": "Stores the billing address associated with the customer. It is used for invoicing and payment processing, ensuring that billing information is accurate and up to date. The bill-to address may differ from the shipping address and is crucial for financial record-keeping.",
+            "GUID": "299ad0aa-01de-43f1-a266-bd803d9d7616",
+            "refDescription": "Stores the default billing address for the customer. Used for invoicing, payment processing, and tax calculations.",
             "compositeKey": [
               "compositePrimaryKey",
               "compositeUniqueKey"
@@ -630,7 +614,7 @@
                 "properties": [
                   {
                     "primaryKey": false,
-                    "required": false,
+                    "required": true,
                     "alternateKey": false,
                     "childType": "varchar",
                     "type": "string",
@@ -639,7 +623,7 @@
                     "name": "Street",
                     "hackoladeMeta": {},
                     "isActivated": true,
-                    "GUID": "473443ff-5b77-557d-8f38-e2fc3887ec6c",
+                    "GUID": "f1fde62f-2224-5c53-bdd5-815c2369d986",
                     "description": "Specifies the street name and number, providing detailed location information within a city or town.",
                     "mode": "",
                     "compositeKey": [
@@ -649,7 +633,7 @@
                   },
                   {
                     "primaryKey": false,
-                    "required": false,
+                    "required": true,
                     "alternateKey": false,
                     "childType": "varchar",
                     "type": "string",
@@ -658,7 +642,7 @@
                     "name": "Postal code",
                     "hackoladeMeta": {},
                     "isActivated": true,
-                    "GUID": "4d854aca-6c5b-5379-80e8-4fee9c366232",
+                    "GUID": "03048688-44ef-5286-9d37-e87d6ca8cdf8",
                     "foreignCollection": "",
                     "foreignField": [],
                     "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
@@ -670,7 +654,7 @@
                   },
                   {
                     "primaryKey": false,
-                    "required": false,
+                    "required": true,
                     "alternateKey": false,
                     "childType": "varchar",
                     "type": "string",
@@ -679,7 +663,7 @@
                     "name": "City",
                     "hackoladeMeta": {},
                     "isActivated": true,
-                    "GUID": "5c335a67-1c92-5902-ae42-a807a09e38f9",
+                    "GUID": "24a64b44-cec0-54fc-8e94-f6287864ebcc",
                     "foreignCollection": "",
                     "foreignField": [],
                     "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
@@ -698,7 +682,7 @@
                 "compositeUniqueKey": false,
                 "hackoladeMeta": {},
                 "isActivated": true,
-                "GUID": "8678843b-3325-445b-9161-00f739973a3b",
+                "GUID": "3ff559e8-d20f-432c-9ad8-5b93be0f1055",
                 "displayName": "Address",
                 "arrayItem": true,
                 "compositeKey": [
@@ -733,6 +717,7 @@
         "isActivated": true,
         "additionalProperties": false,
         "bucketId": "81137752-f86d-41e7-bb91-6d3e9fdb9628",
+        "description": "The Customer entity represents an individual or organization using the ecommerce platform to browse, purchase, and manage orders. It stores essential contact information, registration data, and address details for billing and shipping.",
         "definitionEntityType": "collection",
         "fileType": "hackoladeSchema",
         "definitionRefs": [
@@ -747,7 +732,9 @@
       {
         "name": "Customer management",
         "type": "bucket",
-        "collectionIds": [],
+        "collectionIds": [
+          "5cc94e26-8eb9-4b1c-a78d-a870d9f640db"
+        ],
         "backgroundColor": {
           "r": 216,
           "g": 0,
@@ -758,16 +745,17 @@
         "isActivated": true,
         "indexes": [],
         "GUID": "81137752-f86d-41e7-bb91-6d3e9fdb9628",
+        "description": "The Customer Management container encompasses all entities and relationships associated with users of the ecommerce platform. It covers personal information, contact details, and addresses needed to fulfill orders, provide customer support, and maintain communication preferences.",
         "definitionEntityType": "bucket",
-        "link": "../common/Customer-Polyglot.hck.json",
-        "kind": "relativePath",
-        "fieldRelativePath": "#/Customer management",
         "fileType": "hackoladeSchema",
         "definitionRefs": [
           [
             "1be970c9-a83a-41b1-bdd5-ed045231c1bc"
           ]
-        ]
+        ],
+        "kind": "relativePath",
+        "link": "../common/Customer-Polyglot.hck.json",
+        "fieldRelativePath": "#/Customer management"
       },
       {
         "GUID": "f40517e2-29ea-49d0-9706-f405a6cf02ac",
@@ -813,7 +801,7 @@
       "normalization": false
     }
   ],
-  "lastModifTS": "2025-02-21T14:16:01.199Z",
+  "lastModifTS": "2025-02-25T15:27:57.523Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {

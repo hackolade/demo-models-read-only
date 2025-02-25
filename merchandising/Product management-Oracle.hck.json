@@ -227,7 +227,7 @@
             "parentRelationship": "5d510e65-638b-46a9-8de7-b78d2006e54b"
           },
           {
-            "GUID": "b9d5da76-8812-4308-8bf6-0ac6a34c938f",
+            "GUID": "ba154f30-0f46-41b7-bbd0-b5e106f2cf32",
             "referenceDiffDeleted": true
           },
           {
@@ -235,7 +235,7 @@
             "referenceDiffDeleted": true
           },
           {
-            "GUID": "ba154f30-0f46-41b7-bbd0-b5e106f2cf32",
+            "GUID": "b9d5da76-8812-4308-8bf6-0ac6a34c938f",
             "referenceDiffDeleted": true
           }
         ]
@@ -971,6 +971,7 @@
             },
             "isActivated": true,
             "GUID": "c5f20bbd-e577-4a70-b532-13e319e3ef18",
+            "description": "The name of the product or service as displayed to the customer.",
             "compositeKey": [
               "partitionKey",
               "compositePartitionKey",
@@ -1003,6 +1004,7 @@
               "97db87db-8fbe-41bb-8850-34193c9ee07e"
             ],
             "relationshipType": "Foreign Key",
+            "description": "References the category or product group to which this item belongs. This links to a separate Category entity that stores hierarchical or descriptive data about product categories.",
             "compositeKey": [
               "partitionKey",
               "compositePartitionKey",
@@ -1029,6 +1031,7 @@
             },
             "isActivated": true,
             "GUID": "a898b734-3304-48c1-b45d-98c1f7cc3808",
+            "description": "References the unique code of the supplier who provides or manufactures the product. Ties to the Supplier entity, facilitating supplier relationship management and inventory tracking.",
             "compositeKey": [
               "partitionKey",
               "compositePartitionKey",
@@ -1055,6 +1058,7 @@
             },
             "isActivated": true,
             "GUID": "6ef810f9-c366-426b-9aa7-97f54138905f",
+            "description": "A longer text providing additional details about the product. May be omitted if product details are referenced externally.",
             "compositeKey": [
               "partitionKey",
               "compositePartitionKey",
@@ -1157,7 +1161,7 @@
         "definitions": {
           "type": "definitions",
           "properties": [],
-          "GUID": "61ffabd1-7502-4cee-90c3-abc5c9557177"
+          "GUID": "f04dfc0b-4f2e-4691-8e67-4a747b797b62"
         },
         "isActivated": true,
         "additionalProperties": false,
@@ -1280,6 +1284,7 @@
               "SGD",
               "HKD"
             ],
+            "description": "Indicates the currency in which the product price is set.",
             "compositeKey": [
               "partitionKey",
               "compositePartitionKey",
@@ -1308,6 +1313,7 @@
             "GUID": "bfcda36f-8a7b-421b-ba98-8a9b313affc6",
             "foreignCollection": "",
             "foreignField": [],
+            "description": "The numeric value of the product’s price in the specified currency.",
             "compositeKey": [
               "partitionKey",
               "compositePartitionKey",
@@ -1332,6 +1338,7 @@
             },
             "isActivated": true,
             "GUID": "2c86253b-1d80-4798-ad2b-3bef74fa239c",
+            "description": "The date or date/time from which the specified price becomes valid. Enables time-based pricing and helps maintain a historical record of price changes.",
             "compositeKey": [
               "partitionKey",
               "compositePartitionKey",
@@ -1344,7 +1351,7 @@
         "definitions": {
           "type": "definitions",
           "properties": [],
-          "GUID": "0e465d0c-e8b8-4c8b-9e7f-b785e6a23a4a"
+          "GUID": "e7e65f07-9b58-4aab-abf8-a1dfc8236546"
         },
         "isActivated": true,
         "additionalProperties": false,
@@ -1468,6 +1475,7 @@
               "6b6386de-f9dc-46d9-9fc2-16d3c2c58340"
             ],
             "relationshipType": "Foreign Key",
+            "description": "A unique identifier for the product in stock. Serves as a foreign key linking to the Product entity, ensuring that each stock record is associated with an existing product.",
             "compositeKey": [
               "partitionKey",
               "compositePartitionKey",
@@ -1554,6 +1562,7 @@
               "8a3bbd3c-b148-4306-9da3-e84c938855d0"
             ],
             "relationshipType": "Foreign Key",
+            "description": "A unique identifier for the product in stock. Serves as a foreign key linking to the Product entity, ensuring that each stock record is associated with an existing product.",
             "compositeKey": [
               "partitionKey",
               "compositePartitionKey",
@@ -1629,7 +1638,7 @@
             "mode": "varchar2",
             "length": 20,
             "subtype": "string",
-            "required": false,
+            "required": true,
             "childType": "char",
             "type": "string",
             "partitionKey": false,
@@ -1656,7 +1665,7 @@
             "mode": "varchar2",
             "length": 20,
             "subtype": "string",
-            "required": false,
+            "required": true,
             "childType": "char",
             "type": "string",
             "partitionKey": false,
@@ -1685,7 +1694,7 @@
             "mode": "varchar2",
             "length": 20,
             "subtype": "string",
-            "required": false,
+            "required": true,
             "childType": "char",
             "type": "string",
             "partitionKey": false,
@@ -1713,7 +1722,7 @@
         "definitions": {
           "type": "definitions",
           "properties": [],
-          "GUID": "2adb6237-e8ab-4025-9637-b4172be80c30"
+          "GUID": "21b089e2-1d86-4ce4-95f9-cd31584dc6d2"
         },
         "isActivated": true,
         "additionalProperties": false,
@@ -1837,7 +1846,7 @@
         "definitions": {
           "type": "definitions",
           "properties": [],
-          "GUID": "5ca246b3-b9df-4b34-a4da-39cfcdf69e32"
+          "GUID": "642328b5-52f4-4048-8da1-7c272c6f6390"
         },
         "isActivated": true,
         "additionalProperties": false,
@@ -1954,6 +1963,7 @@
               "a898b734-3304-48c1-b45d-98c1f7cc3808"
             ],
             "relationshipType": "Foreign Key",
+            "description": "A unique code identifying the supplier company. This serves as the primary key for the Supplier entity, and may also be used as a foreign key to link to a broader Company entity or domain if one exists.",
             "compositeKey": [
               "partitionKey",
               "compositePartitionKey",
@@ -1980,6 +1990,7 @@
             },
             "isActivated": true,
             "GUID": "8ee85d26-2d69-49d4-82b9-1d2b12c7966d",
+            "description": "The official or registered name of the supplier company.",
             "compositeKey": [
               "partitionKey",
               "compositePartitionKey",
@@ -2006,6 +2017,7 @@
             },
             "isActivated": true,
             "GUID": "ba154f30-0f46-41b7-bbd0-b5e106f2cf32",
+            "description": "The primary point of contact’s full name. This individual typically handles order-related queries, negotiations, or partnership details.",
             "compositeKey": [
               "partitionKey",
               "compositePartitionKey",
@@ -2032,6 +2044,7 @@
             },
             "isActivated": true,
             "GUID": "9cc886b2-1216-4d95-bef9-d48290b0e804",
+            "description": "The main email address for communicating with the supplier. Should be validated to ensure correct formatting.",
             "compositeKey": [
               "partitionKey",
               "compositePartitionKey",
@@ -2058,6 +2071,7 @@
             },
             "isActivated": true,
             "GUID": "3a79b59c-1d60-4c86-a484-a20deb6fcd95",
+            "description": "The primary telephone or mobile number for reaching the supplier. Formats may vary by region; it is recommended to store this in a standardized format if possible.",
             "compositeKey": [
               "partitionKey",
               "compositePartitionKey",
@@ -2090,6 +2104,7 @@
               "d75bc27b-db09-4e44-a9a2-b55e1b17b399"
             ],
             "relationshipType": "Foreign Key",
+            "description": "A unique code identifying the supplier company. This serves as the primary key for the Supplier entity, and may also be used as a foreign key to link to a broader Company entity or domain if one exists.",
             "compositeKey": [
               "partitionKey",
               "compositePartitionKey",
@@ -2165,7 +2180,7 @@
             "mode": "varchar2",
             "length": 20,
             "subtype": "string",
-            "required": false,
+            "required": true,
             "childType": "char",
             "type": "string",
             "partitionKey": false,
@@ -2192,7 +2207,7 @@
             "mode": "varchar2",
             "length": 20,
             "subtype": "string",
-            "required": false,
+            "required": true,
             "childType": "char",
             "type": "string",
             "partitionKey": false,
@@ -2221,7 +2236,7 @@
             "mode": "varchar2",
             "length": 20,
             "subtype": "string",
-            "required": false,
+            "required": true,
             "childType": "char",
             "type": "string",
             "partitionKey": false,
@@ -2249,7 +2264,7 @@
         "definitions": {
           "type": "definitions",
           "properties": [],
-          "GUID": "f036c580-86d1-4aa1-a478-3f46f954d262"
+          "GUID": "7baad760-6f95-46dc-9230-f00a0f031ed8"
         },
         "isActivated": true,
         "additionalProperties": false,
@@ -2337,19 +2352,19 @@
           "shape": [
             {
               "x": 1389,
-              "y": 1218.6666666666667
+              "y": 1220.8650835695087
             },
             {
               "x": 1463.9469309674228,
-              "y": 1218.6666666666667
+              "y": 1220.8650835695087
             },
             {
               "x": 1463.9469309674228,
-              "y": 1299.2793540182593
+              "y": 1301.4777709211012
             },
             {
               "x": 1538.8938619348455,
-              "y": 1299.2793540182593
+              "y": 1301.4777709211012
             }
           ],
           "sides": [
@@ -2357,10 +2372,10 @@
             "left"
           ]
         },
+        "definitionEntityType": "relationship",
         "hackoladeMeta": {
           "namingConvention": "code"
         },
-        "definitionEntityType": "relationship",
         "fileType": "hackoladeSchema",
         "definitionRefs": [
           [
@@ -2403,19 +2418,19 @@
           "shape": [
             {
               "x": 1494.001128122551,
-              "y": 1123.430278881021
+              "y": 1125.628695783863
             },
             {
               "x": 1441.5005640612756,
-              "y": 1123.430278881021
+              "y": 1125.628695783863
             },
             {
               "x": 1441.5005640612756,
-              "y": 1134.3333333333333
+              "y": 1136.5317502361752
             },
             {
               "x": 1389,
-              "y": 1134.3333333333333
+              "y": 1136.5317502361752
             }
           ],
           "sides": [
@@ -2423,10 +2438,10 @@
             "right"
           ]
         },
+        "definitionEntityType": "relationship",
         "hackoladeMeta": {
           "namingConvention": "code"
         },
-        "definitionEntityType": "relationship",
         "fileType": "hackoladeSchema",
         "definitionRefs": [
           [
@@ -2469,19 +2484,19 @@
           "shape": [
             {
               "x": 1366.2486241170195,
-              "y": 1385.560485077721
+              "y": 1387.758901980563
             },
             {
               "x": 1366.2486241170195,
-              "y": 1344.2802425388604
+              "y": 1346.4786594417023
             },
             {
               "x": 1219.5,
-              "y": 1344.2802425388604
+              "y": 1346.4786594417023
             },
             {
               "x": 1219.5,
-              "y": 1303
+              "y": 1305.198416902842
             }
           ],
           "sides": [
@@ -2489,10 +2504,10 @@
             "bottom"
           ]
         },
+        "definitionEntityType": "relationship",
         "hackoladeMeta": {
           "namingConvention": "code"
         },
-        "definitionEntityType": "relationship",
         "fileType": "hackoladeSchema",
         "definitionRefs": [
           [
@@ -2508,8 +2523,8 @@
         "type": "bucket",
         "collectionIds": [
           "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
-          "18efa0fe-85b0-4883-b2b8-9359fe7ded74",
           "ac3a61f6-9c63-4bab-a0d1-48d0f847112c",
+          "18efa0fe-85b0-4883-b2b8-9359fe7ded74",
           "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
           "14dd0530-7fdc-4567-a3c4-2177fc0bd660",
           "4b9dbb3f-4e74-44df-a4b8-6461e63311e9",
@@ -2582,7 +2597,7 @@
       "normalization": true
     }
   ],
-  "lastModifTS": "2025-02-24T13:42:22.233Z",
+  "lastModifTS": "2025-02-25T15:29:50.080Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {

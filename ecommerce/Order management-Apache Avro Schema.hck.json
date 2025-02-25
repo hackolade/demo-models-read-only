@@ -213,7 +213,8 @@
       "hackoladeMeta": {
         "validationErrors": {},
         "namingConvention": "code"
-      }
+      },
+      "description": "The Order Management container is responsible for all entities and relationships involved in creating, tracking, and fulfilling customer orders. At a logical level, the Order Management container interacts closely with both the Customer Management container (to identify and authenticate the customer placing the order) and the Product Management container (to reference product details and availability)."
     }
   ],
   "views": [],
@@ -260,12 +261,12 @@
             "multipleTypes": [
               {
                 "type": "null",
-                "GUID": "bda2c30b-d9a0-4da4-9e5f-44b6869a7941"
+                "GUID": "547feea7-6050-46f5-85ba-cad822ebcba2"
               },
               {
                 "childType": "string",
                 "type": "string",
-                "GUID": "4cd5b2bc-3402-4b35-8539-0c735bc14894",
+                "GUID": "65b4d86d-7595-49a9-a0dd-53df98e83ac2",
                 "error": {}
               }
             ],
@@ -274,6 +275,7 @@
             "hackoladeMeta": {
               "namingConvention": "code"
             },
+            "description": "References the unique identifier of the Customer entity. Associates the order with the customer who placed it.",
             "relationshipType": "Foreign Key",
             "parentRelationship": "f8f34cd7-4027-46ad-9160-b0dcaa29a509",
             "required": false,
@@ -298,15 +300,14 @@
             "multipleTypes": [
               {
                 "type": "null",
-                "GUID": "c7176eb1-1972-4328-935c-e472c5a42fbc"
+                "GUID": "6188c9e6-cbdc-4882-9254-28b0b685e715"
               },
               {
                 "index": true,
-                "alternateKey": false,
                 "childType": "number",
                 "type": "numeric",
+                "GUID": "90601183-e887-4195-915c-aea34c484667",
                 "error": {},
-                "GUID": "6a84b690-55b7-4281-8e1a-37611c1ffba0",
                 "mode": "int",
                 "logicalType": "date"
               }
@@ -316,6 +317,7 @@
             "hackoladeMeta": {
               "namingConvention": "code"
             },
+            "description": "The date and time at which the order was placed. Used for chronological reporting and status tracking.",
             "required": false,
             "compositeKey": [
               "compositePrimaryKey",
@@ -323,7 +325,6 @@
             ],
             "default": null,
             "compositePrimaryKey": false,
-            "compositeUniqueKey": false,
             "GUID": "3a550c04-6ca2-4876-8ec9-89aa76ea1d13",
             "code": "order_date"
           },
@@ -334,7 +335,7 @@
             "multipleTypes": [
               {
                 "type": "null",
-                "GUID": "900cf741-e36c-4f12-b9be-c87e6ced7830"
+                "GUID": "f6392ead-db85-440a-b4c0-fd837333f5e1"
               },
               {
                 "index": true,
@@ -342,7 +343,7 @@
                 "exclusiveMaximum": false,
                 "childType": "bytes",
                 "type": "string",
-                "GUID": "c6af9ccc-b16b-4c41-a974-f355dd7f228e",
+                "GUID": "41c23c76-0061-4f2f-afdc-952b0654818a",
                 "mode": "int",
                 "error": {},
                 "subtype": "decimal"
@@ -353,6 +354,7 @@
             "hackoladeMeta": {
               "namingConvention": "code"
             },
+            "description": "The aggregated cost of all ordered items, including any taxes, fees, or discounts applied to the order. Should reflect the final amount the customer is expected to pay.",
             "required": false,
             "compositeKey": [
               "compositePrimaryKey",
@@ -369,7 +371,7 @@
             "multipleTypes": [
               {
                 "type": "null",
-                "GUID": "4ff5efc1-5e7a-459a-bdf1-2576270a888d"
+                "GUID": "a3120c92-c3e5-4d4d-b7a0-098a0a7230bb"
               },
               {
                 "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
@@ -381,7 +383,7 @@
                 ],
                 "childType": "enum",
                 "type": "string",
-                "GUID": "9e890c51-e608-40f7-b97b-d8f39760c4de",
+                "GUID": "35500a7d-0557-4dfd-b12c-d7f3b1a6312e",
                 "enum": [
                   "Pending",
                   "Shipped",
@@ -414,12 +416,12 @@
             "multipleTypes": [
               {
                 "type": "null",
-                "GUID": "df6b9038-b81b-45f5-a256-868f4498b374"
+                "GUID": "3f197232-2e30-4ccb-b5e6-f766d19bc516"
               },
               {
                 "childType": "string",
                 "type": "string",
-                "GUID": "ca6f1660-4ce1-400e-81b7-4e093697ba8d",
+                "GUID": "154b199b-3a44-4c39-b4ba-ee90a9722776",
                 "error": {}
               }
             ],
@@ -475,100 +477,46 @@
                     "primaryKey": false,
                     "properties": [
                       {
-                        "name": "Street",
-                        "type": "multiple",
-                        "properties": [],
-                        "multipleTypes": [
-                          {
-                            "type": "null",
-                            "GUID": "84ef613d-faf0-4c89-9bef-a2bb4ab3b397"
-                          },
-                          {
-                            "childType": "string",
-                            "type": "string",
-                            "GUID": "8bddde9e-3651-4cbf-8852-a10fbbeca075",
-                            "error": {}
-                          }
-                        ],
-                        "isActivated": true,
+                        "required": true,
                         "primaryKey": false,
+                        "type": "string",
+                        "name": "Street",
                         "hackoladeMeta": {
                           "namingConvention": "code"
                         },
-                        "description": "Specifies the street name and number, providing detailed location information within a city or town.",
-                        "required": false,
-                        "compositeKey": [
-                          "compositePrimaryKey",
-                          "compositeUniqueKey"
-                        ],
-                        "default": null,
+                        "isActivated": true,
                         "GUID": "99f6874d-0ce2-5b47-8ab9-42d7c3702219",
+                        "description": "Specifies the street name and number, providing detailed location information within a city or town.",
                         "code": "street"
                       },
                       {
-                        "name": "Postal code",
-                        "type": "multiple",
-                        "properties": [],
-                        "multipleTypes": [
-                          {
-                            "type": "null",
-                            "GUID": "fe97d8a7-1506-4e7f-9800-8409f10d0ee6"
-                          },
-                          {
-                            "childType": "string",
-                            "type": "string",
-                            "GUID": "6a413c0f-4a10-4a10-9ff4-3fe589e6d4c9",
-                            "error": {}
-                          }
-                        ],
-                        "isActivated": true,
+                        "required": true,
                         "primaryKey": false,
+                        "type": "string",
+                        "name": "Postal code",
                         "hackoladeMeta": {
                           "namingConvention": "code"
                         },
-                        "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
-                        "required": false,
-                        "compositeKey": [
-                          "compositePrimaryKey",
-                          "compositeUniqueKey"
-                        ],
+                        "isActivated": true,
+                        "GUID": "e1cf9617-3aab-51fb-a0bf-11c788dc0179",
                         "foreignCollection": "",
                         "foreignField": [],
-                        "default": null,
-                        "GUID": "e1cf9617-3aab-51fb-a0bf-11c788dc0179",
+                        "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
                         "code": "postal_code"
                       },
                       {
-                        "name": "City",
-                        "type": "multiple",
-                        "properties": [],
-                        "multipleTypes": [
-                          {
-                            "type": "null",
-                            "GUID": "f1ba58bc-13f0-48d4-bb9b-edc6c9f54d42"
-                          },
-                          {
-                            "childType": "string",
-                            "type": "string",
-                            "GUID": "62bb8e20-48fd-405c-b78c-c1346a060f7e",
-                            "error": {}
-                          }
-                        ],
-                        "isActivated": true,
+                        "required": true,
                         "primaryKey": false,
+                        "type": "string",
+                        "name": "City",
                         "hackoladeMeta": {
                           "namingConvention": "code"
                         },
-                        "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
-                        "required": false,
-                        "compositeKey": [
-                          "compositePrimaryKey",
-                          "compositeUniqueKey"
-                        ],
+                        "isActivated": true,
+                        "GUID": "93594ede-d2dc-51d6-bfb2-06fcfee72d2b",
                         "foreignCollection": "",
                         "foreignField": [],
-                        "default": null,
-                        "GUID": "93594ede-d2dc-51d6-bfb2-06fcfee72d2b",
+                        "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
                         "code": "city"
                       }
                     ],
@@ -648,7 +596,7 @@
                             "multipleTypes": [
                               {
                                 "type": "null",
-                                "GUID": "eaf1ffb7-dbae-4048-ac54-47c3977e5fb8"
+                                "GUID": "551bf51b-0c8f-44f1-8169-2ec40854acd4"
                               },
                               {
                                 "index": true,
@@ -656,7 +604,7 @@
                                 "exclusiveMaximum": false,
                                 "childType": "bytes",
                                 "type": "string",
-                                "GUID": "d0c59790-0e87-4194-9a6e-5e701f85380b",
+                                "GUID": "63ad0f39-c05e-418e-8b34-e3afbd8c75fe",
                                 "mode": "int",
                                 "error": {},
                                 "subtype": "decimal"
@@ -686,13 +634,13 @@
                             "multipleTypes": [
                               {
                                 "type": "null",
-                                "GUID": "c0fec313-5dae-4b14-bf7f-634e60dce5f5"
+                                "GUID": "f8a3b2b6-0927-404e-8cef-8d55a05ea382"
                               },
                               {
                                 "tPrecision": 9,
                                 "childType": "number",
                                 "type": "numeric",
-                                "GUID": "048b6c4c-5b88-4bc0-a2a4-fa7fa0925597",
+                                "GUID": "0b86fe65-d896-4de7-ad60-e76cdea01eb7",
                                 "error": {},
                                 "mode": "long",
                                 "logicalType": "local-timestamp-millis"
@@ -722,7 +670,7 @@
                             "multipleTypes": [
                               {
                                 "type": "null",
-                                "GUID": "54b41d72-d6da-44c8-bca9-d2eb4fc4f2ab"
+                                "GUID": "32995058-bfe3-4f52-abc8-2a7acbcdeead"
                               },
                               {
                                 "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
@@ -733,14 +681,10 @@
                                 ],
                                 "childType": "enum",
                                 "type": "string",
-                                "GUID": "999e49ef-85d0-4db6-bc92-bad5613f9a01",
+                                "GUID": "9d2117f0-b15f-4d03-b33e-7961973f3298",
                                 "error": {
                                   "enum": false,
-                                  "enums": [
-                                    false,
-                                    false,
-                                    false
-                                  ]
+                                  "enums": false
                                 },
                                 "enum": [
                                   "CreditCard",
@@ -773,7 +717,7 @@
                             "multipleTypes": [
                               {
                                 "type": "null",
-                                "GUID": "d230c7ed-fb76-4060-a991-b1416aea9ce3"
+                                "GUID": "84ebfbe4-60d3-46ff-a241-5569216466d1"
                               },
                               {
                                 "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
@@ -784,7 +728,7 @@
                                 ],
                                 "childType": "enum",
                                 "type": "string",
-                                "GUID": "2f48e95b-1ce5-429a-b866-c1752070faf2",
+                                "GUID": "54661da1-c24a-42cd-be91-fbcdbfb5df7b",
                                 "enum": [
                                   "completed",
                                   "pending",
@@ -902,7 +846,7 @@
                             "multipleTypes": [
                               {
                                 "type": "null",
-                                "GUID": "60bbbacf-8327-4649-8d37-fffed6f7f7b8"
+                                "GUID": "a71d60aa-1c6e-4176-ad89-adad7b9c0fd4"
                               },
                               {
                                 "index": true,
@@ -910,7 +854,7 @@
                                 "exclusiveMaximum": false,
                                 "childType": "number",
                                 "type": "numeric",
-                                "GUID": "a75db676-2dd4-4baa-9f12-6fe0c4ced6b9",
+                                "GUID": "1a38224e-23f4-419f-81f8-44fecbc29bc7",
                                 "error": {},
                                 "mode": "int"
                               }
@@ -954,7 +898,7 @@
                             "multipleTypes": [
                               {
                                 "type": "null",
-                                "GUID": "1cb79f6a-e632-4ced-9ba1-785adc4aaf66"
+                                "GUID": "4728ca18-6395-46fe-bf7d-cce0f3cc2765"
                               },
                               {
                                 "childType": "string",
@@ -962,7 +906,7 @@
                                 "error": {
                                   "name": false
                                 },
-                                "GUID": "2028950d-ffff-4130-ba0c-dfd90a17c2e8"
+                                "GUID": "ba400918-1fa3-49c3-b2c9-8348310228fd"
                               }
                             ],
                             "isActivated": true,
@@ -970,6 +914,7 @@
                             "hackoladeMeta": {
                               "namingConvention": "code"
                             },
+                            "description": "The name of the product or service as displayed to the customer.",
                             "parentRelationship": "",
                             "required": false,
                             "compositeKey": [
@@ -988,7 +933,7 @@
                             "multipleTypes": [
                               {
                                 "type": "null",
-                                "GUID": "e27e9891-e992-4434-b4cf-854ab44d6a2e"
+                                "GUID": "63223901-b834-464c-b11a-d2db023fbbaf"
                               },
                               {
                                 "childType": "string",
@@ -996,7 +941,7 @@
                                 "error": {
                                   "name": false
                                 },
-                                "GUID": "58f1cf7b-03b5-4147-81d5-ce16a191255d"
+                                "GUID": "6d144d29-ac1f-4c72-a34f-0e298214cd31"
                               }
                             ],
                             "isActivated": true,
@@ -1004,6 +949,7 @@
                             "hackoladeMeta": {
                               "namingConvention": "code"
                             },
+                            "description": "A longer text providing additional details about the product. May be omitted if product details are referenced externally.",
                             "parentRelationship": "",
                             "required": false,
                             "compositeKey": [
@@ -1042,6 +988,7 @@
                               "SGD",
                               "HKD"
                             ],
+                            "description": "Indicates the currency in which the product price is set.",
                             "GUID": "c7ccd811-1374-4a95-96b8-1bbb7eda7590",
                             "code": "currency"
                           },
@@ -1055,6 +1002,7 @@
                               "namingConvention": "code"
                             },
                             "isActivated": true,
+                            "description": "The numeric value of the product’s price in the specified currency.",
                             "GUID": "cf7c7d06-9e2a-490d-852d-29010e9eefd8",
                             "code": "amount",
                             "subtype": "decimal"
@@ -1151,6 +1099,7 @@
         "isActivated": true,
         "indexes": [],
         "GUID": "e863d79d-6e38-4098-a01e-46d6249501f8",
+        "description": "The Order Management container is responsible for all entities and relationships involved in creating, tracking, and fulfilling customer orders. At a logical level, the Order Management container interacts closely with both the Customer Management container (to identify and authenticate the customer placing the order) and the Product Management container (to reference product details and availability).",
         "hackoladeMeta": {
           "namingConvention": "code"
         },
@@ -1205,7 +1154,7 @@
     }
   ],
   "code": "order_management",
-  "lastModifTS": "2025-02-25T07:09:15.635Z",
+  "lastModifTS": "2025-02-25T15:12:29.629Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {

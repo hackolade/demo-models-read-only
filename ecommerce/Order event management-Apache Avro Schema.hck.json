@@ -301,7 +301,6 @@
           },
           "required": false,
           "default": null,
-          "lineageDescription": "An optional comment provided by the customer during order placement. This may include special instructions, delivery notes, or any additional information the customer wishes to convey about the order.",
           "description": "An optional comment provided by the customer during order placement. This may include special instructions, delivery notes, or any additional information the customer wishes to convey about the order.",
           "error": {}
         },
@@ -723,7 +722,7 @@
   "creationTS": "2025-02-19T13:28:59.048Z",
   "GUID": "777fbee0-73a1-43a3-8272-fa6b5eb58dac",
   "isLineageEnabled": false,
-  "lastModifTS": "2025-02-25T15:08:50.556Z",
+  "lastModifTS": "2025-02-25T15:10:44.972Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
