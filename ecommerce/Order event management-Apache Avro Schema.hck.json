@@ -301,7 +301,8 @@
           },
           "required": false,
           "default": null,
-          "comments": "An optional comment provided by the customer during order placement. This may include special instructions, delivery notes, or any additional information the customer wishes to convey about the order.",
+          "lineageDescription": "An optional comment provided by the customer during order placement. This may include special instructions, delivery notes, or any additional information the customer wishes to convey about the order.",
+          "description": "An optional comment provided by the customer during order placement. This may include special instructions, delivery notes, or any additional information the customer wishes to convey about the order.",
           "error": {}
         },
         {
@@ -580,12 +581,12 @@
       "indexes": [],
       "GUID": "0ce79e7c-133c-45e0-adcb-bf6f2de69d56",
       "hackoladeMeta": {
-        "namingConvention": "code",
-        "validationErrors": {}
+        "namingConvention": "code"
       },
       "code": "com.ecommerce.bike.orders",
       "addFieldsToBucket": true,
-      "isPlugin": true
+      "isPlugin": true,
+      "description": "This namespace groups all order-related event schemas for the ecommerce bike platform. It is intended for demonstration purposes and is not a complete implementation. The schemas within this namespace illustrate key events in the order lifecycle, including creation, update, and cancellation.\n\n### Included Schemas\n\n- **OrderCreated**\n  - **Description:** Represents an event triggered when a new order is placed. It captures essential details such as the unique order identifier, customer information, the list of ordered products, the creation timestamp, and the initial order status.\n  \n- **OrderUpdated**\n  - **Description:** Represents an event that signifies modifications to an existing order. It records the unique order identifier, the precise timestamp of the update, and update details through two optional fields—`product_update` and `status_update`—which can be null if not applicable.\n  \n- **OrderCancelled**\n  - **Description:** Represents the event generated when an order is cancelled. It includes key information such as the unique order identifier, an optional cancellation reason, and the cancellation timestamp. This information supports audit logs and operational analysis.\n\n### Purpose\n\n- **Event-Driven Architecture:**  \n  The schemas support integration with Kafka and Avro-based data pipelines, enabling robust event tracking and processing in an event-driven architecture.\n  \n- **Consistent Data Representation:**  \n  By defining clear, self-contained records for each order state change, the namespace ensures that order events are consistently and accurately represented.\n  \n- **Demonstration Focus:**  \n  As a demo, the namespace serves to illustrate how order lifecycle events can be modeled using Avro schemas. It may be extended or refined for production use as needed."
     }
   ],
   "views": [],
@@ -722,7 +723,7 @@
   "creationTS": "2025-02-19T13:28:59.048Z",
   "GUID": "777fbee0-73a1-43a3-8272-fa6b5eb58dac",
   "isLineageEnabled": false,
-  "lastModifTS": "2025-02-25T14:54:05.459Z",
+  "lastModifTS": "2025-02-25T15:08:50.556Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -748,7 +749,7 @@
           {
             "GUID": "30f43a54-5e73-4f88-8b7a-2901a5790a14",
             "x": 1255.2000000000019,
-            "y": 1197.999999999999,
+            "y": 1196.9262295081958,
             "width": 349,
             "height": 348,
             "color": {}
@@ -756,7 +757,7 @@
           {
             "GUID": "1e046ba4-262c-46cf-a6c8-a5a5283f264d",
             "x": 927.2,
-            "y": 1194,
+            "y": 1192.9262295081967,
             "width": 294,
             "height": 200,
             "color": {}
@@ -764,7 +765,7 @@
           {
             "GUID": "3d49a16d-8a5b-4586-8705-330ebf282b83",
             "x": 934.7999999999997,
-            "y": 1426.3999999999992,
+            "y": 1425.3262295081959,
             "width": 302,
             "height": 84,
             "color": {}
@@ -779,7 +780,7 @@
         "buckets": [
           {
             "x": 887.2,
-            "y": 1154,
+            "y": 1152.9262295081967,
             "GUID": "0ce79e7c-133c-45e0-adcb-bf6f2de69d56"
           }
         ],

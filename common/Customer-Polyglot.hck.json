@@ -108,7 +108,8 @@
           "compositePrimaryKey": false,
           "compositeUniqueKey": false,
           "error": {
-            "refDescription": false
+            "refDescription": false,
+            "refPath": false
           },
           "refDescription": "Stores the default billing address for the customer. Used for invoicing, payment processing, and tax calculations."
         },
@@ -138,7 +139,9 @@
               "compositeUniqueKey": false,
               "displayName": "Address",
               "arrayItem": true,
-              "error": {}
+              "error": {
+                "refPath": false
+              }
             }
           ],
           "childType": "array",
@@ -227,7 +230,7 @@
             "hackoladeMeta": {},
             "isActivated": true,
             "primaryKey": false,
-            "required": false,
+            "required": true,
             "childType": "varchar",
             "type": "string",
             "compositeKey": [
@@ -243,7 +246,7 @@
             "hackoladeMeta": {},
             "isActivated": true,
             "primaryKey": false,
-            "required": false,
+            "required": true,
             "childType": "varchar",
             "type": "string",
             "compositeKey": [
@@ -261,7 +264,7 @@
             "hackoladeMeta": {},
             "isActivated": true,
             "primaryKey": false,
-            "required": false,
+            "required": true,
             "childType": "varchar",
             "type": "string",
             "compositeKey": [
@@ -283,6 +286,11 @@
         "compositePrimaryKey": false,
         "compositeUniqueKey": false,
         "GUID": "08a8411a-1281-468b-9ec4-cbe9179336a3",
+        "fieldRelativePath": "#/Address",
+        "fileType": "hackoladeSchema",
+        "kind": "relativePath",
+        "link": "Address-Polyglot.hck.json",
+        "childType": "object",
         "definitionRefs": [
           [
             "5cc94e26-8eb9-4b1c-a78d-a870d9f640db",
@@ -293,12 +301,7 @@
             "a569060a-b3b2-4f73-95c7-7c2e2145c273",
             "3ff559e8-d20f-432c-9ad8-5b93be0f1055"
           ]
-        ],
-        "childType": "object",
-        "link": "Address-Polyglot.hck.json",
-        "fieldRelativePath": "#/Address",
-        "kind": "relativePath",
-        "fileType": "hackoladeSchema"
+        ]
       }
     ],
     "GUID": "993e567a-09e9-47db-9254-e71c2dccbfc4"
@@ -319,7 +322,7 @@
   "GUID": "dca9ade7-ee0b-4953-b408-cc0e6b806e82",
   "isLineageEnabled": false,
   "polyglotModelPaths": [],
-  "lastModifTS": "2025-02-25T07:52:47.944Z",
+  "lastModifTS": "2025-02-25T14:58:41.470Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
