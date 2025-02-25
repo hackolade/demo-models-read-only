@@ -260,12 +260,12 @@
             "multipleTypes": [
               {
                 "type": "null",
-                "GUID": "e46a1202-81a6-47a1-a11a-9d908db948b6"
+                "GUID": "bda2c30b-d9a0-4da4-9e5f-44b6869a7941"
               },
               {
                 "childType": "string",
                 "type": "string",
-                "GUID": "650acfdc-c5c4-444e-8fd9-ede2aa00dfe0",
+                "GUID": "4cd5b2bc-3402-4b35-8539-0c735bc14894",
                 "error": {}
               }
             ],
@@ -292,13 +292,49 @@
             "code": "customer_reference"
           },
           {
+            "name": "Order date",
+            "type": "multiple",
+            "properties": [],
+            "multipleTypes": [
+              {
+                "type": "null",
+                "GUID": "c7176eb1-1972-4328-935c-e472c5a42fbc"
+              },
+              {
+                "index": true,
+                "alternateKey": false,
+                "childType": "number",
+                "type": "numeric",
+                "error": {},
+                "GUID": "6a84b690-55b7-4281-8e1a-37611c1ffba0",
+                "mode": "int",
+                "logicalType": "date"
+              }
+            ],
+            "isActivated": true,
+            "primaryKey": false,
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            },
+            "required": false,
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ],
+            "default": null,
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "GUID": "3a550c04-6ca2-4876-8ec9-89aa76ea1d13",
+            "code": "order_date"
+          },
+          {
             "name": "Total amount",
             "type": "multiple",
             "properties": [],
             "multipleTypes": [
               {
                 "type": "null",
-                "GUID": "7fc366ee-aaab-432d-b331-4428fc4795a9"
+                "GUID": "900cf741-e36c-4f12-b9be-c87e6ced7830"
               },
               {
                 "index": true,
@@ -306,7 +342,7 @@
                 "exclusiveMaximum": false,
                 "childType": "bytes",
                 "type": "string",
-                "GUID": "4787cb50-a7de-4d01-a195-d2dff2b9006a",
+                "GUID": "c6af9ccc-b16b-4c41-a974-f355dd7f228e",
                 "mode": "int",
                 "error": {},
                 "subtype": "decimal"
@@ -333,7 +369,7 @@
             "multipleTypes": [
               {
                 "type": "null",
-                "GUID": "7dae2f50-356f-4ce9-8baa-478d0be3d931"
+                "GUID": "4ff5efc1-5e7a-459a-bdf1-2576270a888d"
               },
               {
                 "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
@@ -345,7 +381,7 @@
                 ],
                 "childType": "enum",
                 "type": "string",
-                "GUID": "7e053f25-2ba4-4e06-8fe5-811a2049c4d7",
+                "GUID": "9e890c51-e608-40f7-b97b-d8f39760c4de",
                 "enum": [
                   "Pending",
                   "Shipped",
@@ -378,12 +414,12 @@
             "multipleTypes": [
               {
                 "type": "null",
-                "GUID": "71e8f08f-94c6-41f9-b16f-efc911ff3f0b"
+                "GUID": "df6b9038-b81b-45f5-a256-868f4498b374"
               },
               {
                 "childType": "string",
                 "type": "string",
-                "GUID": "edce20cd-b351-4915-addf-4b0af40f87b3",
+                "GUID": "ca6f1660-4ce1-400e-81b7-4e093697ba8d",
                 "error": {}
               }
             ],
@@ -445,12 +481,12 @@
                         "multipleTypes": [
                           {
                             "type": "null",
-                            "GUID": "13fa625f-7df4-435c-ad51-029a2de57df5"
+                            "GUID": "84ef613d-faf0-4c89-9bef-a2bb4ab3b397"
                           },
                           {
                             "childType": "string",
                             "type": "string",
-                            "GUID": "57f2d2d9-49bc-49cd-ab8f-8c23b91fe1c1",
+                            "GUID": "8bddde9e-3651-4cbf-8852-a10fbbeca075",
                             "error": {}
                           }
                         ],
@@ -476,12 +512,12 @@
                         "multipleTypes": [
                           {
                             "type": "null",
-                            "GUID": "67aec7e9-4d51-4e62-acde-18d5e7ab0b81"
+                            "GUID": "fe97d8a7-1506-4e7f-9800-8409f10d0ee6"
                           },
                           {
                             "childType": "string",
                             "type": "string",
-                            "GUID": "4cd329c4-2dde-4907-b9aa-9408987c6d66",
+                            "GUID": "6a413c0f-4a10-4a10-9ff4-3fe589e6d4c9",
                             "error": {}
                           }
                         ],
@@ -509,12 +545,12 @@
                         "multipleTypes": [
                           {
                             "type": "null",
-                            "GUID": "a6435efb-9580-4c88-9ea3-678408f11079"
+                            "GUID": "f1ba58bc-13f0-48d4-bb9b-edc6c9f54d42"
                           },
                           {
                             "childType": "string",
                             "type": "string",
-                            "GUID": "7de6573d-a2aa-4bef-bfb3-331a1603d832",
+                            "GUID": "62bb8e20-48fd-405c-b78c-c1346a060f7e",
                             "error": {}
                           }
                         ],
@@ -612,7 +648,7 @@
                             "multipleTypes": [
                               {
                                 "type": "null",
-                                "GUID": "9092b514-ec99-40c2-a18a-a917567a9f08"
+                                "GUID": "eaf1ffb7-dbae-4048-ac54-47c3977e5fb8"
                               },
                               {
                                 "index": true,
@@ -620,7 +656,7 @@
                                 "exclusiveMaximum": false,
                                 "childType": "bytes",
                                 "type": "string",
-                                "GUID": "2e3ff2bb-fd12-4ade-87f1-91d51be0cb51",
+                                "GUID": "d0c59790-0e87-4194-9a6e-5e701f85380b",
                                 "mode": "int",
                                 "error": {},
                                 "subtype": "decimal"
@@ -650,13 +686,13 @@
                             "multipleTypes": [
                               {
                                 "type": "null",
-                                "GUID": "f9d0d047-0993-4c75-bd79-a1525868845c"
+                                "GUID": "c0fec313-5dae-4b14-bf7f-634e60dce5f5"
                               },
                               {
                                 "tPrecision": 9,
                                 "childType": "number",
                                 "type": "numeric",
-                                "GUID": "8b08dbf7-d841-4e78-bd1b-293286513473",
+                                "GUID": "048b6c4c-5b88-4bc0-a2a4-fa7fa0925597",
                                 "error": {},
                                 "mode": "long",
                                 "logicalType": "local-timestamp-millis"
@@ -686,7 +722,7 @@
                             "multipleTypes": [
                               {
                                 "type": "null",
-                                "GUID": "fe5da7c0-3969-4a49-a126-ca675114c560"
+                                "GUID": "54b41d72-d6da-44c8-bca9-d2eb4fc4f2ab"
                               },
                               {
                                 "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
@@ -697,7 +733,7 @@
                                 ],
                                 "childType": "enum",
                                 "type": "string",
-                                "GUID": "266e52ff-7fea-425e-a6ba-1267f24ecf81",
+                                "GUID": "999e49ef-85d0-4db6-bc92-bad5613f9a01",
                                 "error": {
                                   "enum": false,
                                   "enums": [
@@ -737,7 +773,7 @@
                             "multipleTypes": [
                               {
                                 "type": "null",
-                                "GUID": "4ff72e09-2b77-4970-81fe-612d240ce883"
+                                "GUID": "d230c7ed-fb76-4060-a991-b1416aea9ce3"
                               },
                               {
                                 "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
@@ -748,7 +784,7 @@
                                 ],
                                 "childType": "enum",
                                 "type": "string",
-                                "GUID": "e140589f-0983-4cb3-8f2f-223d1da29e79",
+                                "GUID": "2f48e95b-1ce5-429a-b866-c1752070faf2",
                                 "enum": [
                                   "completed",
                                   "pending",
@@ -866,7 +902,7 @@
                             "multipleTypes": [
                               {
                                 "type": "null",
-                                "GUID": "c74c4b27-25f8-4b80-87b8-7b63aa047038"
+                                "GUID": "60bbbacf-8327-4649-8d37-fffed6f7f7b8"
                               },
                               {
                                 "index": true,
@@ -874,7 +910,7 @@
                                 "exclusiveMaximum": false,
                                 "childType": "number",
                                 "type": "numeric",
-                                "GUID": "55b18754-0048-4ddd-a447-189397506ac1",
+                                "GUID": "a75db676-2dd4-4baa-9f12-6fe0c4ced6b9",
                                 "error": {},
                                 "mode": "int"
                               }
@@ -907,12 +943,9 @@
                             "description": "A unique identifier assigned to each product for inventory management and tracking purposes. It helps differentiate products and streamline the ordering process.",
                             "GUID": "acdd584f-e173-4126-a669-6ea2f414ffd0",
                             "code": "sku",
-                            "foreignCollection": "f7ceef84-81de-57ff-9055-5bb0b3337f02",
-                            "foreignField": [
-                              "f7ceef84-81de-57ff-9055-5bb0b3337f02",
-                              "a32b91a4-33c4-5028-815c-b44e4800f498"
-                            ],
-                            "relationshipType": "Foreign Key"
+                            "foreignCollection": "",
+                            "foreignField": [],
+                            "relationshipType": ""
                           },
                           {
                             "name": "Name",
@@ -921,7 +954,7 @@
                             "multipleTypes": [
                               {
                                 "type": "null",
-                                "GUID": "757e11ff-5fd4-4dbc-9972-0f10dcd2412b"
+                                "GUID": "1cb79f6a-e632-4ced-9ba1-785adc4aaf66"
                               },
                               {
                                 "childType": "string",
@@ -929,7 +962,7 @@
                                 "error": {
                                   "name": false
                                 },
-                                "GUID": "7c4ebbec-45e2-42f4-adb4-ad07513fe5af"
+                                "GUID": "2028950d-ffff-4130-ba0c-dfd90a17c2e8"
                               }
                             ],
                             "isActivated": true,
@@ -955,7 +988,7 @@
                             "multipleTypes": [
                               {
                                 "type": "null",
-                                "GUID": "996dd00e-461b-4723-823a-bf17ecea2713"
+                                "GUID": "e27e9891-e992-4434-b4cf-854ab44d6a2e"
                               },
                               {
                                 "childType": "string",
@@ -963,7 +996,7 @@
                                 "error": {
                                   "name": false
                                 },
-                                "GUID": "870584d5-bc36-4b71-9a15-0c59cc65cbc2"
+                                "GUID": "58f1cf7b-03b5-4147-81d5-ce16a191255d"
                               }
                             ],
                             "isActivated": true,
@@ -1142,7 +1175,15 @@
     "GUID": "35a0eab5-51f4-4ad5-a521-f6e7e313f381"
   },
   "sources": [],
-  "decorativeSymbols": [],
+  "decorativeSymbols": [
+    {
+      "GUID": "bcb8207d-276b-4099-91b4-eeac7541a07e",
+      "name": "Disclaimer",
+      "type": "annotation",
+      "disableInitialFocus": true,
+      "value": "This Avro Kafka Order Management Model is intended for illustration purposes only and provides a simplified representation of an event-driven order management system within an ecommerce platform.\n\nWhile it captures essential events and Avro schema definitions, it does not encompass all potential complexities or best practices that may be applicable in a comprehensive production implementation."
+    }
+  ],
   "dbVendor": "Avro",
   "schemaNameStrategy": "TopicNameStrategy",
   "appTarget": "Avro",
@@ -1151,7 +1192,7 @@
   "isLineageEnabled": false,
   "hackoladeMeta": {
     "validationErrors": {
-      "modelName": false
+      "description": false
     },
     "namingConvention": "code"
   },
@@ -1164,17 +1205,18 @@
     }
   ],
   "code": "order_management",
-  "lastModifTS": "2025-02-21T15:08:19.869Z",
+  "lastModifTS": "2025-02-25T07:09:15.635Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
     "pluginName": "Avro",
-    "pluginVersion": "0.2.9",
+    "pluginVersion": "0.2.10",
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
     "version": "8.0.2"
   },
+  "description": "This Avro Kafka Order Management Model is intended for illustration purposes only and provides a simplified representation of an event-driven order management system within an ecommerce platform.\n\nWhile it captures essential events and Avro schema definitions, it does not encompass all potential complexities or best practices that may be applicable in a comprehensive production implementation.",
   "settings": {
     "centralPane": {
       "dbLevel": {
@@ -1219,7 +1261,18 @@
           "defaultLinkLength": 300
         },
         "diagramViews": [],
-        "decorativeSymbols": [],
+        "decorativeSymbols": [
+          {
+            "GUID": "bcb8207d-276b-4099-91b4-eeac7541a07e",
+            "x": 1326,
+            "y": 555,
+            "height": 183,
+            "width": 393,
+            "color": {
+              "hex": "#fec107"
+            }
+          }
+        ],
         "nestedCollectionsLayout": "horizontal",
         "options": [
           {

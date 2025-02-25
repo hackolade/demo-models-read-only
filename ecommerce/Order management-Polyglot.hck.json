@@ -47,6 +47,25 @@
           "relationshipType": "Foreign Key"
         },
         {
+          "name": "Order date",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "index": true,
+          "required": false,
+          "alternateKey": false,
+          "childType": "date",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "error": {},
+          "primaryKey": false,
+          "GUID": "3a550c04-6ca2-4876-8ec9-89aa76ea1d13"
+        },
+        {
           "name": "Total amount",
           "hackoladeMeta": {},
           "isActivated": true,
@@ -329,14 +348,13 @@
                     "name": false,
                     "refPath": false
                   },
-                  "parentRelationship": "a8252ff3-4c2a-4575-ab6e-688663492aca",
-                  "foreignCollection": "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648",
-                  "foreignField": [
-                    "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648",
-                    "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
-                    "6b6386de-f9dc-46d9-9fc2-16d3c2c58340"
-                  ],
-                  "relationshipType": "Foreign Key"
+                  "parentRelationship": "",
+                  "foreignCollection": "",
+                  "foreignField": [],
+                  "relationshipType": "",
+                  "childRelationships": [
+                    "9883a02f-9c36-46f5-adeb-3ba9460724bf"
+                  ]
                 },
                 {
                   "GUID": "39a652f4-defc-4297-8814-d16fdb749d18",
@@ -482,44 +500,6 @@
       ]
     },
     {
-      "GUID": "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648",
-      "type": "reference",
-      "$ref": "#external/definitions/Product",
-      "refType": "polyglot",
-      "ref": "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
-      "refIdPath": [
-        "c67522a8-66b6-4046-89f1-2190faa20f67",
-        "c2c1c7a2-2fd6-4b39-b890-9bf77cfa26c7",
-        "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b"
-      ],
-      "isActivated": true,
-      "collectionName": "Product",
-      "bucketId": "893adac0-c450-4c13-b69e-974ee5e93117",
-      "properties": [],
-      "definitions": {
-        "properties": [],
-        "GUID": "d87de0ac-964a-409d-9986-e3db66156c34"
-      },
-      "additionalProperties": false,
-      "error": {
-        "refPath": false
-      },
-      "referenceDiff": {
-        "properties": [
-          {
-            "GUID": "6b6386de-f9dc-46d9-9fc2-16d3c2c58340",
-            "childRelationships": [
-              "a8252ff3-4c2a-4575-ab6e-688663492aca"
-            ]
-          },
-          {
-            "GUID": "6ef810f9-c366-426b-9aa7-97f54138905f"
-          }
-        ]
-      },
-      "description": "Represents the items available for sale in the e-commerce platform. It encompasses essential details about each product, including its **name**, **description**, **pricing**, and associations with **categories** and **suppliers**. This entity is crucial for managing inventory and facilitating sales transactions."
-    },
-    {
       "GUID": "e2ba0994-1763-4b13-8b19-e7a0d9f95edb",
       "type": "reference",
       "$ref": "#external/definitions/Customer",
@@ -552,26 +532,43 @@
           }
         ]
       }
+    },
+    {
+      "GUID": "3ef82e26-0f96-48f1-9603-4c737037815d",
+      "type": "reference",
+      "$ref": "#external/definitions/Product",
+      "refType": "polyglot",
+      "ref": "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
+      "refIdPath": [
+        "c67522a8-66b6-4046-89f1-2190faa20f67",
+        "c2c1c7a2-2fd6-4b39-b890-9bf77cfa26c7",
+        "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b"
+      ],
+      "isActivated": true,
+      "collectionName": "Product",
+      "bucketId": "38a4f489-8d86-47f3-8cd5-bc666ce58741",
+      "properties": [],
+      "definitions": {
+        "properties": [],
+        "GUID": "ac0c7f99-3d20-4c7a-b96e-dc6b027ceb7a"
+      },
+      "description": "Represents the items available for sale in the e-commerce platform. It encompasses essential details about each product, including its **name**, **description**, **pricing**, and associations with **categories** and **suppliers**. This entity is crucial for managing inventory and facilitating sales transactions.",
+      "additionalProperties": false,
+      "referenceDiff": {
+        "properties": [
+          {
+            "GUID": "6b6386de-f9dc-46d9-9fc2-16d3c2c58340",
+            "relationshipType": "",
+            "foreignCollection": "",
+            "foreignField": [],
+            "parentRelationship": "",
+            "childRelationships": []
+          }
+        ]
+      }
     }
   ],
   "buckets": [
-    {
-      "name": "Product management",
-      "type": "bucket",
-      "collectionIds": [
-        "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648"
-      ],
-      "backgroundColor": {
-        "r": 216,
-        "g": 0,
-        "b": 115,
-        "a": 1
-      },
-      "show": true,
-      "isActivated": true,
-      "indexes": [],
-      "GUID": "893adac0-c450-4c13-b69e-974ee5e93117"
-    },
     {
       "name": "Order management",
       "type": "bucket",
@@ -612,6 +609,31 @@
       "collectionIds": [
         "e2ba0994-1763-4b13-8b19-e7a0d9f95edb"
       ]
+    },
+    {
+      "GUID": "38a4f489-8d86-47f3-8cd5-bc666ce58741",
+      "name": "Product management",
+      "type": "reference",
+      "$ref": "#external/definitions/Product management",
+      "refType": "polyglot",
+      "ref": "4631c9fb-41fb-4647-a18e-f22367a656c5",
+      "refIdPath": [
+        "c67522a8-66b6-4046-89f1-2190faa20f67",
+        "c2c1c7a2-2fd6-4b39-b890-9bf77cfa26c7",
+        "4631c9fb-41fb-4647-a18e-f22367a656c5"
+      ],
+      "isActivated": true,
+      "backgroundColor": {
+        "r": 216,
+        "g": 0,
+        "b": 115,
+        "a": 1
+      },
+      "show": true,
+      "collectionIds": [
+        "3ef82e26-0f96-48f1-9603-4c737037815d"
+      ],
+      "description": "Serves as a comprehensive framework for managing all aspects of products within the e-commerce system. This entity encompasses various components that facilitate the organization, tracking, and sale of products, ensuring a streamlined process from supplier management to customer sales."
     }
   ],
   "views": [],
@@ -650,11 +672,11 @@
         "shape": [
           {
             "x": 1378.5380761523052,
-            "y": 1027.8563794255192
+            "y": 1051.8563794255192
           },
           {
             "x": 1299.1670048954331,
-            "y": 1027.8563794255192
+            "y": 1051.8563794255192
           },
           {
             "x": 1299.1670048954331,
@@ -672,17 +694,9 @@
       }
     },
     {
-      "name": "concerns",
+      "name": "contains",
       "relationshipType": "Foreign Key",
       "parentField": [
-        [
-          "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648",
-          "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
-          "6b6386de-f9dc-46d9-9fc2-16d3c2c58340"
-        ]
-      ],
-      "parentCardinality": "1",
-      "childField": [
         [
           "46385b4a-a728-4579-8b09-10e9e7c52c99",
           "72bc07b9-d511-42e0-966a-7e5f14513040",
@@ -690,59 +704,23 @@
           "acdd584f-e173-4126-a669-6ea2f414ffd0"
         ]
       ],
-      "isActivated": true,
-      "childCardinality": "0..n",
-      "level": "field",
-      "GUID": "a8252ff3-4c2a-4575-ab6e-688663492aca",
-      "lineSize": 2,
-      "parentCollection": "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648",
-      "childCollection": "46385b4a-a728-4579-8b09-10e9e7c52c99",
-      "hackoladeStyles": {
-        "GUID": "650906b5-4129-4844-a1db-8255ee45b33e",
-        "autoPositioning": true,
-        "type": "Orthogonal",
-        "thickness": 2,
-        "color": "#79c4ff",
-        "dataType": "",
-        "shape": [
-          {
-            "x": 1817.5380761523052,
-            "y": 1027.8563794255192
-          },
-          {
-            "x": 1899.9854805518949,
-            "y": 1027.8563794255192
-          },
-          {
-            "x": 1899.9854805518949,
-            "y": 1039.7561443430177
-          },
-          {
-            "x": 1982.4328849514845,
-            "y": 1039.7561443430177
-          }
-        ],
-        "sides": [
-          "right",
-          "left"
+      "parentCardinality": "0..n",
+      "childField": [
+        [
+          "3ef82e26-0f96-48f1-9603-4c737037815d",
+          "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
+          "6b6386de-f9dc-46d9-9fc2-16d3c2c58340"
         ]
-      }
-    },
-    {
-      "name": "contains",
-      "relationshipType": "Foreign Master",
-      "parentField": [],
-      "parentCardinality": "1",
-      "childField": [],
+      ],
       "isActivated": true,
       "childCardinality": "1..n",
-      "level": "field",
-      "GUID": "6488463e-2696-426a-87bf-5abad797879b",
-      "lineSize": 2,
       "parentCollection": "46385b4a-a728-4579-8b09-10e9e7c52c99",
-      "childCollection": "",
+      "childCollection": "3ef82e26-0f96-48f1-9603-4c737037815d",
+      "GUID": "9883a02f-9c36-46f5-adeb-3ba9460724bf",
+      "level": "field",
+      "lineSize": 2,
       "hackoladeStyles": {
-        "GUID": "05d9a895-e0b8-42d8-8f0e-b99e7348bd1a",
+        "GUID": "17a65d6d-b207-4aff-80aa-e7b43ed49b45",
         "autoPositioning": true,
         "type": "Orthogonal",
         "thickness": 2,
@@ -750,69 +728,25 @@
         "dataType": "",
         "shape": [
           {
-            "x": 1968.6806947227808,
-            "y": 1041.7368069472293
+            "x": 2061.347586735294,
+            "y": 1138.0861891492136
           },
           {
-            "x": 1889.609385437543,
-            "y": 1041.7368069472293
+            "x": 1944.4428314437996,
+            "y": 1138.0861891492136
           },
           {
-            "x": 1889.609385437543,
-            "y": 990.3563794255192
+            "x": 1944.4428314437996,
+            "y": 1136.3563794255192
           },
           {
-            "x": 1810.5380761523052,
-            "y": 990.3563794255192
+            "x": 1827.5380761523052,
+            "y": 1136.3563794255192
           }
         ],
         "sides": [
           "left",
           "right"
-        ]
-      }
-    },
-    {
-      "name": "grants",
-      "relationshipType": "Foreign Master",
-      "parentField": [],
-      "parentCardinality": "1",
-      "childField": [],
-      "isActivated": true,
-      "childCardinality": "1",
-      "level": "field",
-      "GUID": "638ede08-fc4b-448b-a7c6-35f0eba2a726",
-      "lineSize": 2,
-      "parentCollection": "46385b4a-a728-4579-8b09-10e9e7c52c99",
-      "childCollection": "",
-      "hackoladeStyles": {
-        "GUID": "6d5d96ae-02e7-42f0-aa8f-08ca7d0ee499",
-        "autoPositioning": true,
-        "type": "Orthogonal",
-        "thickness": 2,
-        "color": "#79c4ff",
-        "dataType": "",
-        "shape": [
-          {
-            "x": 1724.454005090437,
-            "y": 1399.4742493294116
-          },
-          {
-            "x": 1724.454005090437,
-            "y": 1314.4153143774654
-          },
-          {
-            "x": 1596.0380761523052,
-            "y": 1314.4153143774654
-          },
-          {
-            "x": 1596.0380761523052,
-            "y": 1229.3563794255192
-          }
-        ],
-        "sides": [
-          "top",
-          "bottom"
         ]
       }
     }
@@ -824,10 +758,6 @@
     "17ee1d91-fa06-4638-831b-a7766df0e191": "Total amount",
     "6dac6534-e11a-49ac-a049-30f3b1207b88": "Status",
     "f8f34cd7-4027-46ad-9160-b0dcaa29a509": "placed",
-    "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648": "Product",
-    "893adac0-c450-4c13-b69e-974ee5e93117": "Product management",
-    "a8252ff3-4c2a-4575-ab6e-688663492aca": "concerns",
-    "6488463e-2696-426a-87bf-5abad797879b": "contains",
     "d8e8b56d-827d-4fd1-bea0-07bd5bab9c2e": "Tracking number",
     "2dc5cd19-9bb7-4405-a00f-69af0c39ea24": "Identifier",
     "aac0636d-630a-49f5-b2ab-0a0092f61cd3": "Disclaimer",
@@ -844,7 +774,6 @@
     "e2ba0994-1763-4b13-8b19-e7a0d9f95edb": "Customer",
     "a47b2731-dfa7-4364-91e6-4601ec648539": "Customer management",
     "6c26e788-797f-4f45-b8df-f2cdeb9b2eab": "Disclaimer",
-    "638ede08-fc4b-448b-a7c6-35f0eba2a726": "grants",
     "268d0db8-65bc-4a7a-a9f6-5348a7934439": "SKU",
     "acdd584f-e173-4126-a669-6ea2f414ffd0": "SKU",
     "865adb6d-3499-4c17-8661-9b3b4333ca8c": "Name",
@@ -855,7 +784,11 @@
     "c7ccd811-1374-4a95-96b8-1bbb7eda7590": "Currency",
     "91f49cfb-0486-4406-9e30-f5b68d67f1fe": "Amount",
     "cf7c7d06-9e2a-490d-852d-29010e9eefd8": "Amount",
-    "6adc1c99-dca5-4d92-88fd-6e27edf175ce": "Customer reference"
+    "6adc1c99-dca5-4d92-88fd-6e27edf175ce": "Customer reference",
+    "3a550c04-6ca2-4876-8ec9-89aa76ea1d13": "Order date",
+    "3ef82e26-0f96-48f1-9603-4c737037815d": "Product",
+    "38a4f489-8d86-47f3-8cd5-bc666ce58741": "Product management",
+    "9883a02f-9c36-46f5-adeb-3ba9460724bf": "contains"
   },
   "definitions": {
     "type": "definitions",
@@ -865,281 +798,6 @@
   "polyglotDefinitions": {
     "type": "polyglotDefinitions",
     "properties": [
-      {
-        "GUID": "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
-        "collectionName": "Product",
-        "type": "object",
-        "properties": [
-          {
-            "primaryKey": true,
-            "required": true,
-            "alternateKey": false,
-            "childType": "varchar",
-            "type": "string",
-            "compositePrimaryKey": false,
-            "compositeUniqueKey": false,
-            "name": "SKU",
-            "hackoladeMeta": {},
-            "isActivated": true,
-            "GUID": "6b6386de-f9dc-46d9-9fc2-16d3c2c58340",
-            "description": "A unique identifier assigned to each product for inventory management and tracking purposes. It helps differentiate products and streamline the ordering process.",
-            "mode": "",
-            "compositeKey": [
-              "compositePrimaryKey",
-              "compositeUniqueKey"
-            ]
-          },
-          {
-            "primaryKey": false,
-            "required": false,
-            "alternateKey": false,
-            "childType": "varchar",
-            "type": "string",
-            "compositePrimaryKey": false,
-            "compositeUniqueKey": false,
-            "name": "Name",
-            "hackoladeMeta": {},
-            "isActivated": true,
-            "GUID": "c5f20bbd-e577-4a70-b532-13e319e3ef18",
-            "mode": "",
-            "compositeKey": [
-              "compositePrimaryKey",
-              "compositeUniqueKey"
-            ]
-          },
-          {
-            "primaryKey": false,
-            "required": false,
-            "alternateKey": false,
-            "childType": "varchar",
-            "type": "string",
-            "compositePrimaryKey": false,
-            "compositeUniqueKey": false,
-            "name": "Category name",
-            "hackoladeMeta": {},
-            "isActivated": true,
-            "GUID": "4d678e93-e8cb-434c-9789-0d411b30a433",
-            "foreignCollection": "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
-            "foreignField": [
-              "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
-              "97db87db-8fbe-41bb-8850-34193c9ee07e"
-            ],
-            "relationshipType": "Foreign Key",
-            "mode": "",
-            "compositeKey": [
-              "compositePrimaryKey",
-              "compositeUniqueKey"
-            ]
-          },
-          {
-            "primaryKey": false,
-            "required": false,
-            "alternateKey": false,
-            "childType": "varchar",
-            "type": "string",
-            "compositePrimaryKey": false,
-            "compositeUniqueKey": false,
-            "name": "Supplier code",
-            "hackoladeMeta": {},
-            "isActivated": true,
-            "GUID": "a898b734-3304-48c1-b45d-98c1f7cc3808",
-            "mode": "",
-            "compositeKey": [
-              "compositePrimaryKey",
-              "compositeUniqueKey"
-            ]
-          },
-          {
-            "primaryKey": false,
-            "required": false,
-            "alternateKey": false,
-            "childType": "varchar",
-            "type": "string",
-            "compositePrimaryKey": false,
-            "compositeUniqueKey": false,
-            "name": "Description",
-            "hackoladeMeta": {},
-            "isActivated": true,
-            "GUID": "6ef810f9-c366-426b-9aa7-97f54138905f",
-            "mode": "",
-            "compositeKey": [
-              "compositePrimaryKey",
-              "compositeUniqueKey"
-            ]
-          },
-          {
-            "properties": [
-              {
-                "primaryKey": false,
-                "required": false,
-                "alternateKey": false,
-                "childType": "varchar",
-                "type": "string",
-                "compositePrimaryKey": false,
-                "compositeUniqueKey": false,
-                "hackoladeMeta": {},
-                "isActivated": true,
-                "GUID": "eb09feb9-6460-4193-b564-2d31c3ca40b4",
-                "arrayItem": true,
-                "displayName": "url",
-                "mode": "",
-                "compositeKey": [
-                  "compositePrimaryKey",
-                  "compositeUniqueKey"
-                ]
-              }
-            ],
-            "alternateKey": false,
-            "childType": "array",
-            "type": "array",
-            "compositePrimaryKey": false,
-            "compositeUniqueKey": false,
-            "name": "Images",
-            "hackoladeMeta": {},
-            "isActivated": true,
-            "primaryKey": false,
-            "required": false,
-            "GUID": "dc12c121-c011-42fd-865f-1a0fcd657fc0",
-            "description": "An array of URLs representing images of the product for display on the website. These images enhance the customer experience by providing visual context and details about the product.",
-            "compositeKey": [
-              "compositePrimaryKey",
-              "compositeUniqueKey"
-            ]
-          },
-          {
-            "properties": [
-              {
-                "properties": [
-                  {
-                    "required": true,
-                    "primaryKey": false,
-                    "alternateKey": false,
-                    "childType": "enum",
-                    "type": "string",
-                    "compositePrimaryKey": false,
-                    "compositeUniqueKey": false,
-                    "name": "Currency",
-                    "hackoladeMeta": {},
-                    "isActivated": true,
-                    "GUID": "ea782112-8bc7-4902-98a0-7dc8ea8207e5",
-                    "enum": [
-                      "USD",
-                      "EUR",
-                      "JPY",
-                      "GBP",
-                      "AUD",
-                      "CAD",
-                      "CHF",
-                      "CNY",
-                      "SEK",
-                      "NZD",
-                      "INR",
-                      "MXN",
-                      "SGD",
-                      "HKD"
-                    ],
-                    "compositeKey": [
-                      "compositePrimaryKey",
-                      "compositeUniqueKey"
-                    ]
-                  },
-                  {
-                    "exclusiveMinimum": false,
-                    "exclusiveMaximum": false,
-                    "primaryKey": false,
-                    "required": true,
-                    "alternateKey": false,
-                    "childType": "number",
-                    "type": "numeric",
-                    "compositePrimaryKey": false,
-                    "compositeUniqueKey": false,
-                    "name": "Amount",
-                    "hackoladeMeta": {},
-                    "isActivated": true,
-                    "GUID": "bfcda36f-8a7b-421b-ba98-8a9b313affc6",
-                    "mode": "decimal",
-                    "foreignCollection": "",
-                    "foreignField": [],
-                    "compositeKey": [
-                      "compositePrimaryKey",
-                      "compositeUniqueKey"
-                    ]
-                  },
-                  {
-                    "required": true,
-                    "alternateKey": false,
-                    "childType": "date",
-                    "type": "string",
-                    "compositePrimaryKey": false,
-                    "compositeUniqueKey": false,
-                    "name": "Effective date",
-                    "hackoladeMeta": {},
-                    "isActivated": true,
-                    "primaryKey": false,
-                    "GUID": "2c86253b-1d80-4798-ad2b-3bef74fa239c",
-                    "compositeKey": [
-                      "compositePrimaryKey",
-                      "compositeUniqueKey"
-                    ]
-                  }
-                ],
-                "additionalProperties": false,
-                "alternateKey": false,
-                "childType": "object",
-                "type": "document",
-                "compositePrimaryKey": false,
-                "compositeUniqueKey": false,
-                "hackoladeMeta": {},
-                "isActivated": true,
-                "GUID": "1002c3a4-64cd-46ec-b4ff-e330099caa23",
-                "arrayItem": true,
-                "primaryKey": false,
-                "required": false,
-                "displayName": "Price",
-                "compositeKey": [
-                  "compositePrimaryKey",
-                  "compositeUniqueKey"
-                ]
-              }
-            ],
-            "alternateKey": false,
-            "childType": "array",
-            "type": "array",
-            "compositePrimaryKey": false,
-            "compositeUniqueKey": false,
-            "name": "Prices",
-            "hackoladeMeta": {},
-            "isActivated": true,
-            "primaryKey": false,
-            "required": false,
-            "GUID": "097524b6-a4e7-4091-bf57-be02308a2816",
-            "description": "An array of price records associated with the product, each linked to an **effective date**. This allows for tracking price changes over time and supports promotional pricing strategies.",
-            "compositeKey": [
-              "compositePrimaryKey",
-              "compositeUniqueKey"
-            ]
-          }
-        ],
-        "definitions": {
-          "type": "definitions",
-          "properties": [],
-          "GUID": "5be067f0-fa8e-4f4c-9404-3e82c95124cf"
-        },
-        "isActivated": true,
-        "additionalProperties": false,
-        "bucketId": "4631c9fb-41fb-4647-a18e-f22367a656c5",
-        "description": "Represents the items available for sale in the e-commerce platform. It encompasses essential details about each product, including its **name**, **description**, **pricing**, and associations with **categories** and **suppliers**. This entity is crucial for managing inventory and facilitating sales transactions.",
-        "definitionEntityType": "collection",
-        "fileType": "hackoladeSchema",
-        "definitionRefs": [
-          [
-            "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648"
-          ]
-        ],
-        "kind": "relativePath",
-        "link": "../merchandising/Product-Polyglot.hck.json",
-        "fieldRelativePath": "#/Product"
-      },
       {
         "GUID": "5cc94e26-8eb9-4b1c-a78d-a870d9f640db",
         "collectionName": "Customer",
@@ -1474,6 +1132,309 @@
         "kind": "relativePath",
         "link": "../common/Customer-Polyglot.hck.json",
         "fieldRelativePath": "#/Customer management"
+      },
+      {
+        "GUID": "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
+        "collectionName": "Product",
+        "type": "object",
+        "properties": [
+          {
+            "primaryKey": true,
+            "required": true,
+            "alternateKey": false,
+            "childType": "varchar",
+            "type": "string",
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "SKU",
+            "hackoladeMeta": {},
+            "isActivated": true,
+            "GUID": "6b6386de-f9dc-46d9-9fc2-16d3c2c58340",
+            "description": "A unique identifier assigned to each product for inventory management and tracking purposes. It helps differentiate products and streamline the ordering process.",
+            "mode": "",
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ]
+          },
+          {
+            "primaryKey": false,
+            "required": false,
+            "alternateKey": false,
+            "childType": "varchar",
+            "type": "string",
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "Name",
+            "hackoladeMeta": {},
+            "isActivated": true,
+            "GUID": "c5f20bbd-e577-4a70-b532-13e319e3ef18",
+            "mode": "",
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ]
+          },
+          {
+            "primaryKey": false,
+            "required": false,
+            "alternateKey": false,
+            "childType": "varchar",
+            "type": "string",
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "Category name",
+            "hackoladeMeta": {},
+            "isActivated": true,
+            "GUID": "4d678e93-e8cb-434c-9789-0d411b30a433",
+            "foreignCollection": "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
+            "foreignField": [
+              "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
+              "97db87db-8fbe-41bb-8850-34193c9ee07e"
+            ],
+            "relationshipType": "Foreign Key",
+            "mode": "",
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ]
+          },
+          {
+            "primaryKey": false,
+            "required": false,
+            "alternateKey": false,
+            "childType": "varchar",
+            "type": "string",
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "Supplier code",
+            "hackoladeMeta": {},
+            "isActivated": true,
+            "GUID": "a898b734-3304-48c1-b45d-98c1f7cc3808",
+            "mode": "",
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ]
+          },
+          {
+            "primaryKey": false,
+            "required": false,
+            "alternateKey": false,
+            "childType": "varchar",
+            "type": "string",
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "Description",
+            "hackoladeMeta": {},
+            "isActivated": true,
+            "GUID": "6ef810f9-c366-426b-9aa7-97f54138905f",
+            "mode": "",
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ]
+          },
+          {
+            "properties": [
+              {
+                "primaryKey": false,
+                "required": false,
+                "alternateKey": false,
+                "childType": "varchar",
+                "type": "string",
+                "compositePrimaryKey": false,
+                "compositeUniqueKey": false,
+                "hackoladeMeta": {},
+                "isActivated": true,
+                "GUID": "eb09feb9-6460-4193-b564-2d31c3ca40b4",
+                "arrayItem": true,
+                "displayName": "url",
+                "mode": "",
+                "compositeKey": [
+                  "compositePrimaryKey",
+                  "compositeUniqueKey"
+                ]
+              }
+            ],
+            "alternateKey": false,
+            "childType": "array",
+            "type": "array",
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "Images",
+            "hackoladeMeta": {},
+            "isActivated": true,
+            "primaryKey": false,
+            "required": false,
+            "GUID": "dc12c121-c011-42fd-865f-1a0fcd657fc0",
+            "description": "An array of URLs representing images of the product for display on the website. These images enhance the customer experience by providing visual context and details about the product.",
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ]
+          },
+          {
+            "properties": [
+              {
+                "properties": [
+                  {
+                    "required": true,
+                    "primaryKey": false,
+                    "alternateKey": false,
+                    "childType": "enum",
+                    "type": "string",
+                    "compositePrimaryKey": false,
+                    "compositeUniqueKey": false,
+                    "name": "Currency",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "GUID": "ea782112-8bc7-4902-98a0-7dc8ea8207e5",
+                    "enum": [
+                      "USD",
+                      "EUR",
+                      "JPY",
+                      "GBP",
+                      "AUD",
+                      "CAD",
+                      "CHF",
+                      "CNY",
+                      "SEK",
+                      "NZD",
+                      "INR",
+                      "MXN",
+                      "SGD",
+                      "HKD"
+                    ],
+                    "compositeKey": [
+                      "compositePrimaryKey",
+                      "compositeUniqueKey"
+                    ]
+                  },
+                  {
+                    "exclusiveMinimum": false,
+                    "exclusiveMaximum": false,
+                    "primaryKey": false,
+                    "required": true,
+                    "alternateKey": false,
+                    "childType": "number",
+                    "type": "numeric",
+                    "compositePrimaryKey": false,
+                    "compositeUniqueKey": false,
+                    "name": "Amount",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "GUID": "bfcda36f-8a7b-421b-ba98-8a9b313affc6",
+                    "mode": "decimal",
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "compositeKey": [
+                      "compositePrimaryKey",
+                      "compositeUniqueKey"
+                    ]
+                  },
+                  {
+                    "required": true,
+                    "alternateKey": false,
+                    "childType": "date",
+                    "type": "string",
+                    "compositePrimaryKey": false,
+                    "compositeUniqueKey": false,
+                    "name": "Effective date",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "GUID": "2c86253b-1d80-4798-ad2b-3bef74fa239c",
+                    "compositeKey": [
+                      "compositePrimaryKey",
+                      "compositeUniqueKey"
+                    ]
+                  }
+                ],
+                "additionalProperties": false,
+                "alternateKey": false,
+                "childType": "object",
+                "type": "document",
+                "compositePrimaryKey": false,
+                "compositeUniqueKey": false,
+                "hackoladeMeta": {},
+                "isActivated": true,
+                "GUID": "1002c3a4-64cd-46ec-b4ff-e330099caa23",
+                "arrayItem": true,
+                "primaryKey": false,
+                "required": false,
+                "displayName": "Price",
+                "compositeKey": [
+                  "compositePrimaryKey",
+                  "compositeUniqueKey"
+                ]
+              }
+            ],
+            "alternateKey": false,
+            "childType": "array",
+            "type": "array",
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "Prices",
+            "hackoladeMeta": {},
+            "isActivated": true,
+            "primaryKey": false,
+            "required": false,
+            "GUID": "097524b6-a4e7-4091-bf57-be02308a2816",
+            "description": "An array of price records associated with the product, each linked to an **effective date**. This allows for tracking price changes over time and supports promotional pricing strategies.",
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ]
+          }
+        ],
+        "definitions": {
+          "type": "definitions",
+          "properties": [],
+          "GUID": "5be067f0-fa8e-4f4c-9404-3e82c95124cf"
+        },
+        "isActivated": true,
+        "additionalProperties": false,
+        "bucketId": "4631c9fb-41fb-4647-a18e-f22367a656c5",
+        "description": "Represents the items available for sale in the e-commerce platform. It encompasses essential details about each product, including its **name**, **description**, **pricing**, and associations with **categories** and **suppliers**. This entity is crucial for managing inventory and facilitating sales transactions.",
+        "definitionEntityType": "collection",
+        "link": "../merchandising/Product-Polyglot.hck.json",
+        "kind": "relativePath",
+        "fieldRelativePath": "#/Product management/Product",
+        "fileType": "hackoladeSchema",
+        "definitionRefs": [
+          [
+            "3ef82e26-0f96-48f1-9603-4c737037815d"
+          ]
+        ]
+      },
+      {
+        "name": "Product management",
+        "type": "bucket",
+        "collectionIds": [
+          "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b"
+        ],
+        "backgroundColor": {
+          "r": 216,
+          "g": 0,
+          "b": 115,
+          "a": 1
+        },
+        "show": true,
+        "isActivated": true,
+        "indexes": [],
+        "GUID": "4631c9fb-41fb-4647-a18e-f22367a656c5",
+        "description": "Serves as a comprehensive framework for managing all aspects of products within the e-commerce system. This entity encompasses various components that facilitate the organization, tracking, and sale of products, ensuring a streamlined process from supplier management to customer sales.",
+        "definitionEntityType": "bucket",
+        "link": "../merchandising/Product-Polyglot.hck.json",
+        "kind": "relativePath",
+        "fieldRelativePath": "#/Product management",
+        "fileType": "hackoladeSchema",
+        "definitionRefs": [
+          [
+            "38a4f489-8d86-47f3-8cd5-bc666ce58741"
+          ]
+        ]
       }
     ],
     "GUID": "c2c1c7a2-2fd6-4b39-b890-9bf77cfa26c7"
@@ -1748,19 +1709,19 @@
   "isLineageEnabled": false,
   "polyglotModelPaths": [
     {
-      "GUID": "39854a9d-c389-4193-a001-f0f012ab1dbd",
-      "polyglotModelName": "Product-Polyglot.hck",
-      "polyglotModelPath": "../merchandising/Product-Polyglot.hck.json",
-      "normalization": false
-    },
-    {
       "GUID": "814c59e0-6932-46af-afc6-dd578cadb3d9",
       "polyglotModelName": "Customer-Polyglot.hck",
       "polyglotModelPath": "../common/Customer-Polyglot.hck.json",
       "normalization": false
+    },
+    {
+      "GUID": "d249a1ad-1b9d-4526-8f11-0b0e2f1df3a4",
+      "polyglotModelName": "Product-Polyglot.hck",
+      "polyglotModelPath": "../merchandising/Product-Polyglot.hck.json",
+      "normalization": false
     }
   ],
-  "lastModifTS": "2025-02-24T10:17:43.631Z",
+  "lastModifTS": "2025-02-25T07:02:24.299Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -1782,6 +1743,16 @@
       "dbLevel": {
         "erd": [
           {
+            "GUID": "3ef82e26-0f96-48f1-9603-4c737037815d",
+            "x": 2061.347586735294,
+            "y": 969.4195224825469,
+            "width": 339,
+            "height": 253,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
             "GUID": "e2ba0994-1763-4b13-8b19-e7a0d9f95edb",
             "x": 837.7959336385611,
             "y": 882.2182641961967,
@@ -1792,21 +1763,11 @@
             }
           },
           {
-            "GUID": "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648",
-            "x": 1982.4328849514845,
-            "y": 913.7561443430177,
-            "width": 385,
-            "height": 252,
-            "color": {
-              "hex": "#2196F3"
-            }
-          },
-          {
             "GUID": "46385b4a-a728-4579-8b09-10e9e7c52c99",
             "x": 1378.5380761523052,
             "y": 798.3563794255192,
-            "width": 439,
-            "height": 459,
+            "width": 449,
+            "height": 507,
             "color": {
               "hex": "#2196F3"
             }
@@ -1820,11 +1781,6 @@
         },
         "buckets": [
           {
-            "x": 1942.4328849514845,
-            "y": 873.7561443430177,
-            "GUID": "893adac0-c450-4c13-b69e-974ee5e93117"
-          },
-          {
             "x": 1338.5380761523052,
             "y": 758.3563794255192,
             "GUID": "e863d79d-6e38-4098-a01e-46d6249501f8"
@@ -1833,6 +1789,11 @@
             "x": 797.7959336385611,
             "y": 842.2182641961967,
             "GUID": "a47b2731-dfa7-4364-91e6-4601ec648539"
+          },
+          {
+            "x": 2021.347586735294,
+            "y": 929.4195224825469,
+            "GUID": "38a4f489-8d86-47f3-8cd5-bc666ce58741"
           }
         ],
         "collapsedNodes": [],
@@ -1852,24 +1813,19 @@
               "y": 1040
             },
             {
-              "GUID": "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648",
-              "size": 100,
-              "x": 1390,
-              "y": 2540
-            },
-            {
               "GUID": "e2ba0994-1763-4b13-8b19-e7a0d9f95edb",
               "size": 100,
               "x": 1140,
               "y": 3340
+            },
+            {
+              "GUID": "3ef82e26-0f96-48f1-9603-4c737037815d",
+              "size": 100,
+              "x": 1140,
+              "y": 3640
             }
           ],
           "buckets": [
-            {
-              "x": 1116.8266533066133,
-              "y": 1015.7294589178357,
-              "GUID": "893adac0-c450-4c13-b69e-974ee5e93117"
-            },
             {
               "x": 964,
               "y": 728,
@@ -1879,6 +1835,11 @@
               "x": 40,
               "y": 40,
               "GUID": "a47b2731-dfa7-4364-91e6-4601ec648539"
+            },
+            {
+              "x": 80,
+              "y": 80,
+              "GUID": "38a4f489-8d86-47f3-8cd5-bc666ce58741"
             }
           ],
           "decorativeSymbols": [
@@ -1909,14 +1870,7 @@
         "nestedCollectionsLayout": "horizontal",
         "options": [
           {
-            "autoWidth": false,
-            "autoHeight": false,
-            "GUID": "46385b4a-a728-4579-8b09-10e9e7c52c99"
-          },
-          {
-            "autoWidth": false,
-            "autoHeight": false,
-            "GUID": "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648"
+            "GUID": "3ef82e26-0f96-48f1-9603-4c737037815d"
           }
         ],
         "relationshipUpdateDisabled": false
