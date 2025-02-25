@@ -562,6 +562,10 @@
             "foreignField": [],
             "parentRelationship": "",
             "childRelationships": []
+          },
+          {
+            "GUID": "6ef810f9-c366-426b-9aa7-97f54138905f",
+            "referenceDiffDeleted": true
           }
         ]
       },
@@ -1742,7 +1746,7 @@
       "normalization": false
     }
   ],
-  "lastModifTS": "2025-02-25T15:19:15.231Z",
+  "lastModifTS": "2025-02-25T15:38:27.510Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
