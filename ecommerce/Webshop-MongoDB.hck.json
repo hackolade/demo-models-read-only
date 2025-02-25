@@ -60,22 +60,23 @@
           },
           {
             "GUID": "72bc07b9-d511-42e0-966a-7e5f14513040",
+            "hackoladeMeta": {},
+            "error": {},
             "properties": [
               {
                 "GUID": "eae27a5b-3644-46dd-a3d1-01afce2a245d",
-                "properties": [],
                 "hackoladeMeta": {},
-                "error": {}
+                "error": {},
+                "properties": []
               }
-            ],
-            "hackoladeMeta": {},
-            "error": {}
+            ]
           }
         ]
       },
       "error": {
         "refPath": false
-      }
+      },
+      "description": "Represents a purchase transaction, including details about the items ordered, shipping information, payment details, and order status."
     }
   ],
   "buckets": [
@@ -106,7 +107,8 @@
       "hackoladeMeta": {
         "namingConvention": "code",
         "validationErrors": {}
-      }
+      },
+      "description": "The Order Management container is responsible for all entities and relationships involved in creating, tracking, and fulfilling customer orders. At a logical level, the Order Management container interacts closely with both the Customer Management container (to identify and authenticate the customer placing the order) and the Product Management container (to reference product details and availability)."
     }
   ],
   "views": [],
@@ -352,27 +354,61 @@
         "error": {}
       },
       {
-        "code": "order",
         "GUID": "46385b4a-a728-4579-8b09-10e9e7c52c99",
         "collectionName": "Order",
         "type": "object",
         "properties": [
           {
-            "code": "identifier",
             "type": "string",
             "name": "Identifier",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            },
             "isActivated": true,
             "primaryKey": true,
             "required": true,
             "GUID": "2dc5cd19-9bb7-4405-a00f-69af0c39ea24",
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            }
+            "description": "A unique reference number or code assigned to the order for tracking and identification.",
+            "code": "Identifier"
           },
           {
-            "code": "totalAmount",
+            "type": "string",
+            "name": "Customer reference",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            },
+            "isActivated": true,
+            "primaryKey": false,
+            "required": false,
+            "GUID": "6adc1c99-dca5-4d92-88fd-6e27edf175ce",
+            "foreignCollection": "65b184c5-dbf9-5d7a-b038-30aa2b8bb11a",
+            "foreignField": [
+              "65b184c5-dbf9-5d7a-b038-30aa2b8bb11a",
+              "15a4d58f-d2ae-5415-9cd9-23669eec4ef8"
+            ],
+            "relationshipType": "Foreign Key",
+            "description": "References the unique identifier of the Customer entity. Associates the order with the customer who placed it.",
+            "code": "Customerreference"
+          },
+          {
+            "type": "date",
+            "primaryKey": false,
+            "name": "Order date",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            },
+            "isActivated": true,
+            "required": false,
+            "GUID": "3a550c04-6ca2-4876-8ec9-89aa76ea1d13",
+            "description": "The date and time at which the order was placed. Used for chronological reporting and status tracking.",
+            "code": "Orderdate"
+          },
+          {
             "type": "numeric",
             "name": "Total amount",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            },
             "isActivated": true,
             "exclusiveMinimum": false,
             "exclusiveMaximum": false,
@@ -380,56 +416,64 @@
             "required": false,
             "GUID": "17ee1d91-fa06-4638-831b-a7766df0e191",
             "mode": "decimal128",
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            }
+            "description": "The aggregated cost of all ordered items, including any taxes, fees, or discounts applied to the order. Should reflect the final amount the customer is expected to pay.",
+            "code": "Totalamount"
           },
           {
-            "code": "status",
             "type": "string",
             "name": "Status",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            },
             "isActivated": true,
             "required": false,
             "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
             "primaryKey": false,
             "GUID": "6dac6534-e11a-49ac-a049-30f3b1207b88",
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            }
+            "description": "The current state of the order (e.g., Pending, Shipped, Delivered, Canceled).",
+            "enum": [
+              "Pending",
+              "Shipped",
+              "Delivered",
+              "Canceled"
+            ],
+            "code": "Status"
           },
           {
-            "code": "trackingNumber",
             "type": "string",
             "name": "Tracking number",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            },
             "isActivated": true,
             "primaryKey": false,
             "required": false,
             "GUID": "d8e8b56d-827d-4fd1-bea0-07bd5bab9c2e",
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            }
+            "description": "A unique code provided by the shipping carrier to track the delivery status of the order.",
+            "code": "Trackingnumber"
           },
           {
-            "code": "ship_toAddress",
             "type": "document",
             "properties": [
               {
-                "code": "street",
                 "type": "string",
                 "name": "Street",
+                "hackoladeMeta": {
+                  "namingConvention": "code"
+                },
                 "isActivated": true,
                 "primaryKey": false,
                 "required": false,
                 "GUID": "99f6874d-0ce2-5b47-8ab9-42d7c3702219",
                 "description": "Specifies the street name and number, providing detailed location information within a city or town.",
-                "hackoladeMeta": {
-                  "namingConvention": "code"
-                }
+                "code": "Street"
               },
               {
-                "code": "postalCode",
                 "type": "string",
                 "name": "Postal code",
+                "hackoladeMeta": {
+                  "namingConvention": "code"
+                },
                 "isActivated": true,
                 "primaryKey": false,
                 "required": false,
@@ -437,14 +481,14 @@
                 "foreignCollection": "",
                 "foreignField": [],
                 "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
-                "hackoladeMeta": {
-                  "namingConvention": "code"
-                }
+                "code": "Postalcode"
               },
               {
-                "code": "city",
                 "type": "string",
                 "name": "City",
+                "hackoladeMeta": {
+                  "namingConvention": "code"
+                },
                 "isActivated": true,
                 "primaryKey": false,
                 "required": false,
@@ -452,29 +496,30 @@
                 "foreignCollection": "",
                 "foreignField": [],
                 "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
-                "hackoladeMeta": {
-                  "namingConvention": "code"
-                }
+                "code": "City"
               }
             ],
             "additionalProperties": false,
             "name": "Ship-to address",
-            "isActivated": true,
-            "GUID": "9e4faa2d-6567-4c55-908d-59f30426bdc1",
             "hackoladeMeta": {
               "namingConvention": "code"
-            }
+            },
+            "isActivated": true,
+            "GUID": "9e4faa2d-6567-4c55-908d-59f30426bdc1",
+            "code": "Shiptoaddress",
+            "refDescription": "The destination address where the order is to be delivered."
           },
           {
-            "code": "payments",
             "type": "array",
             "properties": [
               {
                 "type": "document",
                 "properties": [
                   {
-                    "code": "amount",
                     "type": "numeric",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    },
                     "isActivated": true,
                     "exclusiveMinimum": false,
                     "exclusiveMaximum": false,
@@ -485,28 +530,30 @@
                     "foreignCollection": "",
                     "foreignField": [],
                     "name": "Amount",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    }
+                    "description": "The total cost of the payment, net of applicable taxes and fees.",
+                    "code": "Amount"
                   },
                   {
-                    "code": "timestamp",
                     "type": "timestamp",
                     "name": "Timestamp",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    },
                     "isActivated": true,
                     "primaryKey": false,
                     "required": false,
                     "GUID": "b2f61376-69c8-46f5-9f61-8e68a0dae68d",
                     "foreignCollection": "",
                     "foreignField": [],
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    }
+                    "description": "The date and time when the payment was received.",
+                    "code": "Timestamp"
                   },
                   {
-                    "code": "paymentMethod",
                     "type": "string",
                     "name": "Payment method",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    },
                     "isActivated": true,
                     "required": false,
                     "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
@@ -514,14 +561,20 @@
                     "GUID": "37ecefbe-69cd-4c46-bfe2-bdb2fea3be1c",
                     "foreignCollection": "",
                     "foreignField": [],
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    }
+                    "description": "The method used for payment (e.g., Credit Card, PayPal, Bank Transfer).",
+                    "enum": [
+                      "CreditCard",
+                      "PayPal",
+                      "BankTransfer"
+                    ],
+                    "code": "Paymentmethod"
                   },
                   {
-                    "code": "status",
                     "type": "string",
                     "name": "Status",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    },
                     "isActivated": true,
                     "required": false,
                     "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
@@ -529,9 +582,13 @@
                     "GUID": "4b11b953-edb3-4c2d-8e36-a17406cb7b26",
                     "foreignCollection": "",
                     "foreignField": [],
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    }
+                    "description": "Indicates whether the payment has been completed, pending, or failed.",
+                    "enum": [
+                      "completed",
+                      "pending",
+                      "failed"
+                    ],
+                    "code": "Status"
                   }
                 ],
                 "additionalProperties": false,
@@ -548,83 +605,86 @@
             ],
             "additionalItems": true,
             "name": "Payments",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            },
             "isActivated": true,
             "primaryKey": false,
             "required": false,
             "GUID": "fad47821-c108-4728-ac06-edd87399a408",
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            }
+            "description": "A record of financial transactions associated with the order.",
+            "code": "Payments"
           },
           {
-            "code": "orderedItems",
             "type": "array",
             "properties": [
               {
                 "type": "document",
                 "properties": [
                   {
-                    "code": "quantity",
                     "type": "numeric",
                     "name": "Quantity",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    },
                     "isActivated": true,
                     "exclusiveMinimum": false,
                     "exclusiveMaximum": false,
                     "primaryKey": false,
                     "required": false,
                     "GUID": "e16e89ec-42c0-4647-ab3f-4225a2c9df1c",
+                    "description": "The number of units for each ordered item.",
                     "mode": "",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    }
+                    "code": "Quantity"
                   },
                   {
-                    "code": "sku",
                     "type": "string",
                     "name": "SKU",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    },
                     "isActivated": true,
                     "primaryKey": true,
                     "required": true,
                     "description": "A unique identifier assigned to each product for inventory management and tracking purposes. It helps differentiate products and streamline the ordering process.",
                     "GUID": "acdd584f-e173-4126-a669-6ea2f414ffd0",
-                    "foreignCollection": "f7ceef84-81de-57ff-9055-5bb0b3337f02",
-                    "foreignField": [
-                      "f7ceef84-81de-57ff-9055-5bb0b3337f02",
-                      "a32b91a4-33c4-5028-815c-b44e4800f498"
-                    ],
-                    "relationshipType": "Foreign Master",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    }
+                    "code": "SKU",
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "relationshipType": ""
                   },
                   {
-                    "code": "name",
                     "type": "string",
                     "name": "Name",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    },
                     "isActivated": true,
                     "primaryKey": false,
                     "required": false,
+                    "description": "The name of the product or service as displayed to the customer.",
                     "GUID": "39a652f4-defc-4297-8814-d16fdb749d18",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    }
+                    "code": "Name"
                   },
                   {
-                    "code": "description",
                     "type": "string",
                     "name": "Description",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    },
                     "isActivated": true,
                     "primaryKey": false,
                     "required": false,
+                    "description": "A longer text providing additional details about the product. May be omitted if product details are referenced externally.",
                     "GUID": "6d536af4-ae07-48db-923e-3fd215300a8c",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    }
+                    "code": "Description"
                   },
                   {
-                    "code": "currency",
                     "type": "string",
                     "name": "Currency",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    },
                     "isActivated": true,
                     "required": true,
                     "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
@@ -645,15 +705,16 @@
                       "SGD",
                       "HKD"
                     ],
+                    "description": "Indicates the currency in which the product price is set.",
                     "GUID": "c7ccd811-1374-4a95-96b8-1bbb7eda7590",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    }
+                    "code": "Currency"
                   },
                   {
-                    "code": "amount",
                     "type": "numeric",
                     "name": "Amount",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    },
                     "isActivated": true,
                     "exclusiveMinimum": false,
                     "exclusiveMaximum": false,
@@ -662,10 +723,9 @@
                     "mode": "decimal128",
                     "foreignCollection": "",
                     "foreignField": [],
+                    "description": "The numeric value of the product’s price in the specified currency.",
                     "GUID": "cf7c7d06-9e2a-490d-852d-29010e9eefd8",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    }
+                    "code": "Amount"
                   }
                 ],
                 "additionalProperties": false,
@@ -682,13 +742,15 @@
             ],
             "additionalItems": true,
             "name": "Ordered items",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            },
             "isActivated": true,
             "primaryKey": false,
             "required": false,
             "GUID": "72bc07b9-d511-42e0-966a-7e5f14513040",
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            }
+            "description": "A list of products included in the order, detailing the purchased goods.",
+            "code": "Ordereditems"
           }
         ],
         "definitions": {
@@ -699,6 +761,16 @@
         "isActivated": true,
         "additionalProperties": false,
         "bucketId": "e863d79d-6e38-4098-a01e-46d6249501f8",
+        "description": "Represents a purchase transaction, including details about the items ordered, shipping information, payment details, and order status.",
+        "uniqueKey": [
+          {
+            "GUID": "53cbcce4-2637-470e-9bba-debbe6fb564d"
+          }
+        ],
+        "hackoladeMeta": {
+          "namingConvention": "code"
+        },
+        "code": "Order",
         "definitionEntityType": "collection",
         "fileType": "hackoladeSchema",
         "definitionRefs": [
@@ -708,38 +780,9 @@
         ],
         "kind": "relativePath",
         "link": "Order management-Polyglot.hck.json",
-        "fieldRelativePath": "#/Order management/Order",
-        "hackoladeMeta": {
-          "namingConvention": "code"
-        }
+        "fieldRelativePath": "#/Order management/Order"
       },
       {
-        "name": "Product management",
-        "type": "bucket",
-        "collectionIds": [],
-        "backgroundColor": {
-          "r": 216,
-          "g": 0,
-          "b": 115,
-          "a": 1
-        },
-        "show": true,
-        "isActivated": true,
-        "indexes": [],
-        "GUID": "893adac0-c450-4c13-b69e-974ee5e93117",
-        "definitionEntityType": "bucket",
-        "link": "Order management-Polyglot.hck.json",
-        "kind": "relativePath",
-        "fieldRelativePath": "#/Product management",
-        "fileType": "hackoladeSchema",
-        "hackoladeMeta": {
-          "namingConvention": "code"
-        },
-        "code": "productManagement",
-        "definitionRefs": []
-      },
-      {
-        "code": "orderManagement",
         "name": "Order management",
         "type": "bucket",
         "collectionIds": [
@@ -755,6 +798,11 @@
         "isActivated": true,
         "indexes": [],
         "GUID": "e863d79d-6e38-4098-a01e-46d6249501f8",
+        "description": "The Order Management container is responsible for all entities and relationships involved in creating, tracking, and fulfilling customer orders. At a logical level, the Order Management container interacts closely with both the Customer Management container (to identify and authenticate the customer placing the order) and the Product Management container (to reference product details and availability).",
+        "hackoladeMeta": {
+          "namingConvention": "code"
+        },
+        "code": "Ordermanagement",
         "definitionEntityType": "bucket",
         "fileType": "hackoladeSchema",
         "definitionRefs": [
@@ -764,10 +812,7 @@
         ],
         "kind": "relativePath",
         "link": "Order management-Polyglot.hck.json",
-        "fieldRelativePath": "#/Order management",
-        "hackoladeMeta": {
-          "namingConvention": "code"
-        }
+        "fieldRelativePath": "#/Order management"
       },
       {
         "type": "bucket",
@@ -838,14 +883,14 @@
       "normalization": false
     }
   ],
-  "lastModifTS": "2025-02-19T11:15:33.654Z",
+  "lastModifTS": "2025-02-25T08:00:11.970Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.0.1"
+    "version": "8.0.2"
   },
   "description": "This MongoDB Webshop Model is intended for illustration purposes only and provides a simplified representation for a\nwebshop within a document database.\n\nWhile it captures essential entities and relationships, it does not encompass all potential complexities, or best practices that may be applicable in a comprehensive system Implementation.",
   "settings": {
