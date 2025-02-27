@@ -914,7 +914,7 @@
   "creationTS": "2016-05-09T16:09:02.887Z",
   "GUID": "53fc2360-128a-11e8-9f2d-819809faafb9",
   "code": "",
-  "lastModifTS": "2025-02-27T11:41:54.402Z",
+  "lastModifTS": "2025-02-27T14:20:58.389Z",
   "persistenceSchemaVersion": "8",
   "description": "Basic demo of a sales application data model, with denormalization of some master data\n",
   "comments": "More comments here...",

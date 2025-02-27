@@ -420,11 +420,11 @@
           },
           {
             "x": 1565.5,
-            "y": 1057.75
+            "y": 1065
           },
           {
             "x": 1509,
-            "y": 1057.75
+            "y": 1065
           }
         ],
         "sides": [
@@ -474,11 +474,11 @@
           },
           {
             "x": 1565.5,
-            "y": 1079.5
+            "y": 1094
           },
           {
             "x": 1509,
-            "y": 1079.5
+            "y": 1094
           }
         ],
         "sides": [
@@ -574,11 +574,11 @@
         "shape": [
           {
             "x": 1606,
-            "y": 1221
+            "y": 1209.5
           },
           {
             "x": 1566,
-            "y": 1221
+            "y": 1209.5
           },
           {
             "x": 1566,
@@ -812,7 +812,7 @@
   "appTarget": "DYNAMODB",
   "creationTS": "2016-12-02T19:00:59.891Z",
   "GUID": "a9d55c30-b8c1-11e6-8089-6f1f31218a06",
-  "lastModifTS": "2025-02-27T10:23:35.071Z",
+  "lastModifTS": "2025-02-27T14:03:14.014Z",
   "persistenceSchemaVersion": "8",
   "description": "Model according to Slideshare of DAT-304 Mastering NoSQL: Advanced Amazon DynamoDB design patterns for ultra-high performance applications .  By David Yanacek (Amazon DynamoDB)\n\nhttp://www.slideshare.net/AmazonWebServices/amazon-dynamodb-design-patterns-for-ultrahigh-performance-apps-dat304-aws-reinvent-2013-28436991\n\nYouTube video: https://www.youtube.com/watch?v=VuKu23oZp9Q by Siva Raghupathy, Principal Solutions Architect\n\nIt is combined with DAT-401 YouTube video https://www.youtube.com/watch?v=ggDIat_FZtA&t=3s by Rick Houlihan, Principal Solutions Architect",
   "comments": "",

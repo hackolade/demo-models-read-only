@@ -724,7 +724,36 @@
       "customProperties": {
         "disableNoValidate": true
       },
-      "hackoladeStyles": {},
+      "hackoladeStyles": {
+        "GUID": "f8e250ff-fd41-4cf4-a0d5-0f1a27f8ce8b",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1419,
+            "y": 1074
+          },
+          {
+            "x": 1369.5,
+            "y": 1074
+          },
+          {
+            "x": 1369.5,
+            "y": 1074.5
+          },
+          {
+            "x": 1320,
+            "y": 1074.5
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      },
       "isActivated": true
     },
     {
@@ -752,7 +781,36 @@
       "customProperties": {
         "disableNoValidate": true
       },
-      "hackoladeStyles": {},
+      "hackoladeStyles": {
+        "GUID": "fc8f4b04-b225-4d46-b87a-5f80d9c04048",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1325,
+            "y": 1217
+          },
+          {
+            "x": 1372,
+            "y": 1217
+          },
+          {
+            "x": 1372,
+            "y": 1103
+          },
+          {
+            "x": 1419,
+            "y": 1103
+          }
+        ],
+        "sides": [
+          "right",
+          "left"
+        ]
+      },
       "isActivated": true
     },
     {
@@ -780,7 +838,36 @@
       "customProperties": {
         "disableNoValidate": true
       },
-      "hackoladeStyles": {},
+      "hackoladeStyles": {
+        "GUID": "cce17274-f01b-4d21-9be0-8270a2dd6fe8",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1419,
+            "y": 1241.1767676767677
+          },
+          {
+            "x": 1372,
+            "y": 1241.1767676767677
+          },
+          {
+            "x": 1372,
+            "y": 1264
+          },
+          {
+            "x": 1325,
+            "y": 1264
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      },
       "isActivated": true
     },
     {
@@ -808,7 +895,28 @@
       "customProperties": {
         "disableNoValidate": true
       },
-      "hackoladeStyles": {},
+      "hackoladeStyles": {
+        "GUID": "113dffd6-d25d-48bb-9780-3d356cc3acef",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1573,
+            "y": 1311.6767676767677
+          },
+          {
+            "x": 1573,
+            "y": 1412
+          }
+        ],
+        "sides": [
+          "bottom",
+          "top"
+        ]
+      },
       "isActivated": true
     },
     {
@@ -836,7 +944,28 @@
       "customProperties": {
         "disableNoValidate": true
       },
-      "hackoladeStyles": {},
+      "hackoladeStyles": {
+        "GUID": "685a69e1-e84c-49e4-9219-ee78e7ceb035",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1447,
+            "y": 1464.5
+          },
+          {
+            "x": 1324,
+            "y": 1464.5
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      },
       "isActivated": true
     }
   ],
@@ -908,7 +1037,7 @@
   "appTarget": "HIVE",
   "creationTS": "2018-10-30T14:42:57.142Z",
   "GUID": "17511960-dc52-11e8-8437-7734b2373917",
-  "lastModifTS": "2025-02-27T10:25:51.333Z",
+  "lastModifTS": "2025-02-27T14:07:02.989Z",
   "persistenceSchemaVersion": "8",
   "description": "Inspired from https://www.cloudera.com/developers/get-started-with-hadoop-tutorial/exercise-1.html\n",
   "comments": "",

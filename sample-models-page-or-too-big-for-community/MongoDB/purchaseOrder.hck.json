@@ -1099,7 +1099,7 @@
   "appTarget": "MONGODB",
   "creationTS": "2016-07-09T08:53:49.982Z",
   "GUID": "0c3d6610-5fb1-11e7-93c6-9d9c238b87f7",
-  "lastModifTS": "2025-02-27T11:41:35.794Z",
+  "lastModifTS": "2025-02-27T14:20:11.050Z",
   "persistenceSchemaVersion": "8",
   "description": "Taken from Oracle JSON https://docs.oracle.com/database/121/ADXDB/json.htm#ADXDB6250",
   "comments": "",

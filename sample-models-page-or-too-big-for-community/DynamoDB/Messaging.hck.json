@@ -738,7 +738,7 @@
   "appTarget": "DYNAMODB",
   "creationTS": "2016-12-02T23:49:43.930Z",
   "GUID": "ffc3eda0-b8e9-11e6-8089-6f1f31218a06",
-  "lastModifTS": "2025-02-27T10:22:00.681Z",
+  "lastModifTS": "2025-02-27T13:56:15.801Z",
   "persistenceSchemaVersion": "8",
   "description": "DAT-401 YouTube video https://www.youtube.com/watch?v=ggDIat_FZtA&t=3s by Rick Houlihan, Principal Solutions Architect",
   "comments": "",

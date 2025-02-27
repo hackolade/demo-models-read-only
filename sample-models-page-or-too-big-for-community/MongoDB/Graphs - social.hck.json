@@ -1408,7 +1408,7 @@
   "appTarget": "MONGODB",
   "creationTS": "2017-04-17T11:23:05.925Z",
   "GUID": "3a40d750-2360-11e7-b174-834c31d10a9e",
-  "lastModifTS": "2025-02-27T11:39:32.107Z",
+  "lastModifTS": "2025-02-27T14:22:31.493Z",
   "persistenceSchemaVersion": "8",
   "description": "Different ways to model graphs, according to article:\nhttps://www.mongodb.com/presentations/socialite-open-source-status-feed-part-2-managing-social-graph?jmp=docs&_ga=1.11176368.544578421.1459505203\n",
   "comments": "",

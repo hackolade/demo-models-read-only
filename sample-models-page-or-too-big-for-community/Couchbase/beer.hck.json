@@ -409,7 +409,36 @@
         ]
       ],
       "childCardinality": "0..n",
-      "hackoladeStyles": {},
+      "hackoladeStyles": {
+        "GUID": "e50d6bfe-67c7-44b4-b9a6-6dc9c1801634",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1325,
+            "y": 1170.5
+          },
+          {
+            "x": 1293.5,
+            "y": 1170.5
+          },
+          {
+            "x": 1293.5,
+            "y": 1209.5
+          },
+          {
+            "x": 1262,
+            "y": 1209.5
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      },
       "isActivated": true
     }
   ],
@@ -471,7 +500,7 @@
   "appTarget": "COUCHBASE",
   "creationTS": "2017-03-03T08:31:48.344Z",
   "GUID": "d7bfaf80-ffeb-11e6-bc11-bba283d07659",
-  "lastModifTS": "2025-02-27T10:20:32.292Z",
+  "lastModifTS": "2025-02-27T13:04:33.487Z",
   "persistenceSchemaVersion": "8",
   "description": "beer-sample application described in http://docs.couchbase.com/admin/admin/Misc/sample-bucket-beer.html",
   "comments": "",

@@ -905,7 +905,7 @@
   "creationTS": "2016-10-21T01:57:47.887Z",
   "GUID": "c3ff77f0-9731-11e6-9010-056a22b35869",
   "code": "",
-  "lastModifTS": "2025-02-27T11:38:38.218Z",
+  "lastModifTS": "2025-02-27T14:16:07.357Z",
   "persistenceSchemaVersion": "8",
   "description": "Model derived from article: https://www.mongodb.com/blog/post/building-your-first-application-mongodb-creating-rest-api-using-mean-stack-part-1, a blog series on how to use MongoDB, Mongoose Object Data Mapping (ODM) with Express.js and Node.js.  \n\nThe  article describes hte steps required to build an RSS Aggregator application, similar to Google Reader.",
   "comments": "",

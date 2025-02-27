@@ -1437,7 +1437,7 @@
   "creationTS": "2016-04-28T08:11:26.118Z",
   "GUID": "8b6c2620-112d-11e6-9f2c-e978a8d7cc1e",
   "code": "",
-  "lastModifTS": "2025-02-27T11:42:14.092Z",
+  "lastModifTS": "2025-02-27T14:21:26.982Z",
   "persistenceSchemaVersion": "8",
   "description": "Social network to showcase Hackolade capabilities",
   "comments": "One feature of particular interest is in the userFriends collection.  We have there a 'pattern field' for which the key a variable with a regular expression format.  This is useful to leverage the 'dot notation' of MongoDB.",

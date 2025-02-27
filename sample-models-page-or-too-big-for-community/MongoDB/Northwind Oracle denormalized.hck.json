@@ -1944,7 +1944,7 @@
   "appTarget": "MONGODB",
   "creationTS": "2016-10-03T19:11:11.926Z",
   "GUID": "e2fe7bb0-9236-11eb-a1cd-2b20d40ce8aa",
-  "lastModifTS": "2025-02-27T11:40:27.945Z",
+  "lastModifTS": "2025-02-27T14:18:37.828Z",
   "persistenceSchemaVersion": "8",
   "description": "The famous Microsoft Access example, imported from an Oracle DDL at http://www.geeksengine.com/article/northwind-oracle-2.html",
   "comments": "More comments here",

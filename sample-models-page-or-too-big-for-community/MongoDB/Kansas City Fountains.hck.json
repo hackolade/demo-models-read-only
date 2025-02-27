@@ -703,7 +703,7 @@
   "appTarget": "MONGODB",
   "creationTS": "2016-10-10T09:22:33.357Z",
   "GUID": "133bf2e0-8ecb-11e6-9a2f-37f1efd6553e",
-  "lastModifTS": "2025-02-27T11:39:49.125Z",
+  "lastModifTS": "2025-02-27T14:17:36.767Z",
   "persistenceSchemaVersion": "8",
   "description": "This model is drawn from an exercise in Steve Hoberman's class on 'Advanced modeling for NoSQL'.  It is asked to model donations where the donor can either be an individual or a corporation, each requiring deffirent fields.",
   "comments": "This example is interesting because it features physical sub-types in the form of a oneOf choice between the individual and the corporate donor.  It shows the power of JSON and NoSQL documents.  And the power of Hackolade modeling...",
