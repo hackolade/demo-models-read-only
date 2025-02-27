@@ -7,6 +7,21 @@
       "type": "object",
       "properties": [
         {
+          "name": "Address ID",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "GUID": "65b54be5-17e3-480b-9543-41cade950030",
+          "error": {}
+        },
+        {
           "name": "Street",
           "hackoladeMeta": {},
           "isActivated": true,
@@ -79,7 +94,8 @@
     "50ec3adc-dd4a-4ddf-bab7-572b8e9b8bf7": "Address",
     "226178a4-d5d7-4303-8ded-6edd2bf5e94a": "Street",
     "172ef4de-fb50-4087-a44b-9a34e92b1f39": "Postal code",
-    "f23a20a2-d7b1-476d-b567-50a67b99f2fc": "City"
+    "f23a20a2-d7b1-476d-b567-50a67b99f2fc": "City",
+    "65b54be5-17e3-480b-9543-41cade950030": "Address ID"
   },
   "definitions": {
     "type": "definitions",
@@ -111,7 +127,7 @@
   "creationTS": "2024-12-31T10:50:34.735Z",
   "GUID": "251c1cc6-cb0b-4efc-bbc7-56d5a47c2515",
   "isLineageEnabled": false,
-  "lastModifTS": "2025-02-19T11:11:17.449Z",
+  "lastModifTS": "2025-02-24T09:39:52.802Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -120,7 +136,7 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.0.1"
+    "version": "8.0.2"
   },
   "hackoladeMeta": {
     "validationErrors": {
