@@ -23,6 +23,49 @@
           "error": {}
         },
         {
+          "name": "Customer reference",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "GUID": "6adc1c99-dca5-4d92-88fd-6e27edf175ce",
+          "parentRelationship": "f8f34cd7-4027-46ad-9160-b0dcaa29a509",
+          "foreignCollection": "e2ba0994-1763-4b13-8b19-e7a0d9f95edb",
+          "foreignField": [
+            "e2ba0994-1763-4b13-8b19-e7a0d9f95edb",
+            "5cc94e26-8eb9-4b1c-a78d-a870d9f640db",
+            "18d05aa0-70b0-4f8e-9736-ffbc7104f778"
+          ],
+          "relationshipType": "Foreign Key",
+          "description": "References the unique identifier of the Customer entity. Associates the order with the customer who placed it.",
+          "error": {}
+        },
+        {
+          "name": "Order date",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "index": true,
+          "required": false,
+          "childType": "date",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "primaryKey": false,
+          "GUID": "3a550c04-6ca2-4876-8ec9-89aa76ea1d13",
+          "description": "The date and time at which the order was placed. Used for chronological reporting and status tracking.",
+          "error": {}
+        },
+        {
           "name": "Total amount",
           "hackoladeMeta": {},
           "isActivated": true,
@@ -39,6 +82,7 @@
           ],
           "GUID": "17ee1d91-fa06-4638-831b-a7766df0e191",
           "mode": "decimal",
+          "description": "The aggregated cost of all ordered items, including any taxes, fees, or discounts applied to the order. Should reflect the final amount the customer is expected to pay.",
           "error": {}
         },
         {
@@ -104,7 +148,8 @@
           "compositePrimaryKey": false,
           "compositeUniqueKey": false,
           "error": {
-            "refDescription": false
+            "refDescription": false,
+            "refPath": false
           },
           "refDescription": "The destination address where the order is to be delivered."
         },
@@ -181,11 +226,7 @@
                   "description": "The method used for payment (e.g., Credit Card, PayPal, Bank Transfer).",
                   "error": {
                     "enum": false,
-                    "enums": [
-                      false,
-                      false,
-                      false
-                    ]
+                    "enums": false
                   },
                   "enum": [
                     "CreditCard",
@@ -305,14 +346,13 @@
                     "name": false,
                     "refPath": false
                   },
-                  "parentRelationship": "a8252ff3-4c2a-4575-ab6e-688663492aca",
-                  "foreignCollection": "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648",
-                  "foreignField": [
-                    "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648",
-                    "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
-                    "6b6386de-f9dc-46d9-9fc2-16d3c2c58340"
-                  ],
-                  "relationshipType": "Foreign Master"
+                  "parentRelationship": "",
+                  "foreignCollection": "",
+                  "foreignField": [],
+                  "relationshipType": "",
+                  "childRelationships": [
+                    "9883a02f-9c36-46f5-adeb-3ba9460724bf"
+                  ]
                 },
                 {
                   "GUID": "39a652f4-defc-4297-8814-d16fdb749d18",
@@ -450,45 +490,12 @@
       "isActivated": true,
       "additionalProperties": false,
       "bucketId": "e863d79d-6e38-4098-a01e-46d6249501f8",
-      "description": "Represents a purchase transaction, including details about the items ordered, shipping information, payment details, and order status."
-    },
-    {
-      "GUID": "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648",
-      "type": "reference",
-      "$ref": "#external/definitions/Product",
-      "refType": "polyglot",
-      "ref": "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
-      "refIdPath": [
-        "c67522a8-66b6-4046-89f1-2190faa20f67",
-        "c2c1c7a2-2fd6-4b39-b890-9bf77cfa26c7",
-        "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b"
-      ],
-      "isActivated": true,
-      "collectionName": "Product",
-      "bucketId": "893adac0-c450-4c13-b69e-974ee5e93117",
-      "properties": [],
-      "definitions": {
-        "properties": [],
-        "GUID": "d87de0ac-964a-409d-9986-e3db66156c34"
-      },
-      "additionalProperties": false,
-      "error": {
-        "refPath": false
-      },
-      "referenceDiff": {
-        "properties": [
-          {
-            "GUID": "6b6386de-f9dc-46d9-9fc2-16d3c2c58340",
-            "childRelationships": [
-              "a8252ff3-4c2a-4575-ab6e-688663492aca"
-            ]
-          },
-          {
-            "GUID": "6ef810f9-c366-426b-9aa7-97f54138905f"
-          }
-        ]
-      },
-      "description": "Represents the items available for sale in the e-commerce platform. It encompasses essential details about each product, including its **name**, **description**, **pricing**, and associations with **categories** and **suppliers**. This entity is crucial for managing inventory and facilitating sales transactions."
+      "description": "Represents a purchase transaction, including details about the items ordered, shipping information, payment details, and order status.",
+      "uniqueKey": [
+        {
+          "GUID": "53cbcce4-2637-470e-9bba-debbe6fb564d"
+        }
+      ]
     },
     {
       "GUID": "e2ba0994-1763-4b13-8b19-e7a0d9f95edb",
@@ -512,27 +519,86 @@
       "additionalProperties": false,
       "error": {
         "refPath": false
+      },
+      "referenceDiff": {
+        "properties": [
+          {
+            "GUID": "18d05aa0-70b0-4f8e-9736-ffbc7104f778",
+            "childRelationships": [
+              "f8f34cd7-4027-46ad-9160-b0dcaa29a509"
+            ]
+          },
+          {
+            "GUID": "a569060a-b3b2-4f73-95c7-7c2e2145c273",
+            "referenceDiffDeleted": true
+          },
+          {
+            "GUID": "7fa9c279-fe3c-4864-83e9-10df93832aef",
+            "referenceDiffDeleted": true
+          },
+          {
+            "GUID": "bb57e423-15a3-43d2-bb4f-81c084e50416",
+            "referenceDiffDeleted": true
+          }
+        ]
+      },
+      "description": "The Customer entity represents an individual or organization using the ecommerce platform to browse, purchase, and manage orders. It stores essential contact information, registration data, and address details for billing and shipping."
+    },
+    {
+      "GUID": "3ef82e26-0f96-48f1-9603-4c737037815d",
+      "type": "reference",
+      "$ref": "#external/definitions/Product",
+      "refType": "polyglot",
+      "ref": "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
+      "refIdPath": [
+        "c67522a8-66b6-4046-89f1-2190faa20f67",
+        "c2c1c7a2-2fd6-4b39-b890-9bf77cfa26c7",
+        "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b"
+      ],
+      "isActivated": true,
+      "collectionName": "Product",
+      "bucketId": "38a4f489-8d86-47f3-8cd5-bc666ce58741",
+      "properties": [],
+      "definitions": {
+        "properties": [],
+        "GUID": "ac0c7f99-3d20-4c7a-b96e-dc6b027ceb7a"
+      },
+      "description": "Represents the items available for sale in the e-commerce platform. It encompasses essential details about each product, including its **name**, **description**, **pricing**, and associations with **categories** and **suppliers**. This entity is crucial for managing inventory and facilitating sales transactions.",
+      "additionalProperties": false,
+      "referenceDiff": {
+        "properties": [
+          {
+            "GUID": "6b6386de-f9dc-46d9-9fc2-16d3c2c58340",
+            "relationshipType": "",
+            "foreignCollection": "",
+            "foreignField": [],
+            "parentRelationship": "",
+            "childRelationships": []
+          },
+          {
+            "GUID": "6ef810f9-c366-426b-9aa7-97f54138905f",
+            "referenceDiffDeleted": true
+          },
+          {
+            "GUID": "4d678e93-e8cb-434c-9789-0d411b30a433",
+            "referenceDiffDeleted": true
+          },
+          {
+            "GUID": "a898b734-3304-48c1-b45d-98c1f7cc3808",
+            "referenceDiffDeleted": true
+          },
+          {
+            "GUID": "dc12c121-c011-42fd-865f-1a0fcd657fc0",
+            "referenceDiffDeleted": true
+          }
+        ]
+      },
+      "error": {
+        "refPath": false
       }
     }
   ],
   "buckets": [
-    {
-      "name": "Product management",
-      "type": "bucket",
-      "collectionIds": [
-        "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648"
-      ],
-      "backgroundColor": {
-        "r": 216,
-        "g": 0,
-        "b": 115,
-        "a": 1
-      },
-      "show": true,
-      "isActivated": true,
-      "indexes": [],
-      "GUID": "893adac0-c450-4c13-b69e-974ee5e93117"
-    },
     {
       "name": "Order management",
       "type": "bucket",
@@ -548,7 +614,8 @@
       "show": true,
       "isActivated": true,
       "indexes": [],
-      "GUID": "e863d79d-6e38-4098-a01e-46d6249501f8"
+      "GUID": "e863d79d-6e38-4098-a01e-46d6249501f8",
+      "description": "The Order Management container is responsible for all entities and relationships involved in creating, tracking, and fulfilling customer orders. At a logical level, the Order Management container interacts closely with both the Customer Management container (to identify and authenticate the customer placing the order) and the Product Management container (to reference product details and availability)."
     },
     {
       "GUID": "a47b2731-dfa7-4364-91e6-4601ec648539",
@@ -572,17 +639,54 @@
       "show": true,
       "collectionIds": [
         "e2ba0994-1763-4b13-8b19-e7a0d9f95edb"
-      ]
+      ],
+      "description": "The Customer Management container encompasses all entities and relationships associated with users of the ecommerce platform. It covers personal information, contact details, and addresses needed to fulfill orders, provide customer support, and maintain communication preferences."
+    },
+    {
+      "GUID": "38a4f489-8d86-47f3-8cd5-bc666ce58741",
+      "name": "Product management",
+      "type": "reference",
+      "$ref": "#external/definitions/Product management",
+      "refType": "polyglot",
+      "ref": "4631c9fb-41fb-4647-a18e-f22367a656c5",
+      "refIdPath": [
+        "c67522a8-66b6-4046-89f1-2190faa20f67",
+        "c2c1c7a2-2fd6-4b39-b890-9bf77cfa26c7",
+        "4631c9fb-41fb-4647-a18e-f22367a656c5"
+      ],
+      "isActivated": true,
+      "backgroundColor": {
+        "r": 216,
+        "g": 0,
+        "b": 115,
+        "a": 1
+      },
+      "show": true,
+      "collectionIds": [
+        "3ef82e26-0f96-48f1-9603-4c737037815d"
+      ],
+      "description": "Serves as a comprehensive framework for managing all aspects of products within the e-commerce system. This entity encompasses various components that facilitate the organization, tracking, and sale of products, ensuring a streamlined process from supplier management to customer sales."
     }
   ],
   "views": [],
   "relationships": [
     {
       "name": "placed",
-      "relationshipType": "Foreign Master",
-      "parentField": [],
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "e2ba0994-1763-4b13-8b19-e7a0d9f95edb",
+          "5cc94e26-8eb9-4b1c-a78d-a870d9f640db",
+          "18d05aa0-70b0-4f8e-9736-ffbc7104f778"
+        ]
+      ],
       "parentCardinality": "1",
-      "childField": [],
+      "childField": [
+        [
+          "46385b4a-a728-4579-8b09-10e9e7c52c99",
+          "6adc1c99-dca5-4d92-88fd-6e27edf175ce"
+        ]
+      ],
       "isActivated": true,
       "childCardinality": "1..n",
       "level": "field",
@@ -600,19 +704,19 @@
         "shape": [
           {
             "x": 1378.5380761523052,
-            "y": 1013.8563794255192
+            "y": 1051.8563794255192
           },
           {
-            "x": 1299.1670048954331,
-            "y": 1013.8563794255192
+            "x": 1298.1670048954331,
+            "y": 1051.8563794255192
           },
           {
-            "x": 1299.1670048954331,
-            "y": 1032.7182641961967
+            "x": 1298.1670048954331,
+            "y": 966.7182641961967
           },
           {
-            "x": 1219.795933638561,
-            "y": 1032.7182641961967
+            "x": 1217.795933638561,
+            "y": 966.7182641961967
           }
         ],
         "sides": [
@@ -622,17 +726,9 @@
       }
     },
     {
-      "name": "concerns",
-      "relationshipType": "Foreign Master",
+      "name": "contains",
+      "relationshipType": "Foreign Key",
       "parentField": [
-        [
-          "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648",
-          "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
-          "6b6386de-f9dc-46d9-9fc2-16d3c2c58340"
-        ]
-      ],
-      "parentCardinality": "1",
-      "childField": [
         [
           "46385b4a-a728-4579-8b09-10e9e7c52c99",
           "72bc07b9-d511-42e0-966a-7e5f14513040",
@@ -640,59 +736,23 @@
           "acdd584f-e173-4126-a669-6ea2f414ffd0"
         ]
       ],
-      "isActivated": true,
-      "childCardinality": "0..n",
-      "level": "field",
-      "GUID": "a8252ff3-4c2a-4575-ab6e-688663492aca",
-      "lineSize": 2,
-      "parentCollection": "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648",
-      "childCollection": "46385b4a-a728-4579-8b09-10e9e7c52c99",
-      "hackoladeStyles": {
-        "GUID": "650906b5-4129-4844-a1db-8255ee45b33e",
-        "autoPositioning": true,
-        "type": "Orthogonal",
-        "thickness": 2,
-        "color": "#79c4ff",
-        "dataType": "",
-        "shape": [
-          {
-            "x": 1813.5380761523052,
-            "y": 1013.8563794255192
-          },
-          {
-            "x": 1897.9854805518949,
-            "y": 1013.8563794255192
-          },
-          {
-            "x": 1897.9854805518949,
-            "y": 1039.7561443430177
-          },
-          {
-            "x": 1982.4328849514845,
-            "y": 1039.7561443430177
-          }
-        ],
-        "sides": [
-          "right",
-          "left"
+      "parentCardinality": "0..n",
+      "childField": [
+        [
+          "3ef82e26-0f96-48f1-9603-4c737037815d",
+          "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
+          "6b6386de-f9dc-46d9-9fc2-16d3c2c58340"
         ]
-      }
-    },
-    {
-      "name": "contains",
-      "relationshipType": "Foreign Master",
-      "parentField": [],
-      "parentCardinality": "1",
-      "childField": [],
+      ],
       "isActivated": true,
       "childCardinality": "1..n",
-      "level": "field",
-      "GUID": "6488463e-2696-426a-87bf-5abad797879b",
-      "lineSize": 2,
       "parentCollection": "46385b4a-a728-4579-8b09-10e9e7c52c99",
-      "childCollection": "",
+      "childCollection": "3ef82e26-0f96-48f1-9603-4c737037815d",
+      "GUID": "9883a02f-9c36-46f5-adeb-3ba9460724bf",
+      "level": "field",
+      "lineSize": 2,
       "hackoladeStyles": {
-        "GUID": "05d9a895-e0b8-42d8-8f0e-b99e7348bd1a",
+        "GUID": "17a65d6d-b207-4aff-80aa-e7b43ed49b45",
         "autoPositioning": true,
         "type": "Orthogonal",
         "thickness": 2,
@@ -700,69 +760,25 @@
         "dataType": "",
         "shape": [
           {
-            "x": 1968.6806947227808,
-            "y": 1041.7368069472293
+            "x": 1977.347586735294,
+            "y": 1027.4195224825469
           },
           {
-            "x": 1889.609385437543,
-            "y": 1041.7368069472293
+            "x": 1902.4428314437996,
+            "y": 1027.4195224825469
           },
           {
-            "x": 1889.609385437543,
-            "y": 990.3563794255192
+            "x": 1902.4428314437996,
+            "y": 1051.8563794255192
           },
           {
-            "x": 1810.5380761523052,
-            "y": 990.3563794255192
+            "x": 1827.5380761523052,
+            "y": 1051.8563794255192
           }
         ],
         "sides": [
           "left",
           "right"
-        ]
-      }
-    },
-    {
-      "name": "grants",
-      "relationshipType": "Foreign Master",
-      "parentField": [],
-      "parentCardinality": "1",
-      "childField": [],
-      "isActivated": true,
-      "childCardinality": "1",
-      "level": "field",
-      "GUID": "638ede08-fc4b-448b-a7c6-35f0eba2a726",
-      "lineSize": 2,
-      "parentCollection": "46385b4a-a728-4579-8b09-10e9e7c52c99",
-      "childCollection": "",
-      "hackoladeStyles": {
-        "GUID": "6d5d96ae-02e7-42f0-aa8f-08ca7d0ee499",
-        "autoPositioning": true,
-        "type": "Orthogonal",
-        "thickness": 2,
-        "color": "#79c4ff",
-        "dataType": "",
-        "shape": [
-          {
-            "x": 1724.454005090437,
-            "y": 1399.4742493294116
-          },
-          {
-            "x": 1724.454005090437,
-            "y": 1314.4153143774654
-          },
-          {
-            "x": 1596.0380761523052,
-            "y": 1314.4153143774654
-          },
-          {
-            "x": 1596.0380761523052,
-            "y": 1229.3563794255192
-          }
-        ],
-        "sides": [
-          "top",
-          "bottom"
         ]
       }
     }
@@ -774,10 +790,6 @@
     "17ee1d91-fa06-4638-831b-a7766df0e191": "Total amount",
     "6dac6534-e11a-49ac-a049-30f3b1207b88": "Status",
     "f8f34cd7-4027-46ad-9160-b0dcaa29a509": "placed",
-    "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648": "Product",
-    "893adac0-c450-4c13-b69e-974ee5e93117": "Product management",
-    "a8252ff3-4c2a-4575-ab6e-688663492aca": "concerns",
-    "6488463e-2696-426a-87bf-5abad797879b": "contains",
     "d8e8b56d-827d-4fd1-bea0-07bd5bab9c2e": "Tracking number",
     "2dc5cd19-9bb7-4405-a00f-69af0c39ea24": "Identifier",
     "aac0636d-630a-49f5-b2ab-0a0092f61cd3": "Disclaimer",
@@ -794,7 +806,6 @@
     "e2ba0994-1763-4b13-8b19-e7a0d9f95edb": "Customer",
     "a47b2731-dfa7-4364-91e6-4601ec648539": "Customer management",
     "6c26e788-797f-4f45-b8df-f2cdeb9b2eab": "Disclaimer",
-    "638ede08-fc4b-448b-a7c6-35f0eba2a726": "grants",
     "268d0db8-65bc-4a7a-a9f6-5348a7934439": "SKU",
     "acdd584f-e173-4126-a669-6ea2f414ffd0": "SKU",
     "865adb6d-3499-4c17-8661-9b3b4333ca8c": "Name",
@@ -804,7 +815,12 @@
     "cb06164d-25df-4016-ba43-fe0a45921e6e": "Currency",
     "c7ccd811-1374-4a95-96b8-1bbb7eda7590": "Currency",
     "91f49cfb-0486-4406-9e30-f5b68d67f1fe": "Amount",
-    "cf7c7d06-9e2a-490d-852d-29010e9eefd8": "Amount"
+    "cf7c7d06-9e2a-490d-852d-29010e9eefd8": "Amount",
+    "6adc1c99-dca5-4d92-88fd-6e27edf175ce": "Customer reference",
+    "3a550c04-6ca2-4876-8ec9-89aa76ea1d13": "Order date",
+    "3ef82e26-0f96-48f1-9603-4c737037815d": "Product",
+    "38a4f489-8d86-47f3-8cd5-bc666ce58741": "Product management",
+    "9883a02f-9c36-46f5-adeb-3ba9460724bf": "contains"
   },
   "definitions": {
     "type": "definitions",
@@ -814,6 +830,346 @@
   "polyglotDefinitions": {
     "type": "polyglotDefinitions",
     "properties": [
+      {
+        "GUID": "5cc94e26-8eb9-4b1c-a78d-a870d9f640db",
+        "collectionName": "Customer",
+        "type": "object",
+        "properties": [
+          {
+            "primaryKey": false,
+            "required": false,
+            "alternateKey": false,
+            "childType": "varchar",
+            "type": "string",
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "First name",
+            "hackoladeMeta": {},
+            "isActivated": true,
+            "GUID": "e8a58173-1262-4752-859c-10ceec5598aa",
+            "description": "The customer’s given name, used for personalization and identification.",
+            "mode": "",
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ]
+          },
+          {
+            "primaryKey": false,
+            "required": false,
+            "alternateKey": false,
+            "childType": "varchar",
+            "type": "string",
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "Last name",
+            "hackoladeMeta": {},
+            "isActivated": true,
+            "GUID": "872c6f47-1c90-4b97-ad5e-2c446d854243",
+            "description": "The customer’s surname or family name.",
+            "mode": "",
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ]
+          },
+          {
+            "primaryKey": true,
+            "required": true,
+            "alternateKey": false,
+            "childType": "varchar",
+            "type": "string",
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "email",
+            "hackoladeMeta": {},
+            "isActivated": true,
+            "GUID": "18d05aa0-70b0-4f8e-9736-ffbc7104f778",
+            "description": "The unique email address of the customer, serving as the primary key and primary contact method. Often used for authentication and login purposes.",
+            "mode": "",
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ]
+          },
+          {
+            "primaryKey": false,
+            "required": false,
+            "alternateKey": false,
+            "childType": "varchar",
+            "type": "string",
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "Phone number",
+            "hackoladeMeta": {},
+            "isActivated": true,
+            "GUID": "bb57e423-15a3-43d2-bb4f-81c084e50416",
+            "description": "The primary telephone or mobile number for contacting the customer. Format may vary based on locale.",
+            "mode": "",
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ]
+          },
+          {
+            "required": false,
+            "alternateKey": false,
+            "childType": "date",
+            "type": "string",
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "Registration date",
+            "hackoladeMeta": {},
+            "isActivated": true,
+            "primaryKey": false,
+            "GUID": "7fa9c279-fe3c-4864-83e9-10df93832aef",
+            "description": "Records the date when the customer registered on the e-commerce platform. It is essential for tracking customer lifecycle stages, analyzing customer acquisition trends, and managing loyalty programs.",
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ]
+          },
+          {
+            "properties": [
+              {
+                "primaryKey": false,
+                "required": true,
+                "alternateKey": false,
+                "childType": "varchar",
+                "type": "string",
+                "compositePrimaryKey": false,
+                "compositeUniqueKey": false,
+                "name": "Street",
+                "hackoladeMeta": {},
+                "isActivated": true,
+                "GUID": "a67178d1-2b76-5521-a4c3-d6fd453f0f74",
+                "description": "Specifies the street name and number, providing detailed location information within a city or town.",
+                "mode": "",
+                "compositeKey": [
+                  "compositePrimaryKey",
+                  "compositeUniqueKey"
+                ]
+              },
+              {
+                "primaryKey": false,
+                "required": true,
+                "alternateKey": false,
+                "childType": "varchar",
+                "type": "string",
+                "compositePrimaryKey": false,
+                "compositeUniqueKey": false,
+                "name": "Postal code",
+                "hackoladeMeta": {},
+                "isActivated": true,
+                "GUID": "7c7e4aed-3aa9-5bd2-bccb-4430d94e0834",
+                "foreignCollection": "",
+                "foreignField": [],
+                "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
+                "mode": "",
+                "compositeKey": [
+                  "compositePrimaryKey",
+                  "compositeUniqueKey"
+                ]
+              },
+              {
+                "primaryKey": false,
+                "required": true,
+                "alternateKey": false,
+                "childType": "varchar",
+                "type": "string",
+                "compositePrimaryKey": false,
+                "compositeUniqueKey": false,
+                "name": "City",
+                "hackoladeMeta": {},
+                "isActivated": true,
+                "GUID": "0e1b934a-42c4-5d75-8fdc-07f8d0129925",
+                "foreignCollection": "",
+                "foreignField": [],
+                "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
+                "mode": "",
+                "compositeKey": [
+                  "compositePrimaryKey",
+                  "compositeUniqueKey"
+                ]
+              }
+            ],
+            "additionalProperties": false,
+            "alternateKey": false,
+            "childType": "object",
+            "type": "document",
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "Bill-to address",
+            "hackoladeMeta": {},
+            "isActivated": true,
+            "GUID": "299ad0aa-01de-43f1-a266-bd803d9d7616",
+            "refDescription": "Stores the default billing address for the customer. Used for invoicing, payment processing, and tax calculations.",
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ]
+          },
+          {
+            "properties": [
+              {
+                "properties": [
+                  {
+                    "primaryKey": false,
+                    "required": true,
+                    "alternateKey": false,
+                    "childType": "varchar",
+                    "type": "string",
+                    "compositePrimaryKey": false,
+                    "compositeUniqueKey": false,
+                    "name": "Street",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "GUID": "f1fde62f-2224-5c53-bdd5-815c2369d986",
+                    "description": "Specifies the street name and number, providing detailed location information within a city or town.",
+                    "mode": "",
+                    "compositeKey": [
+                      "compositePrimaryKey",
+                      "compositeUniqueKey"
+                    ]
+                  },
+                  {
+                    "primaryKey": false,
+                    "required": true,
+                    "alternateKey": false,
+                    "childType": "varchar",
+                    "type": "string",
+                    "compositePrimaryKey": false,
+                    "compositeUniqueKey": false,
+                    "name": "Postal code",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "GUID": "03048688-44ef-5286-9d37-e87d6ca8cdf8",
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
+                    "mode": "",
+                    "compositeKey": [
+                      "compositePrimaryKey",
+                      "compositeUniqueKey"
+                    ]
+                  },
+                  {
+                    "primaryKey": false,
+                    "required": true,
+                    "alternateKey": false,
+                    "childType": "varchar",
+                    "type": "string",
+                    "compositePrimaryKey": false,
+                    "compositeUniqueKey": false,
+                    "name": "City",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "GUID": "24a64b44-cec0-54fc-8e94-f6287864ebcc",
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
+                    "mode": "",
+                    "compositeKey": [
+                      "compositePrimaryKey",
+                      "compositeUniqueKey"
+                    ]
+                  }
+                ],
+                "additionalProperties": false,
+                "alternateKey": false,
+                "childType": "object",
+                "type": "document",
+                "compositePrimaryKey": false,
+                "compositeUniqueKey": false,
+                "hackoladeMeta": {},
+                "isActivated": true,
+                "GUID": "3ff559e8-d20f-432c-9ad8-5b93be0f1055",
+                "displayName": "Address",
+                "arrayItem": true,
+                "compositeKey": [
+                  "compositePrimaryKey",
+                  "compositeUniqueKey"
+                ]
+              }
+            ],
+            "alternateKey": false,
+            "childType": "array",
+            "type": "array",
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "Ship-to addresses",
+            "hackoladeMeta": {},
+            "isActivated": true,
+            "primaryKey": false,
+            "required": false,
+            "GUID": "a569060a-b3b2-4f73-95c7-7c2e2145c273",
+            "description": "Holds a list of potential shipping addresses registered by the customer. Customers can maintain multiple shipping addresses for convenience and flexibility, allowing them to select a preferred address when placing an order. This feature enhances the user experience by accommodating different delivery locations, such as home, work, or gift recipients.",
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ]
+          }
+        ],
+        "definitions": {
+          "type": "definitions",
+          "properties": [],
+          "GUID": "a8a134b2-2caf-48d9-93b6-3a86f837ad43"
+        },
+        "isActivated": true,
+        "additionalProperties": false,
+        "bucketId": "81137752-f86d-41e7-bb91-6d3e9fdb9628",
+        "description": "The Customer entity represents an individual or organization using the ecommerce platform to browse, purchase, and manage orders. It stores essential contact information, registration data, and address details for billing and shipping.",
+        "definitionEntityType": "collection",
+        "fileType": "hackoladeSchema",
+        "definitionRefs": [
+          [
+            "e2ba0994-1763-4b13-8b19-e7a0d9f95edb"
+          ]
+        ],
+        "kind": "relativePath",
+        "link": "../common/Customer-Polyglot.hck.json",
+        "fieldRelativePath": "#/Customer management/Customer"
+      },
+      {
+        "GUID": "f40517e2-29ea-49d0-9706-f405a6cf02ac",
+        "name": "Disclaimer",
+        "type": "annotation",
+        "value": "This Model serves as a basic example of reusable definitions within a data modeling context\n\nIt is intended for illustration purposes only and simplifies the complexities of customer data management, omitting certain variations and best practices relevant to real-world applications.",
+        "disableInitialFocus": true,
+        "definitionEntityType": "decorativeSymbol",
+        "link": "../common/Customer-Polyglot.hck.json",
+        "kind": "relativePath",
+        "fieldRelativePath": "#/Disclaimer",
+        "fileType": "hackoladeSchema",
+        "definitionRefs": []
+      },
+      {
+        "name": "Customer management",
+        "type": "bucket",
+        "collectionIds": [
+          "5cc94e26-8eb9-4b1c-a78d-a870d9f640db"
+        ],
+        "backgroundColor": {
+          "r": 216,
+          "g": 0,
+          "b": 115,
+          "a": 1
+        },
+        "show": true,
+        "isActivated": true,
+        "indexes": [],
+        "GUID": "81137752-f86d-41e7-bb91-6d3e9fdb9628",
+        "definitionEntityType": "bucket",
+        "fileType": "hackoladeSchema",
+        "definitionRefs": [
+          [
+            "a47b2731-dfa7-4364-91e6-4601ec648539"
+          ]
+        ],
+        "kind": "relativePath",
+        "link": "../common/Customer-Polyglot.hck.json",
+        "fieldRelativePath": "#/Customer management"
+      },
       {
         "GUID": "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
         "collectionName": "Product",
@@ -850,6 +1206,7 @@
             "hackoladeMeta": {},
             "isActivated": true,
             "GUID": "c5f20bbd-e577-4a70-b532-13e319e3ef18",
+            "description": "The name of the product or service as displayed to the customer.",
             "mode": "",
             "compositeKey": [
               "compositePrimaryKey",
@@ -873,7 +1230,27 @@
               "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
               "97db87db-8fbe-41bb-8850-34193c9ee07e"
             ],
-            "relationshipType": "Foreign Master",
+            "relationshipType": "Foreign Key",
+            "description": "References the category or product group to which this item belongs. This links to a separate Category entity that stores hierarchical or descriptive data about product categories.",
+            "mode": "",
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ]
+          },
+          {
+            "primaryKey": false,
+            "required": false,
+            "alternateKey": false,
+            "childType": "varchar",
+            "type": "string",
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "Supplier code",
+            "hackoladeMeta": {},
+            "isActivated": true,
+            "GUID": "a898b734-3304-48c1-b45d-98c1f7cc3808",
+            "description": "References the unique code of the supplier who provides or manufactures the product. Ties to the Supplier entity, facilitating supplier relationship management and inventory tracking.",
             "mode": "",
             "compositeKey": [
               "compositePrimaryKey",
@@ -892,6 +1269,7 @@
             "hackoladeMeta": {},
             "isActivated": true,
             "GUID": "6ef810f9-c366-426b-9aa7-97f54138905f",
+            "description": "A longer text providing additional details about the product. May be omitted if product details are referenced externally.",
             "mode": "",
             "compositeKey": [
               "compositePrimaryKey",
@@ -913,6 +1291,7 @@
                 "GUID": "eb09feb9-6460-4193-b564-2d31c3ca40b4",
                 "arrayItem": true,
                 "displayName": "url",
+                "description": "The direct link or path to the image file. Ensures the platform can retrieve and display product images across various channels.",
                 "mode": "",
                 "compositeKey": [
                   "compositePrimaryKey",
@@ -969,6 +1348,7 @@
                       "SGD",
                       "HKD"
                     ],
+                    "description": "Indicates the currency in which the product price is set.",
                     "compositeKey": [
                       "compositePrimaryKey",
                       "compositeUniqueKey"
@@ -991,6 +1371,7 @@
                     "mode": "decimal",
                     "foreignCollection": "",
                     "foreignField": [],
+                    "description": "The numeric value of the product’s price in the specified currency.",
                     "compositeKey": [
                       "compositePrimaryKey",
                       "compositeUniqueKey"
@@ -1008,6 +1389,7 @@
                     "isActivated": true,
                     "primaryKey": false,
                     "GUID": "2c86253b-1d80-4798-ad2b-3bef74fa239c",
+                    "description": "The date or date/time from which the specified price becomes valid. Enables time-based pricing and helps maintain a historical record of price changes.",
                     "compositeKey": [
                       "compositePrimaryKey",
                       "compositeUniqueKey"
@@ -1064,326 +1446,21 @@
         "fileType": "hackoladeSchema",
         "definitionRefs": [
           [
-            "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648"
+            "3ef82e26-0f96-48f1-9603-4c737037815d"
           ]
         ],
         "kind": "relativePath",
         "link": "../merchandising/Product-Polyglot.hck.json",
-        "fieldRelativePath": "#/Product"
+        "fieldRelativePath": "#/Product management/Product"
       },
       {
-        "GUID": "5cc94e26-8eb9-4b1c-a78d-a870d9f640db",
-        "collectionName": "Customer",
-        "type": "object",
-        "properties": [
-          {
-            "primaryKey": false,
-            "required": false,
-            "alternateKey": false,
-            "childType": "varchar",
-            "type": "string",
-            "compositePrimaryKey": false,
-            "compositeUniqueKey": false,
-            "name": "First name",
-            "hackoladeMeta": {},
-            "isActivated": true,
-            "GUID": "e8a58173-1262-4752-859c-10ceec5598aa",
-            "mode": "",
-            "compositeKey": [
-              "compositePrimaryKey",
-              "compositeUniqueKey"
-            ]
-          },
-          {
-            "primaryKey": false,
-            "required": false,
-            "alternateKey": false,
-            "childType": "varchar",
-            "type": "string",
-            "compositePrimaryKey": false,
-            "compositeUniqueKey": false,
-            "name": "Last name",
-            "hackoladeMeta": {},
-            "isActivated": true,
-            "GUID": "872c6f47-1c90-4b97-ad5e-2c446d854243",
-            "mode": "",
-            "compositeKey": [
-              "compositePrimaryKey",
-              "compositeUniqueKey"
-            ]
-          },
-          {
-            "primaryKey": true,
-            "required": true,
-            "alternateKey": false,
-            "childType": "varchar",
-            "type": "string",
-            "compositePrimaryKey": false,
-            "compositeUniqueKey": false,
-            "name": "email",
-            "hackoladeMeta": {},
-            "isActivated": true,
-            "GUID": "18d05aa0-70b0-4f8e-9736-ffbc7104f778",
-            "mode": "",
-            "compositeKey": [
-              "compositePrimaryKey",
-              "compositeUniqueKey"
-            ]
-          },
-          {
-            "primaryKey": false,
-            "required": false,
-            "alternateKey": false,
-            "childType": "varchar",
-            "type": "string",
-            "compositePrimaryKey": false,
-            "compositeUniqueKey": false,
-            "name": "Phone number",
-            "hackoladeMeta": {},
-            "isActivated": true,
-            "GUID": "bb57e423-15a3-43d2-bb4f-81c084e50416",
-            "mode": "",
-            "compositeKey": [
-              "compositePrimaryKey",
-              "compositeUniqueKey"
-            ]
-          },
-          {
-            "required": false,
-            "alternateKey": false,
-            "childType": "date",
-            "type": "string",
-            "compositePrimaryKey": false,
-            "compositeUniqueKey": false,
-            "name": "Registration date",
-            "hackoladeMeta": {},
-            "isActivated": true,
-            "primaryKey": false,
-            "GUID": "7fa9c279-fe3c-4864-83e9-10df93832aef",
-            "description": "Records the date when the customer registered on the e-commerce platform. It is essential for tracking customer lifecycle stages, analyzing customer acquisition trends, and managing loyalty programs.",
-            "compositeKey": [
-              "compositePrimaryKey",
-              "compositeUniqueKey"
-            ]
-          },
-          {
-            "properties": [
-              {
-                "primaryKey": false,
-                "required": false,
-                "alternateKey": false,
-                "childType": "varchar",
-                "type": "string",
-                "compositePrimaryKey": false,
-                "compositeUniqueKey": false,
-                "name": "Street",
-                "hackoladeMeta": {},
-                "isActivated": true,
-                "GUID": "ecbb43ea-0993-5816-a4ed-88245fc6aa74",
-                "description": "Specifies the street name and number, providing detailed location information within a city or town.",
-                "mode": "",
-                "compositeKey": [
-                  "compositePrimaryKey",
-                  "compositeUniqueKey"
-                ]
-              },
-              {
-                "primaryKey": false,
-                "required": false,
-                "alternateKey": false,
-                "childType": "varchar",
-                "type": "string",
-                "compositePrimaryKey": false,
-                "compositeUniqueKey": false,
-                "name": "Postal code",
-                "hackoladeMeta": {},
-                "isActivated": true,
-                "GUID": "1b1a3d76-edce-5c06-bb4f-2ce2d8af2680",
-                "foreignCollection": "",
-                "foreignField": [],
-                "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
-                "mode": "",
-                "compositeKey": [
-                  "compositePrimaryKey",
-                  "compositeUniqueKey"
-                ]
-              },
-              {
-                "primaryKey": false,
-                "required": false,
-                "alternateKey": false,
-                "childType": "varchar",
-                "type": "string",
-                "compositePrimaryKey": false,
-                "compositeUniqueKey": false,
-                "name": "City",
-                "hackoladeMeta": {},
-                "isActivated": true,
-                "GUID": "46719528-1e8c-5df1-8362-9794cbdb696b",
-                "foreignCollection": "",
-                "foreignField": [],
-                "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
-                "mode": "",
-                "compositeKey": [
-                  "compositePrimaryKey",
-                  "compositeUniqueKey"
-                ]
-              }
-            ],
-            "additionalProperties": false,
-            "alternateKey": false,
-            "childType": "object",
-            "type": "document",
-            "compositePrimaryKey": false,
-            "compositeUniqueKey": false,
-            "name": "Bill-to address",
-            "hackoladeMeta": {},
-            "isActivated": true,
-            "GUID": "7c3325ce-c9c4-4ad6-9287-8c1e2084ab9a",
-            "refDescription": "Stores the billing address associated with the customer. It is used for invoicing and payment processing, ensuring that billing information is accurate and up to date. The bill-to address may differ from the shipping address and is crucial for financial record-keeping.",
-            "compositeKey": [
-              "compositePrimaryKey",
-              "compositeUniqueKey"
-            ]
-          },
-          {
-            "properties": [
-              {
-                "properties": [
-                  {
-                    "primaryKey": false,
-                    "required": false,
-                    "alternateKey": false,
-                    "childType": "varchar",
-                    "type": "string",
-                    "compositePrimaryKey": false,
-                    "compositeUniqueKey": false,
-                    "name": "Street",
-                    "hackoladeMeta": {},
-                    "isActivated": true,
-                    "GUID": "473443ff-5b77-557d-8f38-e2fc3887ec6c",
-                    "description": "Specifies the street name and number, providing detailed location information within a city or town.",
-                    "mode": "",
-                    "compositeKey": [
-                      "compositePrimaryKey",
-                      "compositeUniqueKey"
-                    ]
-                  },
-                  {
-                    "primaryKey": false,
-                    "required": false,
-                    "alternateKey": false,
-                    "childType": "varchar",
-                    "type": "string",
-                    "compositePrimaryKey": false,
-                    "compositeUniqueKey": false,
-                    "name": "Postal code",
-                    "hackoladeMeta": {},
-                    "isActivated": true,
-                    "GUID": "4d854aca-6c5b-5379-80e8-4fee9c366232",
-                    "foreignCollection": "",
-                    "foreignField": [],
-                    "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
-                    "mode": "",
-                    "compositeKey": [
-                      "compositePrimaryKey",
-                      "compositeUniqueKey"
-                    ]
-                  },
-                  {
-                    "primaryKey": false,
-                    "required": false,
-                    "alternateKey": false,
-                    "childType": "varchar",
-                    "type": "string",
-                    "compositePrimaryKey": false,
-                    "compositeUniqueKey": false,
-                    "name": "City",
-                    "hackoladeMeta": {},
-                    "isActivated": true,
-                    "GUID": "5c335a67-1c92-5902-ae42-a807a09e38f9",
-                    "foreignCollection": "",
-                    "foreignField": [],
-                    "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
-                    "mode": "",
-                    "compositeKey": [
-                      "compositePrimaryKey",
-                      "compositeUniqueKey"
-                    ]
-                  }
-                ],
-                "additionalProperties": false,
-                "alternateKey": false,
-                "childType": "object",
-                "type": "document",
-                "compositePrimaryKey": false,
-                "compositeUniqueKey": false,
-                "hackoladeMeta": {},
-                "isActivated": true,
-                "GUID": "8678843b-3325-445b-9161-00f739973a3b",
-                "displayName": "Address",
-                "arrayItem": true,
-                "compositeKey": [
-                  "compositePrimaryKey",
-                  "compositeUniqueKey"
-                ]
-              }
-            ],
-            "alternateKey": false,
-            "childType": "array",
-            "type": "array",
-            "compositePrimaryKey": false,
-            "compositeUniqueKey": false,
-            "name": "Ship-to addresses",
-            "hackoladeMeta": {},
-            "isActivated": true,
-            "primaryKey": false,
-            "required": false,
-            "GUID": "a569060a-b3b2-4f73-95c7-7c2e2145c273",
-            "description": "Holds a list of potential shipping addresses registered by the customer. Customers can maintain multiple shipping addresses for convenience and flexibility, allowing them to select a preferred address when placing an order. This feature enhances the user experience by accommodating different delivery locations, such as home, work, or gift recipients.",
-            "compositeKey": [
-              "compositePrimaryKey",
-              "compositeUniqueKey"
-            ]
-          }
-        ],
-        "definitions": {
-          "type": "definitions",
-          "properties": [],
-          "GUID": "a8a134b2-2caf-48d9-93b6-3a86f837ad43"
-        },
-        "isActivated": true,
-        "additionalProperties": false,
-        "bucketId": "81137752-f86d-41e7-bb91-6d3e9fdb9628",
-        "definitionEntityType": "collection",
-        "fileType": "hackoladeSchema",
-        "definitionRefs": [
-          [
-            "e2ba0994-1763-4b13-8b19-e7a0d9f95edb"
-          ]
-        ],
-        "kind": "relativePath",
-        "link": "../common/Customer-Polyglot.hck.json",
-        "fieldRelativePath": "#/Customer management/Customer"
-      },
-      {
-        "GUID": "f40517e2-29ea-49d0-9706-f405a6cf02ac",
-        "name": "Disclaimer",
-        "type": "annotation",
-        "value": "This Model serves as a basic example of reusable definitions within a data modeling context\n\nIt is intended for illustration purposes only and simplifies the complexities of customer data management, omitting certain variations and best practices relevant to real-world applications.",
-        "disableInitialFocus": true,
-        "definitionEntityType": "decorativeSymbol",
-        "link": "../common/Customer-Polyglot.hck.json",
-        "kind": "relativePath",
-        "fieldRelativePath": "#/Disclaimer",
-        "fileType": "hackoladeSchema",
-        "definitionRefs": []
-      },
-      {
-        "name": "Customer management",
+        "name": "Product management",
         "type": "bucket",
         "collectionIds": [
-          "5cc94e26-8eb9-4b1c-a78d-a870d9f640db"
+          "d69b2dea-e91d-49e8-8a14-f9c3ab1af88b",
+          "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
+          "14dd0530-7fdc-4567-a3c4-2177fc0bd660",
+          "1eec2f02-271b-45e3-b874-b47ac00ca585"
         ],
         "backgroundColor": {
           "r": 216,
@@ -1394,17 +1471,18 @@
         "show": true,
         "isActivated": true,
         "indexes": [],
-        "GUID": "81137752-f86d-41e7-bb91-6d3e9fdb9628",
+        "GUID": "4631c9fb-41fb-4647-a18e-f22367a656c5",
+        "description": "Serves as a comprehensive framework for managing all aspects of products within the e-commerce system. This entity encompasses various components that facilitate the organization, tracking, and sale of products, ensuring a streamlined process from supplier management to customer sales.",
         "definitionEntityType": "bucket",
         "fileType": "hackoladeSchema",
         "definitionRefs": [
           [
-            "a47b2731-dfa7-4364-91e6-4601ec648539"
+            "38a4f489-8d86-47f3-8cd5-bc666ce58741"
           ]
         ],
         "kind": "relativePath",
-        "link": "../common/Customer-Polyglot.hck.json",
-        "fieldRelativePath": "#/Customer management"
+        "link": "../merchandising/Product-Polyglot.hck.json",
+        "fieldRelativePath": "#/Product management"
       }
     ],
     "GUID": "c2c1c7a2-2fd6-4b39-b890-9bf77cfa26c7"
@@ -1423,7 +1501,7 @@
             "hackoladeMeta": {},
             "isActivated": true,
             "primaryKey": false,
-            "required": false,
+            "required": true,
             "childType": "varchar",
             "type": "string",
             "compositeKey": [
@@ -1439,7 +1517,7 @@
             "hackoladeMeta": {},
             "isActivated": true,
             "primaryKey": false,
-            "required": false,
+            "required": true,
             "childType": "varchar",
             "type": "string",
             "compositeKey": [
@@ -1457,7 +1535,7 @@
             "hackoladeMeta": {},
             "isActivated": true,
             "primaryKey": false,
-            "required": false,
+            "required": true,
             "childType": "varchar",
             "type": "string",
             "compositeKey": [
@@ -1535,6 +1613,7 @@
           "compositeUniqueKey"
         ],
         "GUID": "865adb6d-3499-4c17-8661-9b3b4333ca8c",
+        "description": "The name of the product or service as displayed to the customer.",
         "error": {},
         "link": "../merchandising/Product-Polyglot.hck.json",
         "fieldRelativePath": "#/Product management/Product/properties/Name",
@@ -1562,6 +1641,7 @@
           "compositeUniqueKey"
         ],
         "GUID": "3d5e05e0-8430-45a8-98db-ebf2cee3f31e",
+        "description": "A longer text providing additional details about the product. May be omitted if product details are referenced externally.",
         "error": {},
         "link": "../merchandising/Product-Polyglot.hck.json",
         "fieldRelativePath": "#/Product management/Product/properties/Description",
@@ -1609,6 +1689,7 @@
           "SGD",
           "HKD"
         ],
+        "description": "Indicates the currency in which the product price is set.",
         "error": {},
         "link": "../merchandising/Product-Polyglot.hck.json",
         "fieldRelativePath": "#/Product management/Product/properties/Prices/properties/0/properties/Currency",
@@ -1640,12 +1721,10 @@
         ],
         "GUID": "91f49cfb-0486-4406-9e30-f5b68d67f1fe",
         "mode": "decimal",
-        "error": {
-          "name": false,
-          "code": false
-        },
         "foreignCollection": "",
         "foreignField": [],
+        "description": "The numeric value of the product’s price in the specified currency.",
+        "error": {},
         "link": "../merchandising/Product-Polyglot.hck.json",
         "fieldRelativePath": "#/Product management/Product/properties/Prices/properties/0/properties/Amount",
         "kind": "relativePath",
@@ -1679,19 +1758,19 @@
   "isLineageEnabled": false,
   "polyglotModelPaths": [
     {
-      "GUID": "39854a9d-c389-4193-a001-f0f012ab1dbd",
-      "polyglotModelName": "Product-Polyglot.hck",
-      "polyglotModelPath": "../merchandising/Product-Polyglot.hck.json",
-      "normalization": false
-    },
-    {
       "GUID": "814c59e0-6932-46af-afc6-dd578cadb3d9",
       "polyglotModelName": "Customer-Polyglot.hck",
       "polyglotModelPath": "../common/Customer-Polyglot.hck.json",
       "normalization": false
+    },
+    {
+      "GUID": "d249a1ad-1b9d-4526-8f11-0b0e2f1df3a4",
+      "polyglotModelName": "Product-Polyglot.hck",
+      "polyglotModelPath": "../merchandising/Product-Polyglot.hck.json",
+      "normalization": false
     }
   ],
-  "lastModifTS": "2025-02-19T11:31:23.099Z",
+  "lastModifTS": "2025-02-25T15:42:53.507Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -1700,7 +1779,7 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.0.1"
+    "version": "8.0.2"
   },
   "hackoladeMeta": {
     "validationErrors": {
@@ -1713,21 +1792,21 @@
       "dbLevel": {
         "erd": [
           {
-            "GUID": "e2ba0994-1763-4b13-8b19-e7a0d9f95edb",
-            "x": 837.7959336385611,
-            "y": 882.2182641961967,
-            "width": 382,
-            "height": 301,
+            "GUID": "3ef82e26-0f96-48f1-9603-4c737037815d",
+            "x": 1976.347586735294,
+            "y": 944.4195224825469,
+            "width": 309,
+            "height": 168,
             "color": {
               "hex": "#2196F3"
             }
           },
           {
-            "GUID": "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648",
-            "x": 1982.4328849514845,
-            "y": 913.7561443430177,
-            "width": 385,
-            "height": 252,
+            "GUID": "e2ba0994-1763-4b13-8b19-e7a0d9f95edb",
+            "x": 837.7959336385611,
+            "y": 882.2182641961967,
+            "width": 380,
+            "height": 169,
             "color": {
               "hex": "#2196F3"
             }
@@ -1736,8 +1815,8 @@
             "GUID": "46385b4a-a728-4579-8b09-10e9e7c52c99",
             "x": 1378.5380761523052,
             "y": 798.3563794255192,
-            "width": 435,
-            "height": 431,
+            "width": 449,
+            "height": 507,
             "color": {
               "hex": "#2196F3"
             }
@@ -1751,11 +1830,6 @@
         },
         "buckets": [
           {
-            "x": 1942.4328849514845,
-            "y": 873.7561443430177,
-            "GUID": "893adac0-c450-4c13-b69e-974ee5e93117"
-          },
-          {
             "x": 1338.5380761523052,
             "y": 758.3563794255192,
             "GUID": "e863d79d-6e38-4098-a01e-46d6249501f8"
@@ -1764,6 +1838,11 @@
             "x": 797.7959336385611,
             "y": 842.2182641961967,
             "GUID": "a47b2731-dfa7-4364-91e6-4601ec648539"
+          },
+          {
+            "x": 1936.347586735294,
+            "y": 904.4195224825469,
+            "GUID": "38a4f489-8d86-47f3-8cd5-bc666ce58741"
           }
         ],
         "collapsedNodes": [],
@@ -1783,24 +1862,19 @@
               "y": 1040
             },
             {
-              "GUID": "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648",
-              "size": 100,
-              "x": 1390,
-              "y": 2540
-            },
-            {
               "GUID": "e2ba0994-1763-4b13-8b19-e7a0d9f95edb",
               "size": 100,
               "x": 1140,
               "y": 3340
+            },
+            {
+              "GUID": "3ef82e26-0f96-48f1-9603-4c737037815d",
+              "size": 100,
+              "x": 1140,
+              "y": 3640
             }
           ],
           "buckets": [
-            {
-              "x": 1116.8266533066133,
-              "y": 1015.7294589178357,
-              "GUID": "893adac0-c450-4c13-b69e-974ee5e93117"
-            },
             {
               "x": 964,
               "y": 728,
@@ -1810,6 +1884,11 @@
               "x": 40,
               "y": 40,
               "GUID": "a47b2731-dfa7-4364-91e6-4601ec648539"
+            },
+            {
+              "x": 80,
+              "y": 80,
+              "GUID": "38a4f489-8d86-47f3-8cd5-bc666ce58741"
             }
           ],
           "decorativeSymbols": [
@@ -1840,14 +1919,14 @@
         "nestedCollectionsLayout": "horizontal",
         "options": [
           {
+            "GUID": "3ef82e26-0f96-48f1-9603-4c737037815d",
             "autoWidth": false,
-            "autoHeight": false,
-            "GUID": "46385b4a-a728-4579-8b09-10e9e7c52c99"
+            "autoHeight": false
           },
           {
             "autoWidth": false,
             "autoHeight": false,
-            "GUID": "8519b9b6-e2aa-4eb0-b6cc-aaa9c401f648"
+            "GUID": "e2ba0994-1763-4b13-8b19-e7a0d9f95edb"
           }
         ],
         "relationshipUpdateDisabled": false

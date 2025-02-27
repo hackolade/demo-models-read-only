@@ -1,0 +1,1247 @@
+{
+  "modelName": "Order management",
+  "collections": [
+    {
+      "code": "order",
+      "GUID": "d10c5dd7-9451-44e0-ad42-9565ec3f7ebd",
+      "type": "reference",
+      "$ref": "#external/definitions/Order",
+      "refType": "polyglot",
+      "ref": "46385b4a-a728-4579-8b09-10e9e7c52c99",
+      "refIdPath": [
+        "30f063c2-a89e-4946-82b7-109fecb13f2c",
+        "ddb313aa-e6d4-4f69-a5f0-835684eac1a8",
+        "46385b4a-a728-4579-8b09-10e9e7c52c99"
+      ],
+      "isActivated": true,
+      "collectionName": "Order",
+      "bucketId": "33ed0346-7999-4ef1-8918-f9903a580cdb",
+      "properties": [],
+      "definitions": {
+        "properties": [],
+        "GUID": "b7a12dd1-f9d9-4486-a24b-ee323f24e376"
+      },
+      "description": "Represents a purchase transaction, including details about the items ordered, shipping information, payment details, and order status.",
+      "additionalProperties": false,
+      "referenceDiff": {
+        "properties": [
+          {
+            "GUID": "17ee1d91-fa06-4638-831b-a7766df0e191",
+            "error": {
+              "code": false,
+              "name": false
+            },
+            "hackoladeMeta": {}
+          },
+          {
+            "GUID": "d8e8b56d-827d-4fd1-bea0-07bd5bab9c2e",
+            "error": {
+              "code": false,
+              "name": false
+            },
+            "hackoladeMeta": {}
+          },
+          {
+            "GUID": "7e7c88f7-9ae5-5ee0-8fea-173f27c015f3",
+            "error": {},
+            "hackoladeMeta": {},
+            "name": "Shipto address",
+            "code": "shipto_address",
+            "properties": [
+              {
+                "GUID": "a78862dc-1d57-517a-98b1-71e47473535b",
+                "error": {},
+                "hackoladeMeta": {},
+                "properties": [
+                  {
+                    "GUID": "8c9edc40-f25d-5bbf-ab0f-38368906b961",
+                    "error": {},
+                    "hackoladeMeta": {},
+                    "name": "Shipto address",
+                    "code": "shipto_address"
+                  }
+                ]
+              },
+              {
+                "GUID": "a7d406c2-0ac4-53a1-a675-944848f485f9",
+                "error": {},
+                "hackoladeMeta": {},
+                "properties": [
+                  {
+                    "GUID": "9e4faa2d-6567-4c55-908d-59f30426bdc1",
+                    "error": {},
+                    "hackoladeMeta": {},
+                    "name": "Shipto address",
+                    "code": "shipto_address",
+                    "properties": [
+                      {
+                        "GUID": "e1cf9617-3aab-51fb-a0bf-11c788dc0179",
+                        "error": {
+                          "code": false,
+                          "name": false
+                        },
+                        "hackoladeMeta": {}
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "GUID": "60409d31-d9db-592b-8798-955bd29a93e2",
+            "error": {},
+            "hackoladeMeta": {},
+            "properties": [
+              {
+                "GUID": "252731f2-ab7e-5c2e-a982-47b882c3f81c",
+                "error": {},
+                "hackoladeMeta": {},
+                "properties": [
+                  {
+                    "GUID": "fad47821-c108-4728-ac06-edd87399a408",
+                    "error": {},
+                    "hackoladeMeta": {},
+                    "properties": [
+                      {
+                        "GUID": "1010c594-625d-457d-955c-a897e9a514c1",
+                        "error": {},
+                        "hackoladeMeta": {},
+                        "properties": [
+                          {
+                            "GUID": "37ecefbe-69cd-4c46-bfe2-bdb2fea3be1c",
+                            "error": {
+                              "code": false,
+                              "name": false
+                            },
+                            "hackoladeMeta": {}
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "GUID": "424b101d-ff5e-5562-a0fb-431964eb1bfd",
+            "error": {
+              "code": false,
+              "name": false
+            },
+            "hackoladeMeta": {},
+            "properties": [
+              {
+                "GUID": "0ba220fa-550b-548d-9646-1c57e116c934",
+                "error": {},
+                "hackoladeMeta": {},
+                "properties": [
+                  {
+                    "GUID": "dd734c93-f401-5f46-8b55-dbbe2ae379d4",
+                    "error": {
+                      "code": false,
+                      "name": false
+                    },
+                    "hackoladeMeta": {}
+                  }
+                ]
+              },
+              {
+                "GUID": "dd8de703-0353-5d9b-8e0a-78f2695e0cb1",
+                "error": {},
+                "hackoladeMeta": {},
+                "properties": [
+                  {
+                    "GUID": "72bc07b9-d511-42e0-966a-7e5f14513040",
+                    "error": {
+                      "code": false,
+                      "name": false
+                    },
+                    "hackoladeMeta": {},
+                    "properties": [
+                      {
+                        "GUID": "eae27a5b-3644-46dd-a3d1-01afce2a245d",
+                        "error": {
+                          "code": false,
+                          "name": false
+                        },
+                        "hackoladeMeta": {}
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hackoladeMeta": {
+        "validationErrors": {},
+        "namingConvention": "code"
+      },
+      "error": {
+        "refPath": false
+      }
+    }
+  ],
+  "buckets": [
+    {
+      "code": "order_management",
+      "GUID": "33ed0346-7999-4ef1-8918-f9903a580cdb",
+      "name": "Order management",
+      "type": "reference",
+      "$ref": "#external/definitions/Order management",
+      "refType": "polyglot",
+      "ref": "e863d79d-6e38-4098-a01e-46d6249501f8",
+      "refIdPath": [
+        "30f063c2-a89e-4946-82b7-109fecb13f2c",
+        "ddb313aa-e6d4-4f69-a5f0-835684eac1a8",
+        "e863d79d-6e38-4098-a01e-46d6249501f8"
+      ],
+      "isActivated": true,
+      "backgroundColor": {
+        "r": 0,
+        "g": 188,
+        "b": 213,
+        "a": 1
+      },
+      "show": true,
+      "collectionIds": [
+        "d10c5dd7-9451-44e0-ad42-9565ec3f7ebd"
+      ],
+      "hackoladeMeta": {
+        "validationErrors": {},
+        "namingConvention": "code"
+      },
+      "description": "The Order Management container is responsible for all entities and relationships involved in creating, tracking, and fulfilling customer orders. At a logical level, the Order Management container interacts closely with both the Customer Management container (to identify and authenticate the customer placing the order) and the Product Management container (to reference product details and availability)."
+    }
+  ],
+  "views": [],
+  "relationships": [],
+  "users": [],
+  "diagramViews": [],
+  "idToNameHashTable": {
+    "d10c5dd7-9451-44e0-ad42-9565ec3f7ebd": "Order",
+    "33ed0346-7999-4ef1-8918-f9903a580cdb": "Order management",
+    "8c9edc40-f25d-5bbf-ab0f-38368906b961": "Shipto address",
+    "9e4faa2d-6567-4c55-908d-59f30426bdc1": "Shipto address",
+    "7e7c88f7-9ae5-5ee0-8fea-173f27c015f3": "Shipto address"
+  },
+  "definitions": {
+    "type": "definitions",
+    "properties": [],
+    "GUID": "822b0527-b677-420b-8306-827fd4da1040"
+  },
+  "polyglotDefinitions": {
+    "type": "polyglotDefinitions",
+    "properties": [
+      {
+        "GUID": "46385b4a-a728-4579-8b09-10e9e7c52c99",
+        "collectionName": "Order",
+        "type": "object",
+        "properties": [
+          {
+            "required": true,
+            "primaryKey": true,
+            "type": "string",
+            "name": "Identifier",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            },
+            "isActivated": true,
+            "GUID": "2dc5cd19-9bb7-4405-a00f-69af0c39ea24",
+            "description": "A unique reference number or code assigned to the order for tracking and identification.",
+            "code": "identifier"
+          },
+          {
+            "name": "Customer reference",
+            "type": "multiple",
+            "properties": [],
+            "multipleTypes": [
+              {
+                "type": "null",
+                "GUID": "547feea7-6050-46f5-85ba-cad822ebcba2"
+              },
+              {
+                "childType": "string",
+                "type": "string",
+                "GUID": "65b4d86d-7595-49a9-a0dd-53df98e83ac2",
+                "error": {}
+              }
+            ],
+            "isActivated": true,
+            "primaryKey": false,
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            },
+            "description": "References the unique identifier of the Customer entity. Associates the order with the customer who placed it.",
+            "relationshipType": "Foreign Key",
+            "parentRelationship": "f8f34cd7-4027-46ad-9160-b0dcaa29a509",
+            "required": false,
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ],
+            "foreignCollection": "65b184c5-dbf9-5d7a-b038-30aa2b8bb11a",
+            "foreignField": [
+              "65b184c5-dbf9-5d7a-b038-30aa2b8bb11a",
+              "15a4d58f-d2ae-5415-9cd9-23669eec4ef8"
+            ],
+            "default": null,
+            "compositePrimaryKey": false,
+            "GUID": "6adc1c99-dca5-4d92-88fd-6e27edf175ce",
+            "code": "customer_reference"
+          },
+          {
+            "name": "Order date",
+            "type": "multiple",
+            "properties": [],
+            "multipleTypes": [
+              {
+                "type": "null",
+                "GUID": "6188c9e6-cbdc-4882-9254-28b0b685e715"
+              },
+              {
+                "index": true,
+                "childType": "number",
+                "type": "numeric",
+                "GUID": "90601183-e887-4195-915c-aea34c484667",
+                "error": {},
+                "mode": "int",
+                "logicalType": "date"
+              }
+            ],
+            "isActivated": true,
+            "primaryKey": false,
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            },
+            "description": "The date and time at which the order was placed. Used for chronological reporting and status tracking.",
+            "required": false,
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ],
+            "default": null,
+            "compositePrimaryKey": false,
+            "GUID": "3a550c04-6ca2-4876-8ec9-89aa76ea1d13",
+            "code": "order_date"
+          },
+          {
+            "name": "Total amount",
+            "type": "multiple",
+            "properties": [],
+            "multipleTypes": [
+              {
+                "type": "null",
+                "GUID": "f6392ead-db85-440a-b4c0-fd837333f5e1"
+              },
+              {
+                "index": true,
+                "exclusiveMinimum": false,
+                "exclusiveMaximum": false,
+                "childType": "bytes",
+                "type": "string",
+                "GUID": "41c23c76-0061-4f2f-afdc-952b0654818a",
+                "mode": "int",
+                "error": {},
+                "subtype": "decimal"
+              }
+            ],
+            "isActivated": true,
+            "primaryKey": false,
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            },
+            "description": "The aggregated cost of all ordered items, including any taxes, fees, or discounts applied to the order. Should reflect the final amount the customer is expected to pay.",
+            "required": false,
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ],
+            "default": null,
+            "GUID": "17ee1d91-fa06-4638-831b-a7766df0e191",
+            "code": "total_amount"
+          },
+          {
+            "name": "Status",
+            "type": "multiple",
+            "properties": [],
+            "multipleTypes": [
+              {
+                "type": "null",
+                "GUID": "a3120c92-c3e5-4d4d-b7a0-098a0a7230bb"
+              },
+              {
+                "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
+                "symbols": [
+                  "Pending",
+                  "Shipped",
+                  "Delivered",
+                  "Canceled"
+                ],
+                "childType": "enum",
+                "type": "string",
+                "GUID": "35500a7d-0557-4dfd-b12c-d7f3b1a6312e",
+                "enum": [
+                  "Pending",
+                  "Shipped",
+                  "Delivered",
+                  "Canceled"
+                ],
+                "error": {}
+              }
+            ],
+            "isActivated": true,
+            "primaryKey": false,
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            },
+            "description": "The current state of the order (e.g., Pending, Shipped, Delivered, Canceled).",
+            "required": false,
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ],
+            "default": null,
+            "compositePrimaryKey": false,
+            "GUID": "6dac6534-e11a-49ac-a049-30f3b1207b88",
+            "code": "status"
+          },
+          {
+            "name": "Tracking number",
+            "type": "multiple",
+            "properties": [],
+            "multipleTypes": [
+              {
+                "type": "null",
+                "GUID": "3f197232-2e30-4ccb-b5e6-f766d19bc516"
+              },
+              {
+                "childType": "string",
+                "type": "string",
+                "GUID": "154b199b-3a44-4c39-b4ba-ee90a9722776",
+                "error": {}
+              }
+            ],
+            "isActivated": true,
+            "primaryKey": false,
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            },
+            "description": "A unique code provided by the shipping carrier to track the delivery status of the order.",
+            "required": false,
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ],
+            "default": null,
+            "GUID": "d8e8b56d-827d-4fd1-bea0-07bd5bab9c2e",
+            "code": "tracking_number"
+          },
+          {
+            "required": true,
+            "type": "choice",
+            "properties": [
+              {
+                "required": true,
+                "primaryKey": false,
+                "properties": [
+                  {
+                    "default": null,
+                    "type": "null",
+                    "primaryKey": false,
+                    "name": "Ship-to address",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    },
+                    "isActivated": true,
+                    "required": false,
+                    "GUID": "8c9edc40-f25d-5bbf-ab0f-38368906b961",
+                    "code": "ship-to_address"
+                  }
+                ],
+                "childType": "record",
+                "type": "document",
+                "subschema": true,
+                "isActivated": true,
+                "GUID": "a78862dc-1d57-517a-98b1-71e47473535b"
+              },
+              {
+                "required": true,
+                "primaryKey": false,
+                "properties": [
+                  {
+                    "required": false,
+                    "primaryKey": false,
+                    "properties": [
+                      {
+                        "required": true,
+                        "primaryKey": false,
+                        "type": "string",
+                        "name": "Street",
+                        "hackoladeMeta": {
+                          "namingConvention": "code"
+                        },
+                        "isActivated": true,
+                        "GUID": "99f6874d-0ce2-5b47-8ab9-42d7c3702219",
+                        "description": "Specifies the street name and number, providing detailed location information within a city or town.",
+                        "code": "street"
+                      },
+                      {
+                        "required": true,
+                        "primaryKey": false,
+                        "type": "string",
+                        "name": "Postal code",
+                        "hackoladeMeta": {
+                          "namingConvention": "code"
+                        },
+                        "isActivated": true,
+                        "GUID": "e1cf9617-3aab-51fb-a0bf-11c788dc0179",
+                        "foreignCollection": "",
+                        "foreignField": [],
+                        "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
+                        "code": "postal_code"
+                      },
+                      {
+                        "required": true,
+                        "primaryKey": false,
+                        "type": "string",
+                        "name": "City",
+                        "hackoladeMeta": {
+                          "namingConvention": "code"
+                        },
+                        "isActivated": true,
+                        "GUID": "93594ede-d2dc-51d6-bfb2-06fcfee72d2b",
+                        "foreignCollection": "",
+                        "foreignField": [],
+                        "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
+                        "code": "city"
+                      }
+                    ],
+                    "childType": "record",
+                    "type": "document",
+                    "name": "Ship-to address",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    },
+                    "isActivated": true,
+                    "GUID": "9e4faa2d-6567-4c55-908d-59f30426bdc1",
+                    "code": "ship-to_address",
+                    "refDescription": "The destination address where the order is to be delivered.",
+                    "default": null
+                  }
+                ],
+                "childType": "record",
+                "type": "document",
+                "subschema": true,
+                "isActivated": true,
+                "GUID": "a7d406c2-0ac4-53a1-a675-944848f485f9"
+              }
+            ],
+            "isActivated": true,
+            "choice": "oneOf",
+            "default": null,
+            "name": "Ship-to address",
+            "code": "ship-to_address",
+            "GUID": "7e7c88f7-9ae5-5ee0-8fea-173f27c015f3",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            }
+          },
+          {
+            "required": true,
+            "type": "choice",
+            "properties": [
+              {
+                "required": true,
+                "primaryKey": false,
+                "properties": [
+                  {
+                    "default": null,
+                    "type": "null",
+                    "primaryKey": false,
+                    "name": "Payments",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    },
+                    "isActivated": true,
+                    "required": false,
+                    "GUID": "f1b44f62-f5f2-5fe9-87af-1af4b98e46c1",
+                    "code": "payments"
+                  }
+                ],
+                "childType": "record",
+                "type": "document",
+                "subschema": true,
+                "isActivated": true,
+                "GUID": "fdc5e9b1-afa7-5e92-bceb-c63026b3bc00"
+              },
+              {
+                "required": true,
+                "primaryKey": false,
+                "properties": [
+                  {
+                    "required": false,
+                    "properties": [
+                      {
+                        "required": false,
+                        "primaryKey": false,
+                        "properties": [
+                          {
+                            "name": "Amount",
+                            "type": "multiple",
+                            "properties": [],
+                            "multipleTypes": [
+                              {
+                                "type": "null",
+                                "GUID": "551bf51b-0c8f-44f1-8169-2ec40854acd4"
+                              },
+                              {
+                                "index": true,
+                                "exclusiveMinimum": false,
+                                "exclusiveMaximum": false,
+                                "childType": "bytes",
+                                "type": "string",
+                                "GUID": "63ad0f39-c05e-418e-8b34-e3afbd8c75fe",
+                                "mode": "int",
+                                "error": {},
+                                "subtype": "decimal"
+                              }
+                            ],
+                            "isActivated": true,
+                            "primaryKey": false,
+                            "hackoladeMeta": {
+                              "namingConvention": "code"
+                            },
+                            "description": "The total cost of the payment, net of applicable taxes and fees.",
+                            "required": false,
+                            "compositeKey": [
+                              "compositePrimaryKey",
+                              "compositeUniqueKey"
+                            ],
+                            "foreignCollection": "",
+                            "foreignField": [],
+                            "default": null,
+                            "GUID": "42c71b66-59d1-4f73-b821-a9034764f127",
+                            "code": "amount"
+                          },
+                          {
+                            "name": "Timestamp",
+                            "type": "multiple",
+                            "properties": [],
+                            "multipleTypes": [
+                              {
+                                "type": "null",
+                                "GUID": "f8a3b2b6-0927-404e-8cef-8d55a05ea382"
+                              },
+                              {
+                                "tPrecision": 9,
+                                "childType": "number",
+                                "type": "numeric",
+                                "GUID": "0b86fe65-d896-4de7-ad60-e76cdea01eb7",
+                                "error": {},
+                                "mode": "long",
+                                "logicalType": "local-timestamp-millis"
+                              }
+                            ],
+                            "isActivated": true,
+                            "primaryKey": false,
+                            "hackoladeMeta": {
+                              "namingConvention": "code"
+                            },
+                            "description": "The date and time when the payment was received.",
+                            "required": false,
+                            "compositeKey": [
+                              "compositePrimaryKey",
+                              "compositeUniqueKey"
+                            ],
+                            "foreignCollection": "",
+                            "foreignField": [],
+                            "default": null,
+                            "GUID": "b2f61376-69c8-46f5-9f61-8e68a0dae68d",
+                            "code": "timestamp"
+                          },
+                          {
+                            "name": "Payment method",
+                            "type": "multiple",
+                            "properties": [],
+                            "multipleTypes": [
+                              {
+                                "type": "null",
+                                "GUID": "32995058-bfe3-4f52-abc8-2a7acbcdeead"
+                              },
+                              {
+                                "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
+                                "symbols": [
+                                  "CreditCard",
+                                  "PayPal",
+                                  "BankTransfer"
+                                ],
+                                "childType": "enum",
+                                "type": "string",
+                                "GUID": "9d2117f0-b15f-4d03-b33e-7961973f3298",
+                                "error": {
+                                  "enum": false,
+                                  "enums": false
+                                },
+                                "enum": [
+                                  "CreditCard",
+                                  "PayPal",
+                                  "BankTransfer"
+                                ]
+                              }
+                            ],
+                            "isActivated": true,
+                            "primaryKey": false,
+                            "hackoladeMeta": {
+                              "namingConvention": "code"
+                            },
+                            "description": "The method used for payment (e.g., Credit Card, PayPal, Bank Transfer).",
+                            "required": false,
+                            "compositeKey": [
+                              "compositePrimaryKey",
+                              "compositeUniqueKey"
+                            ],
+                            "foreignCollection": "",
+                            "foreignField": [],
+                            "default": null,
+                            "GUID": "37ecefbe-69cd-4c46-bfe2-bdb2fea3be1c",
+                            "code": "payment_method"
+                          },
+                          {
+                            "name": "Status",
+                            "type": "multiple",
+                            "properties": [],
+                            "multipleTypes": [
+                              {
+                                "type": "null",
+                                "GUID": "84ebfbe4-60d3-46ff-a241-5569216466d1"
+                              },
+                              {
+                                "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
+                                "symbols": [
+                                  "completed",
+                                  "pending",
+                                  "failed"
+                                ],
+                                "childType": "enum",
+                                "type": "string",
+                                "GUID": "54661da1-c24a-42cd-be91-fbcdbfb5df7b",
+                                "enum": [
+                                  "completed",
+                                  "pending",
+                                  "failed"
+                                ],
+                                "error": {}
+                              }
+                            ],
+                            "isActivated": true,
+                            "primaryKey": false,
+                            "hackoladeMeta": {
+                              "namingConvention": "code"
+                            },
+                            "description": "Indicates whether the payment has been completed, pending, or failed.",
+                            "required": false,
+                            "compositeKey": [
+                              "compositePrimaryKey",
+                              "compositeUniqueKey"
+                            ],
+                            "foreignCollection": "",
+                            "foreignField": [],
+                            "default": null,
+                            "GUID": "4b11b953-edb3-4c2d-8e36-a17406cb7b26",
+                            "code": "status"
+                          }
+                        ],
+                        "childType": "record",
+                        "type": "document",
+                        "hackoladeMeta": {
+                          "namingConvention": "code"
+                        },
+                        "isActivated": true,
+                        "GUID": "1010c594-625d-457d-955c-a897e9a514c1",
+                        "arrayItem": true,
+                        "displayName": "Payment",
+                        "name": "Payment",
+                        "code": "payment"
+                      }
+                    ],
+                    "primaryKey": false,
+                    "uniqueItems": false,
+                    "childType": "array",
+                    "type": "array",
+                    "name": "Payments",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    },
+                    "isActivated": true,
+                    "GUID": "fad47821-c108-4728-ac06-edd87399a408",
+                    "description": "A record of financial transactions associated with the order.",
+                    "default": null,
+                    "code": "payments"
+                  }
+                ],
+                "childType": "record",
+                "type": "document",
+                "subschema": true,
+                "isActivated": true,
+                "GUID": "252731f2-ab7e-5c2e-a982-47b882c3f81c"
+              }
+            ],
+            "isActivated": true,
+            "choice": "oneOf",
+            "default": null,
+            "name": "Payments",
+            "code": "payments",
+            "GUID": "60409d31-d9db-592b-8798-955bd29a93e2",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            }
+          },
+          {
+            "required": true,
+            "type": "choice",
+            "properties": [
+              {
+                "required": true,
+                "primaryKey": false,
+                "properties": [
+                  {
+                    "default": null,
+                    "type": "null",
+                    "primaryKey": false,
+                    "name": "Ordered items",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    },
+                    "isActivated": true,
+                    "required": false,
+                    "GUID": "dd734c93-f401-5f46-8b55-dbbe2ae379d4",
+                    "code": "ordered_items"
+                  }
+                ],
+                "childType": "record",
+                "type": "document",
+                "subschema": true,
+                "isActivated": true,
+                "GUID": "0ba220fa-550b-548d-9646-1c57e116c934"
+              },
+              {
+                "required": true,
+                "primaryKey": false,
+                "properties": [
+                  {
+                    "required": false,
+                    "properties": [
+                      {
+                        "required": false,
+                        "primaryKey": false,
+                        "properties": [
+                          {
+                            "name": "Quantity",
+                            "type": "multiple",
+                            "properties": [],
+                            "multipleTypes": [
+                              {
+                                "type": "null",
+                                "GUID": "a71d60aa-1c6e-4176-ad89-adad7b9c0fd4"
+                              },
+                              {
+                                "index": true,
+                                "exclusiveMinimum": false,
+                                "exclusiveMaximum": false,
+                                "childType": "number",
+                                "type": "numeric",
+                                "GUID": "1a38224e-23f4-419f-81f8-44fecbc29bc7",
+                                "error": {},
+                                "mode": "int"
+                              }
+                            ],
+                            "isActivated": true,
+                            "primaryKey": false,
+                            "hackoladeMeta": {
+                              "namingConvention": "code"
+                            },
+                            "description": "The number of units for each ordered item.",
+                            "required": false,
+                            "compositeKey": [
+                              "compositePrimaryKey",
+                              "compositeUniqueKey"
+                            ],
+                            "default": null,
+                            "compositePrimaryKey": false,
+                            "GUID": "e16e89ec-42c0-4647-ab3f-4225a2c9df1c",
+                            "code": "quantity"
+                          },
+                          {
+                            "required": true,
+                            "primaryKey": true,
+                            "type": "string",
+                            "name": "SKU",
+                            "hackoladeMeta": {
+                              "namingConvention": "code"
+                            },
+                            "isActivated": true,
+                            "description": "A unique identifier assigned to each product for inventory management and tracking purposes. It helps differentiate products and streamline the ordering process.",
+                            "GUID": "acdd584f-e173-4126-a669-6ea2f414ffd0",
+                            "code": "sku",
+                            "foreignCollection": "",
+                            "foreignField": [],
+                            "relationshipType": ""
+                          },
+                          {
+                            "name": "Name",
+                            "type": "multiple",
+                            "properties": [],
+                            "multipleTypes": [
+                              {
+                                "type": "null",
+                                "GUID": "4728ca18-6395-46fe-bf7d-cce0f3cc2765"
+                              },
+                              {
+                                "childType": "string",
+                                "type": "string",
+                                "error": {
+                                  "name": false
+                                },
+                                "GUID": "ba400918-1fa3-49c3-b2c9-8348310228fd"
+                              }
+                            ],
+                            "isActivated": true,
+                            "primaryKey": false,
+                            "hackoladeMeta": {
+                              "namingConvention": "code"
+                            },
+                            "description": "The name of the product or service as displayed to the customer.",
+                            "parentRelationship": "",
+                            "required": false,
+                            "compositeKey": [
+                              "compositePrimaryKey",
+                              "compositeUniqueKey"
+                            ],
+                            "childRelationships": [],
+                            "default": null,
+                            "GUID": "39a652f4-defc-4297-8814-d16fdb749d18",
+                            "code": "name"
+                          },
+                          {
+                            "name": "Description",
+                            "type": "multiple",
+                            "properties": [],
+                            "multipleTypes": [
+                              {
+                                "type": "null",
+                                "GUID": "63223901-b834-464c-b11a-d2db023fbbaf"
+                              },
+                              {
+                                "childType": "string",
+                                "type": "string",
+                                "error": {
+                                  "name": false
+                                },
+                                "GUID": "6d144d29-ac1f-4c72-a34f-0e298214cd31"
+                              }
+                            ],
+                            "isActivated": true,
+                            "primaryKey": false,
+                            "hackoladeMeta": {
+                              "namingConvention": "code"
+                            },
+                            "description": "A longer text providing additional details about the product. May be omitted if product details are referenced externally.",
+                            "parentRelationship": "",
+                            "required": false,
+                            "compositeKey": [
+                              "compositePrimaryKey",
+                              "compositeUniqueKey"
+                            ],
+                            "childRelationships": [],
+                            "default": null,
+                            "GUID": "6d536af4-ae07-48db-923e-3fd215300a8c",
+                            "code": "description"
+                          },
+                          {
+                            "required": true,
+                            "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
+                            "primaryKey": false,
+                            "childType": "enum",
+                            "type": "string",
+                            "name": "Currency",
+                            "hackoladeMeta": {
+                              "namingConvention": "code"
+                            },
+                            "isActivated": true,
+                            "symbols": [
+                              "USD",
+                              "EUR",
+                              "JPY",
+                              "GBP",
+                              "AUD",
+                              "CAD",
+                              "CHF",
+                              "CNY",
+                              "SEK",
+                              "NZD",
+                              "INR",
+                              "MXN",
+                              "SGD",
+                              "HKD"
+                            ],
+                            "description": "Indicates the currency in which the product price is set.",
+                            "GUID": "c7ccd811-1374-4a95-96b8-1bbb7eda7590",
+                            "code": "currency"
+                          },
+                          {
+                            "required": true,
+                            "primaryKey": false,
+                            "childType": "bytes",
+                            "type": "string",
+                            "name": "Amount",
+                            "hackoladeMeta": {
+                              "namingConvention": "code"
+                            },
+                            "isActivated": true,
+                            "description": "The numeric value of the product’s price in the specified currency.",
+                            "GUID": "cf7c7d06-9e2a-490d-852d-29010e9eefd8",
+                            "code": "amount",
+                            "subtype": "decimal"
+                          }
+                        ],
+                        "childType": "record",
+                        "type": "document",
+                        "hackoladeMeta": {
+                          "namingConvention": "code"
+                        },
+                        "isActivated": true,
+                        "GUID": "eae27a5b-3644-46dd-a3d1-01afce2a245d",
+                        "arrayItem": true,
+                        "displayName": "Ordered item",
+                        "name": "Ordered item",
+                        "code": "ordered_item"
+                      }
+                    ],
+                    "primaryKey": false,
+                    "uniqueItems": false,
+                    "childType": "array",
+                    "type": "array",
+                    "name": "Ordered items",
+                    "hackoladeMeta": {
+                      "namingConvention": "code"
+                    },
+                    "isActivated": true,
+                    "GUID": "72bc07b9-d511-42e0-966a-7e5f14513040",
+                    "description": "A list of products included in the order, detailing the purchased goods.",
+                    "default": null,
+                    "code": "ordered_items"
+                  }
+                ],
+                "childType": "record",
+                "type": "document",
+                "subschema": true,
+                "isActivated": true,
+                "GUID": "dd8de703-0353-5d9b-8e0a-78f2695e0cb1"
+              }
+            ],
+            "isActivated": true,
+            "choice": "oneOf",
+            "default": null,
+            "name": "Ordered items",
+            "code": "ordered_items",
+            "GUID": "424b101d-ff5e-5562-a0fb-431964eb1bfd",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            }
+          }
+        ],
+        "definitions": {
+          "type": "definitions",
+          "properties": [],
+          "GUID": "c3fe565c-9e15-44ed-957b-4bca2e105ec8"
+        },
+        "isActivated": true,
+        "additionalProperties": false,
+        "bucketId": "e863d79d-6e38-4098-a01e-46d6249501f8",
+        "description": "Represents a purchase transaction, including details about the items ordered, shipping information, payment details, and order status.",
+        "uniqueKey": [
+          {
+            "GUID": "53cbcce4-2637-470e-9bba-debbe6fb564d"
+          }
+        ],
+        "hackoladeMeta": {
+          "namingConvention": "code"
+        },
+        "code": "order",
+        "definitionEntityType": "collection",
+        "fileType": "hackoladeSchema",
+        "definitionRefs": [
+          [
+            "d10c5dd7-9451-44e0-ad42-9565ec3f7ebd"
+          ]
+        ],
+        "kind": "relativePath",
+        "link": "Order management-Polyglot.hck.json",
+        "fieldRelativePath": "#/Order management/Order"
+      },
+      {
+        "name": "Order management",
+        "type": "bucket",
+        "collectionIds": [
+          "46385b4a-a728-4579-8b09-10e9e7c52c99"
+        ],
+        "backgroundColor": {
+          "r": 0,
+          "g": 188,
+          "b": 213,
+          "a": 1
+        },
+        "show": true,
+        "isActivated": true,
+        "indexes": [],
+        "GUID": "e863d79d-6e38-4098-a01e-46d6249501f8",
+        "description": "The Order Management container is responsible for all entities and relationships involved in creating, tracking, and fulfilling customer orders. At a logical level, the Order Management container interacts closely with both the Customer Management container (to identify and authenticate the customer placing the order) and the Product Management container (to reference product details and availability).",
+        "hackoladeMeta": {
+          "namingConvention": "code"
+        },
+        "code": "order_management",
+        "definitionEntityType": "bucket",
+        "fileType": "hackoladeSchema",
+        "definitionRefs": [
+          [
+            "33ed0346-7999-4ef1-8918-f9903a580cdb"
+          ]
+        ],
+        "kind": "relativePath",
+        "link": "Order management-Polyglot.hck.json",
+        "fieldRelativePath": "#/Order management"
+      }
+    ],
+    "GUID": "ddb313aa-e6d4-4f69-a5f0-835684eac1a8"
+  },
+  "externalDefinitions": {
+    "type": "externalDefinitions",
+    "properties": [],
+    "GUID": "35a0eab5-51f4-4ad5-a521-f6e7e313f381"
+  },
+  "sources": [],
+  "decorativeSymbols": [
+    {
+      "GUID": "bcb8207d-276b-4099-91b4-eeac7541a07e",
+      "name": "Disclaimer",
+      "type": "annotation",
+      "disableInitialFocus": true,
+      "value": "This Avro Kafka Order Management Model is intended for illustration purposes only and provides a simplified representation of an event-driven order management system within an ecommerce platform.\n\nWhile it captures essential events and Avro schema definitions, it does not encompass all potential complexities or best practices that may be applicable in a comprehensive production implementation."
+    }
+  ],
+  "dbVendor": "Avro",
+  "schemaNameStrategy": "TopicNameStrategy",
+  "appTarget": "Avro",
+  "creationTS": "2025-02-21T11:15:36.272Z",
+  "GUID": "30f063c2-a89e-4946-82b7-109fecb13f2c",
+  "isLineageEnabled": false,
+  "hackoladeMeta": {
+    "validationErrors": {
+      "description": false
+    },
+    "namingConvention": "code"
+  },
+  "polyglotModelPaths": [
+    {
+      "GUID": "ec93b59a-8e4d-4f5d-afca-ba6ede19999f",
+      "polyglotModelName": "Order management-Polyglot.hck",
+      "polyglotModelPath": "Order management-Polyglot.hck.json",
+      "normalization": false
+    }
+  ],
+  "code": "order_management",
+  "lastModifTS": "2025-02-25T15:12:29.629Z",
+  "persistenceSchemaVersion": "8",
+  "isCreatedByPlugin": true,
+  "pluginInformation": {
+    "pluginName": "Avro",
+    "pluginVersion": "0.2.10",
+    "pluginEngineVersion": "1.0.0"
+  },
+  "applicationInformation": {
+    "version": "8.0.2"
+  },
+  "description": "This Avro Kafka Order Management Model is intended for illustration purposes only and provides a simplified representation of an event-driven order management system within an ecommerce platform.\n\nWhile it captures essential events and Avro schema definitions, it does not encompass all potential complexities or best practices that may be applicable in a comprehensive production implementation.",
+  "settings": {
+    "centralPane": {
+      "dbLevel": {
+        "erd": [
+          {
+            "GUID": "d10c5dd7-9451-44e0-ad42-9565ec3f7ebd",
+            "x": 1378.5380761523052,
+            "y": 798.3563794255192,
+            "width": 409,
+            "height": 672,
+            "color": {
+              "hex": "#2196F3"
+            }
+          }
+        ],
+        "erdDefinitions": {
+          "erd": [],
+          "rootPath": [],
+          "entities": [],
+          "decorativeSymbols": []
+        },
+        "buckets": [
+          {
+            "x": 1338.5380761523052,
+            "y": 758.3563794255192,
+            "GUID": "33ed0346-7999-4ef1-8918-f9903a580cdb"
+          }
+        ],
+        "collapsedNodes": [],
+        "activeRelationship": "",
+        "activeRelationshipFields": {
+          "childField": [],
+          "parentField": []
+        },
+        "selectedCollections": [],
+        "displayColorPicker": false,
+        "graphView": {
+          "erd": [],
+          "buckets": [],
+          "decorativeSymbols": [],
+          "forceLayout": true,
+          "defaultLinkLength": 300
+        },
+        "diagramViews": [],
+        "decorativeSymbols": [
+          {
+            "GUID": "bcb8207d-276b-4099-91b4-eeac7541a07e",
+            "x": 1326,
+            "y": 555,
+            "height": 183,
+            "width": 393,
+            "color": {
+              "hex": "#fec107"
+            }
+          }
+        ],
+        "nestedCollectionsLayout": "horizontal",
+        "options": [
+          {
+            "GUID": "d10c5dd7-9451-44e0-ad42-9565ec3f7ebd",
+            "autoWidth": false,
+            "autoHeight": false
+          }
+        ],
+        "relationshipUpdateDisabled": false,
+        "displayOptions": {
+          "dndHandles": false,
+          "hideErdRelationshipsNames": false
+        }
+      },
+      "collectionLevel": {},
+      "changed": false
+    },
+    "dtDiagram": {
+      "collapsedNodes": [],
+      "shouldDistributeCollections": false
+    }
+  }
+}
