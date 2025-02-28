@@ -952,7 +952,7 @@
   "creationTS": "2025-02-24T10:52:12.322Z",
   "GUID": "5b87d931-af65-4496-8576-698532d04eb8",
   "isLineageEnabled": false,
-  "lastModifTS": "2025-02-25T15:04:36.972Z",
+  "lastModifTS": "2025-02-28T10:29:40.372Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -961,7 +961,7 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.0.2"
+    "version": "8.0.3"
   },
   "hackoladeMeta": {
     "validationErrors": {
@@ -979,24 +979,24 @@
         "erd": [
           {
             "GUID": "dd5b9ff0-7be6-4cc2-8883-8b1da4bd54f5",
-            "x": 1132,
-            "y": 1050,
+            "x": 1050,
+            "y": 1097.5,
             "width": 250,
             "height": 137,
             "color": {}
           },
           {
             "GUID": "f4902403-34df-4b72-b29a-8c99f15948c6",
-            "x": 1050,
-            "y": 1217,
+            "x": 1330,
+            "y": 1050,
             "width": 192,
             "height": 101,
             "color": {}
           },
           {
             "GUID": "3990d62b-95a3-43db-bb6f-aa1dca307d70",
-            "x": 1272,
-            "y": 1217,
+            "x": 1330,
+            "y": 1181,
             "width": 192,
             "height": 101,
             "color": {}
@@ -1034,7 +1034,7 @@
         "decorativeSymbols": [
           {
             "GUID": "47b48548-25da-4e3d-8270-ba388af4dbb1",
-            "x": 1530,
+            "x": 1599.219536757301,
             "y": 1007,
             "height": 261,
             "width": 445,
@@ -1043,10 +1043,11 @@
             }
           }
         ],
-        "nestedCollectionsLayout": "horizontal",
+        "nestedCollectionsLayout": "vertical",
         "options": [],
         "relationshipUpdateDisabled": false,
         "displayOptions": {
+          "dndHandles": false,
           "hideErdRelationshipsNames": false
         }
       },

@@ -879,7 +879,7 @@
                 "name": "Street",
                 "hackoladeMeta": {},
                 "isActivated": true,
-                "required": false,
+                "required": true,
                 "GUID": "a67178d1-2b76-5521-a4c3-d6fd453f0f74",
                 "description": "Specifies the street name and number, providing detailed location information within a city or town."
               },
@@ -890,7 +890,7 @@
                 "name": "Postal code",
                 "hackoladeMeta": {},
                 "isActivated": true,
-                "required": false,
+                "required": true,
                 "GUID": "7c7e4aed-3aa9-5bd2-bccb-4430d94e0834",
                 "foreignCollection": "",
                 "foreignField": [],
@@ -903,7 +903,7 @@
                 "name": "City",
                 "hackoladeMeta": {},
                 "isActivated": true,
-                "required": false,
+                "required": true,
                 "GUID": "0e1b934a-42c4-5d75-8fdc-07f8d0129925",
                 "foreignCollection": "",
                 "foreignField": [],
@@ -936,7 +936,7 @@
                     "name": "Street",
                     "hackoladeMeta": {},
                     "isActivated": true,
-                    "required": false,
+                    "required": true,
                     "GUID": "f1fde62f-2224-5c53-bdd5-815c2369d986",
                     "description": "Specifies the street name and number, providing detailed location information within a city or town."
                   },
@@ -947,7 +947,7 @@
                     "name": "Postal code",
                     "hackoladeMeta": {},
                     "isActivated": true,
-                    "required": false,
+                    "required": true,
                     "GUID": "03048688-44ef-5286-9d37-e87d6ca8cdf8",
                     "foreignCollection": "",
                     "foreignField": [],
@@ -960,7 +960,7 @@
                     "name": "City",
                     "hackoladeMeta": {},
                     "isActivated": true,
-                    "required": false,
+                    "required": true,
                     "GUID": "24a64b44-cec0-54fc-8e94-f6287864ebcc",
                     "foreignCollection": "",
                     "foreignField": [],
@@ -1048,7 +1048,7 @@
   "creationTS": "2025-02-24T10:52:12.322Z",
   "GUID": "5b87d931-af65-4496-8576-698532d04eb8",
   "isLineageEnabled": false,
-  "lastModifTS": "2025-02-25T07:54:48.153Z",
+  "lastModifTS": "2025-02-28T10:32:06.854Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -1057,7 +1057,7 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.0.2"
+    "version": "8.0.3"
   },
   "hackoladeMeta": {
     "validationErrors": {
@@ -1075,24 +1075,24 @@
         "erd": [
           {
             "GUID": "f17f9287-5b11-4f47-94ca-1885ae97514e",
-            "x": 1219.5,
-            "y": 1050,
+            "x": 1050,
+            "y": 1260,
             "width": 250,
             "height": 137,
             "color": {}
           },
           {
             "GUID": "1e32a97a-6a9e-4d92-b827-8a05e22c2f0b",
-            "x": 1050,
-            "y": 1217,
+            "x": 1330,
+            "y": 1050,
             "width": 367,
             "height": 426,
             "color": {}
           },
           {
             "GUID": "f528a87b-d107-4a34-826f-44065df4d781",
-            "x": 1447,
-            "y": 1217,
+            "x": 1330,
+            "y": 1506,
             "width": 192,
             "height": 101,
             "color": {}
@@ -1130,8 +1130,8 @@
         "decorativeSymbols": [
           {
             "GUID": "512cc03b-c1f8-4494-8b7c-36856ab519c3",
-            "x": 1714,
-            "y": 1009,
+            "x": 1147.2371031746034,
+            "y": 1664.614087301587,
             "height": 265,
             "width": 453,
             "color": {
@@ -1139,7 +1139,7 @@
             }
           }
         ],
-        "nestedCollectionsLayout": "horizontal",
+        "nestedCollectionsLayout": "vertical",
         "options": [
           {
             "autoWidth": false,
@@ -1149,6 +1149,7 @@
         ],
         "relationshipUpdateDisabled": false,
         "displayOptions": {
+          "dndHandles": false,
           "hideErdRelationshipsNames": false
         }
       },

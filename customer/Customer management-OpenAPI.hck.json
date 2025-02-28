@@ -2814,7 +2814,7 @@
                 "name": "Street",
                 "hackoladeMeta": {},
                 "isActivated": true,
-                "required": false,
+                "required": true,
                 "GUID": "a67178d1-2b76-5521-a4c3-d6fd453f0f74",
                 "description": "Specifies the street name and number, providing detailed location information within a city or town."
               },
@@ -2825,7 +2825,7 @@
                 "name": "Postal code",
                 "hackoladeMeta": {},
                 "isActivated": true,
-                "required": false,
+                "required": true,
                 "GUID": "7c7e4aed-3aa9-5bd2-bccb-4430d94e0834",
                 "foreignCollection": "",
                 "foreignField": [],
@@ -2838,7 +2838,7 @@
                 "name": "City",
                 "hackoladeMeta": {},
                 "isActivated": true,
-                "required": false,
+                "required": true,
                 "GUID": "0e1b934a-42c4-5d75-8fdc-07f8d0129925",
                 "foreignCollection": "",
                 "foreignField": [],
@@ -2871,7 +2871,7 @@
                     "name": "Street",
                     "hackoladeMeta": {},
                     "isActivated": true,
-                    "required": false,
+                    "required": true,
                     "GUID": "f1fde62f-2224-5c53-bdd5-815c2369d986",
                     "description": "Specifies the street name and number, providing detailed location information within a city or town."
                   },
@@ -2882,7 +2882,7 @@
                     "name": "Postal code",
                     "hackoladeMeta": {},
                     "isActivated": true,
-                    "required": false,
+                    "required": true,
                     "GUID": "03048688-44ef-5286-9d37-e87d6ca8cdf8",
                     "foreignCollection": "",
                     "foreignField": [],
@@ -2895,7 +2895,7 @@
                     "name": "City",
                     "hackoladeMeta": {},
                     "isActivated": true,
-                    "required": false,
+                    "required": true,
                     "GUID": "24a64b44-cec0-54fc-8e94-f6287864ebcc",
                     "foreignCollection": "",
                     "foreignField": [],
@@ -2983,7 +2983,7 @@
   "creationTS": "2025-02-24T10:52:12.322Z",
   "GUID": "5b87d931-af65-4496-8576-698532d04eb8",
   "isLineageEnabled": false,
-  "lastModifTS": "2025-02-25T07:57:01.411Z",
+  "lastModifTS": "2025-02-28T10:34:30.499Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -2992,7 +2992,7 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.0.2"
+    "version": "8.0.3"
   },
   "hackoladeMeta": {
     "validationErrors": {
@@ -3010,112 +3010,112 @@
         "erd": [
           {
             "GUID": "640aabeb-50e4-47b6-be3f-6ec268e6fa6f",
-            "x": 3195.88850346878,
-            "y": 1055.1020812685829,
+            "x": 1803.5466269841272,
+            "y": 2495.4910714285706,
             "width": 178,
             "height": 65,
             "color": {}
           },
           {
             "GUID": "a15b101b-3f01-488b-be19-fdc614afd3dc",
-            "x": 3091.38850346878,
-            "y": 1150.1020812685829,
+            "x": 2011.5466269841272,
+            "y": 2305.9910714285706,
             "width": 387,
             "height": 444,
             "color": {}
           },
           {
             "GUID": "953ab768-3383-4775-b801-bedbf33eef48",
-            "x": 2568.88850346878,
-            "y": 1055.1020812685829,
+            "x": 1000.5466269841272,
+            "y": 2380.4910714285706,
             "width": 356,
             "height": 408,
             "color": {}
           },
           {
             "GUID": "6b33b49b-5bd7-4ac9-a12a-f636754c0f45",
-            "x": 2452.38850346878,
-            "y": 1493.1020812685829,
+            "x": 1386.5466269841272,
+            "y": 2305.9910714285706,
             "width": 367,
             "height": 426,
             "color": {}
           },
           {
             "GUID": "2a728cc7-b730-46d2-a7c8-1801fe8172a1",
-            "x": 2849.38850346878,
-            "y": 1493.1020812685829,
+            "x": 1386.5466269841272,
+            "y": 2761.9910714285706,
             "width": 192,
             "height": 101,
             "color": {}
           },
           {
             "GUID": "f17f9287-5b11-4f47-94ca-1885ae97514e",
-            "x": 1858.5,
-            "y": 1050,
+            "x": 1050,
+            "y": 1828.5,
             "width": 250,
             "height": 137,
             "color": {}
           },
           {
             "GUID": "1e32a97a-6a9e-4d92-b827-8a05e22c2f0b",
-            "x": 1689,
-            "y": 1217,
+            "x": 1330,
+            "y": 1618.5,
             "width": 367,
             "height": 426,
             "color": {}
           },
           {
             "GUID": "f528a87b-d107-4a34-826f-44065df4d781",
-            "x": 2086,
-            "y": 1217,
+            "x": 1330,
+            "y": 2074.5,
             "width": 192,
             "height": 101,
             "color": {}
           },
           {
             "GUID": "305ecb70-4022-4689-816e-5e919ec5098c",
-            "x": 1166.5,
-            "y": 1050,
+            "x": 1050,
+            "y": 1088.5,
             "width": 356,
             "height": 480,
             "color": {}
           },
           {
             "GUID": "e063880b-5c3d-48cd-b95a-24c568997c56",
-            "x": 1050,
-            "y": 1560,
+            "x": 1436,
+            "y": 1050,
             "width": 367,
             "height": 426,
             "color": {}
           },
           {
             "GUID": "d1013cbb-5aad-4adf-ac00-51307587e037",
-            "x": 1447,
-            "y": 1560,
+            "x": 1436,
+            "y": 1506,
             "width": 192,
             "height": 101,
             "color": {}
           },
           {
             "GUID": "dd5b9ff0-7be6-4cc2-8883-8b1da4bd54f5",
-            "x": 1771,
-            "y": 1693,
+            "x": 1853,
+            "y": 1097.5,
             "width": 250,
             "height": 137,
             "color": {}
           },
           {
             "GUID": "f4902403-34df-4b72-b29a-8c99f15948c6",
-            "x": 1689,
-            "y": 1860,
+            "x": 2133,
+            "y": 1050,
             "width": 192,
             "height": 101,
             "color": {}
           },
           {
             "GUID": "3990d62b-95a3-43db-bb6f-aa1dca307d70",
-            "x": 1911,
-            "y": 1860,
+            "x": 2133,
+            "y": 1181,
             "width": 192,
             "height": 101,
             "color": {}
@@ -3129,8 +3129,8 @@
         },
         "buckets": [
           {
-            "x": 2412.38850346878,
-            "y": 1015.1020812685829,
+            "x": 960.5466269841272,
+            "y": 2265.9910714285706,
             "GUID": "d440f585-8b75-4dad-b23c-f3238b088931"
           },
           {
@@ -3158,8 +3158,8 @@
         "decorativeSymbols": [
           {
             "GUID": "4c4817a4-28b1-4acb-8516-a207a8ca13ae",
-            "x": 2188.9699372315813,
-            "y": 758.1757515692107,
+            "x": 1497.135611834756,
+            "y": 781.9297198231789,
             "height": 199,
             "width": 396,
             "color": {
@@ -3167,7 +3167,7 @@
             }
           }
         ],
-        "nestedCollectionsLayout": "horizontal",
+        "nestedCollectionsLayout": "vertical",
         "options": [
           {
             "autoWidth": false,
@@ -3197,6 +3197,7 @@
         ],
         "relationshipUpdateDisabled": false,
         "displayOptions": {
+          "dndHandles": false,
           "hideErdRelationshipsNames": false
         }
       },

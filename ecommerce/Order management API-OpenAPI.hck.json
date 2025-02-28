@@ -3728,7 +3728,7 @@
   },
   "isLineageEnabled": false,
   "code": "Ordr mngmnt AP",
-  "lastModifTS": "2025-02-25T15:11:19.255Z",
+  "lastModifTS": "2025-02-28T10:35:10.484Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -3737,7 +3737,7 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.0.2"
+    "version": "8.0.3"
   },
   "scopesExtensions": [],
   "modelVersion": "1.0.0",
@@ -3750,112 +3750,112 @@
         "erd": [
           {
             "GUID": "bf9ffe64-6ccc-4ca6-9612-c03131215fb3",
-            "x": 3411.621212121212,
-            "y": 4059.090909090909,
+            "x": 1878.3282773564456,
+            "y": 2981.008125677141,
             "width": 178,
             "height": 65,
             "color": {}
           },
           {
             "GUID": "3127a678-95a0-474c-897b-38fdd4abcd38",
-            "x": 3293.121212121212,
-            "y": 4154.090909090909,
-            "width": 415,
-            "height": 605,
+            "x": 2086.3282773564456,
+            "y": 2701.508125677141,
+            "width": 440,
+            "height": 624,
             "color": {}
           },
           {
             "GUID": "f149bc3f-c719-473e-91c9-ea1ec9add7ad",
-            "x": 2747.121212121212,
-            "y": 4059.090909090909,
-            "width": 375,
-            "height": 569,
+            "x": 978.3282773564456,
+            "y": 2776.008125677141,
+            "width": 400,
+            "height": 588,
             "color": {}
           },
           {
             "GUID": "ee723c80-3b76-41a5-b69a-103a07cba413",
-            "x": 2626.121212121212,
-            "y": 4658.090909090909,
-            "width": 395,
-            "height": 587,
+            "x": 1408.3282773564456,
+            "y": 2701.508125677141,
+            "width": 420,
+            "height": 606,
             "color": {}
           },
           {
             "GUID": "d1ff06f7-e8eb-4a05-b3c4-48f01f85ab15",
-            "x": 3051.121212121212,
-            "y": 4658.090909090909,
+            "x": 1408.3282773564456,
+            "y": 3337.508125677141,
             "width": 192,
             "height": 101,
             "color": {}
           },
           {
             "GUID": "5a4bf182-902e-496a-9945-f3037281c9ea",
-            "x": 1900.5,
-            "y": 4080.30303030303,
+            "x": 1050,
+            "y": 2098.5,
             "width": 250,
             "height": 137,
             "color": {}
           },
           {
             "GUID": "d03b15b7-17bb-479a-adf1-68e47efe6e7e",
-            "x": 1717,
-            "y": 4247.30303030303,
-            "width": 395,
-            "height": 587,
+            "x": 1330,
+            "y": 1798.5,
+            "width": 420,
+            "height": 606,
             "color": {}
           },
           {
             "GUID": "373ddb98-54e8-428c-a327-0b12a51c9b8b",
-            "x": 2142,
-            "y": 4247.30303030303,
+            "x": 1330,
+            "y": 2434.5,
             "width": 192,
             "height": 101,
             "color": {}
           },
           {
             "GUID": "c8912668-44ce-471d-9b26-a431585890ed",
-            "x": 1171,
-            "y": 4080.30303030303,
-            "width": 375,
-            "height": 641,
+            "x": 1050,
+            "y": 1088.5,
+            "width": 400,
+            "height": 660,
             "color": {}
           },
           {
             "GUID": "aa074b9b-64f5-486c-8187-8be3470a7ae3",
-            "x": 1050,
-            "y": 4751.30303030303,
-            "width": 395,
-            "height": 587,
+            "x": 1480,
+            "y": 1050,
+            "width": 420,
+            "height": 606,
             "color": {}
           },
           {
             "GUID": "68e3e089-17c8-4110-8d22-ee6dfd8cc0b9",
-            "x": 1475,
-            "y": 4751.30303030303,
+            "x": 1480,
+            "y": 1686,
             "width": 192,
             "height": 101,
             "color": {}
           },
           {
             "GUID": "d5bae68e-332d-4b27-97c5-d48494321ac8",
-            "x": 1799,
-            "y": 4884.30303030303,
+            "x": 1950,
+            "y": 1097.5,
             "width": 250,
             "height": 137,
             "color": {}
           },
           {
             "GUID": "c5e37090-3482-4639-8143-79ebdf7fd6fd",
-            "x": 1717,
-            "y": 5051.30303030303,
+            "x": 2230,
+            "y": 1050,
             "width": 192,
             "height": 101,
             "color": {}
           },
           {
             "GUID": "a5e2f5c0-46ff-4a58-890f-accd62eebcfe",
-            "x": 1939,
-            "y": 5051.30303030303,
+            "x": 2230,
+            "y": 1181,
             "width": 192,
             "height": 101,
             "color": {}
@@ -3898,13 +3898,13 @@
         },
         "buckets": [
           {
-            "x": 2586.121212121212,
-            "y": 4019.090909090909,
+            "x": 938.3282773564456,
+            "y": 2661.508125677141,
             "GUID": "94ce591f-efe4-437c-9eef-57c68810fa51"
           },
           {
             "x": 1010,
-            "y": 4040.30303030303,
+            "y": 1010,
             "GUID": "0fe039ae-2bf2-4298-b282-397c853c8485"
           }
         ],
@@ -3927,8 +3927,8 @@
         "decorativeSymbols": [
           {
             "GUID": "e727e35a-5580-4135-8bf4-6b5f5e8df739",
-            "x": 1106,
-            "y": 3810,
+            "x": 1520.6045503791981,
+            "y": 748.8364030335862,
             "height": 189,
             "width": 450,
             "color": {
@@ -3936,10 +3936,11 @@
             }
           }
         ],
-        "nestedCollectionsLayout": "horizontal",
+        "nestedCollectionsLayout": "vertical",
         "options": [],
         "relationshipUpdateDisabled": false,
         "displayOptions": {
+          "dndHandles": false,
           "hideErdRelationshipsNames": false
         }
       },
