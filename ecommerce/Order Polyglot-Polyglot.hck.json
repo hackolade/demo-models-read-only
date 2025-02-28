@@ -48,24 +48,6 @@
           "error": {}
         },
         {
-          "name": "Order date",
-          "hackoladeMeta": {},
-          "isActivated": true,
-          "index": true,
-          "required": false,
-          "childType": "date",
-          "type": "string",
-          "compositeKey": [
-            "compositePrimaryKey",
-            "compositeUniqueKey"
-          ],
-          "compositePrimaryKey": false,
-          "primaryKey": false,
-          "GUID": "3a550c04-6ca2-4876-8ec9-89aa76ea1d13",
-          "description": "The date and time at which the order was placed. Used for chronological reporting and status tracking.",
-          "error": {}
-        },
-        {
           "name": "Status",
           "hackoladeMeta": {},
           "isActivated": true,
@@ -666,7 +648,6 @@
     "91f49cfb-0486-4406-9e30-f5b68d67f1fe": "Amount",
     "cf7c7d06-9e2a-490d-852d-29010e9eefd8": "Amount",
     "6adc1c99-dca5-4d92-88fd-6e27edf175ce": "Customer reference",
-    "3a550c04-6ca2-4876-8ec9-89aa76ea1d13": "Order date",
     "3ef82e26-0f96-48f1-9603-4c737037815d": "Product",
     "38a4f489-8d86-47f3-8cd5-bc666ce58741": "Product management",
     "9883a02f-9c36-46f5-adeb-3ba9460724bf": "contains"
@@ -1614,7 +1595,7 @@
       "normalization": false
     }
   ],
-  "lastModifTS": "2025-02-28T11:17:31.380Z",
+  "lastModifTS": "2025-02-28T11:18:23.490Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
