@@ -9449,7 +9449,7 @@
   "creationTS": "2020-07-01T14:12:26.539Z",
   "GUID": "e42cbfb0-bba4-11ea-91a7-efa8d96c78e7",
   "code": "",
-  "lastModifTS": "2025-02-27T12:23:57.703Z",
+  "lastModifTS": "2025-02-28T16:17:40.366Z",
   "persistenceSchemaVersion": "8",
   "description": "Model based on the AdventureWorks sample databases\n\nhttps://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver15&tabs=ssms",
   "comments": "",
@@ -9464,11 +9464,11 @@
   "isCreatedByPlugin": true,
   "pluginInformation": {
     "pluginName": "Synapse",
-    "pluginVersion": "0.2.16",
+    "pluginVersion": "0.2.17",
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.0.2"
+    "version": "8.0.3"
   },
   "settings": {
     "centralPane": {

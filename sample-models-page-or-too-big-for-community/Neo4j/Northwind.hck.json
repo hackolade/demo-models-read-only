@@ -1323,6 +1323,22 @@
       "hackoladeStyles": {},
       "isActivated": true,
       "properties": []
+    },
+    {
+      "name": "PURCHASED_FROM",
+      "relationshipType": "Foreign Key",
+      "parentField": [],
+      "parentCardinality": "1",
+      "childField": [],
+      "isActivated": true,
+      "childCardinality": "1",
+      "parentCollection": "9d804cb1-6da6-11e8-977e-574156f5cc39",
+      "childCollection": "9d7ffe93-6da6-11e8-977e-574156f5cc39",
+      "level": "entity",
+      "GUID": "84a42467-93b6-4156-98df-25b8f1aeaf0d",
+      "lineSize": 2,
+      "bucketId": "9d911590-6da6-11e8-977e-574156f5cc39",
+      "properties": []
     }
   ],
   "users": [],
@@ -1392,7 +1408,8 @@
     "9d83a813-6da6-11e8-977e-574156f5cc39": "discount",
     "9d83a814-6da6-11e8-977e-574156f5cc39": "quantity",
     "9d83a815-6da6-11e8-977e-574156f5cc39": "productID",
-    "9d83a816-6da6-11e8-977e-574156f5cc39": "orderID"
+    "9d83a816-6da6-11e8-977e-574156f5cc39": "orderID",
+    "84a42467-93b6-4156-98df-25b8f1aeaf0d": "PURCHASED_FROM"
   },
   "definitions": {
     "type": "definitions",
@@ -1416,7 +1433,7 @@
   "appTarget": "NEO4J",
   "creationTS": "2018-06-11T18:37:24.070Z",
   "GUID": "7b9d3860-6da6-11e8-977e-574156f5cc39",
-  "lastModifTS": "2025-02-27T11:45:04.664Z",
+  "lastModifTS": "2025-02-28T16:01:40.310Z",
   "persistenceSchemaVersion": "8",
   "description": "",
   "comments": "",
@@ -1430,7 +1447,7 @@
   },
   "hackoladeMeta": {},
   "applicationInformation": {
-    "version": "8.0.2"
+    "version": "8.0.3"
   },
   "settings": {
     "centralPane": {
@@ -1505,6 +1522,16 @@
             "color": {
               "hex": "#333333"
             }
+          },
+          {
+            "GUID": "84a42467-93b6-4156-98df-25b8f1aeaf0d",
+            "x": 1161.5,
+            "y": 1736,
+            "width": 240,
+            "height": 100,
+            "color": {
+              "hex": "#333333"
+            }
           }
         ],
         "erdDefinitions": {
@@ -1521,7 +1548,7 @@
           }
         ],
         "collapsedNodes": [],
-        "activeRelationship": "",
+        "activeRelationship": "84a42467-93b6-4156-98df-25b8f1aeaf0d",
         "activeRelationshipFields": {
           "childField": [],
           "parentField": []
@@ -1532,39 +1559,39 @@
           "erd": [
             {
               "GUID": "9d7e50e1-6da6-11e8-977e-574156f5cc39",
-              "x": 1354.111196422228,
-              "y": 1395.4063714429099,
+              "x": 1357.2039904471299,
+              "y": 1401.3871562713016,
               "size": 100
             },
             {
               "GUID": "9d7eed21-6da6-11e8-977e-574156f5cc39",
-              "x": 1331.0449464183234,
-              "y": 1040,
+              "x": 1332.3110098697143,
+              "y": 1033.514885186752,
               "size": 100
             },
             {
               "GUID": "9d7ffe93-6da6-11e8-977e-574156f5cc39",
-              "x": 1611.2486636606411,
-              "y": 1158.5703768115563,
+              "x": 1619.4156802678667,
+              "y": 1157.3990056478524,
               "size": 100
             },
             {
               "GUID": "9d804cb1-6da6-11e8-977e-574156f5cc39",
-              "x": 1054.4241840590125,
-              "y": 1414.0322766488534,
+              "x": 1048.6418957769858,
+              "y": 1419.8226918189434,
               "size": 100
             },
             {
               "GUID": "9d80e8f1-6da6-11e8-977e-574156f5cc39",
-              "x": 1040,
-              "y": 1113.7463299714125,
+              "x": 1033.262580883845,
+              "y": 1109.6254443173254,
               "size": 100
             }
           ],
           "buckets": [
             {
-              "x": 993.4438020072962,
-              "y": 993.6894719556406,
+              "x": 978.305536119272,
+              "y": 957.8889727954333,
               "GUID": "9d911590-6da6-11e8-977e-574156f5cc39"
             }
           ],
@@ -1617,7 +1644,10 @@
             "autoHeight": false
           }
         ],
-        "relationshipUpdateDisabled": false
+        "relationshipUpdateDisabled": false,
+        "displayOptions": {
+          "dndHandles": false
+        }
       },
       "collectionLevel": {},
       "changed": false

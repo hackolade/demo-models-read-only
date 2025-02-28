@@ -5752,7 +5752,7 @@
   "creationTS": "2020-03-20T11:25:55.598Z",
   "GUID": "908fe2e0-6a9d-11ea-a5ff-a16524f9bb05",
   "code": "",
-  "lastModifTS": "2025-02-27T12:17:36.946Z",
+  "lastModifTS": "2025-02-28T16:15:18.203Z",
   "persistenceSchemaVersion": "8",
   "description": "From the AdventureWorks sample database described at https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver15",
   "comments": "",
@@ -5765,7 +5765,7 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.0.2"
+    "version": "8.0.3"
   },
   "hackoladeMeta": {
     "validationErrors": {

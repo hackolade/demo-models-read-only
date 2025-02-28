@@ -2308,11 +2308,11 @@
           },
           {
             "x": 1959.5,
-            "y": 1652.3649851971632
+            "y": 1672.3649851971632
           },
           {
             "x": 1866,
-            "y": 1652.3649851971632
+            "y": 1672.3649851971632
           }
         ],
         "sides": [
@@ -2406,11 +2406,11 @@
           },
           {
             "x": 1455.5,
-            "y": 1213.139467097885
+            "y": 1227.139467097885
           },
           {
             "x": 1366,
-            "y": 1213.139467097885
+            "y": 1227.139467097885
           }
         ],
         "sides": [
@@ -2694,7 +2694,7 @@
     }
   },
   "description": "Inspired by https://docs.oracle.com/en/database/oracle/oracle-database/21/comsc/introduction-to-sample-schemas.html#GUID-BF7EBD46-7AF6-40C7-8B4E-7244169A07E8",
-  "lastModifTS": "2025-02-27T12:14:12.623Z",
+  "lastModifTS": "2025-02-28T16:07:12.593Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -2703,7 +2703,7 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.0.2"
+    "version": "8.0.3"
   },
   "settings": {
     "centralPane": {
@@ -2812,7 +2812,7 @@
           }
         ],
         "collapsedNodes": [],
-        "activeRelationship": "d3f3b098-80e2-11ec-a640-596aedb199f8",
+        "activeRelationship": "",
         "activeRelationshipFields": {
           "childField": [],
           "parentField": []

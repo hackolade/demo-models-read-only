@@ -3768,7 +3768,7 @@
   "creationTS": "2020-02-26T08:49:48.621Z",
   "GUID": "f1e85fd0-5874-11ea-904d-b14aeefbf5a2",
   "code": "",
-  "lastModifTS": "2025-02-27T12:16:18.976Z",
+  "lastModifTS": "2025-02-28T16:11:17.540Z",
   "persistenceSchemaVersion": "8",
   "description": "",
   "comments": "",
@@ -3787,7 +3787,7 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.0.2"
+    "version": "8.0.3"
   },
   "settings": {
     "centralPane": {
