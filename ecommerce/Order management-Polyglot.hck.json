@@ -2,43 +2,6 @@
   "modelName": "Order Polyglot",
   "collections": [
     {
-      "GUID": "46385b4a-a728-4579-8b09-10e9e7c52c99",
-      "collectionName": "Order",
-      "type": "object",
-      "properties": [
-        {
-          "name": "Identifier",
-          "hackoladeMeta": {},
-          "isActivated": true,
-          "primaryKey": true,
-          "required": true,
-          "childType": "varchar",
-          "type": "string",
-          "compositeKey": [
-            "compositePrimaryKey",
-            "compositeUniqueKey"
-          ],
-          "GUID": "2dc5cd19-9bb7-4405-a00f-69af0c39ea24",
-          "description": "A unique reference number or code assigned to the order for tracking and identification.",
-          "error": {}
-        }
-      ],
-      "definitions": {
-        "type": "definitions",
-        "properties": [],
-        "GUID": "c3fe565c-9e15-44ed-957b-4bca2e105ec8"
-      },
-      "isActivated": true,
-      "additionalProperties": false,
-      "bucketId": "e863d79d-6e38-4098-a01e-46d6249501f8",
-      "description": "Represents a purchase transaction, including details about the items ordered, shipping information, payment details, and order status.",
-      "uniqueKey": [
-        {
-          "GUID": "53cbcce4-2637-470e-9bba-debbe6fb564d"
-        }
-      ]
-    },
-    {
       "GUID": "e2ba0994-1763-4b13-8b19-e7a0d9f95edb",
       "type": "reference",
       "$ref": "#external/definitions/Customer",
@@ -137,24 +100,6 @@
   ],
   "buckets": [
     {
-      "name": "Order management",
-      "type": "bucket",
-      "collectionIds": [
-        "46385b4a-a728-4579-8b09-10e9e7c52c99"
-      ],
-      "backgroundColor": {
-        "r": 0,
-        "g": 188,
-        "b": 213,
-        "a": 1
-      },
-      "show": true,
-      "isActivated": true,
-      "indexes": [],
-      "GUID": "e863d79d-6e38-4098-a01e-46d6249501f8",
-      "description": "The Order Management container is responsible for all entities and relationships involved in creating, tracking, and fulfilling customer orders. At a logical level, the Order Management container interacts closely with both the Customer Management container (to identify and authenticate the customer placing the order) and the Product Management container (to reference product details and availability)."
-    },
-    {
       "GUID": "a47b2731-dfa7-4364-91e6-4601ec648539",
       "name": "Customer management",
       "type": "reference",
@@ -210,10 +155,7 @@
   "users": [],
   "diagramViews": [],
   "idToNameHashTable": {
-    "46385b4a-a728-4579-8b09-10e9e7c52c99": "Order",
-    "2dc5cd19-9bb7-4405-a00f-69af0c39ea24": "Identifier",
     "aac0636d-630a-49f5-b2ab-0a0092f61cd3": "Disclaimer",
-    "e863d79d-6e38-4098-a01e-46d6249501f8": "Order management",
     "e2ba0994-1763-4b13-8b19-e7a0d9f95edb": "Customer",
     "a47b2731-dfa7-4364-91e6-4601ec648539": "Customer management",
     "6c26e788-797f-4f45-b8df-f2cdeb9b2eab": "Disclaimer",
@@ -955,7 +897,7 @@
       "normalization": false
     }
   ],
-  "lastModifTS": "2025-02-28T10:55:29.515Z",
+  "lastModifTS": "2025-02-28T10:55:53.784Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -995,16 +937,6 @@
             "color": {
               "hex": "#2196F3"
             }
-          },
-          {
-            "GUID": "46385b4a-a728-4579-8b09-10e9e7c52c99",
-            "x": 1378.5380761523052,
-            "y": 798.3563794255192,
-            "width": 447,
-            "height": 443,
-            "color": {
-              "hex": "#2196F3"
-            }
           }
         ],
         "erdDefinitions": {
@@ -1014,11 +946,6 @@
           "decorativeSymbols": []
         },
         "buckets": [
-          {
-            "x": 1338.5380761523052,
-            "y": 758.3563794255192,
-            "GUID": "e863d79d-6e38-4098-a01e-46d6249501f8"
-          },
           {
             "x": 797.7959336385611,
             "y": 842.2182641961967,
@@ -1041,12 +968,6 @@
         "graphView": {
           "erd": [
             {
-              "GUID": "46385b4a-a728-4579-8b09-10e9e7c52c99",
-              "size": 100,
-              "x": 1040,
-              "y": 1040
-            },
-            {
               "GUID": "e2ba0994-1763-4b13-8b19-e7a0d9f95edb",
               "size": 100,
               "x": 1140,
@@ -1060,11 +981,6 @@
             }
           ],
           "buckets": [
-            {
-              "x": 964,
-              "y": 728,
-              "GUID": "e863d79d-6e38-4098-a01e-46d6249501f8"
-            },
             {
               "x": 40,
               "y": 40,
@@ -1112,11 +1028,6 @@
             "autoWidth": false,
             "autoHeight": false,
             "GUID": "e2ba0994-1763-4b13-8b19-e7a0d9f95edb"
-          },
-          {
-            "autoWidth": false,
-            "autoHeight": false,
-            "GUID": "46385b4a-a728-4579-8b09-10e9e7c52c99"
           }
         ],
         "relationshipUpdateDisabled": false
