@@ -262,30 +262,6 @@
                   ]
                 },
                 {
-                  "GUID": "39a652f4-defc-4297-8814-d16fdb749d18",
-                  "name": "Name",
-                  "type": "reference",
-                  "$ref": "#external/definitions/Name",
-                  "refType": "external",
-                  "ref": "865adb6d-3499-4c17-8661-9b3b4333ca8c",
-                  "refIdPath": [
-                    "c67522a8-66b6-4046-89f1-2190faa20f67",
-                    "7e87c923-a353-4e57-9b70-137049ae013f",
-                    "865adb6d-3499-4c17-8661-9b3b4333ca8c"
-                  ],
-                  "isActivated": true,
-                  "compositeKey": [
-                    "compositePrimaryKey",
-                    "compositeUniqueKey"
-                  ],
-                  "primaryKey": false,
-                  "required": false,
-                  "error": {
-                    "name": false,
-                    "refPath": false
-                  }
-                },
-                {
                   "GUID": "c7ccd811-1374-4a95-96b8-1bbb7eda7590",
                   "name": "Currency",
                   "type": "reference",
@@ -585,11 +561,11 @@
         "shape": [
           {
             "x": 1378.5380761523052,
-            "y": 1051.8563794255192
+            "y": 1004.3563794255192
           },
           {
             "x": 1300.6670048954331,
-            "y": 1051.8563794255192
+            "y": 1004.3563794255192
           },
           {
             "x": 1300.6670048954331,
@@ -645,16 +621,16 @@
             "y": 1028.4195224825469
           },
           {
-            "x": 1901.9428314437996,
+            "x": 1897.4428314437996,
             "y": 1028.4195224825469
           },
           {
-            "x": 1901.9428314437996,
-            "y": 1051.8563794255192
+            "x": 1897.4428314437996,
+            "y": 1004.3563794255192
           },
           {
-            "x": 1827.5380761523052,
-            "y": 1051.8563794255192
+            "x": 1818.5380761523052,
+            "y": 1004.3563794255192
           }
         ],
         "sides": [
@@ -685,8 +661,6 @@
     "6c26e788-797f-4f45-b8df-f2cdeb9b2eab": "Disclaimer",
     "268d0db8-65bc-4a7a-a9f6-5348a7934439": "SKU",
     "acdd584f-e173-4126-a669-6ea2f414ffd0": "SKU",
-    "865adb6d-3499-4c17-8661-9b3b4333ca8c": "Name",
-    "39a652f4-defc-4297-8814-d16fdb749d18": "Name",
     "cb06164d-25df-4016-ba43-fe0a45921e6e": "Currency",
     "c7ccd811-1374-4a95-96b8-1bbb7eda7590": "Currency",
     "91f49cfb-0486-4406-9e30-f5b68d67f1fe": "Amount",
@@ -1527,34 +1501,6 @@
         ]
       },
       {
-        "name": "Name",
-        "hackoladeMeta": {},
-        "isActivated": true,
-        "primaryKey": false,
-        "required": false,
-        "childType": "varchar",
-        "type": "string",
-        "compositeKey": [
-          "compositePrimaryKey",
-          "compositeUniqueKey"
-        ],
-        "GUID": "865adb6d-3499-4c17-8661-9b3b4333ca8c",
-        "description": "The name of the product or service as displayed to the customer.",
-        "error": {},
-        "link": "../merchandising/Product-Polyglot.hck.json",
-        "fieldRelativePath": "#/Product management/Product/properties/Name",
-        "kind": "relativePath",
-        "fileType": "hackoladeSchema",
-        "definitionRefs": [
-          [
-            "46385b4a-a728-4579-8b09-10e9e7c52c99",
-            "72bc07b9-d511-42e0-966a-7e5f14513040",
-            "eae27a5b-3644-46dd-a3d1-01afce2a245d",
-            "39a652f4-defc-4297-8814-d16fdb749d18"
-          ]
-        ]
-      },
-      {
         "name": "Currency",
         "hackoladeMeta": {},
         "isActivated": true,
@@ -1668,7 +1614,7 @@
       "normalization": false
     }
   ],
-  "lastModifTS": "2025-02-28T11:11:59.443Z",
+  "lastModifTS": "2025-02-28T11:17:31.380Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -1713,8 +1659,8 @@
             "GUID": "46385b4a-a728-4579-8b09-10e9e7c52c99",
             "x": 1378.5380761523052,
             "y": 798.3563794255192,
-            "width": 449,
-            "height": 507,
+            "width": 440,
+            "height": 412,
             "color": {
               "hex": "#2196F3"
             }
@@ -1825,6 +1771,11 @@
             "autoWidth": false,
             "autoHeight": false,
             "GUID": "e2ba0994-1763-4b13-8b19-e7a0d9f95edb"
+          },
+          {
+            "autoWidth": false,
+            "autoHeight": false,
+            "GUID": "46385b4a-a728-4579-8b09-10e9e7c52c99"
           }
         ],
         "relationshipUpdateDisabled": false
