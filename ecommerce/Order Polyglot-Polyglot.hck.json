@@ -48,33 +48,6 @@
           "error": {}
         },
         {
-          "name": "Status",
-          "hackoladeMeta": {},
-          "isActivated": true,
-          "required": false,
-          "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
-          "primaryKey": false,
-          "symbols": [
-            "Y"
-          ],
-          "childType": "enum",
-          "type": "string",
-          "compositeKey": [
-            "compositePrimaryKey",
-            "compositeUniqueKey"
-          ],
-          "compositePrimaryKey": false,
-          "GUID": "6dac6534-e11a-49ac-a049-30f3b1207b88",
-          "description": "The current state of the order (e.g., Pending, Shipped, Delivered, Canceled).",
-          "enum": [
-            "Pending",
-            "Shipped",
-            "Delivered",
-            "Canceled"
-          ],
-          "error": {}
-        },
-        {
           "GUID": "9e4faa2d-6567-4c55-908d-59f30426bdc1",
           "name": "Ship-to address",
           "type": "reference",
@@ -242,30 +215,6 @@
                   "childRelationships": [
                     "9883a02f-9c36-46f5-adeb-3ba9460724bf"
                   ]
-                },
-                {
-                  "GUID": "c7ccd811-1374-4a95-96b8-1bbb7eda7590",
-                  "name": "Currency",
-                  "type": "reference",
-                  "$ref": "#external/definitions/Currency",
-                  "refType": "external",
-                  "ref": "cb06164d-25df-4016-ba43-fe0a45921e6e",
-                  "refIdPath": [
-                    "c67522a8-66b6-4046-89f1-2190faa20f67",
-                    "7e87c923-a353-4e57-9b70-137049ae013f",
-                    "cb06164d-25df-4016-ba43-fe0a45921e6e"
-                  ],
-                  "isActivated": true,
-                  "compositeKey": [
-                    "compositePrimaryKey",
-                    "compositeUniqueKey"
-                  ],
-                  "primaryKey": false,
-                  "required": true,
-                  "error": {
-                    "name": false,
-                    "refPath": false
-                  }
                 },
                 {
                   "GUID": "cf7c7d06-9e2a-490d-852d-29010e9eefd8",
@@ -626,7 +575,6 @@
   "diagramViews": [],
   "idToNameHashTable": {
     "46385b4a-a728-4579-8b09-10e9e7c52c99": "Order",
-    "6dac6534-e11a-49ac-a049-30f3b1207b88": "Status",
     "f8f34cd7-4027-46ad-9160-b0dcaa29a509": "placed",
     "2dc5cd19-9bb7-4405-a00f-69af0c39ea24": "Identifier",
     "aac0636d-630a-49f5-b2ab-0a0092f61cd3": "Disclaimer",
@@ -643,8 +591,6 @@
     "6c26e788-797f-4f45-b8df-f2cdeb9b2eab": "Disclaimer",
     "268d0db8-65bc-4a7a-a9f6-5348a7934439": "SKU",
     "acdd584f-e173-4126-a669-6ea2f414ffd0": "SKU",
-    "cb06164d-25df-4016-ba43-fe0a45921e6e": "Currency",
-    "c7ccd811-1374-4a95-96b8-1bbb7eda7590": "Currency",
     "91f49cfb-0486-4406-9e30-f5b68d67f1fe": "Amount",
     "cf7c7d06-9e2a-490d-852d-29010e9eefd8": "Amount",
     "6adc1c99-dca5-4d92-88fd-6e27edf175ce": "Customer reference",
@@ -1482,54 +1428,6 @@
         ]
       },
       {
-        "name": "Currency",
-        "hackoladeMeta": {},
-        "isActivated": true,
-        "required": true,
-        "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
-        "primaryKey": false,
-        "symbols": [
-          "Y"
-        ],
-        "childType": "enum",
-        "type": "string",
-        "compositeKey": [
-          "compositePrimaryKey",
-          "compositeUniqueKey"
-        ],
-        "GUID": "cb06164d-25df-4016-ba43-fe0a45921e6e",
-        "enum": [
-          "USD",
-          "EUR",
-          "JPY",
-          "GBP",
-          "AUD",
-          "CAD",
-          "CHF",
-          "CNY",
-          "SEK",
-          "NZD",
-          "INR",
-          "MXN",
-          "SGD",
-          "HKD"
-        ],
-        "description": "Indicates the currency in which the product price is set.",
-        "error": {},
-        "link": "../merchandising/Product-Polyglot.hck.json",
-        "fieldRelativePath": "#/Product management/Product/properties/Prices/properties/0/properties/Currency",
-        "kind": "relativePath",
-        "fileType": "hackoladeSchema",
-        "definitionRefs": [
-          [
-            "46385b4a-a728-4579-8b09-10e9e7c52c99",
-            "72bc07b9-d511-42e0-966a-7e5f14513040",
-            "eae27a5b-3644-46dd-a3d1-01afce2a245d",
-            "c7ccd811-1374-4a95-96b8-1bbb7eda7590"
-          ]
-        ]
-      },
-      {
         "name": "Amount",
         "hackoladeMeta": {},
         "isActivated": true,
@@ -1595,7 +1493,7 @@
       "normalization": false
     }
   ],
-  "lastModifTS": "2025-02-28T11:18:23.490Z",
+  "lastModifTS": "2025-02-28T11:19:25.356Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
