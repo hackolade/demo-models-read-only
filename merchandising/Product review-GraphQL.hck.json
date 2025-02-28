@@ -891,7 +891,7 @@
   "isCreatedByPlugin": true,
   "pluginInformation": {
     "pluginName": "GraphQL",
-    "pluginVersion": "0.2.3",
+    "pluginVersion": "0.2.2",
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
