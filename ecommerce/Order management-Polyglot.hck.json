@@ -66,26 +66,6 @@
           "error": {}
         },
         {
-          "name": "Total amount",
-          "hackoladeMeta": {},
-          "isActivated": true,
-          "index": true,
-          "exclusiveMinimum": false,
-          "exclusiveMaximum": false,
-          "primaryKey": false,
-          "required": false,
-          "childType": "number",
-          "type": "numeric",
-          "compositeKey": [
-            "compositePrimaryKey",
-            "compositeUniqueKey"
-          ],
-          "GUID": "17ee1d91-fa06-4638-831b-a7766df0e191",
-          "mode": "decimal",
-          "description": "The aggregated cost of all ordered items, including any taxes, fees, or discounts applied to the order. Should reflect the final amount the customer is expected to pay.",
-          "error": {}
-        },
-        {
           "name": "Status",
           "hackoladeMeta": {},
           "isActivated": true,
@@ -632,11 +612,11 @@
         "shape": [
           {
             "x": 1378.5380761523052,
-            "y": 1051.8563794255192
+            "y": 1019.8563794255192
           },
           {
             "x": 1300.6670048954331,
-            "y": 1051.8563794255192
+            "y": 1019.8563794255192
           },
           {
             "x": 1300.6670048954331,
@@ -692,16 +672,16 @@
             "y": 1028.4195224825469
           },
           {
-            "x": 1901.9428314437996,
+            "x": 1900.9428314437996,
             "y": 1028.4195224825469
           },
           {
-            "x": 1901.9428314437996,
-            "y": 1051.8563794255192
+            "x": 1900.9428314437996,
+            "y": 1019.8563794255192
           },
           {
-            "x": 1827.5380761523052,
-            "y": 1051.8563794255192
+            "x": 1825.5380761523052,
+            "y": 1019.8563794255192
           }
         ],
         "sides": [
@@ -715,7 +695,6 @@
   "diagramViews": [],
   "idToNameHashTable": {
     "46385b4a-a728-4579-8b09-10e9e7c52c99": "Order",
-    "17ee1d91-fa06-4638-831b-a7766df0e191": "Total amount",
     "6dac6534-e11a-49ac-a049-30f3b1207b88": "Status",
     "f8f34cd7-4027-46ad-9160-b0dcaa29a509": "placed",
     "2dc5cd19-9bb7-4405-a00f-69af0c39ea24": "Identifier",
@@ -1717,7 +1696,7 @@
       "normalization": false
     }
   ],
-  "lastModifTS": "2025-02-28T10:52:32.463Z",
+  "lastModifTS": "2025-02-28T10:54:51.464Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -1762,8 +1741,8 @@
             "GUID": "46385b4a-a728-4579-8b09-10e9e7c52c99",
             "x": 1378.5380761523052,
             "y": 798.3563794255192,
-            "width": 449,
-            "height": 507,
+            "width": 447,
+            "height": 443,
             "color": {
               "hex": "#2196F3"
             }
@@ -1874,6 +1853,11 @@
             "autoWidth": false,
             "autoHeight": false,
             "GUID": "e2ba0994-1763-4b13-8b19-e7a0d9f95edb"
+          },
+          {
+            "autoWidth": false,
+            "autoHeight": false,
+            "GUID": "46385b4a-a728-4579-8b09-10e9e7c52c99"
           }
         ],
         "relationshipUpdateDisabled": false
