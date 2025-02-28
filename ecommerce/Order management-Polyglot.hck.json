@@ -492,11 +492,11 @@
         "shape": [
           {
             "x": 1378.5380761523052,
-            "y": 1004.3563794255192
+            "y": 979.3563794255192
           },
           {
             "x": 1300.6670048954331,
-            "y": 1004.3563794255192
+            "y": 979.3563794255192
           },
           {
             "x": 1300.6670048954331,
@@ -557,11 +557,11 @@
           },
           {
             "x": 1897.4428314437996,
-            "y": 1004.3563794255192
+            "y": 979.3563794255192
           },
           {
             "x": 1818.5380761523052,
-            "y": 1004.3563794255192
+            "y": 979.3563794255192
           }
         ],
         "sides": [
@@ -1493,7 +1493,7 @@
       "normalization": false
     }
   ],
-  "lastModifTS": "2025-02-28T11:19:25.356Z",
+  "lastModifTS": "2025-02-28T12:18:10.996Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -1502,7 +1502,7 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.0.3"
+    "version": "8.0.2"
   },
   "hackoladeMeta": {
     "validationErrors": {
@@ -1539,7 +1539,7 @@
             "x": 1378.5380761523052,
             "y": 798.3563794255192,
             "width": 440,
-            "height": 412,
+            "height": 362,
             "color": {
               "hex": "#2196F3"
             }
@@ -1657,7 +1657,11 @@
             "GUID": "46385b4a-a728-4579-8b09-10e9e7c52c99"
           }
         ],
-        "relationshipUpdateDisabled": false
+        "relationshipUpdateDisabled": false,
+        "displayOptions": {
+          "dndHandles": false,
+          "hideErdRelationshipsNames": false
+        }
       },
       "collectionLevel": {},
       "changed": false

@@ -830,11 +830,26 @@
         "type": "document",
         "properties": [
           {
-            "name": "Street",
+            "name": "Address ID",
             "hackoladeMeta": {},
             "isActivated": true,
             "primaryKey": false,
             "required": false,
+            "childType": "varchar",
+            "type": "string",
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ],
+            "GUID": "44a88c1b-f02c-546d-8e8c-7d87f41fc743",
+            "error": {}
+          },
+          {
+            "name": "Street",
+            "hackoladeMeta": {},
+            "isActivated": true,
+            "primaryKey": false,
+            "required": true,
             "childType": "varchar",
             "type": "string",
             "compositeKey": [
@@ -850,7 +865,7 @@
             "hackoladeMeta": {},
             "isActivated": true,
             "primaryKey": false,
-            "required": false,
+            "required": true,
             "childType": "varchar",
             "type": "string",
             "compositeKey": [
@@ -868,7 +883,7 @@
             "hackoladeMeta": {},
             "isActivated": true,
             "primaryKey": false,
-            "required": false,
+            "required": true,
             "childType": "varchar",
             "type": "string",
             "compositeKey": [
@@ -927,7 +942,7 @@
   "GUID": "530c923e-219d-470a-b2f9-1c2a82d43bb0",
   "isLineageEnabled": false,
   "polyglotModelPaths": [],
-  "lastModifTS": "2025-02-25T07:44:37.500Z",
+  "lastModifTS": "2025-02-28T12:20:48.793Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -1085,6 +1100,7 @@
         ],
         "relationshipUpdateDisabled": false,
         "displayOptions": {
+          "dndHandles": false,
           "hideErdRelationshipsNames": false
         }
       },

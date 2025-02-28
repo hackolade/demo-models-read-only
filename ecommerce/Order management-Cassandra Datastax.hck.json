@@ -45,40 +45,6 @@
             "description": "Acts as the partition key. This field uniquely identifies a customer and groups all orders associated with that customer."
           },
           {
-            "GUID": "3a550c04-6ca2-4876-8ec9-89aa76ea1d13",
-            "compositeKey": [
-              "compositePartitionKey",
-              "compositeClusteringKey"
-            ],
-            "compositePartitionKey": false,
-            "primaryKey": true,
-            "required": true,
-            "compositeClusteringKey": true,
-            "description": "Functions as the clustering column. It records the date the order was placed. The descending order ensures that recent orders are returned first during queries.",
-            "error": {}
-          },
-          {
-            "GUID": "17ee1d91-fa06-4638-831b-a7766df0e191",
-            "error": {
-              "name": false
-            },
-            "hackoladeMeta": {}
-          },
-          {
-            "GUID": "6dac6534-e11a-49ac-a049-30f3b1207b88",
-            "error": {
-              "name": false
-            },
-            "hackoladeMeta": {}
-          },
-          {
-            "GUID": "d8e8b56d-827d-4fd1-bea0-07bd5bab9c2e",
-            "error": {
-              "name": false
-            },
-            "hackoladeMeta": {}
-          },
-          {
             "GUID": "9e4faa2d-6567-4c55-908d-59f30426bdc1",
             "error": {},
             "hackoladeMeta": {},
@@ -418,105 +384,32 @@
             "code": "customer_reference"
           },
           {
-            "primaryKey": false,
-            "childType": "date",
-            "type": "string",
-            "compositePartitionKey": false,
-            "compositeClusteringKey": false,
-            "name": "Order date",
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            },
-            "isActivated": true,
-            "required": false,
-            "GUID": "3a550c04-6ca2-4876-8ec9-89aa76ea1d13",
-            "description": "The date and time at which the order was placed. Used for chronological reporting and status tracking.",
-            "compositeKey": [
-              "compositePartitionKey",
-              "compositeClusteringKey"
-            ],
-            "code": "order_date"
-          },
-          {
-            "exclusiveMinimum": false,
-            "exclusiveMaximum": false,
-            "primaryKey": false,
-            "mode": "decimal",
-            "childType": "numeric",
-            "type": "numeric",
-            "compositePartitionKey": false,
-            "compositeClusteringKey": false,
-            "name": "Total amount",
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            },
-            "isActivated": true,
-            "required": false,
-            "GUID": "17ee1d91-fa06-4638-831b-a7766df0e191",
-            "description": "The aggregated cost of all ordered items, including any taxes, fees, or discounts applied to the order. Should reflect the final amount the customer is expected to pay.",
-            "compositeKey": [
-              "compositePartitionKey",
-              "compositeClusteringKey"
-            ],
-            "code": "total_amount"
-          },
-          {
-            "primaryKey": false,
-            "mode": "text",
-            "subtype": "string",
-            "childType": "char",
-            "type": "string",
-            "compositePartitionKey": false,
-            "compositeClusteringKey": false,
-            "name": "Status",
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            },
-            "isActivated": true,
-            "required": false,
-            "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
-            "GUID": "6dac6534-e11a-49ac-a049-30f3b1207b88",
-            "description": "The current state of the order (e.g., Pending, Shipped, Delivered, Canceled).",
-            "enum": [
-              "Pending",
-              "Shipped",
-              "Delivered",
-              "Canceled"
-            ],
-            "compositeKey": [
-              "compositePartitionKey",
-              "compositeClusteringKey"
-            ],
-            "code": "status"
-          },
-          {
-            "primaryKey": false,
-            "mode": "varchar",
-            "subtype": "string",
-            "childType": "char",
-            "type": "string",
-            "compositePartitionKey": false,
-            "compositeClusteringKey": false,
-            "name": "Tracking number",
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            },
-            "isActivated": true,
-            "required": false,
-            "GUID": "d8e8b56d-827d-4fd1-bea0-07bd5bab9c2e",
-            "description": "A unique code provided by the shipping carrier to track the delivery status of the order.",
-            "compositeKey": [
-              "compositePartitionKey",
-              "compositeClusteringKey"
-            ],
-            "code": "tracking_number"
-          },
-          {
             "subtype": "map<str>",
             "keyType": "char",
             "keySubtype": "text",
             "primaryKey": false,
             "properties": [
+              {
+                "primaryKey": false,
+                "mode": "varchar",
+                "subtype": "string",
+                "childType": "char",
+                "type": "string",
+                "compositePartitionKey": false,
+                "compositeClusteringKey": false,
+                "name": "Address ID",
+                "hackoladeMeta": {
+                  "namingConvention": "code"
+                },
+                "isActivated": true,
+                "required": false,
+                "GUID": "74c02da5-4923-52cc-a457-faac0dfeb552",
+                "compositeKey": [
+                  "compositePartitionKey",
+                  "compositeClusteringKey"
+                ],
+                "code": "address_id"
+              },
               {
                 "primaryKey": false,
                 "mode": "varchar",
@@ -659,66 +552,6 @@
                       "compositeClusteringKey"
                     ],
                     "code": "timestamp"
-                  },
-                  {
-                    "primaryKey": false,
-                    "mode": "text",
-                    "subtype": "string",
-                    "childType": "char",
-                    "type": "string",
-                    "compositePartitionKey": false,
-                    "compositeClusteringKey": false,
-                    "name": "Payment method",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    },
-                    "isActivated": true,
-                    "required": false,
-                    "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
-                    "GUID": "37ecefbe-69cd-4c46-bfe2-bdb2fea3be1c",
-                    "foreignCollection": "",
-                    "foreignField": [],
-                    "description": "The method used for payment (e.g., Credit Card, PayPal, Bank Transfer).",
-                    "enum": [
-                      "CreditCard",
-                      "PayPal",
-                      "BankTransfer"
-                    ],
-                    "compositeKey": [
-                      "compositePartitionKey",
-                      "compositeClusteringKey"
-                    ],
-                    "code": "payment_method"
-                  },
-                  {
-                    "primaryKey": false,
-                    "mode": "text",
-                    "subtype": "string",
-                    "childType": "char",
-                    "type": "string",
-                    "compositePartitionKey": false,
-                    "compositeClusteringKey": false,
-                    "name": "Status",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    },
-                    "isActivated": true,
-                    "required": false,
-                    "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
-                    "GUID": "4b11b953-edb3-4c2d-8e36-a17406cb7b26",
-                    "foreignCollection": "",
-                    "foreignField": [],
-                    "description": "Indicates whether the payment has been completed, pending, or failed.",
-                    "enum": [
-                      "completed",
-                      "pending",
-                      "failed"
-                    ],
-                    "compositeKey": [
-                      "compositePartitionKey",
-                      "compositeClusteringKey"
-                    ],
-                    "code": "status"
                   }
                 ],
                 "additionalProperties": false,
@@ -811,89 +644,6 @@
                     "foreignCollection": "",
                     "foreignField": [],
                     "relationshipType": "",
-                    "compositeKey": [
-                      "compositePartitionKey",
-                      "compositeClusteringKey"
-                    ]
-                  },
-                  {
-                    "primaryKey": false,
-                    "mode": "varchar",
-                    "subtype": "string",
-                    "childType": "char",
-                    "type": "string",
-                    "compositePartitionKey": false,
-                    "compositeClusteringKey": false,
-                    "name": "Name",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    },
-                    "isActivated": true,
-                    "required": false,
-                    "description": "The name of the product or service as displayed to the customer.",
-                    "GUID": "39a652f4-defc-4297-8814-d16fdb749d18",
-                    "code": "name",
-                    "compositeKey": [
-                      "compositePartitionKey",
-                      "compositeClusteringKey"
-                    ]
-                  },
-                  {
-                    "primaryKey": false,
-                    "mode": "varchar",
-                    "subtype": "string",
-                    "childType": "char",
-                    "type": "string",
-                    "compositePartitionKey": false,
-                    "compositeClusteringKey": false,
-                    "name": "Description",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    },
-                    "isActivated": true,
-                    "required": false,
-                    "description": "A longer text providing additional details about the product. May be omitted if product details are referenced externally.",
-                    "GUID": "6d536af4-ae07-48db-923e-3fd215300a8c",
-                    "code": "description",
-                    "compositeKey": [
-                      "compositePartitionKey",
-                      "compositeClusteringKey"
-                    ]
-                  },
-                  {
-                    "primaryKey": false,
-                    "mode": "text",
-                    "subtype": "string",
-                    "childType": "char",
-                    "type": "string",
-                    "compositePartitionKey": false,
-                    "compositeClusteringKey": false,
-                    "name": "Currency",
-                    "hackoladeMeta": {
-                      "namingConvention": "code"
-                    },
-                    "isActivated": true,
-                    "required": true,
-                    "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
-                    "enum": [
-                      "USD",
-                      "EUR",
-                      "JPY",
-                      "GBP",
-                      "AUD",
-                      "CAD",
-                      "CHF",
-                      "CNY",
-                      "SEK",
-                      "NZD",
-                      "INR",
-                      "MXN",
-                      "SGD",
-                      "HKD"
-                    ],
-                    "description": "Indicates the currency in which the product price is set.",
-                    "GUID": "c7ccd811-1374-4a95-96b8-1bbb7eda7590",
-                    "code": "currency",
                     "compositeKey": [
                       "compositePartitionKey",
                       "compositeClusteringKey"
@@ -1139,7 +889,7 @@
   ],
   "code": "order_management",
   "description": "This Cassandra order management model is intended for illustration purposes only and provides a simplified representation of an order management system within a Cassandra-based environment.\n\nWhile it covers essential tables for an eCommerce context, it does not encompass all potential complexities or best practices that may be applicable in a comprehensive production system implementation.",
-  "lastModifTS": "2025-02-25T15:13:59.979Z",
+  "lastModifTS": "2025-02-28T12:16:47.366Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -1158,8 +908,8 @@
             "GUID": "c0df0789-e76e-4c7b-b777-d0f19ea24e33",
             "x": 1264.5380761523052,
             "y": 893.3563794255192,
-            "width": 378,
-            "height": 225,
+            "width": 384,
+            "height": 170,
             "color": {
               "hex": "#2196F3"
             }

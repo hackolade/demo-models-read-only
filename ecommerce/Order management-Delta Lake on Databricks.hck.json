@@ -2022,12 +2022,12 @@
     }
   ],
   "description": "This Delta Lake on Databricks Order Management Model is intended for illustration purposes only and provides a simplified representation of an ecommerce order management system using Delta Lake on Databricks.\n\nWhile it captures essential entities, fields, relationships, and key Delta Lake features, it does not encompass all potential complexities or best practices that may be applicable in a comprehensive production system implementation.",
-  "lastModifTS": "2025-02-25T15:18:00.290Z",
+  "lastModifTS": "2025-02-28T12:17:46.231Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
     "pluginName": "DeltaLake",
-    "pluginVersion": "0.2.18",
+    "pluginVersion": "0.2.19",
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
@@ -2158,6 +2158,7 @@
         ],
         "relationshipUpdateDisabled": false,
         "displayOptions": {
+          "dndHandles": false,
           "hideErdRelationshipsNames": false
         }
       },

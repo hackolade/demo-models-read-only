@@ -26,22 +26,6 @@
       "referenceDiff": {
         "properties": [
           {
-            "GUID": "17ee1d91-fa06-4638-831b-a7766df0e191",
-            "error": {
-              "code": false,
-              "name": false
-            },
-            "hackoladeMeta": {}
-          },
-          {
-            "GUID": "d8e8b56d-827d-4fd1-bea0-07bd5bab9c2e",
-            "error": {
-              "code": false,
-              "name": false
-            },
-            "hackoladeMeta": {}
-          },
-          {
             "GUID": "7e7c88f7-9ae5-5ee0-8fea-173f27c015f3",
             "error": {},
             "hackoladeMeta": {},
@@ -107,16 +91,7 @@
                         "GUID": "1010c594-625d-457d-955c-a897e9a514c1",
                         "error": {},
                         "hackoladeMeta": {},
-                        "properties": [
-                          {
-                            "GUID": "37ecefbe-69cd-4c46-bfe2-bdb2fea3be1c",
-                            "error": {
-                              "code": false,
-                              "name": false
-                            },
-                            "hackoladeMeta": {}
-                          }
-                        ]
+                        "properties": []
                       }
                     ]
                   }
@@ -166,7 +141,8 @@
                           "code": false,
                           "name": false
                         },
-                        "hackoladeMeta": {}
+                        "hackoladeMeta": {},
+                        "properties": []
                       }
                     ]
                   }
@@ -261,12 +237,12 @@
             "multipleTypes": [
               {
                 "type": "null",
-                "GUID": "547feea7-6050-46f5-85ba-cad822ebcba2"
+                "GUID": "3acafb1c-5dfd-450c-981e-07c816195aa1"
               },
               {
                 "childType": "string",
                 "type": "string",
-                "GUID": "65b4d86d-7595-49a9-a0dd-53df98e83ac2",
+                "GUID": "294ce865-54ca-4143-ad31-683e3be1f509",
                 "error": {}
               }
             ],
@@ -292,153 +268,6 @@
             "compositePrimaryKey": false,
             "GUID": "6adc1c99-dca5-4d92-88fd-6e27edf175ce",
             "code": "customer_reference"
-          },
-          {
-            "name": "Order date",
-            "type": "multiple",
-            "properties": [],
-            "multipleTypes": [
-              {
-                "type": "null",
-                "GUID": "6188c9e6-cbdc-4882-9254-28b0b685e715"
-              },
-              {
-                "index": true,
-                "childType": "number",
-                "type": "numeric",
-                "GUID": "90601183-e887-4195-915c-aea34c484667",
-                "error": {},
-                "mode": "int",
-                "logicalType": "date"
-              }
-            ],
-            "isActivated": true,
-            "primaryKey": false,
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            },
-            "description": "The date and time at which the order was placed. Used for chronological reporting and status tracking.",
-            "required": false,
-            "compositeKey": [
-              "compositePrimaryKey",
-              "compositeUniqueKey"
-            ],
-            "default": null,
-            "compositePrimaryKey": false,
-            "GUID": "3a550c04-6ca2-4876-8ec9-89aa76ea1d13",
-            "code": "order_date"
-          },
-          {
-            "name": "Total amount",
-            "type": "multiple",
-            "properties": [],
-            "multipleTypes": [
-              {
-                "type": "null",
-                "GUID": "f6392ead-db85-440a-b4c0-fd837333f5e1"
-              },
-              {
-                "index": true,
-                "exclusiveMinimum": false,
-                "exclusiveMaximum": false,
-                "childType": "bytes",
-                "type": "string",
-                "GUID": "41c23c76-0061-4f2f-afdc-952b0654818a",
-                "mode": "int",
-                "error": {},
-                "subtype": "decimal"
-              }
-            ],
-            "isActivated": true,
-            "primaryKey": false,
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            },
-            "description": "The aggregated cost of all ordered items, including any taxes, fees, or discounts applied to the order. Should reflect the final amount the customer is expected to pay.",
-            "required": false,
-            "compositeKey": [
-              "compositePrimaryKey",
-              "compositeUniqueKey"
-            ],
-            "default": null,
-            "GUID": "17ee1d91-fa06-4638-831b-a7766df0e191",
-            "code": "total_amount"
-          },
-          {
-            "name": "Status",
-            "type": "multiple",
-            "properties": [],
-            "multipleTypes": [
-              {
-                "type": "null",
-                "GUID": "a3120c92-c3e5-4d4d-b7a0-098a0a7230bb"
-              },
-              {
-                "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
-                "symbols": [
-                  "Pending",
-                  "Shipped",
-                  "Delivered",
-                  "Canceled"
-                ],
-                "childType": "enum",
-                "type": "string",
-                "GUID": "35500a7d-0557-4dfd-b12c-d7f3b1a6312e",
-                "enum": [
-                  "Pending",
-                  "Shipped",
-                  "Delivered",
-                  "Canceled"
-                ],
-                "error": {}
-              }
-            ],
-            "isActivated": true,
-            "primaryKey": false,
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            },
-            "description": "The current state of the order (e.g., Pending, Shipped, Delivered, Canceled).",
-            "required": false,
-            "compositeKey": [
-              "compositePrimaryKey",
-              "compositeUniqueKey"
-            ],
-            "default": null,
-            "compositePrimaryKey": false,
-            "GUID": "6dac6534-e11a-49ac-a049-30f3b1207b88",
-            "code": "status"
-          },
-          {
-            "name": "Tracking number",
-            "type": "multiple",
-            "properties": [],
-            "multipleTypes": [
-              {
-                "type": "null",
-                "GUID": "3f197232-2e30-4ccb-b5e6-f766d19bc516"
-              },
-              {
-                "childType": "string",
-                "type": "string",
-                "GUID": "154b199b-3a44-4c39-b4ba-ee90a9722776",
-                "error": {}
-              }
-            ],
-            "isActivated": true,
-            "primaryKey": false,
-            "hackoladeMeta": {
-              "namingConvention": "code"
-            },
-            "description": "A unique code provided by the shipping carrier to track the delivery status of the order.",
-            "required": false,
-            "compositeKey": [
-              "compositePrimaryKey",
-              "compositeUniqueKey"
-            ],
-            "default": null,
-            "GUID": "d8e8b56d-827d-4fd1-bea0-07bd5bab9c2e",
-            "code": "tracking_number"
           },
           {
             "required": true,
@@ -476,6 +305,36 @@
                     "required": false,
                     "primaryKey": false,
                     "properties": [
+                      {
+                        "name": "Address ID",
+                        "type": "multiple",
+                        "properties": [],
+                        "multipleTypes": [
+                          {
+                            "type": "null",
+                            "GUID": "1ada9035-e3be-4ccd-92b2-e98240602ff1"
+                          },
+                          {
+                            "childType": "string",
+                            "type": "string",
+                            "GUID": "9cea9d40-94db-46cb-8598-7358d20460cd",
+                            "error": {}
+                          }
+                        ],
+                        "isActivated": true,
+                        "primaryKey": false,
+                        "hackoladeMeta": {
+                          "namingConvention": "code"
+                        },
+                        "required": false,
+                        "compositeKey": [
+                          "compositePrimaryKey",
+                          "compositeUniqueKey"
+                        ],
+                        "default": null,
+                        "GUID": "74c02da5-4923-52cc-a457-faac0dfeb552",
+                        "code": "address_id"
+                      },
                       {
                         "required": true,
                         "primaryKey": false,
@@ -596,7 +455,7 @@
                             "multipleTypes": [
                               {
                                 "type": "null",
-                                "GUID": "551bf51b-0c8f-44f1-8169-2ec40854acd4"
+                                "GUID": "5bf18a43-53ba-4266-b173-d87fdedfd77a"
                               },
                               {
                                 "index": true,
@@ -604,7 +463,7 @@
                                 "exclusiveMaximum": false,
                                 "childType": "bytes",
                                 "type": "string",
-                                "GUID": "63ad0f39-c05e-418e-8b34-e3afbd8c75fe",
+                                "GUID": "cc8efedf-a59d-4a82-9c3b-7da9898b0fd8",
                                 "mode": "int",
                                 "error": {},
                                 "subtype": "decimal"
@@ -634,13 +493,13 @@
                             "multipleTypes": [
                               {
                                 "type": "null",
-                                "GUID": "f8a3b2b6-0927-404e-8cef-8d55a05ea382"
+                                "GUID": "eba3e67b-804d-4216-90fe-31098dd85251"
                               },
                               {
                                 "tPrecision": 9,
                                 "childType": "number",
                                 "type": "numeric",
-                                "GUID": "0b86fe65-d896-4de7-ad60-e76cdea01eb7",
+                                "GUID": "8f0193a0-e27c-4c16-8391-5ba4a6cc29ff",
                                 "error": {},
                                 "mode": "long",
                                 "logicalType": "local-timestamp-millis"
@@ -662,97 +521,6 @@
                             "default": null,
                             "GUID": "b2f61376-69c8-46f5-9f61-8e68a0dae68d",
                             "code": "timestamp"
-                          },
-                          {
-                            "name": "Payment method",
-                            "type": "multiple",
-                            "properties": [],
-                            "multipleTypes": [
-                              {
-                                "type": "null",
-                                "GUID": "32995058-bfe3-4f52-abc8-2a7acbcdeead"
-                              },
-                              {
-                                "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
-                                "symbols": [
-                                  "CreditCard",
-                                  "PayPal",
-                                  "BankTransfer"
-                                ],
-                                "childType": "enum",
-                                "type": "string",
-                                "GUID": "9d2117f0-b15f-4d03-b33e-7961973f3298",
-                                "error": {
-                                  "enum": false,
-                                  "enums": false
-                                },
-                                "enum": [
-                                  "CreditCard",
-                                  "PayPal",
-                                  "BankTransfer"
-                                ]
-                              }
-                            ],
-                            "isActivated": true,
-                            "primaryKey": false,
-                            "hackoladeMeta": {
-                              "namingConvention": "code"
-                            },
-                            "description": "The method used for payment (e.g., Credit Card, PayPal, Bank Transfer).",
-                            "required": false,
-                            "compositeKey": [
-                              "compositePrimaryKey",
-                              "compositeUniqueKey"
-                            ],
-                            "foreignCollection": "",
-                            "foreignField": [],
-                            "default": null,
-                            "GUID": "37ecefbe-69cd-4c46-bfe2-bdb2fea3be1c",
-                            "code": "payment_method"
-                          },
-                          {
-                            "name": "Status",
-                            "type": "multiple",
-                            "properties": [],
-                            "multipleTypes": [
-                              {
-                                "type": "null",
-                                "GUID": "84ebfbe4-60d3-46ff-a241-5569216466d1"
-                              },
-                              {
-                                "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
-                                "symbols": [
-                                  "completed",
-                                  "pending",
-                                  "failed"
-                                ],
-                                "childType": "enum",
-                                "type": "string",
-                                "GUID": "54661da1-c24a-42cd-be91-fbcdbfb5df7b",
-                                "enum": [
-                                  "completed",
-                                  "pending",
-                                  "failed"
-                                ],
-                                "error": {}
-                              }
-                            ],
-                            "isActivated": true,
-                            "primaryKey": false,
-                            "hackoladeMeta": {
-                              "namingConvention": "code"
-                            },
-                            "description": "Indicates whether the payment has been completed, pending, or failed.",
-                            "required": false,
-                            "compositeKey": [
-                              "compositePrimaryKey",
-                              "compositeUniqueKey"
-                            ],
-                            "foreignCollection": "",
-                            "foreignField": [],
-                            "default": null,
-                            "GUID": "4b11b953-edb3-4c2d-8e36-a17406cb7b26",
-                            "code": "status"
                           }
                         ],
                         "childType": "record",
@@ -846,7 +614,7 @@
                             "multipleTypes": [
                               {
                                 "type": "null",
-                                "GUID": "a71d60aa-1c6e-4176-ad89-adad7b9c0fd4"
+                                "GUID": "3f89d348-1abf-4ad9-bdce-25d9a1031dad"
                               },
                               {
                                 "index": true,
@@ -854,7 +622,7 @@
                                 "exclusiveMaximum": false,
                                 "childType": "number",
                                 "type": "numeric",
-                                "GUID": "1a38224e-23f4-419f-81f8-44fecbc29bc7",
+                                "GUID": "3ffe895d-cf45-4718-864f-f66c56e46428",
                                 "error": {},
                                 "mode": "int"
                               }
@@ -890,107 +658,6 @@
                             "foreignCollection": "",
                             "foreignField": [],
                             "relationshipType": ""
-                          },
-                          {
-                            "name": "Name",
-                            "type": "multiple",
-                            "properties": [],
-                            "multipleTypes": [
-                              {
-                                "type": "null",
-                                "GUID": "4728ca18-6395-46fe-bf7d-cce0f3cc2765"
-                              },
-                              {
-                                "childType": "string",
-                                "type": "string",
-                                "error": {
-                                  "name": false
-                                },
-                                "GUID": "ba400918-1fa3-49c3-b2c9-8348310228fd"
-                              }
-                            ],
-                            "isActivated": true,
-                            "primaryKey": false,
-                            "hackoladeMeta": {
-                              "namingConvention": "code"
-                            },
-                            "description": "The name of the product or service as displayed to the customer.",
-                            "parentRelationship": "",
-                            "required": false,
-                            "compositeKey": [
-                              "compositePrimaryKey",
-                              "compositeUniqueKey"
-                            ],
-                            "childRelationships": [],
-                            "default": null,
-                            "GUID": "39a652f4-defc-4297-8814-d16fdb749d18",
-                            "code": "name"
-                          },
-                          {
-                            "name": "Description",
-                            "type": "multiple",
-                            "properties": [],
-                            "multipleTypes": [
-                              {
-                                "type": "null",
-                                "GUID": "63223901-b834-464c-b11a-d2db023fbbaf"
-                              },
-                              {
-                                "childType": "string",
-                                "type": "string",
-                                "error": {
-                                  "name": false
-                                },
-                                "GUID": "6d144d29-ac1f-4c72-a34f-0e298214cd31"
-                              }
-                            ],
-                            "isActivated": true,
-                            "primaryKey": false,
-                            "hackoladeMeta": {
-                              "namingConvention": "code"
-                            },
-                            "description": "A longer text providing additional details about the product. May be omitted if product details are referenced externally.",
-                            "parentRelationship": "",
-                            "required": false,
-                            "compositeKey": [
-                              "compositePrimaryKey",
-                              "compositeUniqueKey"
-                            ],
-                            "childRelationships": [],
-                            "default": null,
-                            "GUID": "6d536af4-ae07-48db-923e-3fd215300a8c",
-                            "code": "description"
-                          },
-                          {
-                            "required": true,
-                            "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
-                            "primaryKey": false,
-                            "childType": "enum",
-                            "type": "string",
-                            "name": "Currency",
-                            "hackoladeMeta": {
-                              "namingConvention": "code"
-                            },
-                            "isActivated": true,
-                            "symbols": [
-                              "USD",
-                              "EUR",
-                              "JPY",
-                              "GBP",
-                              "AUD",
-                              "CAD",
-                              "CHF",
-                              "CNY",
-                              "SEK",
-                              "NZD",
-                              "INR",
-                              "MXN",
-                              "SGD",
-                              "HKD"
-                            ],
-                            "description": "Indicates the currency in which the product price is set.",
-                            "GUID": "c7ccd811-1374-4a95-96b8-1bbb7eda7590",
-                            "code": "currency"
                           },
                           {
                             "required": true,
@@ -1154,7 +821,7 @@
     }
   ],
   "code": "order_management",
-  "lastModifTS": "2025-02-25T15:12:29.629Z",
+  "lastModifTS": "2025-02-28T12:16:17.964Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -1174,8 +841,8 @@
             "GUID": "d10c5dd7-9451-44e0-ad42-9565ec3f7ebd",
             "x": 1378.5380761523052,
             "y": 798.3563794255192,
-            "width": 409,
-            "height": 672,
+            "width": 415,
+            "height": 567,
             "color": {
               "hex": "#2196F3"
             }
@@ -1213,8 +880,8 @@
         "decorativeSymbols": [
           {
             "GUID": "bcb8207d-276b-4099-91b4-eeac7541a07e",
-            "x": 1326,
-            "y": 555,
+            "x": 1381.0765771340439,
+            "y": 556.2517403894101,
             "height": 183,
             "width": 393,
             "color": {

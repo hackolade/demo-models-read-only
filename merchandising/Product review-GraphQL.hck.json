@@ -886,12 +886,12 @@
       "description": false
     }
   },
-  "lastModifTS": "2025-02-21T11:26:45.735Z",
+  "lastModifTS": "2025-02-28T12:20:30.113Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
     "pluginName": "GraphQL",
-    "pluginVersion": "0.2.2",
+    "pluginVersion": "0.2.3",
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
@@ -1003,7 +1003,11 @@
             "GUID": "ae132a12-fcab-4f3a-8040-e139e963a41b"
           }
         ],
-        "relationshipUpdateDisabled": false
+        "relationshipUpdateDisabled": false,
+        "displayOptions": {
+          "dndHandles": false,
+          "hideErdRelationshipsNames": false
+        }
       },
       "collectionLevel": {},
       "changed": false

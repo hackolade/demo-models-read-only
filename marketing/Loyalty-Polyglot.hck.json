@@ -322,15 +322,15 @@
           },
           {
             "x": 1516,
-            "y": 1356.7170706006323
+            "y": 1368.2170706006323
           },
           {
             "x": 1314.1085353003136,
-            "y": 1356.7170706006323
+            "y": 1368.2170706006323
           },
           {
             "x": 1314.1085353003136,
-            "y": 1283.4341412012643
+            "y": 1306.4341412012643
           }
         ],
         "sides": [
@@ -532,6 +532,24 @@
             "properties": [
               {
                 "primaryKey": false,
+                "required": false,
+                "alternateKey": false,
+                "childType": "varchar",
+                "type": "string",
+                "compositePrimaryKey": false,
+                "compositeUniqueKey": false,
+                "name": "Address ID",
+                "hackoladeMeta": {},
+                "isActivated": true,
+                "GUID": "dff923d5-84b7-533f-8a76-4dcd803a5a33",
+                "mode": "",
+                "compositeKey": [
+                  "compositePrimaryKey",
+                  "compositeUniqueKey"
+                ]
+              },
+              {
+                "primaryKey": false,
                 "required": true,
                 "alternateKey": false,
                 "childType": "varchar",
@@ -612,6 +630,24 @@
             "properties": [
               {
                 "properties": [
+                  {
+                    "primaryKey": false,
+                    "required": false,
+                    "alternateKey": false,
+                    "childType": "varchar",
+                    "type": "string",
+                    "compositePrimaryKey": false,
+                    "compositeUniqueKey": false,
+                    "name": "Address ID",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "GUID": "f5f040e0-9c82-58c8-a951-00c223a0b0bd",
+                    "mode": "",
+                    "compositeKey": [
+                      "compositePrimaryKey",
+                      "compositeUniqueKey"
+                    ]
+                  },
                   {
                     "primaryKey": false,
                     "required": true,
@@ -801,7 +837,7 @@
       "normalization": false
     }
   ],
-  "lastModifTS": "2025-02-25T15:27:57.523Z",
+  "lastModifTS": "2025-02-28T12:19:38.722Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -827,7 +863,7 @@
             "x": 1165.1085353003136,
             "y": 989.4341412012643,
             "width": 298,
-            "height": 294,
+            "height": 317,
             "color": {
               "hex": "#2196F3"
             }
@@ -957,6 +993,7 @@
         ],
         "relationshipUpdateDisabled": false,
         "displayOptions": {
+          "dndHandles": false,
           "hideErdRelationshipsNames": false
         }
       },

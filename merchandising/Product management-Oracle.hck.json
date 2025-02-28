@@ -1161,7 +1161,7 @@
         "definitions": {
           "type": "definitions",
           "properties": [],
-          "GUID": "f04dfc0b-4f2e-4691-8e67-4a747b797b62"
+          "GUID": "211acff6-31f1-49cc-a94b-f4f00250254b"
         },
         "isActivated": true,
         "additionalProperties": false,
@@ -1351,7 +1351,7 @@
         "definitions": {
           "type": "definitions",
           "properties": [],
-          "GUID": "e7e65f07-9b58-4aab-abf8-a1dfc8236546"
+          "GUID": "6d1fd70b-2605-4a9e-b78f-82a8ba8130b8"
         },
         "isActivated": true,
         "additionalProperties": false,
@@ -1638,6 +1638,32 @@
             "mode": "varchar2",
             "length": 20,
             "subtype": "string",
+            "required": false,
+            "childType": "char",
+            "type": "string",
+            "partitionKey": false,
+            "compositePartitionKey": false,
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "Address ID",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            },
+            "isActivated": true,
+            "GUID": "25a7a6b0-730a-5df4-87fc-9c9e5def185e",
+            "compositeKey": [
+              "partitionKey",
+              "compositePartitionKey",
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ],
+            "code": "Address_ID"
+          },
+          {
+            "primaryKey": false,
+            "mode": "varchar2",
+            "length": 20,
+            "subtype": "string",
             "required": true,
             "childType": "char",
             "type": "string",
@@ -1722,7 +1748,7 @@
         "definitions": {
           "type": "definitions",
           "properties": [],
-          "GUID": "21b089e2-1d86-4ce4-95f9-cd31584dc6d2"
+          "GUID": "6edf8f39-d544-492b-b2ae-40592bfbc378"
         },
         "isActivated": true,
         "additionalProperties": false,
@@ -1846,7 +1872,7 @@
         "definitions": {
           "type": "definitions",
           "properties": [],
-          "GUID": "642328b5-52f4-4048-8da1-7c272c6f6390"
+          "GUID": "bcae17fb-9cb2-49b6-bfb8-030f7ad6d520"
         },
         "isActivated": true,
         "additionalProperties": false,
@@ -2180,6 +2206,32 @@
             "mode": "varchar2",
             "length": 20,
             "subtype": "string",
+            "required": false,
+            "childType": "char",
+            "type": "string",
+            "partitionKey": false,
+            "compositePartitionKey": false,
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "name": "Address ID",
+            "hackoladeMeta": {
+              "namingConvention": "code"
+            },
+            "isActivated": true,
+            "GUID": "e189ccf5-46f5-5fa1-9ea3-ae5205482c84",
+            "compositeKey": [
+              "partitionKey",
+              "compositePartitionKey",
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ],
+            "code": "Address_ID"
+          },
+          {
+            "primaryKey": false,
+            "mode": "varchar2",
+            "length": 20,
+            "subtype": "string",
             "required": true,
             "childType": "char",
             "type": "string",
@@ -2264,7 +2316,7 @@
         "definitions": {
           "type": "definitions",
           "properties": [],
-          "GUID": "7baad760-6f95-46dc-9230-f00a0f031ed8"
+          "GUID": "712aba17-057b-4c43-8cb6-102ffeae83ab"
         },
         "isActivated": true,
         "additionalProperties": false,
@@ -2597,7 +2649,7 @@
       "normalization": true
     }
   ],
-  "lastModifTS": "2025-02-25T15:29:50.080Z",
+  "lastModifTS": "2025-02-28T12:20:14.624Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -2665,8 +2717,8 @@
             "GUID": "842dd4c1-f54f-4167-b52a-c02dd7b8005b",
             "x": 1346.4033380882277,
             "y": 1485.4740986130357,
-            "width": 322,
-            "height": 207,
+            "width": 316,
+            "height": 221,
             "color": {}
           }
         ],
@@ -2741,6 +2793,7 @@
         ],
         "relationshipUpdateDisabled": false,
         "displayOptions": {
+          "dndHandles": false,
           "hideErdRelationshipsNames": false
         }
       },

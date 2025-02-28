@@ -226,6 +226,21 @@
         "type": "document",
         "properties": [
           {
+            "name": "Address ID",
+            "hackoladeMeta": {},
+            "isActivated": true,
+            "primaryKey": false,
+            "required": false,
+            "childType": "varchar",
+            "type": "string",
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ],
+            "GUID": "c0851672-1531-5dea-b964-a55342c19d01",
+            "error": {}
+          },
+          {
             "name": "Street",
             "hackoladeMeta": {},
             "isActivated": true,
@@ -322,7 +337,7 @@
   "GUID": "dca9ade7-ee0b-4953-b408-cc0e6b806e82",
   "isLineageEnabled": false,
   "polyglotModelPaths": [],
-  "lastModifTS": "2025-02-25T14:58:41.470Z",
+  "lastModifTS": "2025-02-28T12:15:06.712Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -348,8 +363,8 @@
             "GUID": "5cc94e26-8eb9-4b1c-a78d-a870d9f640db",
             "x": 1263,
             "y": 1167,
-            "width": 382,
-            "height": 301,
+            "width": 385,
+            "height": 317,
             "color": {
               "hex": "#2196F3"
             }

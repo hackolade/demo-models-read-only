@@ -240,6 +240,16 @@
       "referenceDiff": {
         "properties": [
           {
+            "GUID": "d138a990-ba4d-4cf7-b998-b57f5d576902",
+            "description": "A unique identifier for the supplier, used to distinctly reference each supplier in the system.",
+            "error": {}
+          },
+          {
+            "GUID": "8ee85d26-2d69-49d4-82b9-1d2b12c7966d",
+            "description": "The official name of the supplier’s company.",
+            "error": {}
+          },
+          {
             "GUID": "ba154f30-0f46-41b7-bbd0-b5e106f2cf32",
             "referenceDiffDeleted": true,
             "hackoladeMeta": {},
@@ -261,16 +271,6 @@
             "GUID": "b9d5da76-8812-4308-8bf6-0ac6a34c938f",
             "referenceDiffDeleted": true,
             "hackoladeMeta": {},
-            "error": {}
-          },
-          {
-            "GUID": "d138a990-ba4d-4cf7-b998-b57f5d576902",
-            "description": "A unique identifier for the supplier, used to distinctly reference each supplier in the system.",
-            "error": {}
-          },
-          {
-            "GUID": "8ee85d26-2d69-49d4-82b9-1d2b12c7966d",
-            "description": "The official name of the supplier’s company.",
             "error": {}
           }
         ]
@@ -839,6 +839,7 @@
             "isActivated": true,
             "required": false,
             "GUID": "c5f20bbd-e577-4a70-b532-13e319e3ef18",
+            "description": "The name of the product or service as displayed to the customer.",
             "compositeKey": [
               "compositeNodeKey"
             ],
@@ -856,6 +857,7 @@
             "isActivated": true,
             "required": false,
             "GUID": "4d678e93-e8cb-434c-9789-0d411b30a433",
+            "description": "References the category or product group to which this item belongs. This links to a separate Category entity that stores hierarchical or descriptive data about product categories.",
             "compositeKey": [
               "compositeNodeKey"
             ],
@@ -873,6 +875,7 @@
             "isActivated": true,
             "required": false,
             "GUID": "a898b734-3304-48c1-b45d-98c1f7cc3808",
+            "description": "References the unique code of the supplier who provides or manufactures the product. Ties to the Supplier entity, facilitating supplier relationship management and inventory tracking.",
             "compositeKey": [
               "compositeNodeKey"
             ],
@@ -890,6 +893,7 @@
             "isActivated": true,
             "required": false,
             "GUID": "6ef810f9-c366-426b-9aa7-97f54138905f",
+            "description": "A longer text providing additional details about the product. May be omitted if product details are referenced externally.",
             "compositeKey": [
               "compositeNodeKey"
             ],
@@ -908,6 +912,7 @@
                 "GUID": "eb09feb9-6460-4193-b564-2d31c3ca40b4",
                 "arrayItem": true,
                 "displayName": "url",
+                "description": "The direct link or path to the image file. Ensures the platform can retrieve and display product images across various channels.",
                 "compositeKey": [
                   "compositeNodeKey"
                 ]
@@ -967,6 +972,7 @@
                       "SGD",
                       "HKD"
                     ],
+                    "description": "Indicates the currency in which the product price is set.",
                     "compositeKey": [
                       "compositeNodeKey"
                     ],
@@ -988,6 +994,7 @@
                     "required": true,
                     "GUID": "bfcda36f-8a7b-421b-ba98-8a9b313affc6",
                     "mode": "integer",
+                    "description": "The numeric value of the product’s price in the specified currency.",
                     "compositeKey": [
                       "compositeNodeKey"
                     ],
@@ -1006,6 +1013,7 @@
                     "isActivated": true,
                     "required": true,
                     "GUID": "2c86253b-1d80-4798-ad2b-3bef74fa239c",
+                    "description": "The date or date/time from which the specified price becomes valid. Enables time-based pricing and helps maintain a historical record of price changes.",
                     "mode": "date",
                     "compositeKey": [
                       "compositeNodeKey"
@@ -1175,6 +1183,7 @@
             "isActivated": true,
             "required": true,
             "GUID": "d138a990-ba4d-4cf7-b998-b57f5d576902",
+            "description": "A unique code identifying the supplier company. This serves as the primary key for the Supplier entity, and may also be used as a foreign key to link to a broader Company entity or domain if one exists.",
             "compositeKey": [
               "compositeNodeKey"
             ],
@@ -1192,6 +1201,7 @@
             "isActivated": true,
             "required": false,
             "GUID": "8ee85d26-2d69-49d4-82b9-1d2b12c7966d",
+            "description": "The official or registered name of the supplier company.",
             "compositeKey": [
               "compositeNodeKey"
             ],
@@ -1209,6 +1219,7 @@
             "isActivated": true,
             "required": false,
             "GUID": "ba154f30-0f46-41b7-bbd0-b5e106f2cf32",
+            "description": "The primary point of contact’s full name. This individual typically handles order-related queries, negotiations, or partnership details.",
             "compositeKey": [
               "compositeNodeKey"
             ],
@@ -1226,6 +1237,7 @@
             "isActivated": true,
             "required": false,
             "GUID": "9cc886b2-1216-4d95-bef9-d48290b0e804",
+            "description": "The main email address for communicating with the supplier. Should be validated to ensure correct formatting.",
             "compositeKey": [
               "compositeNodeKey"
             ],
@@ -1243,6 +1255,7 @@
             "isActivated": true,
             "required": false,
             "GUID": "3a79b59c-1d60-4c86-a484-a20deb6fcd95",
+            "description": "The primary telephone or mobile number for reaching the supplier. Formats may vary by region; it is recommended to store this in a standardized format if possible.",
             "compositeKey": [
               "compositeNodeKey"
             ],
@@ -1256,12 +1269,29 @@
                 "unique": false,
                 "type": "string",
                 "compositeNodeKey": false,
-                "name": "Street",
+                "name": "Address ID",
                 "hackoladeMeta": {
                   "namingConvention": "code"
                 },
                 "isActivated": true,
                 "required": false,
+                "GUID": "e189ccf5-46f5-5fa1-9ea3-ae5205482c84",
+                "compositeKey": [
+                  "compositeNodeKey"
+                ],
+                "code": "addressId"
+              },
+              {
+                "primaryKey": false,
+                "unique": false,
+                "type": "string",
+                "compositeNodeKey": false,
+                "name": "Street",
+                "hackoladeMeta": {
+                  "namingConvention": "code"
+                },
+                "isActivated": true,
+                "required": true,
                 "GUID": "64066830-7738-58ed-8d0a-af3d688bfbcd",
                 "description": "Specifies the street name and number, providing detailed location information within a city or town.",
                 "compositeKey": [
@@ -1279,7 +1309,7 @@
                   "namingConvention": "code"
                 },
                 "isActivated": true,
-                "required": false,
+                "required": true,
                 "GUID": "71d44276-326c-526e-a406-81076072e148",
                 "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
                 "compositeKey": [
@@ -1297,7 +1327,7 @@
                   "namingConvention": "code"
                 },
                 "isActivated": true,
-                "required": false,
+                "required": true,
                 "GUID": "fbd27464-7883-59a3-b809-58270bea270a",
                 "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
                 "compositeKey": [
@@ -1318,6 +1348,7 @@
             "isActivated": true,
             "GUID": "b9d5da76-8812-4308-8bf6-0ac6a34c938f",
             "code": "address",
+            "refDescription": "Encapsulates the supplier’s main business address or headquarters location. Storing this as an object ensures address details remain logically grouped.",
             "compositeKey": [
               "compositeNodeKey"
             ]
@@ -1428,7 +1459,7 @@
     },
     "namingConvention": "code"
   },
-  "lastModifTS": "2025-02-25T06:23:13.609Z",
+  "lastModifTS": "2025-02-28T12:18:46.027Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -1560,32 +1591,32 @@
             {
               "GUID": "3118f7dc-8b13-4c1d-ab91-35396809b06b",
               "size": 100,
-              "x": 1280.9147245832175,
-              "y": 999.6752349473197
+              "x": 1280.7700187956184,
+              "y": 999.5414196649448
             },
             {
               "GUID": "cfec8827-bc74-44f1-b49f-9fb9a5203d53",
               "size": 100,
-              "x": 1451.6452660931357,
-              "y": 1474.3296131230236
+              "x": 1452.5610573441804,
+              "y": 1472.3595497407605
             },
             {
               "GUID": "2925ae78-e002-444f-a47f-bffa062f378d",
               "size": 100,
-              "x": 1212.969463867516,
-              "y": 1292.1286142728466
+              "x": 1212.5459081538515,
+              "y": 1291.9292800374449
             },
             {
               "GUID": "c5ce3066-69e7-459f-a81b-68dd21e98ce2",
               "size": 100,
-              "x": 981.3335047628509,
-              "y": 1483.1761027853215
+              "x": 980.2655773454469,
+              "y": 1482.1904457739602
             }
           ],
           "buckets": [
             {
-              "x": 941.3335047628509,
-              "y": 959.6752349473197,
+              "x": 940.2655773454469,
+              "y": 959.5414196649448,
               "GUID": "7a9fd452-6da8-45b9-8a5a-e15d116b1840"
             }
           ],
@@ -1644,6 +1675,7 @@
         ],
         "relationshipUpdateDisabled": false,
         "displayOptions": {
+          "dndHandles": false,
           "hideErdRelationshipsNames": false
         }
       },
