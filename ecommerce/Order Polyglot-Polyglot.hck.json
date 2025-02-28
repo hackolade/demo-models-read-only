@@ -66,26 +66,6 @@
           "error": {}
         },
         {
-          "name": "Total amount",
-          "hackoladeMeta": {},
-          "isActivated": true,
-          "index": true,
-          "exclusiveMinimum": false,
-          "exclusiveMaximum": false,
-          "primaryKey": false,
-          "required": false,
-          "childType": "number",
-          "type": "numeric",
-          "compositeKey": [
-            "compositePrimaryKey",
-            "compositeUniqueKey"
-          ],
-          "GUID": "17ee1d91-fa06-4638-831b-a7766df0e191",
-          "mode": "decimal",
-          "description": "The aggregated cost of all ordered items, including any taxes, fees, or discounts applied to the order. Should reflect the final amount the customer is expected to pay.",
-          "error": {}
-        },
-        {
           "name": "Status",
           "hackoladeMeta": {},
           "isActivated": true,
@@ -187,63 +167,6 @@
                   "foreignField": [],
                   "description": "The date and time when the payment was received.",
                   "error": {}
-                },
-                {
-                  "name": "Payment method",
-                  "hackoladeMeta": {},
-                  "isActivated": true,
-                  "required": false,
-                  "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
-                  "primaryKey": false,
-                  "symbols": [
-                    "Y"
-                  ],
-                  "childType": "enum",
-                  "type": "string",
-                  "compositeKey": [
-                    "compositePrimaryKey",
-                    "compositeUniqueKey"
-                  ],
-                  "GUID": "37ecefbe-69cd-4c46-bfe2-bdb2fea3be1c",
-                  "foreignCollection": "",
-                  "foreignField": [],
-                  "description": "The method used for payment (e.g., Credit Card, PayPal, Bank Transfer).",
-                  "error": {
-                    "enum": false,
-                    "enums": false
-                  },
-                  "enum": [
-                    "CreditCard",
-                    "PayPal",
-                    "BankTransfer"
-                  ]
-                },
-                {
-                  "name": "Status",
-                  "hackoladeMeta": {},
-                  "isActivated": true,
-                  "required": false,
-                  "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
-                  "primaryKey": false,
-                  "symbols": [
-                    "Y"
-                  ],
-                  "childType": "enum",
-                  "type": "string",
-                  "compositeKey": [
-                    "compositePrimaryKey",
-                    "compositeUniqueKey"
-                  ],
-                  "GUID": "4b11b953-edb3-4c2d-8e36-a17406cb7b26",
-                  "foreignCollection": "",
-                  "foreignField": [],
-                  "description": "Indicates whether the payment has been completed, pending, or failed.",
-                  "enum": [
-                    "completed",
-                    "pending",
-                    "failed"
-                  ],
-                  "error": {}
                 }
               ],
               "additionalProperties": false,
@@ -275,22 +198,6 @@
           "required": false,
           "GUID": "fad47821-c108-4728-ac06-edd87399a408",
           "description": "A record of financial transactions associated with the order.",
-          "error": {}
-        },
-        {
-          "name": "Tracking number",
-          "hackoladeMeta": {},
-          "isActivated": true,
-          "primaryKey": false,
-          "required": false,
-          "childType": "varchar",
-          "type": "string",
-          "compositeKey": [
-            "compositePrimaryKey",
-            "compositeUniqueKey"
-          ],
-          "GUID": "d8e8b56d-827d-4fd1-bea0-07bd5bab9c2e",
-          "description": "A unique code provided by the shipping carrier to track the delivery status of the order.",
           "error": {}
         },
         {
@@ -365,30 +272,6 @@
                     "c67522a8-66b6-4046-89f1-2190faa20f67",
                     "7e87c923-a353-4e57-9b70-137049ae013f",
                     "865adb6d-3499-4c17-8661-9b3b4333ca8c"
-                  ],
-                  "isActivated": true,
-                  "compositeKey": [
-                    "compositePrimaryKey",
-                    "compositeUniqueKey"
-                  ],
-                  "primaryKey": false,
-                  "required": false,
-                  "error": {
-                    "name": false,
-                    "refPath": false
-                  }
-                },
-                {
-                  "GUID": "6d536af4-ae07-48db-923e-3fd215300a8c",
-                  "name": "Description",
-                  "type": "reference",
-                  "$ref": "#external/definitions/Description",
-                  "refType": "external",
-                  "ref": "3d5e05e0-8430-45a8-98db-ebf2cee3f31e",
-                  "refIdPath": [
-                    "c67522a8-66b6-4046-89f1-2190faa20f67",
-                    "7e87c923-a353-4e57-9b70-137049ae013f",
-                    "3d5e05e0-8430-45a8-98db-ebf2cee3f31e"
                   ],
                   "isActivated": true,
                   "compositeKey": [
@@ -785,10 +668,8 @@
   "diagramViews": [],
   "idToNameHashTable": {
     "46385b4a-a728-4579-8b09-10e9e7c52c99": "Order",
-    "17ee1d91-fa06-4638-831b-a7766df0e191": "Total amount",
     "6dac6534-e11a-49ac-a049-30f3b1207b88": "Status",
     "f8f34cd7-4027-46ad-9160-b0dcaa29a509": "placed",
-    "d8e8b56d-827d-4fd1-bea0-07bd5bab9c2e": "Tracking number",
     "2dc5cd19-9bb7-4405-a00f-69af0c39ea24": "Identifier",
     "aac0636d-630a-49f5-b2ab-0a0092f61cd3": "Disclaimer",
     "9fa9cc1c-396e-4fa8-aba6-4f0658948ec3": "Address",
@@ -796,8 +677,6 @@
     "fad47821-c108-4728-ac06-edd87399a408": "Payments",
     "42c71b66-59d1-4f73-b821-a9034764f127": "Amount",
     "b2f61376-69c8-46f5-9f61-8e68a0dae68d": "Timestamp",
-    "37ecefbe-69cd-4c46-bfe2-bdb2fea3be1c": "Payment method",
-    "4b11b953-edb3-4c2d-8e36-a17406cb7b26": "Status",
     "72bc07b9-d511-42e0-966a-7e5f14513040": "Ordered items",
     "e16e89ec-42c0-4647-ab3f-4225a2c9df1c": "Quantity",
     "e863d79d-6e38-4098-a01e-46d6249501f8": "Order management",
@@ -808,8 +687,6 @@
     "acdd584f-e173-4126-a669-6ea2f414ffd0": "SKU",
     "865adb6d-3499-4c17-8661-9b3b4333ca8c": "Name",
     "39a652f4-defc-4297-8814-d16fdb749d18": "Name",
-    "3d5e05e0-8430-45a8-98db-ebf2cee3f31e": "Description",
-    "6d536af4-ae07-48db-923e-3fd215300a8c": "Description",
     "cb06164d-25df-4016-ba43-fe0a45921e6e": "Currency",
     "c7ccd811-1374-4a95-96b8-1bbb7eda7590": "Currency",
     "91f49cfb-0486-4406-9e30-f5b68d67f1fe": "Amount",
@@ -1678,34 +1555,6 @@
         ]
       },
       {
-        "name": "Description",
-        "hackoladeMeta": {},
-        "isActivated": true,
-        "primaryKey": false,
-        "required": false,
-        "childType": "varchar",
-        "type": "string",
-        "compositeKey": [
-          "compositePrimaryKey",
-          "compositeUniqueKey"
-        ],
-        "GUID": "3d5e05e0-8430-45a8-98db-ebf2cee3f31e",
-        "description": "A longer text providing additional details about the product. May be omitted if product details are referenced externally.",
-        "error": {},
-        "link": "../merchandising/Product-Polyglot.hck.json",
-        "fieldRelativePath": "#/Product management/Product/properties/Description",
-        "kind": "relativePath",
-        "fileType": "hackoladeSchema",
-        "definitionRefs": [
-          [
-            "46385b4a-a728-4579-8b09-10e9e7c52c99",
-            "72bc07b9-d511-42e0-966a-7e5f14513040",
-            "eae27a5b-3644-46dd-a3d1-01afce2a245d",
-            "6d536af4-ae07-48db-923e-3fd215300a8c"
-          ]
-        ]
-      },
-      {
         "name": "Currency",
         "hackoladeMeta": {},
         "isActivated": true,
@@ -1819,7 +1668,7 @@
       "normalization": false
     }
   ],
-  "lastModifTS": "2025-02-28T10:59:03.139Z",
+  "lastModifTS": "2025-02-28T11:11:59.443Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
