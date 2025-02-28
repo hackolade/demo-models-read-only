@@ -113,22 +113,6 @@
           "error": {}
         },
         {
-          "name": "Tracking number",
-          "hackoladeMeta": {},
-          "isActivated": true,
-          "primaryKey": false,
-          "required": false,
-          "childType": "varchar",
-          "type": "string",
-          "compositeKey": [
-            "compositePrimaryKey",
-            "compositeUniqueKey"
-          ],
-          "GUID": "d8e8b56d-827d-4fd1-bea0-07bd5bab9c2e",
-          "description": "A unique code provided by the shipping carrier to track the delivery status of the order.",
-          "error": {}
-        },
-        {
           "GUID": "9e4faa2d-6567-4c55-908d-59f30426bdc1",
           "name": "Ship-to address",
           "type": "reference",
@@ -291,6 +275,22 @@
           "required": false,
           "GUID": "fad47821-c108-4728-ac06-edd87399a408",
           "description": "A record of financial transactions associated with the order.",
+          "error": {}
+        },
+        {
+          "name": "Tracking number",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "GUID": "d8e8b56d-827d-4fd1-bea0-07bd5bab9c2e",
+          "description": "A unique code provided by the shipping carrier to track the delivery status of the order.",
           "error": {}
         },
         {
@@ -529,15 +529,13 @@
             ]
           },
           {
+            "GUID": "bb57e423-15a3-43d2-bb4f-81c084e50416"
+          },
+          {
+            "GUID": "7fa9c279-fe3c-4864-83e9-10df93832aef"
+          },
+          {
             "GUID": "a569060a-b3b2-4f73-95c7-7c2e2145c273",
-            "referenceDiffDeleted": true
-          },
-          {
-            "GUID": "7fa9c279-fe3c-4864-83e9-10df93832aef",
-            "referenceDiffDeleted": true
-          },
-          {
-            "GUID": "bb57e423-15a3-43d2-bb4f-81c084e50416",
             "referenceDiffDeleted": true
           }
         ]
@@ -576,15 +574,15 @@
             "childRelationships": []
           },
           {
-            "GUID": "6ef810f9-c366-426b-9aa7-97f54138905f",
-            "referenceDiffDeleted": true
-          },
-          {
             "GUID": "4d678e93-e8cb-434c-9789-0d411b30a433",
             "referenceDiffDeleted": true
           },
           {
             "GUID": "a898b734-3304-48c1-b45d-98c1f7cc3808",
+            "referenceDiffDeleted": true
+          },
+          {
+            "GUID": "6ef810f9-c366-426b-9aa7-97f54138905f",
             "referenceDiffDeleted": true
           },
           {
@@ -707,16 +705,16 @@
             "y": 1051.8563794255192
           },
           {
-            "x": 1298.1670048954331,
+            "x": 1300.6670048954331,
             "y": 1051.8563794255192
           },
           {
-            "x": 1298.1670048954331,
-            "y": 966.7182641961967
+            "x": 1300.6670048954331,
+            "y": 989.2182641961967
           },
           {
-            "x": 1217.795933638561,
-            "y": 966.7182641961967
+            "x": 1222.795933638561,
+            "y": 989.2182641961967
           }
         ],
         "sides": [
@@ -760,15 +758,15 @@
         "dataType": "",
         "shape": [
           {
-            "x": 1977.347586735294,
-            "y": 1027.4195224825469
+            "x": 1976.347586735294,
+            "y": 1028.4195224825469
           },
           {
-            "x": 1902.4428314437996,
-            "y": 1027.4195224825469
+            "x": 1901.9428314437996,
+            "y": 1028.4195224825469
           },
           {
-            "x": 1902.4428314437996,
+            "x": 1901.9428314437996,
             "y": 1051.8563794255192
           },
           {
@@ -933,6 +931,24 @@
             "properties": [
               {
                 "primaryKey": false,
+                "required": false,
+                "alternateKey": false,
+                "childType": "varchar",
+                "type": "string",
+                "compositePrimaryKey": false,
+                "compositeUniqueKey": false,
+                "name": "Address ID",
+                "hackoladeMeta": {},
+                "isActivated": true,
+                "GUID": "dff923d5-84b7-533f-8a76-4dcd803a5a33",
+                "mode": "",
+                "compositeKey": [
+                  "compositePrimaryKey",
+                  "compositeUniqueKey"
+                ]
+              },
+              {
+                "primaryKey": false,
                 "required": true,
                 "alternateKey": false,
                 "childType": "varchar",
@@ -1013,6 +1029,24 @@
             "properties": [
               {
                 "properties": [
+                  {
+                    "primaryKey": false,
+                    "required": false,
+                    "alternateKey": false,
+                    "childType": "varchar",
+                    "type": "string",
+                    "compositePrimaryKey": false,
+                    "compositeUniqueKey": false,
+                    "name": "Address ID",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "GUID": "f5f040e0-9c82-58c8-a951-00c223a0b0bd",
+                    "mode": "",
+                    "compositeKey": [
+                      "compositePrimaryKey",
+                      "compositeUniqueKey"
+                    ]
+                  },
                   {
                     "primaryKey": false,
                     "required": true,
@@ -1497,6 +1531,21 @@
         "type": "document",
         "properties": [
           {
+            "name": "Address ID",
+            "hackoladeMeta": {},
+            "isActivated": true,
+            "primaryKey": false,
+            "required": false,
+            "childType": "varchar",
+            "type": "string",
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ],
+            "GUID": "962dc3fe-ac61-533b-9017-6220e1f41af3",
+            "error": {}
+          },
+          {
             "name": "Street",
             "hackoladeMeta": {},
             "isActivated": true,
@@ -1770,7 +1819,7 @@
       "normalization": false
     }
   ],
-  "lastModifTS": "2025-02-25T15:42:53.507Z",
+  "lastModifTS": "2025-02-28T10:45:07.922Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -1779,7 +1828,7 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.0.2"
+    "version": "8.0.3"
   },
   "hackoladeMeta": {
     "validationErrors": {
@@ -1805,8 +1854,8 @@
             "GUID": "e2ba0994-1763-4b13-8b19-e7a0d9f95edb",
             "x": 837.7959336385611,
             "y": 882.2182641961967,
-            "width": 380,
-            "height": 169,
+            "width": 385,
+            "height": 214,
             "color": {
               "hex": "#2196F3"
             }
