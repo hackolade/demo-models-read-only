@@ -1,0 +1,1755 @@
+{
+  "modelName": "Class words in Data Element Naming",
+  "collections": [
+    {
+      "GUID": "ee7562b5-d7e2-4da1-bdd6-2dc4055aa216",
+      "collectionName": "Event",
+      "type": "object",
+      "properties": [
+        {
+          "name": "Event Identifier",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "error": {},
+          "GUID": "6a4df5d1-aa97-49a0-b1c6-671e17dd48e9",
+          "childRelationships": [
+            "f4117fb5-ccb7-45ef-ab66-82697881db8a",
+            "214e798b-444e-4247-b323-4646326eceba"
+          ]
+        },
+        {
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "GUID": "3a0b954e-7216-4526-a1e6-be3836063a45",
+          "name": "Event Name",
+          "error": {}
+        },
+        {
+          "name": "Event Type Identifier",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "GUID": "d54a8005-9026-45d4-9c58-475580b6a05c",
+          "error": {
+            "name": false
+          },
+          "enum": [
+            "PICNIC",
+            "CONCERT"
+          ],
+          "relationshipType": "Foreign Key",
+          "foreignCollection": "49cbc2e0-bf3c-425f-b3b4-618a0bf11823",
+          "foreignField": [
+            "49cbc2e0-bf3c-425f-b3b4-618a0bf11823",
+            "ef9c6d01-ce7f-493b-b1b9-ce748786ecaa"
+          ],
+          "parentRelationship": "5b33857a-edde-455b-a9ff-520cb7c06e6a"
+        },
+        {
+          "name": "Event Description Text",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "GUID": "88034c5e-0315-46c8-9963-92e1e197b4ac",
+          "mode": "text",
+          "error": {
+            "name": false
+          }
+        },
+        {
+          "name": "Event Attendee Limit Count",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": false,
+          "mode": "int32",
+          "required": false,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "error": {},
+          "GUID": "6adefb0c-5cf8-4db9-90ef-6e1fa730622c"
+        },
+        {
+          "name": "Event Response Due Date",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "index": true,
+          "required": false,
+          "alternateKey": false,
+          "childType": "date",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "error": {},
+          "primaryKey": false,
+          "GUID": "404ef464-038f-47d4-809d-4b520e4c3081"
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "d4efa377-ee0c-4035-8479-9ea033a92fd9"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "bucketId": "32505dbc-2b5e-469a-944c-5067cd761488"
+    },
+    {
+      "GUID": "5e65837e-ba56-4d34-a684-aa49c0eb173b",
+      "collectionName": "Event Venue",
+      "type": "object",
+      "properties": [
+        {
+          "name": "Event Idendtifier",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "required": true,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "GUID": "a2e813d1-eaf1-45b6-87ad-5a30be8d0a66",
+          "error": {
+            "name": false
+          },
+          "compositePrimaryKey": true,
+          "relationshipType": "Foreign Key",
+          "foreignCollection": "ee7562b5-d7e2-4da1-bdd6-2dc4055aa216",
+          "foreignField": [
+            "ee7562b5-d7e2-4da1-bdd6-2dc4055aa216",
+            "6a4df5d1-aa97-49a0-b1c6-671e17dd48e9"
+          ],
+          "parentRelationship": "f4117fb5-ccb7-45ef-ab66-82697881db8a"
+        },
+        {
+          "name": "Venue Identifier",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "required": true,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "GUID": "9891e926-8f76-488b-a969-f0b58a3c0a32",
+          "error": {
+            "name": false
+          },
+          "compositePrimaryKey": true,
+          "relationshipType": "Foreign Key",
+          "foreignCollection": "9f4b93bb-0015-408f-86f3-71dd2baaa870",
+          "foreignField": [
+            "9f4b93bb-0015-408f-86f3-71dd2baaa870",
+            "8ea2ba0a-df61-419a-a728-3dd69d84a1e4"
+          ],
+          "parentRelationship": "3e01e503-78e4-4f93-8e16-634dc9b556f8"
+        },
+        {
+          "name": "Event Date",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "index": true,
+          "required": false,
+          "childType": "date",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "error": {
+            "name": false,
+            "code": false
+          },
+          "primaryKey": false,
+          "GUID": "71f14df1-5bc8-4606-b294-a550a8c80ae5",
+          "foreignCollection": "",
+          "foreignField": []
+        },
+        {
+          "name": "Event Start Time",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "tPrecision": 9,
+          "required": false,
+          "childType": "time",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "error": {
+            "name": false,
+            "code": false
+          },
+          "GUID": "59d11957-b423-4b21-a5d1-1331bc8a96e9",
+          "foreignCollection": "",
+          "foreignField": []
+        },
+        {
+          "name": "Event End Time",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "tPrecision": 9,
+          "required": false,
+          "childType": "time",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "error": {
+            "name": false,
+            "code": false
+          },
+          "GUID": "947bb55b-c194-4174-acb9-e94bab72b51f",
+          "foreignCollection": "",
+          "foreignField": []
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "da67af6b-fabc-46c1-926b-7e09b5e75c48"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "bucketId": "32505dbc-2b5e-469a-944c-5067cd761488",
+      "primaryKey": [
+        {
+          "GUID": "9b6c251f-1387-4811-bce8-1341714995d3",
+          "compositePrimaryKey": [
+            {
+              "keyId": "a2e813d1-eaf1-45b6-87ad-5a30be8d0a66"
+            },
+            {
+              "keyId": "9891e926-8f76-488b-a969-f0b58a3c0a32"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "GUID": "9f4b93bb-0015-408f-86f3-71dd2baaa870",
+      "collectionName": "Venue",
+      "type": "object",
+      "properties": [
+        {
+          "name": "Venue Identifier",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "required": true,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "GUID": "8ea2ba0a-df61-419a-a728-3dd69d84a1e4",
+          "error": {},
+          "childRelationships": [
+            "3e01e503-78e4-4f93-8e16-634dc9b556f8",
+            "db1aecb3-bfc5-4376-93ca-30fbab92854c"
+          ]
+        },
+        {
+          "name": "Venue Name",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "GUID": "6f61d12e-6204-4352-bace-d07af2bb743a",
+          "error": {
+            "name": false
+          }
+        },
+        {
+          "name": "Venue Address",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "GUID": "fa9d751d-5893-4a5c-a8cc-6e2a19fc13b0",
+          "error": {
+            "name": false
+          }
+        },
+        {
+          "name": "Venue Capacity Count",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": false,
+          "mode": "int32",
+          "required": false,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "error": {},
+          "GUID": "e4de453a-3911-46ec-afcc-bce35b11c877"
+        },
+        {
+          "name": "Venue Comment Text",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "GUID": "36209633-2a6c-4fd8-bc4b-0fee9d14cc72",
+          "error": {
+            "name": false
+          }
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "cd39b43a-d26a-4390-9708-a349797bc92b"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "bucketId": "32505dbc-2b5e-469a-944c-5067cd761488"
+    },
+    {
+      "GUID": "88d69e8b-b621-4c49-8a81-45159f3cf39e",
+      "collectionName": "Volunteer",
+      "type": "object",
+      "properties": [
+        {
+          "name": "Volunteer Identifier",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "required": true,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "GUID": "fd086c7b-6a95-4488-a240-1e9a13634e23",
+          "error": {},
+          "childRelationships": [
+            "9545fae6-673b-4f36-ad41-bc8ecbe05863"
+          ]
+        },
+        {
+          "name": "Volunteer Name",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "GUID": "6e2065c7-03ac-4da9-8577-d2e369b01623",
+          "error": {
+            "name": false
+          }
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "945323ed-755d-4202-8395-ade57f99a089"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "bucketId": "32505dbc-2b5e-469a-944c-5067cd761488"
+    },
+    {
+      "GUID": "392af721-08bb-47f0-af04-57e6469ed456",
+      "collectionName": "Event Volunteer Role",
+      "type": "object",
+      "properties": [
+        {
+          "name": "Event Identifier",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "required": true,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "GUID": "a0527798-1a0a-4de4-8890-dad91137c435",
+          "error": {
+            "name": false
+          },
+          "compositePrimaryKey": true,
+          "relationshipType": "Foreign Key",
+          "foreignCollection": "ee7562b5-d7e2-4da1-bdd6-2dc4055aa216",
+          "foreignField": [
+            "ee7562b5-d7e2-4da1-bdd6-2dc4055aa216",
+            "6a4df5d1-aa97-49a0-b1c6-671e17dd48e9"
+          ],
+          "parentRelationship": "214e798b-444e-4247-b323-4646326eceba"
+        },
+        {
+          "name": "Volunteer Identifier",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "required": true,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "GUID": "919508cc-59f6-4ee1-9f54-0330ac30e39c",
+          "error": {
+            "name": false
+          },
+          "compositePrimaryKey": true,
+          "relationshipType": "Foreign Key",
+          "foreignCollection": "88d69e8b-b621-4c49-8a81-45159f3cf39e",
+          "foreignField": [
+            "88d69e8b-b621-4c49-8a81-45159f3cf39e",
+            "fd086c7b-6a95-4488-a240-1e9a13634e23"
+          ],
+          "parentRelationship": "9545fae6-673b-4f36-ad41-bc8ecbe05863"
+        },
+        {
+          "name": "Volunteer Role",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "GUID": "5e607287-2bba-4578-8133-ec9fba3a809c",
+          "error": {
+            "name": false
+          }
+        },
+        {
+          "name": "Volunteer Comment Text",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "GUID": "2e4a3c2c-644f-48c9-a792-7bf79397594c",
+          "error": {
+            "name": false
+          }
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "0a496524-e467-4cb3-8673-d6a35e9b63b1"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "bucketId": "32505dbc-2b5e-469a-944c-5067cd761488",
+      "primaryKey": [
+        {
+          "GUID": "d16f01f5-95c9-424d-9db2-04a99af95685",
+          "compositePrimaryKey": [
+            {
+              "keyId": "a0527798-1a0a-4de4-8890-dad91137c435"
+            },
+            {
+              "keyId": "919508cc-59f6-4ee1-9f54-0330ac30e39c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "GUID": "49cbc2e0-bf3c-425f-b3b4-618a0bf11823",
+      "collectionName": "Event Type",
+      "type": "object",
+      "properties": [
+        {
+          "name": "Event Type Identifier",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "required": true,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "GUID": "ef9c6d01-ce7f-493b-b1b9-ce748786ecaa",
+          "childRelationships": [
+            "5b33857a-edde-455b-a9ff-520cb7c06e6a"
+          ],
+          "error": {}
+        },
+        {
+          "name": "Event Type Name Text",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "GUID": "cceb85b5-e8af-4954-83d2-cbe9aaf19054",
+          "error": {
+            "name": false
+          }
+        },
+        {
+          "name": "Event Type Description Text",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "GUID": "0bc05e58-c7aa-48b1-afef-590cad169aa9",
+          "error": {
+            "name": false
+          }
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "d3dd8989-c871-4af3-8901-9622bfa199dd"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "bucketId": "32505dbc-2b5e-469a-944c-5067cd761488"
+    },
+    {
+      "GUID": "5e03e790-28f9-4be5-ac2c-8aaf081a14ad",
+      "collectionName": "Venue Image",
+      "type": "object",
+      "properties": [
+        {
+          "name": "Venue Image Identifier",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "required": true,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "GUID": "3ec0ba53-240e-45fc-bb54-cf603cd6f71e",
+          "error": {}
+        },
+        {
+          "name": "Venue Image Path",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "GUID": "957acd41-68b1-4612-9580-7936b020faf1",
+          "error": {
+            "name": false
+          }
+        },
+        {
+          "name": "Venue Identifier",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "GUID": "f40f8c58-1969-4e4a-ba21-9887087f368b",
+          "error": {
+            "name": false
+          },
+          "relationshipType": "Foreign Key",
+          "foreignCollection": "9f4b93bb-0015-408f-86f3-71dd2baaa870",
+          "foreignField": [
+            "9f4b93bb-0015-408f-86f3-71dd2baaa870",
+            "8ea2ba0a-df61-419a-a728-3dd69d84a1e4"
+          ],
+          "parentRelationship": "db1aecb3-bfc5-4376-93ca-30fbab92854c"
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "44a0555c-eaeb-437d-8297-0f81cfc4a295"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "bucketId": "32505dbc-2b5e-469a-944c-5067cd761488"
+    }
+  ],
+  "buckets": [
+    {
+      "name": "Events, Venues, and Volunteers Management",
+      "type": "bucket",
+      "collectionIds": [
+        "ee7562b5-d7e2-4da1-bdd6-2dc4055aa216",
+        "5e65837e-ba56-4d34-a684-aa49c0eb173b",
+        "9f4b93bb-0015-408f-86f3-71dd2baaa870",
+        "88d69e8b-b621-4c49-8a81-45159f3cf39e",
+        "392af721-08bb-47f0-af04-57e6469ed456",
+        "49cbc2e0-bf3c-425f-b3b4-618a0bf11823",
+        "5e03e790-28f9-4be5-ac2c-8aaf081a14ad"
+      ],
+      "backgroundColor": {
+        "r": 216,
+        "g": 0,
+        "b": 115,
+        "a": 1
+      },
+      "show": true,
+      "isActivated": true,
+      "indexes": [],
+      "GUID": "32505dbc-2b5e-469a-944c-5067cd761488"
+    }
+  ],
+  "views": [],
+  "relationships": [
+    {
+      "name": "fk_Venue_Venue Identifier_to_Event Locations_Venue Identifier",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "9f4b93bb-0015-408f-86f3-71dd2baaa870",
+          "8ea2ba0a-df61-419a-a728-3dd69d84a1e4"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "5e65837e-ba56-4d34-a684-aa49c0eb173b",
+          "9891e926-8f76-488b-a969-f0b58a3c0a32"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "parentCollection": "9f4b93bb-0015-408f-86f3-71dd2baaa870",
+      "childCollection": "5e65837e-ba56-4d34-a684-aa49c0eb173b",
+      "GUID": "3e01e503-78e4-4f93-8e16-634dc9b556f8",
+      "level": "field",
+      "lineSize": 2,
+      "hackoladeStyles": {
+        "GUID": "5ac8fabc-c77c-4f4c-82e0-0e7805f729ca",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1337,
+            "y": 1169
+          },
+          {
+            "x": 1337,
+            "y": 1212
+          },
+          {
+            "x": 1336.5,
+            "y": 1212
+          },
+          {
+            "x": 1336.5,
+            "y": 1255
+          }
+        ],
+        "sides": [
+          "bottom",
+          "top"
+        ]
+      }
+    },
+    {
+      "name": "fk_Event_Event Identifier_to_Event Locations_Event Idendtifier",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "ee7562b5-d7e2-4da1-bdd6-2dc4055aa216",
+          "6a4df5d1-aa97-49a0-b1c6-671e17dd48e9"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "5e65837e-ba56-4d34-a684-aa49c0eb173b",
+          "a2e813d1-eaf1-45b6-87ad-5a30be8d0a66"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "parentCollection": "ee7562b5-d7e2-4da1-bdd6-2dc4055aa216",
+      "childCollection": "5e65837e-ba56-4d34-a684-aa49c0eb173b",
+      "GUID": "f4117fb5-ccb7-45ef-ab66-82697881db8a",
+      "level": "field",
+      "lineSize": 2,
+      "hackoladeStyles": {
+        "GUID": "ddfeed38-e374-4964-906e-38cbf9287686",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1212,
+            "y": 1107.5
+          },
+          {
+            "x": 1108,
+            "y": 1107.5
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      }
+    },
+    {
+      "name": "fk_Volunteer_Volunteer Identifier_to_Event Volunteer Role_Volunteer Identifier",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "88d69e8b-b621-4c49-8a81-45159f3cf39e",
+          "fd086c7b-6a95-4488-a240-1e9a13634e23"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "392af721-08bb-47f0-af04-57e6469ed456",
+          "919508cc-59f6-4ee1-9f54-0330ac30e39c"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "parentCollection": "88d69e8b-b621-4c49-8a81-45159f3cf39e",
+      "childCollection": "392af721-08bb-47f0-af04-57e6469ed456",
+      "GUID": "9545fae6-673b-4f36-ad41-bc8ecbe05863",
+      "level": "field",
+      "lineSize": 2,
+      "hackoladeStyles": {
+        "GUID": "cfd713e5-2859-46a6-9879-bde7fa955144",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 953,
+            "y": 1369
+          },
+          {
+            "x": 953,
+            "y": 1409.5
+          },
+          {
+            "x": 952.5,
+            "y": 1409.5
+          },
+          {
+            "x": 952.5,
+            "y": 1450
+          }
+        ],
+        "sides": [
+          "bottom",
+          "top"
+        ]
+      }
+    },
+    {
+      "name": "fk_Event_Event Identifier_to_Event Volunteer Role_Event Identifier",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "ee7562b5-d7e2-4da1-bdd6-2dc4055aa216",
+          "6a4df5d1-aa97-49a0-b1c6-671e17dd48e9"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "392af721-08bb-47f0-af04-57e6469ed456",
+          "a0527798-1a0a-4de4-8890-dad91137c435"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "parentCollection": "ee7562b5-d7e2-4da1-bdd6-2dc4055aa216",
+      "childCollection": "392af721-08bb-47f0-af04-57e6469ed456",
+      "GUID": "214e798b-444e-4247-b323-4646326eceba",
+      "level": "field",
+      "lineSize": 2,
+      "hackoladeStyles": {
+        "GUID": "01ee799a-2351-415f-ab4a-a5f8228e7c57",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 953,
+            "y": 1264
+          },
+          {
+            "x": 953,
+            "y": 1221
+          },
+          {
+            "x": 952.5,
+            "y": 1221
+          },
+          {
+            "x": 952.5,
+            "y": 1178
+          }
+        ],
+        "sides": [
+          "top",
+          "bottom"
+        ]
+      }
+    },
+    {
+      "name": "fk_Event Type_Event Type Identifier_to_Event_Event Type Identifier",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "49cbc2e0-bf3c-425f-b3b4-618a0bf11823",
+          "ef9c6d01-ce7f-493b-b1b9-ce748786ecaa"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "ee7562b5-d7e2-4da1-bdd6-2dc4055aa216",
+          "d54a8005-9026-45d4-9c58-475580b6a05c"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "parentCollection": "49cbc2e0-bf3c-425f-b3b4-618a0bf11823",
+      "childCollection": "ee7562b5-d7e2-4da1-bdd6-2dc4055aa216",
+      "GUID": "5b33857a-edde-455b-a9ff-520cb7c06e6a",
+      "level": "field",
+      "lineSize": 2,
+      "hackoladeStyles": {
+        "GUID": "6f9b6830-3f78-4780-8e2f-aea077592564",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 797,
+            "y": 1107.5
+          },
+          {
+            "x": 705.5875051386222,
+            "y": 1107.5
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      }
+    },
+    {
+      "name": "fk_Venue_Venue Identifier_to_Venue Image_Venue Identifier",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "9f4b93bb-0015-408f-86f3-71dd2baaa870",
+          "8ea2ba0a-df61-419a-a728-3dd69d84a1e4"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "5e03e790-28f9-4be5-ac2c-8aaf081a14ad",
+          "f40f8c58-1969-4e4a-ba21-9887087f368b"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "parentCollection": "9f4b93bb-0015-408f-86f3-71dd2baaa870",
+      "childCollection": "5e03e790-28f9-4be5-ac2c-8aaf081a14ad",
+      "GUID": "db1aecb3-bfc5-4376-93ca-30fbab92854c",
+      "level": "field",
+      "lineSize": 2,
+      "hackoladeStyles": {
+        "GUID": "b1f3534a-a179-425a-bd60-6034c063afb1",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1337,
+            "y": 1443.6666666666667
+          },
+          {
+            "x": 1337,
+            "y": 1410.8333333333335
+          },
+          {
+            "x": 1336.5,
+            "y": 1410.8333333333335
+          },
+          {
+            "x": 1336.5,
+            "y": 1378
+          }
+        ],
+        "sides": [
+          "top",
+          "bottom"
+        ]
+      }
+    }
+  ],
+  "users": [],
+  "diagramViews": [],
+  "idToNameHashTable": {
+    "cbd11962-4dfc-4fbe-9d8f-5148231d336c": "Amount",
+    "fea19653-4095-4f20-aa9f-dc8dba1abbb5": "Code",
+    "8437bd6f-5e90-41d0-b30f-78850749aa81": "Constant",
+    "f54db302-07b7-43ee-87b4-161b06202454": "Count",
+    "07449441-4554-4eaf-9117-3c780f13b5eb": "Date",
+    "1869e001-35ce-407d-8b5b-158413dc80e2": "Document",
+    "d9c78c32-8e59-4889-8776-a95d41b4a385": "File",
+    "df528827-0cd6-412b-872f-fd4b85aa88be": "Identifier",
+    "54831fa4-7791-4389-8096-6b3b0f39942c": "Indicator",
+    "581755f9-8cef-45cc-bdb2-1f0b7c528825": "Line",
+    "03b37367-46eb-4dc2-850c-aab54f27b9a7": "Name",
+    "376c67f5-02de-49ae-ab8f-1d0fd9bfce08": "Number",
+    "9933b4ef-c5fb-4e86-a6f1-a57733d3a9cb": "Percent",
+    "506288f6-268d-44b3-9804-cf4f579b5823": "Point",
+    "ee1027d9-dd3c-48d4-b828-b49da4c5e509": "Polygon",
+    "0e34b3e1-6325-4d36-820f-4de9dd9267c5": "Switch",
+    "0936ab8a-2409-4e94-965e-6f865ba39818": "Text",
+    "035ff6dd-13f1-4a08-a348-28fc650721c0": "Time",
+    "31ddce2a-537a-4184-8a68-32c429e525e0": "Timestamp",
+    "32505dbc-2b5e-469a-944c-5067cd761488": "Events, Venues, and Volunteers Management",
+    "ee7562b5-d7e2-4da1-bdd6-2dc4055aa216": "Event",
+    "6a4df5d1-aa97-49a0-b1c6-671e17dd48e9": "Event Identifier",
+    "d54a8005-9026-45d4-9c58-475580b6a05c": "Event Type Identifier",
+    "88034c5e-0315-46c8-9963-92e1e197b4ac": "Event Description Text",
+    "5e65837e-ba56-4d34-a684-aa49c0eb173b": "Event Venue",
+    "a2e813d1-eaf1-45b6-87ad-5a30be8d0a66": "Event Idendtifier",
+    "9891e926-8f76-488b-a969-f0b58a3c0a32": "Venue Identifier",
+    "9f4b93bb-0015-408f-86f3-71dd2baaa870": "Venue",
+    "8ea2ba0a-df61-419a-a728-3dd69d84a1e4": "Venue Identifier",
+    "6f61d12e-6204-4352-bace-d07af2bb743a": "Venue Name",
+    "fa9d751d-5893-4a5c-a8cc-6e2a19fc13b0": "Venue Address",
+    "88d69e8b-b621-4c49-8a81-45159f3cf39e": "Volunteer",
+    "fd086c7b-6a95-4488-a240-1e9a13634e23": "Volunteer Identifier",
+    "6e2065c7-03ac-4da9-8577-d2e369b01623": "Volunteer Name",
+    "3a0b954e-7216-4526-a1e6-be3836063a45": "Event Name",
+    "6adefb0c-5cf8-4db9-90ef-6e1fa730622c": "Event Attendee Limit Count",
+    "3e01e503-78e4-4f93-8e16-634dc9b556f8": "fk_Venue_Venue Identifier_to_Event Locations_Venue Identifier",
+    "f4117fb5-ccb7-45ef-ab66-82697881db8a": "fk_Event_Event Identifier_to_Event Locations_Event Idendtifier",
+    "e4de453a-3911-46ec-afcc-bce35b11c877": "Venue Capacity Count",
+    "392af721-08bb-47f0-af04-57e6469ed456": "Event Volunteer Role",
+    "a0527798-1a0a-4de4-8890-dad91137c435": "Event Identifier",
+    "919508cc-59f6-4ee1-9f54-0330ac30e39c": "Volunteer Identifier",
+    "5e607287-2bba-4578-8133-ec9fba3a809c": "Volunteer Role",
+    "9545fae6-673b-4f36-ad41-bc8ecbe05863": "fk_Volunteer_Volunteer Identifier_to_Event Volunteer Role_Volunteer Identifier",
+    "214e798b-444e-4247-b323-4646326eceba": "fk_Event_Event Identifier_to_Event Volunteer Role_Event Identifier",
+    "49cbc2e0-bf3c-425f-b3b4-618a0bf11823": "Event Type",
+    "ef9c6d01-ce7f-493b-b1b9-ce748786ecaa": "Event Type Identifier",
+    "cceb85b5-e8af-4954-83d2-cbe9aaf19054": "Event Type Name Text",
+    "0bc05e58-c7aa-48b1-afef-590cad169aa9": "Event Type Description Text",
+    "5b33857a-edde-455b-a9ff-520cb7c06e6a": "fk_Event Type_Event Type Identifier_to_Event_Event Type Identifier",
+    "404ef464-038f-47d4-809d-4b520e4c3081": "Event Response Due Date",
+    "2e4a3c2c-644f-48c9-a792-7bf79397594c": "Volunteer Comment Text",
+    "36209633-2a6c-4fd8-bc4b-0fee9d14cc72": "Venue Comment Text",
+    "5e03e790-28f9-4be5-ac2c-8aaf081a14ad": "Venue Image",
+    "3ec0ba53-240e-45fc-bb54-cf603cd6f71e": "Venue Image Identifier",
+    "957acd41-68b1-4612-9580-7936b020faf1": "Venue Image Path",
+    "f40f8c58-1969-4e4a-ba21-9887087f368b": "Venue Identifier",
+    "db1aecb3-bfc5-4376-93ca-30fbab92854c": "fk_Venue_Venue Identifier_to_Venue Image_Venue Identifier",
+    "59d11957-b423-4b21-a5d1-1331bc8a96e9": "Event Start Time",
+    "947bb55b-c194-4174-acb9-e94bab72b51f": "Event End Time",
+    "71f14df1-5bc8-4606-b294-a550a8c80ae5": "Event Date"
+  },
+  "definitions": {
+    "type": "definitions",
+    "properties": [
+      {
+        "name": "Amount",
+        "hackoladeMeta": {},
+        "isActivated": true,
+        "index": true,
+        "exclusiveMinimum": false,
+        "exclusiveMaximum": false,
+        "primaryKey": false,
+        "required": false,
+        "childType": "number",
+        "type": "numeric",
+        "compositeKey": [
+          "compositePrimaryKey",
+          "compositeUniqueKey"
+        ],
+        "GUID": "cbd11962-4dfc-4fbe-9d8f-5148231d336c",
+        "definitionRefs": [],
+        "mode": "decimal",
+        "description": "Specifically about currency; A quantity of money - a monetary amount. Any valid monetary\nExamples: amount value\n\n* Annual Rent Amount\n* Earned Premium Amount\n* Per Occurrence Limit Amount\n* Premium Discount Amount\n\nNote: Also consider the possibility of Count classword.",
+        "error": {
+          "name": false
+        }
+      },
+      {
+        "hackoladeMeta": {},
+        "isActivated": true,
+        "primaryKey": false,
+        "required": false,
+        "childType": "varchar",
+        "type": "string",
+        "compositeKey": [
+          "compositePrimaryKey",
+          "compositeUniqueKey"
+        ],
+        "GUID": "fea19653-4095-4f20-aa9f-dc8dba1abbb5",
+        "name": "Code",
+        "mode": "string",
+        "description": "A short alphanumeric value that represents a longer, fuller name or description of an Defined Allowed\nobject, thing, or classification belonging to a set of defined allowed values. Values, usually in a\nExamples: set\n\n* Company Code\n* Diagnosis Code\n* Postal State Code\n* Vehicle Type Code\n\nNote: Also consider the possibility of Name or Number classword.\n",
+        "error": {
+          "name": false
+        }
+      },
+      {
+        "name": "Constant",
+        "hackoladeMeta": {},
+        "isActivated": true,
+        "primaryKey": false,
+        "required": false,
+        "childType": "varchar",
+        "type": "string",
+        "compositeKey": [
+          "compositePrimaryKey",
+          "compositeUniqueKey"
+        ],
+        "GUID": "8437bd6f-5e90-41d0-b30f-78850749aa81",
+        "description": "Data that does not change value from one transaction to another. Considered for A numeric,\nreference values that should not or rarely change. alphabetic, or\nExamples: alphanumeric value\n* Print Mask Constant that rarely if ever\n* Column Heading Constant changes.\n* Tax Multiplier Constant\n\nNote: Also consider the possibility of Text classword",
+        "error": {
+          "name": false
+        }
+      },
+      {
+        "name": "Count",
+        "hackoladeMeta": {},
+        "isActivated": true,
+        "index": true,
+        "exclusiveMinimum": false,
+        "exclusiveMaximum": false,
+        "primaryKey": false,
+        "required": false,
+        "childType": "number",
+        "type": "numeric",
+        "compositeKey": [
+          "compositePrimaryKey",
+          "compositeUniqueKey"
+        ],
+        "GUID": "f54db302-07b7-43ee-87b4-161b06202454",
+        "description": "An arithmetic value or quantity {including fractions and units of measure) of anything Any valid numeric\nexcept money. Could also be used in or be the result of a mathematical computation like | value or decimal\nan average, minimum, maximum, etc. value\nExamples:\n\n* Previous Month Total Claim Count\n* Premium Discount Factor Count\n* Square Footage Count\n* Vehicle Mileage Count\n* Maximum Payload Capacity Count\n\nNote: Also consider the possibility of Percent or Amount classwords.\n",
+        "error": {
+          "name": false
+        }
+      },
+      {
+        "name": "Date",
+        "hackoladeMeta": {},
+        "isActivated": true,
+        "index": true,
+        "required": false,
+        "childType": "date",
+        "type": "string",
+        "compositeKey": [
+          "compositePrimaryKey",
+          "compositeUniqueKey"
+        ],
+        "primaryKey": false,
+        "GUID": "07449441-4554-4eaf-9117-3c780f13b5eb",
+        "description": "Actual calendar date.\nExamples:\n* Accident Date\n* Birth Date\n* Buyer Signing Date\n* Expiration Date\n* New Hire Date\n* Purchase Date\n\nNote: Also consider the related Time and Timestamp classwords",
+        "error": {}
+      },
+      {
+        "name": "Document",
+        "hackoladeMeta": {},
+        "isActivated": true,
+        "properties": [],
+        "additionalProperties": false,
+        "childType": "object",
+        "type": "document",
+        "compositeKey": [
+          "compositePrimaryKey",
+          "compositeUniqueKey"
+        ],
+        "primaryKey": false,
+        "required": false,
+        "GUID": "1869e001-35ce-407d-8b5b-158413dc80e2",
+        "description": "Formatted data which can contain several data elements with defined contents and\nstructure such as:, ADO, AJAX, ASP, CSS, CSV, DHTML, DOM, DTD, HTML, JavaScript,\nJSON, PHP, RSS, SQL, XHTML, XML, XSD, XSL, XSLT, etc. which must be interpreted\nbefore use by a system or application, and may represent a portion of a data file.\n\n**Note:** One benefit of the Document classword is that the data elements contained within are flexible due to defined contents can change from within one record to the next.\n\nExamples:\n* Claim Document\n* Coverage Document\n* Pricing Rule Set Input Document\n* Pricing Rule Set Output Document\n* Structure Feature Document\n* Vehicle Feature Document\n\n**Note:** Also consider the possibility of File or Text classword\n\n",
+        "error": {}
+      },
+      {
+        "name": "File",
+        "hackoladeMeta": {},
+        "isActivated": true,
+        "required": false,
+        "childType": "binary",
+        "type": "binary",
+        "compositeKey": [
+          "compositePrimaryKey",
+          "compositeUniqueKey"
+        ],
+        "primaryKey": false,
+        "GUID": "d9c78c32-8e59-4889-8776-a95d41b4a385",
+        "description": "A digital “container” of data that represents Images; Sound, Video executables, etc that\nhave a computer file extension like “.JPG”, “WAV”, “MOV”, “EXE”, “PDF”, “ZIP”, etc\nExamples:\n* Claim Scene Image File\n* Claim Property Loss Video File\n* Window Procedures Sound File\n\n**Note:** Also consider the possibility of the Document classword\n",
+        "error": {}
+      },
+      {
+        "name": "Identifier",
+        "hackoladeMeta": {},
+        "isActivated": true,
+        "primaryKey": false,
+        "required": false,
+        "childType": "varchar",
+        "type": "string",
+        "compositeKey": [
+          "compositePrimaryKey",
+          "compositeUniqueKey"
+        ],
+        "GUID": "df528827-0cd6-412b-872f-fd4b85aa88be",
+        "mode": "string",
+        "description": "A meaningless value (often sequentially or randomly generated) that uniquely represents an occurrence of a record about an object, entity, or thing, including a specific person or\norganization.\nExamples:\n* Contract Identifier\n* Project Identifier\n* Property Identifier\n* Party Identifier\n* Taxpayer Identifier\n\n**Note:** Also consider the possibility of the Name or Number classwords\n",
+        "error": {}
+      },
+      {
+        "name": "Indicator",
+        "type": "multiple",
+        "properties": [],
+        "multipleTypes": [
+          {
+            "childType": "varchar",
+            "type": "string",
+            "GUID": "37a3f3d3-db04-44a6-8970-1e3db1536362"
+          },
+          {
+            "isActivated": true,
+            "type": "null",
+            "alternateKey": false,
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ],
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "GUID": "2043fb6d-cf34-4197-8f10-4272f43d09fb"
+          },
+          {
+            "isActivated": true,
+            "index": true,
+            "alternateKey": false,
+            "childType": "boolean",
+            "type": "boolean",
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ],
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "GUID": "0e52ebb9-384c-4706-b5dc-4fffae391792"
+          }
+        ],
+        "isActivated": true,
+        "primaryKey": false,
+        "GUID": "54831fa4-7791-4389-8096-6b3b0f39942c",
+        "hackoladeMeta": {},
+        "description": "A value limited to four different status types in regard to the existence or presence of a situation or condition.\n\n**Note:** \"No\" is sometimes used as a default placeholder, until the status of the condition is checked in process, later resulting in a \"Yes\", overlaying the \"No\". In some cases the reverse can be the \"Yes\" is used as a default value, until the condition is checked, resulting a \"No\", overlaying the \"Yes\". If the Yes and No default does not work for specific application then the Unknown and  NotApplicable must be used for a default.\n\nExamples:\n* Appraisal Needed Indicator\n* Multiple Line Discount Indicator\n* Part Timing Employee Indicator\n* Occasional Youthful Operator Indicator\n\n**Note:** Also, consider the closely related class word, SWITCH; if condition statuses are to be expressed as Boolean values of “QO” or “1”. \n\n**Allowed values:**\nAlways one of the following literal (character ONLY) allowed values (max 13 characters): \n* “**Yes**” (Condition exists) \n* “**No**” (Condition does not exists)\n* “**Unknown**” (Status of condition is unknown)\n* “**NotApplicable**” (Condition and its status do not apply)\n\n",
+        "required": false,
+        "compositeKey": [
+          "compositePrimaryKey",
+          "compositeUniqueKey"
+        ],
+        "error": {},
+        "default": ""
+      },
+      {
+        "name": "Line",
+        "hackoladeMeta": {},
+        "isActivated": true,
+        "properties": [],
+        "additionalProperties": false,
+        "alternateKey": false,
+        "childType": "geoshape",
+        "type": "document",
+        "compositeKey": [
+          "compositePrimaryKey",
+          "compositeUniqueKey"
+        ],
+        "compositePrimaryKey": false,
+        "compositeUniqueKey": false,
+        "error": {},
+        "primaryKey": false,
+        "required": false,
+        "description": "A spatial, geometric shape that defines a straight connection between two points or may | No distinct set of\nextend infinitely in both directions. allowed values.\nExamples:\n* Longitude Line (represents different line positions from N to S poles)\n* Prime Meridian Line (is always the entire line at 0 longitude from N to S poles)\n* Forty Fourth Parallel Line\n* Property Boundary Line\n* Marketing Street Segment Line\n\n**Note:** Also consider the related geospatial Point and Polygon classword",
+        "GUID": "581755f9-8cef-45cc-bdb2-1f0b7c528825"
+      },
+      {
+        "name": "Name",
+        "hackoladeMeta": {},
+        "isActivated": true,
+        "primaryKey": false,
+        "required": false,
+        "childType": "varchar",
+        "type": "string",
+        "compositeKey": [
+          "compositePrimaryKey",
+          "compositeUniqueKey"
+        ],
+        "GUID": "03b37367-46eb-4dc2-850c-aab54f27b9a7",
+        "description": "Meaningful alphabetic data using words which identifies a specific object or which may Allowed but optional\nhave known allowed values. It can also identify a type or category of an object or thing.\nExamples:\n* Building Name\n* Occupation Name\n* Company Name\n* Party Last Name\n* Data Location Type Name\n\n**Note:** Also consider the possibility of the Identifier and Text classwords\n",
+        "error": {}
+      },
+      {
+        "name": "Number",
+        "hackoladeMeta": {},
+        "isActivated": true,
+        "primaryKey": false,
+        "required": false,
+        "childType": "varchar",
+        "type": "string",
+        "compositeKey": [
+          "compositePrimaryKey",
+          "compositeUniqueKey"
+        ],
+        "GUID": "376c67f5-02de-49ae-ab8f-1d0fd9bfce08",
+        "description": "Alphanumeric data not using words, which identifies a specific object or thing, but can Not applicable\nalso identify a type or category of an object or thing.\nExamples:\n* Telephone Number\n* Model Number\n* Tax Identification Number\n* Serial Number\n* Social Security Number\n* Apartment Number\n* Latitude Number (the location along the Longitude Line)\n* Vehicle Model Year Number\n\n**Note:** Also consider the possibility of Code, Count, Name, Identifier classword\n",
+        "error": {}
+      },
+      {
+        "name": "Percent",
+        "hackoladeMeta": {},
+        "isActivated": true,
+        "index": true,
+        "exclusiveMinimum": false,
+        "exclusiveMaximum": false,
+        "primaryKey": false,
+        "mode": "int32",
+        "required": false,
+        "childType": "integer",
+        "type": "numeric",
+        "compositeKey": [
+          "compositePrimaryKey",
+          "compositeUniqueKey"
+        ],
+        "description": "An arithmetic numeric expression based on the rate or proportion per hundred. \n\nCalculation Example: \n\"DiscountPercentage\": If a product has a discount of 20% (20/100 ratio; or part/whole), you would store it as 0.20 in the database. When displaying this value to users, you can format it as 20% using formatting functions. But it should be stored as a decimal for easier calculation and consistency for all storage of percentages. \n\nExamples: \n* Construction Retainage Percent \n* Project Completion Percent \n* Annual Interest Percent \n* Interest Ratio Percent \n* Premium Discount Percent\n\n**Note:** Also consider the possibility of Count classword \n\n\n**Allowed values**: Typical stored decimal values range between 0 and +1 at any level of precision.\nNOTE: In some situations a negative number can represent situations for  a decrease/loss. In \n\naineis STUER A percentage can exceed +1when the percentage represents a proportion that has exceeded the whole or original quantity.\n\n",
+        "GUID": "9933b4ef-c5fb-4e86-a6f1-a57733d3a9cb",
+        "minimum": 0,
+        "maximum": 1,
+        "error": {}
+      },
+      {
+        "name": "Point",
+        "hackoladeMeta": {},
+        "isActivated": true,
+        "properties": [],
+        "additionalProperties": false,
+        "alternateKey": false,
+        "childType": "geopoint",
+        "type": "document",
+        "compositeKey": [
+          "compositePrimaryKey",
+          "compositeUniqueKey"
+        ],
+        "compositePrimaryKey": false,
+        "compositeUniqueKey": false,
+        "error": {},
+        "primaryKey": false,
+        "required": false,
+        "description": "A spatial, geometric reference that defines the intersection of two coordinate lines. \n\nExamples:\n* Claim Loss Accident Location Point\n* Insured Risk Location Point\n* Daily Distance Vehicle Driven Starting Point\n* Corporate Building Location Point\n\n**Note:** Also consider the related geospatial Line and Polygon classwords",
+        "GUID": "506288f6-268d-44b3-9804-cf4f579b5823"
+      },
+      {
+        "name": "Polygon",
+        "hackoladeMeta": {},
+        "isActivated": true,
+        "properties": [],
+        "additionalProperties": false,
+        "alternateKey": false,
+        "childType": "geoshape",
+        "type": "document",
+        "compositeKey": [
+          "compositePrimaryKey",
+          "compositeUniqueKey"
+        ],
+        "compositePrimaryKey": false,
+        "compositeUniqueKey": false,
+        "error": {},
+        "primaryKey": false,
+        "required": false,
+        "description": "A Spatial, geometric shape that defines a multi-sided geographic area.  \n\nExamples: \n* Flood Zone Polygon\n* Geographic County Polygon\n* Illinois State Border Polygon\n* Peril Risk Area Polygon\n\n**Note:** Also consider the related geospatial Point and Line classwords\n",
+        "GUID": "ee1027d9-dd3c-48d4-b828-b49da4c5e509"
+      },
+      {
+        "name": "Switch",
+        "type": "multiple",
+        "properties": [],
+        "multipleTypes": [
+          {
+            "index": true,
+            "childType": "boolean",
+            "type": "boolean",
+            "GUID": "de3c0dad-1923-4b84-bdf1-658adc87b3d8"
+          },
+          {
+            "isActivated": true,
+            "type": "null",
+            "alternateKey": false,
+            "compositeKey": [
+              "compositePrimaryKey",
+              "compositeUniqueKey"
+            ],
+            "compositePrimaryKey": false,
+            "compositeUniqueKey": false,
+            "GUID": "b01b0d7b-a7ea-47b0-b573-c11b709e3ee2"
+          }
+        ],
+        "isActivated": true,
+        "primaryKey": false,
+        "GUID": "0e34b3e1-6325-4d36-820f-4de9dd9267c5",
+        "hackoladeMeta": {},
+        "description": "Depending on the database management systems (DBMS) a boolean using a datatype of bit or byte (single character/number). The most common physical stored values will only have two condition statuses: “O” or “1”. Few may use “f” or “t”. Some DBMS also allow a NULL as the physical value. Best to consult the documentation of the specific DBMS for the details. \n\n**Note:** \"O\" is sometimes used as a default placeholder, until the status of the condition is checked in process, later resulting in a \"1\", overlaying the \"O\". In some cases the reverse can be the '1\" is used as a default value, until the condition is checked, resulting a \"0\", overlaying the \"1\".\n\n*Note: Though physically a switch bit can ONLY be physically stored as a “O” or “1”, in display or process assignment statements often “false” or “true” are displayed. \nExamples: \n* Cancellation Notice Sent Switch \n* =Multiple Line Discount Eligible Switch \n* Premium Payment Received Switch \n* Underwriter Review Request Switch\n\n**Note:** Consider a closely related class word, INDICATOR, if condition statuses are not to be expressed as as “O” or “1”.\n\n**Allowed values:** Always one of the following Boolean values: \n* “O\"= Off, No, or False (Condition does not exists)\n* “1’= On, Yes, or True (Condition exists)\n* Null = Absence of Value (for the most part 0/1 are accepted and null are the exception when “not answered”)",
+        "required": false,
+        "compositeKey": [
+          "compositePrimaryKey",
+          "compositeUniqueKey"
+        ],
+        "error": {},
+        "compositePrimaryKey": false,
+        "compositeUniqueKey": false,
+        "alternateKey": false
+      },
+      {
+        "name": "Text",
+        "hackoladeMeta": {},
+        "isActivated": true,
+        "primaryKey": false,
+        "required": false,
+        "childType": "varchar",
+        "type": "string",
+        "compositeKey": [
+          "compositePrimaryKey",
+          "compositeUniqueKey"
+        ],
+        "GUID": "0936ab8a-2409-4e94-965e-6f865ba39818",
+        "description": "Data having undefined content and/or unstructured format with no definable allowed values. Could be a free form description or comment about anything but does NOT specifically identify an object or thing.\n\nExamples:\n* Damage Description Text\n* Loss Description Text\n* Accident Description Text\n* Name Address Print Label Text\n\n**Note:** Also consider the possibility of Name, Contant, Document classwords\n",
+        "mode": "text",
+        "error": {}
+      },
+      {
+        "name": "Time",
+        "hackoladeMeta": {},
+        "isActivated": true,
+        "primaryKey": false,
+        "tPrecision": 9,
+        "required": false,
+        "childType": "time",
+        "type": "string",
+        "compositeKey": [
+          "compositePrimaryKey",
+          "compositeUniqueKey"
+        ],
+        "GUID": "035ff6dd-13f1-4a08-a348-28fc650721c0",
+        "description": "Actual clock time, which can be expressed in hours(military hours is usually best), Any valid time value minutes and sometimes seconds and smaller.\n\nExamples:\n* Option Expired Time\n* Transaction Applied Time\n* Appointment Time\n* Store Closing Time\n\n**Note:** Also consider the related Date and Timestamp classword",
+        "error": {}
+      },
+      {
+        "name": "Timestamp",
+        "hackoladeMeta": {},
+        "isActivated": true,
+        "primaryKey": false,
+        "tPrecision": 9,
+        "required": false,
+        "childType": "timestamp_tz",
+        "type": "string",
+        "compositeKey": [
+          "compositePrimaryKey",
+          "compositeUniqueKey"
+        ],
+        "GUID": "31ddce2a-537a-4184-8a68-32c429e525e0",
+        "description": "Hybrid DATE/TIME classword combination. \n\nExamples:\n* Table Row Create Timestamp\n* Communication Initiation Timestamp\n* Queue Message Received Timestamp\n* Systems Job Start Timestamp\n\n*Note: Also consider the related Date and Time classword\n\n**Allowed values:** Any valid timestamp value\n",
+        "error": {}
+      }
+    ],
+    "GUID": "46f4e0a5-4ed9-4cd5-9450-6ef2d5cc496a"
+  },
+  "polyglotDefinitions": {
+    "type": "polyglotDefinitions",
+    "properties": [],
+    "GUID": "b30fbf20-f48a-4a5f-989c-2a4f8b60f038"
+  },
+  "externalDefinitions": {
+    "type": "externalDefinitions",
+    "properties": [],
+    "GUID": "a9d6071c-1d00-4750-bd92-9174d66df642"
+  },
+  "sources": [],
+  "decorativeSymbols": [],
+  "dbVendor": "Polyglot",
+  "appTarget": "Polyglot",
+  "creationTS": "2025-03-04T16:11:38.445Z",
+  "GUID": "d2b770f5-fc25-4abe-89b7-038335dc5f2a",
+  "isLineageEnabled": false,
+  "lastModifTS": "2025-03-04T22:51:03.330Z",
+  "persistenceSchemaVersion": "8",
+  "isCreatedByPlugin": true,
+  "pluginInformation": {
+    "pluginName": "Polyglot",
+    "pluginVersion": "0.0.1",
+    "pluginEngineVersion": "1.0.0"
+  },
+  "applicationInformation": {
+    "version": "8.0.3"
+  },
+  "hackoladeMeta": {
+    "validationErrors": {
+      "description": false
+    }
+  },
+  "description": "Based on Steve Sewell's document",
+  "settings": {
+    "centralPane": {
+      "dbLevel": {
+        "erd": [
+          {
+            "GUID": "ee7562b5-d7e2-4da1-bdd6-2dc4055aa216",
+            "x": 797,
+            "y": 1037,
+            "width": 311,
+            "height": 141,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "5e65837e-ba56-4d34-a684-aa49c0eb173b",
+            "x": 1212,
+            "y": 1046,
+            "width": 250,
+            "height": 123,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "9f4b93bb-0015-408f-86f3-71dd2baaa870",
+            "x": 1196,
+            "y": 1255,
+            "width": 281,
+            "height": 123,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "88d69e8b-b621-4c49-8a81-45159f3cf39e",
+            "x": 819,
+            "y": 1450,
+            "width": 267,
+            "height": 69,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "392af721-08bb-47f0-af04-57e6469ed456",
+            "x": 804,
+            "y": 1264,
+            "width": 298,
+            "height": 105,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "49cbc2e0-bf3c-425f-b3b4-618a0bf11823",
+            "x": 391.58750513862213,
+            "y": 1064,
+            "width": 314,
+            "height": 87,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "5e03e790-28f9-4be5-ac2c-8aaf081a14ad",
+            "x": 1195,
+            "y": 1443.6666666666667,
+            "width": 284,
+            "height": 87,
+            "color": {
+              "hex": "#2196F3"
+            }
+          }
+        ],
+        "erdDefinitions": {
+          "erd": [],
+          "rootPath": [],
+          "entities": [],
+          "decorativeSymbols": []
+        },
+        "buckets": [
+          {
+            "x": 351.58750513862213,
+            "y": 997,
+            "GUID": "32505dbc-2b5e-469a-944c-5067cd761488"
+          }
+        ],
+        "collapsedNodes": [],
+        "activeRelationship": "",
+        "activeRelationshipFields": {
+          "childField": [],
+          "parentField": []
+        },
+        "selectedCollections": [],
+        "displayColorPicker": false,
+        "graphView": {
+          "erd": [
+            {
+              "GUID": "ee7562b5-d7e2-4da1-bdd6-2dc4055aa216",
+              "size": 100,
+              "x": 1157.5840702522346,
+              "y": 987.89225998067
+            },
+            {
+              "GUID": "5e65837e-ba56-4d34-a684-aa49c0eb173b",
+              "size": 100,
+              "x": 1273.5096744801804,
+              "y": 763.8258592404097
+            },
+            {
+              "GUID": "9f4b93bb-0015-408f-86f3-71dd2baaa870",
+              "size": 100,
+              "x": 1518.3597437317612,
+              "y": 703.6589904726494
+            },
+            {
+              "GUID": "88d69e8b-b621-4c49-8a81-45159f3cf39e",
+              "size": 100,
+              "x": 1565.8023523727331,
+              "y": 1144.1557881037747
+            },
+            {
+              "GUID": "392af721-08bb-47f0-af04-57e6469ed456",
+              "size": 100,
+              "x": 1317.3320897001627,
+              "y": 1182.9544237452767
+            },
+            {
+              "GUID": "49cbc2e0-bf3c-425f-b3b4-618a0bf11823",
+              "size": 100,
+              "x": 916.5072732130002,
+              "y": 1059.2848407222396
+            },
+            {
+              "GUID": "5e03e790-28f9-4be5-ac2c-8aaf081a14ad",
+              "size": 100,
+              "x": 1540.730709180826,
+              "y": 953.8757265367922
+            }
+          ],
+          "buckets": [
+            {
+              "x": 665.5875051386222,
+              "y": 779.0302852362829,
+              "GUID": "32505dbc-2b5e-469a-944c-5067cd761488"
+            }
+          ],
+          "decorativeSymbols": [],
+          "forceLayout": true,
+          "defaultLinkLength": 251
+        },
+        "diagramViews": [],
+        "decorativeSymbols": [],
+        "nestedCollectionsLayout": "horizontal",
+        "options": [
+          {
+            "autoWidth": true,
+            "autoHeight": true,
+            "GUID": "5e03e790-28f9-4be5-ac2c-8aaf081a14ad"
+          },
+          {
+            "autoWidth": true,
+            "autoHeight": true,
+            "GUID": "ee7562b5-d7e2-4da1-bdd6-2dc4055aa216"
+          },
+          {
+            "autoWidth": true,
+            "autoHeight": true,
+            "GUID": "5e65837e-ba56-4d34-a684-aa49c0eb173b"
+          },
+          {
+            "autoWidth": true,
+            "autoHeight": true,
+            "GUID": "9f4b93bb-0015-408f-86f3-71dd2baaa870"
+          },
+          {
+            "autoWidth": true,
+            "autoHeight": true,
+            "GUID": "88d69e8b-b621-4c49-8a81-45159f3cf39e"
+          },
+          {
+            "autoWidth": true,
+            "autoHeight": true,
+            "GUID": "392af721-08bb-47f0-af04-57e6469ed456"
+          },
+          {
+            "autoWidth": true,
+            "autoHeight": true,
+            "GUID": "49cbc2e0-bf3c-425f-b3b4-618a0bf11823"
+          }
+        ],
+        "relationshipUpdateDisabled": false,
+        "displayOptions": {
+          "dndHandles": false,
+          "hideRelationshipName": true
+        }
+      },
+      "collectionLevel": {},
+      "changed": false
+    },
+    "dtDiagram": {
+      "collapsedNodes": [],
+      "shouldDistributeCollections": false
+    }
+  }
+}
