@@ -1086,7 +1086,7 @@
   "appTarget": "CASSANDRA",
   "creationTS": "2018-08-17T15:14:15.495Z",
   "GUID": "34558570-a230-11e8-a073-4d93be1f0ee6",
-  "lastModifTS": "2025-02-27T10:20:01.578Z",
+  "lastModifTS": "2025-03-07T01:33:03.334Z",
   "persistenceSchemaVersion": "8",
   "description": "From https://github.com/jbisso/cassandra-samples/blob/master/java/videodb-tutorial/src/main/resources/videodb.cql",
   "comments": "",
@@ -1100,7 +1100,7 @@
   },
   "hackoladeMeta": {},
   "applicationInformation": {
-    "version": "8.0.2"
+    "version": "8.0.4"
   },
   "settings": {
     "centralPane": {
