@@ -2046,7 +2046,8 @@
             "primaryKey": false,
             "type": "string",
             "GUID": "7081acfd-9340-4d07-971d-07ecf7a3dad1",
-            "error": {}
+            "error": {},
+            "definitionRefs": []
           },
           {
             "code": "",
@@ -2059,7 +2060,8 @@
             "minLength": 1,
             "maxLength": 100,
             "GUID": "c08372e2-0fbc-4316-b9a9-ae54d78223a0",
-            "error": {}
+            "error": {},
+            "definitionRefs": []
           }
         ],
         "additionalProperties": true,
@@ -2105,7 +2107,8 @@
             "description": "Error code",
             "sample": "500",
             "GUID": "32f64563-6d49-4388-8547-9fdee1887778",
-            "error": {}
+            "error": {},
+            "definitionRefs": []
           },
           {
             "code": "",
@@ -2117,7 +2120,8 @@
             "description": "Description of the error",
             "sample": "A downstream system is not responding correctly.",
             "GUID": "1b91b5e4-db0c-47d6-98fd-ad0e18a1dac6",
-            "error": {}
+            "error": {},
+            "definitionRefs": []
           }
         ],
         "additionalProperties": true,
@@ -2158,7 +2162,8 @@
               "e8f08d1e-515b-4bda-98d2-f77420d3c173"
             ],
             "ref": "e8f08d1e-515b-4bda-98d2-f77420d3c173",
-            "error": {}
+            "error": {},
+            "definitionRefs": []
           }
         ],
         "additionalProperties": true,
@@ -2278,7 +2283,8 @@
               "3c91f897-a8bd-48bf-b6ce-42b2d4dcfd50"
             ],
             "ref": "3c91f897-a8bd-48bf-b6ce-42b2d4dcfd50",
-            "error": {}
+            "error": {},
+            "definitionRefs": []
           }
         ],
         "additionalProperties": true,
@@ -2387,16 +2393,21 @@
       "securitySchemeScopes": []
     }
   ],
-  "lastModifTS": "2025-02-27T12:22:54.938Z",
+  "lastModifTS": "2025-04-27T07:19:15.591Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
     "pluginName": "Swagger",
-    "pluginVersion": "0.2.3",
+    "pluginVersion": "0.2.4",
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.0.2"
+    "version": "8.1.4"
+  },
+  "hackoladeMeta": {
+    "validationErrors": {
+      "basePath": true
+    }
   },
   "settings": {
     "centralPane": {

@@ -3931,16 +3931,16 @@
       "tagDescription": "CRUD to manage the Entity resources."
     }
   ],
-  "lastModifTS": "2025-02-27T11:47:46.426Z",
+  "lastModifTS": "2025-04-27T07:19:59.158Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
     "pluginName": "OpenAPI",
-    "pluginVersion": "0.2.4",
+    "pluginVersion": "0.2.5",
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.0.2"
+    "version": "8.1.4"
   },
   "hackoladeMeta": {},
   "settings": {
@@ -4157,22 +4157,7 @@
           }
         ],
         "erdDefinitions": {
-          "erd": [
-            {
-              "GUID": "042c51fc-1ede-4609-a5ba-66da04d9322b",
-              "x": 1150,
-              "y": 1050,
-              "width": 174,
-              "height": 69
-            },
-            {
-              "GUID": "acfb3578-0538-4978-99b8-c87f97dd016d",
-              "x": 1050,
-              "y": 1200,
-              "width": 181,
-              "height": 69
-            }
-          ],
+          "erd": [],
           "rootPath": [
             "aa82f2c8-bc8e-4c1f-915d-5e7e22d6914a",
             "4b5ca10f-c4b5-44da-968c-bb9f9e5b310b",
