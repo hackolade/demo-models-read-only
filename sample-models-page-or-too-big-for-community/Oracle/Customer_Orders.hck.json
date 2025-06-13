@@ -1985,24 +1985,6 @@
   ],
   "views": [
     {
-      "name": "CUSTOMER_ORDER_PRODUCTS",
-      "code": "",
-      "isActivated": true,
-      "bucketId": "d3f3d7a0-80e2-11ec-a640-596aedb199f8",
-      "or_replace": true,
-      "force": "force",
-      "editionable": "editionable",
-      "editioning": "",
-      "selectStatement": "select o.order_id, o.order_datetime, o.order_status, \n\t         c.customer_id, c.email_address, c.full_name, \n\t         sum ( oi.quantity * oi.unit_price ) order_total,\n\t         listagg (\n\t           p.product_name, ', ' \n\t           on overflow truncate '...' with count\n\t         ) within group ( order by oi.line_item_id ) items\n\t  from   orders o\n\t  join   order_items oi\n\t  on     o.order_id = oi.order_id\n\t  join   customers c\n\t  on     o.customer_id = c.customer_id\n\t  join   products p\n\t  on     oi.product_id = p.product_id\n\t  group  by o.order_id, o.order_datetime, o.order_status, \n\t         c.customer_id, c.email_address, c.full_name",
-      "viewOn": "",
-      "type": "object",
-      "properties": [],
-      "GUID": "d5128e12-80e2-11ec-a640-596aedb199f8",
-      "hackoladeMeta": {
-        "validationErrors": {}
-      }
-    },
-    {
       "name": "PRODUCT_ORDERS",
       "code": "",
       "isActivated": true,
@@ -2068,42 +2050,6 @@
         }
       ],
       "GUID": "d51e74f3-80e2-11ec-a640-596aedb199f8",
-      "hackoladeMeta": {
-        "validationErrors": {}
-      }
-    },
-    {
-      "name": "PRODUCT_REVIEWS",
-      "code": "",
-      "isActivated": true,
-      "bucketId": "d3f3d7a0-80e2-11ec-a640-596aedb199f8",
-      "or_replace": true,
-      "force": "force",
-      "editionable": "editionable",
-      "editioning": "",
-      "selectStatement": "select p.product_name, r.rating, \n\t         round ( \n\t           avg ( r.rating ) over (\n\t             partition by product_name\n\t           ),\n\t           2\n\t         ) avg_rating,\n\t         r.review\n\t  from   products p,\n\t         json_table (\n\t           p.product_details, '$'\n\t           columns ( \n\t             nested path '$.reviews[*]'\n\t             columns (\n\t               rating integer path '$.rating',\n\t               review varchar2(4000) path '$.review'\n\t             )\n\t           )\n\t         ) r",
-      "viewOn": "",
-      "type": "object",
-      "properties": [],
-      "GUID": "d54bc681-80e2-11ec-a640-596aedb199f8",
-      "hackoladeMeta": {
-        "validationErrors": {}
-      }
-    },
-    {
-      "name": "STORE_ORDERS",
-      "code": "",
-      "isActivated": true,
-      "bucketId": "d3f3d7a0-80e2-11ec-a640-596aedb199f8",
-      "or_replace": true,
-      "force": "force",
-      "editionable": "editionable",
-      "editioning": "",
-      "selectStatement": "select case\n\t           grouping_id ( store_name, order_status ) \n\t           when 1 then 'STORE TOTAL'\n\t           when 2 then 'STATUS TOTAL'\n\t           when 3 then 'GRAND TOTAL'\n\t         end total,\n\t         s.store_name, \n\t         coalesce ( s.web_address, s.physical_address ) address,\n\t         s.latitude, s.longitude,\n\t         o.order_status,\n\t         count ( distinct o.order_id ) order_count,\n\t         sum ( oi.quantity * oi.unit_price ) total_sales\n\t  from   stores s\n\t  join   orders o\n\t  on     s.store_id = o.store_id\n\t  join   order_items oi\n\t  on     o.order_id = oi.order_id\n\t  group  by grouping sets ( \n\t    ( s.store_name, coalesce ( s.web_address, s.physical_address ), s.latitude, s.longitude ),\n\t    ( s.store_name, coalesce ( s.web_address, s.physical_address ), s.latitude, s.longitude, o.order_status ),\n\t    o.order_status, \n\t    ()\n\t  )",
-      "viewOn": "",
-      "type": "object",
-      "properties": [],
-      "GUID": "d5bd4d01-80e2-11ec-a640-596aedb199f8",
       "hackoladeMeta": {
         "validationErrors": {}
       }
@@ -2239,7 +2185,7 @@
       "bucketId": "d3f3d7a0-80e2-11ec-a640-596aedb199f8",
       "hackoladeStyles": {
         "GUID": "cdb3239a-6971-43d5-b116-734c4b7694ee",
-        "autoPositioning": true,
+        "autoPositioning": false,
         "type": "Orthogonal",
         "thickness": 2,
         "color": "#79c4ff",
@@ -2247,19 +2193,11 @@
         "shape": [
           {
             "x": 2053,
-            "y": 1232.3026702326215
-          },
-          {
-            "x": 1957,
-            "y": 1232.3026702326215
-          },
-          {
-            "x": 1957,
-            "y": 1229.6721072479945
+            "y": 1230.3014202056745
           },
           {
             "x": 1861,
-            "y": 1229.6721072479945
+            "y": 1230.3014202056745
           }
         ],
         "sides": [
@@ -2390,7 +2328,7 @@
       "bucketId": "d3f3d7a0-80e2-11ec-a640-596aedb199f8",
       "hackoladeStyles": {
         "GUID": "e96d9d3c-c2b6-470d-80ea-5da6156c6ee3",
-        "autoPositioning": true,
+        "autoPositioning": false,
         "type": "Orthogonal",
         "thickness": 2,
         "color": "#79c4ff",
@@ -2398,19 +2336,11 @@
         "shape": [
           {
             "x": 1545,
-            "y": 1229.6721072479945
-          },
-          {
-            "x": 1455.5,
-            "y": 1229.6721072479945
-          },
-          {
-            "x": 1455.5,
-            "y": 1227.139467097885
+            "y": 1225.6696071941005
           },
           {
             "x": 1366,
-            "y": 1227.139467097885
+            "y": 1225.6696071941005
           }
         ],
         "sides": [
@@ -2654,7 +2584,7 @@
     "d51e74f7-80e2-11ec-a640-596aedb199f8": "TOTAL_SALES",
     "d51e74f3-80e2-11ec-a640-596aedb199f8": "PRODUCT_ORDERS",
     "d54bc681-80e2-11ec-a640-596aedb199f8": "PRODUCT_REVIEWS",
-    "d5bd4d01-80e2-11ec-a640-596aedb199f8": "STORE_ORDERS",
+    "d5bd4d01-80e2-11ec-a640-596aedb199f8": "\n",
     "08379da0-811d-11ec-a640-596aedb199f8": "brand",
     "08407740-811d-11ec-a640-596aedb199f8": "colour",
     "08488d90-811d-11ec-a640-596aedb199f8": "description",
@@ -2694,16 +2624,16 @@
     }
   },
   "description": "Inspired by https://docs.oracle.com/en/database/oracle/oracle-database/21/comsc/introduction-to-sample-schemas.html#GUID-BF7EBD46-7AF6-40C7-8B4E-7244169A07E8",
-  "lastModifTS": "2025-02-28T16:07:12.593Z",
+  "lastModifTS": "2025-06-13T08:45:49.029Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
     "pluginName": "Oracle",
-    "pluginVersion": "0.2.31",
+    "pluginVersion": "0.2.36",
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.0.3"
+    "version": "8.2.1"
   },
   "settings": {
     "centralPane": {
@@ -2766,35 +2696,11 @@
             "color": {}
           },
           {
-            "GUID": "d5128e12-80e2-11ec-a640-596aedb199f8",
-            "x": 1636.0000019073486,
-            "y": 1040,
-            "width": 298,
-            "height": 30,
-            "color": {}
-          },
-          {
             "GUID": "d51e74f3-80e2-11ec-a640-596aedb199f8",
-            "x": 2078,
-            "y": 1044.8293768503545,
+            "x": 1558,
+            "y": 1048.8293768503545,
             "width": 252,
             "height": 81,
-            "color": {}
-          },
-          {
-            "GUID": "d54bc681-80e2-11ec-a640-596aedb199f8",
-            "x": 1341.0000009536743,
-            "y": 1040,
-            "width": 231,
-            "height": 30,
-            "color": {}
-          },
-          {
-            "GUID": "d5bd4d01-80e2-11ec-a640-596aedb199f8",
-            "x": 1068,
-            "y": 1040,
-            "width": 209,
-            "height": 30,
             "color": {}
           }
         ],
@@ -2807,12 +2713,12 @@
         "buckets": [
           {
             "x": 1000,
-            "y": 1000,
+            "y": 1008.8293768503545,
             "GUID": "d3f3d7a0-80e2-11ec-a640-596aedb199f8"
           }
         ],
         "collapsedNodes": [],
-        "activeRelationship": "",
+        "activeRelationship": "d3f3b092-80e2-11ec-a640-596aedb199f8",
         "activeRelationshipFields": {
           "childField": [],
           "parentField": []
@@ -2911,22 +2817,7 @@
             "autoHeight": false
           },
           {
-            "GUID": "d5128e12-80e2-11ec-a640-596aedb199f8",
-            "autoWidth": false,
-            "autoHeight": false
-          },
-          {
             "GUID": "d51e74f3-80e2-11ec-a640-596aedb199f8",
-            "autoWidth": false,
-            "autoHeight": false
-          },
-          {
-            "GUID": "d54bc681-80e2-11ec-a640-596aedb199f8",
-            "autoWidth": false,
-            "autoHeight": false
-          },
-          {
-            "GUID": "d5bd4d01-80e2-11ec-a640-596aedb199f8",
             "autoWidth": false,
             "autoHeight": false
           }
