@@ -644,7 +644,8 @@
             "error": {},
             "hackoladeMeta": {
               "namingConvention": "code"
-            }
+            },
+            "definitionRefs": []
           },
           {
             "code": "quantity",
@@ -662,7 +663,8 @@
             "error": {},
             "hackoladeMeta": {
               "namingConvention": "code"
-            }
+            },
+            "definitionRefs": []
           }
         ],
         "additionalProperties": true,
@@ -722,16 +724,16 @@
   "creationTS": "2025-02-19T13:28:59.048Z",
   "GUID": "777fbee0-73a1-43a3-8272-fa6b5eb58dac",
   "isLineageEnabled": false,
-  "lastModifTS": "2025-02-25T15:10:44.972Z",
+  "lastModifTS": "2025-06-13T08:55:00.756Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
     "pluginName": "Avro",
-    "pluginVersion": "0.2.9",
+    "pluginVersion": "0.2.15",
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.0.2"
+    "version": "8.2.1"
   },
   "hackoladeMeta": {
     "validationErrors": {
@@ -831,6 +833,7 @@
         ],
         "relationshipUpdateDisabled": false,
         "displayOptions": {
+          "dndHandles": false,
           "hideErdRelationshipsNames": false
         }
       },
