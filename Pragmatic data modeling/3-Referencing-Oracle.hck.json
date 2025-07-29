@@ -343,7 +343,7 @@
         },
         "bucketId": "113dda6f-9c60-4967-9dd5-8fc65b1e8d63",
         "definitionEntityType": "collection",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/Referencing/Order",
         "fileType": "hackoladeSchema",
@@ -485,7 +485,7 @@
         },
         "bucketId": "113dda6f-9c60-4967-9dd5-8fc65b1e8d63",
         "definitionEntityType": "collection",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/Referencing/Customer",
         "fileType": "hackoladeSchema",
@@ -553,7 +553,7 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/relationships/places",
         "fileType": "hackoladeSchema",
@@ -621,7 +621,7 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/relationships/fk_Customer_Customer identifier_to_Order_Customer identifier",
         "fileType": "hackoladeSchema",
@@ -686,7 +686,7 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/relationships/fk_Order_Order identifier_to_Customer_Orders.[0].Order identifier",
         "fileType": "hackoladeSchema",
@@ -751,7 +751,7 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/relationships/fk_Order_Ordered date_to_Customer_Orders.[0].Ordered date",
         "fileType": "hackoladeSchema",
@@ -816,7 +816,7 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/relationships/fk_Order_Status_to_Customer_Orders.[0].Status",
         "fileType": "hackoladeSchema",
@@ -880,7 +880,7 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/relationships/fk_Customer_Lastname_to_Order_Customer.Lastname",
         "fileType": "hackoladeSchema",
@@ -944,7 +944,7 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/relationships/fk_Customer_Firstname_to_Order_Customer.Firstname",
         "fileType": "hackoladeSchema",
@@ -1010,7 +1010,7 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/relationships/fk_Customer_Customer identifier_to_Product_Reviews.[0].Customer.Customer identifier",
         "fileType": "hackoladeSchema",
@@ -1076,7 +1076,7 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/relationships/fk_Customer_Pseudo_to_Product_Reviews.[0].Customer.Pseudo",
         "fileType": "hackoladeSchema",
@@ -1141,7 +1141,7 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/relationships/fk_Product_Product identifier_to_Customer_Reviews.[0].Product identifier",
         "fileType": "hackoladeSchema",
@@ -1206,7 +1206,7 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/relationships/fk_Product_Reviews.[0].Date_to_Customer_Reviews.[0].Date",
         "fileType": "hackoladeSchema",
@@ -1273,7 +1273,7 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/relationships/fk_Product_Reviews.[0].Rating_to_Customer_Reviews.[0].Rating",
         "fileType": "hackoladeSchema",
@@ -1301,7 +1301,7 @@
           "namingConvention": "code"
         },
         "definitionEntityType": "bucket",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/Referencing",
         "fileType": "hackoladeSchema",
@@ -1339,11 +1339,11 @@
     {
       "GUID": "911b9a2e-beef-485c-94a6-afad56b88163",
       "polyglotModelName": "Modeling illustrated-Polyglot.hck",
-      "polyglotModelPath": "Modeling illustrated-Polyglot.hck.json",
+      "polyglotModelPath": "1-Polyglot.hck.json",
       "normalization": true
     }
   ],
-  "lastModifTS": "2025-07-04T10:10:38.736Z",
+  "lastModifTS": "2025-07-29T06:04:07.481Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -1352,7 +1352,7 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.3.1"
+    "version": "8.3.4"
   },
   "settings": {
     "centralPane": {

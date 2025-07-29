@@ -2800,7 +2800,7 @@
         },
         "bucketId": "cfc6aa5d-5d9d-4632-9181-3d4be0f1889d",
         "definitionEntityType": "collection",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/Extended referencing - 1-to-many/Customer",
         "fileType": "hackoladeSchema",
@@ -2983,7 +2983,7 @@
         "definitionEntityType": "collection",
         "bucketId": "cfc6aa5d-5d9d-4632-9181-3d4be0f1889d",
         "normalizationSourceCollection": "af123514-8a4e-4215-8cbb-e0695ddd31c9",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fileType": "hackoladeSchema",
         "fieldRelativePath": "#/Extended referencing - 1-to-many/Customer/properties/Address",
@@ -3197,7 +3197,7 @@
         "definitionEntityType": "collection",
         "bucketId": "cfc6aa5d-5d9d-4632-9181-3d4be0f1889d",
         "normalizationSourceCollection": "af123514-8a4e-4215-8cbb-e0695ddd31c9",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fileType": "hackoladeSchema",
         "fieldRelativePath": "#/Extended referencing - 1-to-many/Customer/properties/Membership plan",
@@ -3397,7 +3397,7 @@
         "definitionEntityType": "collection",
         "bucketId": "cfc6aa5d-5d9d-4632-9181-3d4be0f1889d",
         "normalizationSourceCollection": "af123514-8a4e-4215-8cbb-e0695ddd31c9",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fileType": "hackoladeSchema",
         "fieldRelativePath": "#/Extended referencing - 1-to-many/Customer/properties/Orders",
@@ -3434,7 +3434,7 @@
         "definitionEntityType": "relationship",
         "normalizationSourceCollection": "af123514-8a4e-4215-8cbb-e0695ddd31c9",
         "fieldRelativePath": "#/Extended referencing - 1-to-many/Customer",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fileType": "hackoladeSchema",
         "hackoladeMeta": {
@@ -3470,7 +3470,7 @@
         "definitionEntityType": "relationship",
         "normalizationSourceCollection": "af123514-8a4e-4215-8cbb-e0695ddd31c9",
         "fieldRelativePath": "#/Extended referencing - 1-to-many/Customer",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fileType": "hackoladeSchema",
         "hackoladeMeta": {
@@ -3506,7 +3506,7 @@
         "definitionEntityType": "relationship",
         "normalizationSourceCollection": "af123514-8a4e-4215-8cbb-e0695ddd31c9",
         "fieldRelativePath": "#/Extended referencing - 1-to-many/Customer",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fileType": "hackoladeSchema",
         "hackoladeMeta": {
@@ -3723,7 +3723,7 @@
         },
         "bucketId": "cfc6aa5d-5d9d-4632-9181-3d4be0f1889d",
         "definitionEntityType": "collection",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/Extended referencing - 1-to-many/Order",
         "fileType": "hackoladeSchema",
@@ -3896,7 +3896,7 @@
         "definitionEntityType": "collection",
         "bucketId": "cfc6aa5d-5d9d-4632-9181-3d4be0f1889d",
         "normalizationSourceCollection": "965f097a-9ede-4f81-b934-d8d37520537d",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fileType": "hackoladeSchema",
         "fieldRelativePath": "#/Extended referencing - 1-to-many/Order/properties/Customer",
@@ -4071,7 +4071,7 @@
         "definitionEntityType": "collection",
         "bucketId": "cfc6aa5d-5d9d-4632-9181-3d4be0f1889d",
         "normalizationSourceCollection": "965f097a-9ede-4f81-b934-d8d37520537d",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fileType": "hackoladeSchema",
         "fieldRelativePath": "#/Extended referencing - 1-to-many/Order/properties/Shipping address",
@@ -4281,7 +4281,7 @@
         "definitionEntityType": "collection",
         "bucketId": "cfc6aa5d-5d9d-4632-9181-3d4be0f1889d",
         "normalizationSourceCollection": "965f097a-9ede-4f81-b934-d8d37520537d",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fileType": "hackoladeSchema",
         "fieldRelativePath": "#/Extended referencing - 1-to-many/Order/properties/Ordered products",
@@ -4318,7 +4318,7 @@
         "definitionEntityType": "relationship",
         "normalizationSourceCollection": "965f097a-9ede-4f81-b934-d8d37520537d",
         "fieldRelativePath": "#/Extended referencing - 1-to-many/Order",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fileType": "hackoladeSchema",
         "hackoladeMeta": {
@@ -4354,7 +4354,7 @@
         "definitionEntityType": "relationship",
         "normalizationSourceCollection": "965f097a-9ede-4f81-b934-d8d37520537d",
         "fieldRelativePath": "#/Extended referencing - 1-to-many/Order",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fileType": "hackoladeSchema",
         "hackoladeMeta": {
@@ -4390,7 +4390,7 @@
         "definitionEntityType": "relationship",
         "normalizationSourceCollection": "965f097a-9ede-4f81-b934-d8d37520537d",
         "fieldRelativePath": "#/Extended referencing - 1-to-many/Order",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fileType": "hackoladeSchema",
         "hackoladeMeta": {
@@ -4672,7 +4672,7 @@
         },
         "bucketId": "80510329-2fdc-4804-9b87-b022c315deac",
         "definitionEntityType": "collection",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/Extended referencing - many-to-many/Customer",
         "fileType": "hackoladeSchema",
@@ -4855,7 +4855,7 @@
         "definitionEntityType": "collection",
         "bucketId": "80510329-2fdc-4804-9b87-b022c315deac",
         "normalizationSourceCollection": "59690838-da41-477c-9130-156838153758",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fileType": "hackoladeSchema",
         "fieldRelativePath": "#/Extended referencing - many-to-many/Customer/properties/Address",
@@ -5070,7 +5070,7 @@
         "definitionEntityType": "collection",
         "bucketId": "80510329-2fdc-4804-9b87-b022c315deac",
         "normalizationSourceCollection": "59690838-da41-477c-9130-156838153758",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fileType": "hackoladeSchema",
         "fieldRelativePath": "#/Extended referencing - many-to-many/Customer/properties/Membership plan",
@@ -5285,7 +5285,7 @@
         "definitionEntityType": "collection",
         "bucketId": "80510329-2fdc-4804-9b87-b022c315deac",
         "normalizationSourceCollection": "59690838-da41-477c-9130-156838153758",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fileType": "hackoladeSchema",
         "fieldRelativePath": "#/Extended referencing - many-to-many/Customer/properties/Reviews",
@@ -5322,7 +5322,7 @@
         "definitionEntityType": "relationship",
         "normalizationSourceCollection": "59690838-da41-477c-9130-156838153758",
         "fieldRelativePath": "#/Extended referencing - many-to-many/Customer",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fileType": "hackoladeSchema",
         "hackoladeMeta": {
@@ -5358,7 +5358,7 @@
         "definitionEntityType": "relationship",
         "normalizationSourceCollection": "59690838-da41-477c-9130-156838153758",
         "fieldRelativePath": "#/Extended referencing - many-to-many/Customer",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fileType": "hackoladeSchema",
         "hackoladeMeta": {
@@ -5394,7 +5394,7 @@
         "definitionEntityType": "relationship",
         "normalizationSourceCollection": "59690838-da41-477c-9130-156838153758",
         "fieldRelativePath": "#/Extended referencing - many-to-many/Customer",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fileType": "hackoladeSchema",
         "hackoladeMeta": {
@@ -5546,7 +5546,7 @@
         },
         "bucketId": "80510329-2fdc-4804-9b87-b022c315deac",
         "definitionEntityType": "collection",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/Extended referencing - many-to-many/Product",
         "fileType": "hackoladeSchema",
@@ -5685,7 +5685,7 @@
         "definitionEntityType": "collection",
         "bucketId": "80510329-2fdc-4804-9b87-b022c315deac",
         "normalizationSourceCollection": "c11fcec9-1567-4d2a-a680-632b87c5d444",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fileType": "hackoladeSchema",
         "fieldRelativePath": "#/Extended referencing - many-to-many/Product/properties/Reviews/properties/0/properties/Customer",
@@ -5908,7 +5908,7 @@
         "definitionEntityType": "collection",
         "bucketId": "80510329-2fdc-4804-9b87-b022c315deac",
         "normalizationSourceCollection": "c11fcec9-1567-4d2a-a680-632b87c5d444",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fileType": "hackoladeSchema",
         "fieldRelativePath": "#/Extended referencing - many-to-many/Product/properties/Reviews",
@@ -5945,7 +5945,7 @@
         "definitionEntityType": "relationship",
         "normalizationSourceCollection": "c11fcec9-1567-4d2a-a680-632b87c5d444",
         "fieldRelativePath": "#/Extended referencing - many-to-many/Product",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fileType": "hackoladeSchema",
         "hackoladeMeta": {
@@ -5981,7 +5981,7 @@
         "definitionEntityType": "relationship",
         "normalizationSourceCollection": "c11fcec9-1567-4d2a-a680-632b87c5d444",
         "fieldRelativePath": "#/Extended referencing - many-to-many/Product",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fileType": "hackoladeSchema",
         "hackoladeMeta": {
@@ -6050,7 +6050,7 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/relationships/places",
         "fileType": "hackoladeSchema",
@@ -6113,7 +6113,7 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/relationships/fk_Customer_Customer identifier_to_Order_Customer identifier",
         "fileType": "hackoladeSchema",
@@ -6180,7 +6180,7 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/relationships/fk_Order_Order identifier_to_Customer_Orders.[0].Order identifier",
         "fileType": "hackoladeSchema",
@@ -6247,7 +6247,7 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/relationships/fk_Order_Ordered date_to_Customer_Orders.[0].Ordered date",
         "fileType": "hackoladeSchema",
@@ -6314,7 +6314,7 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/relationships/fk_Order_Status_to_Customer_Orders.[0].Status",
         "fileType": "hackoladeSchema",
@@ -6381,7 +6381,7 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/relationships/fk_Customer_Lastname_to_Order_Customer.Lastname",
         "fileType": "hackoladeSchema",
@@ -6448,7 +6448,7 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/relationships/fk_Customer_Firstname_to_Order_Customer.Firstname",
         "fileType": "hackoladeSchema",
@@ -6515,7 +6515,7 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/relationships/fk_Customer_Customer identifier_to_Product_Reviews.[0].Customer.Customer identifier",
         "fileType": "hackoladeSchema",
@@ -6582,7 +6582,7 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/relationships/fk_Customer_Pseudo_to_Product_Reviews.[0].Customer.Pseudo",
         "fileType": "hackoladeSchema",
@@ -6649,7 +6649,7 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/relationships/fk_Product_Product identifier_to_Customer_Reviews.[0].Product identifier",
         "fileType": "hackoladeSchema",
@@ -6716,7 +6716,7 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/relationships/fk_Product_Reviews.[0].Date_to_Customer_Reviews.[0].Date",
         "fileType": "hackoladeSchema",
@@ -6783,7 +6783,7 @@
           ]
         },
         "definitionEntityType": "relationship",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/relationships/fk_Product_Reviews.[0].Rating_to_Customer_Reviews.[0].Rating",
         "fileType": "hackoladeSchema",
@@ -6821,7 +6821,7 @@
           "namingConvention": "code"
         },
         "definitionEntityType": "bucket",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/Extended referencing - 1-to-many",
         "fileType": "hackoladeSchema",
@@ -6859,7 +6859,7 @@
           "namingConvention": "code"
         },
         "definitionEntityType": "bucket",
-        "link": "Modeling illustrated-Polyglot.hck.json",
+        "link": "1-Polyglot.hck.json",
         "kind": "relativePath",
         "fieldRelativePath": "#/Extended referencing - many-to-many",
         "fileType": "hackoladeSchema",
@@ -6897,11 +6897,11 @@
     {
       "GUID": "6398c42a-8ecb-4e48-987c-2067297972a2",
       "polyglotModelName": "Modeling illustrated-Polyglot.hck",
-      "polyglotModelPath": "Modeling illustrated-Polyglot.hck.json",
+      "polyglotModelPath": "1-Polyglot.hck.json",
       "normalization": true
     }
   ],
-  "lastModifTS": "2025-07-04T10:27:28.487Z",
+  "lastModifTS": "2025-07-29T06:04:28.349Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -6910,7 +6910,7 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.3.1"
+    "version": "8.3.4"
   },
   "settings": {
     "centralPane": {
