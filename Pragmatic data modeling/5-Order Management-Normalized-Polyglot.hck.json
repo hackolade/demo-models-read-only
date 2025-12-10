@@ -698,7 +698,15 @@
     "GUID": "d0cc540b-6561-44e9-b1d1-a41356c51f46"
   },
   "sources": [],
-  "decorativeSymbols": [],
+  "decorativeSymbols": [
+    {
+      "GUID": "b05a5752-82f4-4b17-8307-77c5d9b77c9d",
+      "name": "New annotation",
+      "type": "annotation",
+      "disableInitialFocus": true,
+      "value": "This Order Management model is provided solely for illustration purposes. It represents a simplified view of a typical order management domain and is not intended to reflect all business rules, structural variations, or implementation considerations found in a full production environment.\nThe model should be used as an educational example only and not as a reference for real-world design decisions."
+    }
+  ],
   "dbVendor": "Polyglot",
   "appTarget": "Polyglot",
   "creationTS": "2025-12-01T14:01:08.108Z",
@@ -710,7 +718,7 @@
     },
     "namingConvention": "code"
   },
-  "lastModifTS": "2025-12-09T15:55:34.833Z",
+  "lastModifTS": "2025-12-10T06:44:54.883Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -719,7 +727,7 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.7.3"
+    "version": "8.7.2"
   },
   "code": "5-normalized-to-denormalized",
   "settings": {
@@ -822,12 +830,51 @@
               "GUID": "47ab350c-e39b-4a42-83dd-08d73ad49ae9"
             }
           ],
-          "decorativeSymbols": [],
+          "decorativeSymbols": [
+            {
+              "GUID": "b05a5752-82f4-4b17-8307-77c5d9b77c9d",
+              "x": 1333.2125506072875,
+              "y": 1299.835222672065,
+              "height": 150,
+              "width": 300
+            }
+          ],
           "forceLayout": true,
           "defaultLinkLength": 300
         },
         "diagramViews": [],
-        "decorativeSymbols": [],
+        "decorativeSymbols": [
+          {
+            "GUID": "b05a5752-82f4-4b17-8307-77c5d9b77c9d",
+            "x": 1529.140080971659,
+            "y": 998.1886639676113,
+            "height": 163.65303643724687,
+            "width": 395.5712550607287,
+            "color": {
+              "hsl": {
+                "h": 50.35294117647059,
+                "s": 1,
+                "l": 0.5,
+                "a": 1
+              },
+              "hex": "#ffd600",
+              "rgb": {
+                "r": 255,
+                "g": 214,
+                "b": 0,
+                "a": 1
+              },
+              "hsv": {
+                "h": 50.35294117647059,
+                "s": 1,
+                "v": 1,
+                "a": 1
+              },
+              "oldHue": 50.35294117647059,
+              "source": "rgb"
+            }
+          }
+        ],
         "nestedCollectionsLayout": "horizontal",
         "options": [
           {

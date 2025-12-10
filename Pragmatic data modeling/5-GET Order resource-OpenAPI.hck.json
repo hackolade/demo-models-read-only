@@ -1163,7 +1163,15 @@
     "GUID": "261b9bbe-18ab-4dc2-b4b7-54077c837bd1"
   },
   "sources": [],
-  "decorativeSymbols": [],
+  "decorativeSymbols": [
+    {
+      "GUID": "02e8aae4-493e-4ea6-b32a-9086c6baeba5",
+      "name": "New annotation",
+      "type": "annotation",
+      "disableInitialFocus": true,
+      "value": "This Order Management model is provided solely for illustration purposes. It represents a simplified view of a typical order management domain and is not intended to reflect all business rules, structural variations, or implementation considerations found in a full production environment.\nThe model should be used as an educational example only and not as a reference for real-world design decisions."
+    }
+  ],
   "dbVersion": "3.0.3",
   "dbVendor": "OpenAPI",
   "appTarget": "OPENAPI",
@@ -1176,7 +1184,7 @@
     }
   },
   "modelVersion": "v1.0.0",
-  "lastModifTS": "2025-12-09T15:56:00.168Z",
+  "lastModifTS": "2025-12-10T06:45:31.185Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -1185,7 +1193,7 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.7.3"
+    "version": "8.7.2"
   },
   "settings": {
     "centralPane": {
@@ -1237,7 +1245,38 @@
           "defaultLinkLength": 300
         },
         "diagramViews": [],
-        "decorativeSymbols": [],
+        "decorativeSymbols": [
+          {
+            "GUID": "02e8aae4-493e-4ea6-b32a-9086c6baeba5",
+            "x": 1222,
+            "y": 693,
+            "height": 153,
+            "width": 425,
+            "color": {
+              "hsl": {
+                "h": 50.35294117647059,
+                "s": 1,
+                "l": 0.5,
+                "a": 1
+              },
+              "hex": "#ffd600",
+              "rgb": {
+                "r": 255,
+                "g": 214,
+                "b": 0,
+                "a": 1
+              },
+              "hsv": {
+                "h": 50.35294117647059,
+                "s": 1,
+                "v": 1,
+                "a": 1
+              },
+              "oldHue": 50.35294117647059,
+              "source": "rgb"
+            }
+          }
+        ],
         "nestedCollectionsLayout": "vertical",
         "options": [
           {
