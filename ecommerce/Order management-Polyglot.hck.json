@@ -319,12 +319,6 @@
             ]
           },
           {
-            "GUID": "bb57e423-15a3-43d2-bb4f-81c084e50416"
-          },
-          {
-            "GUID": "7fa9c279-fe3c-4864-83e9-10df93832aef"
-          },
-          {
             "GUID": "a569060a-b3b2-4f73-95c7-7c2e2145c273",
             "referenceDiffDeleted": true
           }
@@ -401,7 +395,6 @@
       },
       "show": true,
       "isActivated": true,
-      "indexes": [],
       "GUID": "e863d79d-6e38-4098-a01e-46d6249501f8",
       "description": "The Order Management container is responsible for all entities and relationships involved in creating, tracking, and fulfilling customer orders. At a logical level, the Order Management container interacts closely with both the Customer Management container (to identify and authenticate the customer placing the order) and the Product Management container (to reference product details and availability)."
     },
@@ -620,7 +613,6 @@
             "compositePrimaryKey": false,
             "compositeUniqueKey": false,
             "name": "First name",
-            "hackoladeMeta": {},
             "isActivated": true,
             "GUID": "e8a58173-1262-4752-859c-10ceec5598aa",
             "description": "The customer’s given name, used for personalization and identification.",
@@ -639,7 +631,6 @@
             "compositePrimaryKey": false,
             "compositeUniqueKey": false,
             "name": "Last name",
-            "hackoladeMeta": {},
             "isActivated": true,
             "GUID": "872c6f47-1c90-4b97-ad5e-2c446d854243",
             "description": "The customer’s surname or family name.",
@@ -658,7 +649,6 @@
             "compositePrimaryKey": false,
             "compositeUniqueKey": false,
             "name": "email",
-            "hackoladeMeta": {},
             "isActivated": true,
             "GUID": "18d05aa0-70b0-4f8e-9736-ffbc7104f778",
             "description": "The unique email address of the customer, serving as the primary key and primary contact method. Often used for authentication and login purposes.",
@@ -677,7 +667,6 @@
             "compositePrimaryKey": false,
             "compositeUniqueKey": false,
             "name": "Phone number",
-            "hackoladeMeta": {},
             "isActivated": true,
             "GUID": "bb57e423-15a3-43d2-bb4f-81c084e50416",
             "description": "The primary telephone or mobile number for contacting the customer. Format may vary based on locale.",
@@ -695,7 +684,6 @@
             "compositePrimaryKey": false,
             "compositeUniqueKey": false,
             "name": "Registration date",
-            "hackoladeMeta": {},
             "isActivated": true,
             "primaryKey": false,
             "GUID": "7fa9c279-fe3c-4864-83e9-10df93832aef",
@@ -716,7 +704,6 @@
                 "compositePrimaryKey": false,
                 "compositeUniqueKey": false,
                 "name": "Address ID",
-                "hackoladeMeta": {},
                 "isActivated": true,
                 "GUID": "dff923d5-84b7-533f-8a76-4dcd803a5a33",
                 "mode": "",
@@ -734,7 +721,6 @@
                 "compositePrimaryKey": false,
                 "compositeUniqueKey": false,
                 "name": "Street",
-                "hackoladeMeta": {},
                 "isActivated": true,
                 "GUID": "a67178d1-2b76-5521-a4c3-d6fd453f0f74",
                 "description": "Specifies the street name and number, providing detailed location information within a city or town.",
@@ -753,7 +739,6 @@
                 "compositePrimaryKey": false,
                 "compositeUniqueKey": false,
                 "name": "Postal code",
-                "hackoladeMeta": {},
                 "isActivated": true,
                 "GUID": "7c7e4aed-3aa9-5bd2-bccb-4430d94e0834",
                 "foreignCollection": "",
@@ -774,7 +759,6 @@
                 "compositePrimaryKey": false,
                 "compositeUniqueKey": false,
                 "name": "City",
-                "hackoladeMeta": {},
                 "isActivated": true,
                 "GUID": "0e1b934a-42c4-5d75-8fdc-07f8d0129925",
                 "foreignCollection": "",
@@ -794,7 +778,6 @@
             "compositePrimaryKey": false,
             "compositeUniqueKey": false,
             "name": "Bill-to address",
-            "hackoladeMeta": {},
             "isActivated": true,
             "GUID": "299ad0aa-01de-43f1-a266-bd803d9d7616",
             "refDescription": "Stores the default billing address for the customer. Used for invoicing, payment processing, and tax calculations.",
@@ -816,7 +799,6 @@
                     "compositePrimaryKey": false,
                     "compositeUniqueKey": false,
                     "name": "Address ID",
-                    "hackoladeMeta": {},
                     "isActivated": true,
                     "GUID": "f5f040e0-9c82-58c8-a951-00c223a0b0bd",
                     "mode": "",
@@ -834,7 +816,6 @@
                     "compositePrimaryKey": false,
                     "compositeUniqueKey": false,
                     "name": "Street",
-                    "hackoladeMeta": {},
                     "isActivated": true,
                     "GUID": "f1fde62f-2224-5c53-bdd5-815c2369d986",
                     "description": "Specifies the street name and number, providing detailed location information within a city or town.",
@@ -853,7 +834,6 @@
                     "compositePrimaryKey": false,
                     "compositeUniqueKey": false,
                     "name": "Postal code",
-                    "hackoladeMeta": {},
                     "isActivated": true,
                     "GUID": "03048688-44ef-5286-9d37-e87d6ca8cdf8",
                     "foreignCollection": "",
@@ -874,7 +854,6 @@
                     "compositePrimaryKey": false,
                     "compositeUniqueKey": false,
                     "name": "City",
-                    "hackoladeMeta": {},
                     "isActivated": true,
                     "GUID": "24a64b44-cec0-54fc-8e94-f6287864ebcc",
                     "foreignCollection": "",
@@ -893,7 +872,6 @@
                 "type": "document",
                 "compositePrimaryKey": false,
                 "compositeUniqueKey": false,
-                "hackoladeMeta": {},
                 "isActivated": true,
                 "GUID": "3ff559e8-d20f-432c-9ad8-5b93be0f1055",
                 "displayName": "Address",
@@ -910,7 +888,6 @@
             "compositePrimaryKey": false,
             "compositeUniqueKey": false,
             "name": "Ship-to addresses",
-            "hackoladeMeta": {},
             "isActivated": true,
             "primaryKey": false,
             "required": false,
@@ -996,7 +973,6 @@
             "compositePrimaryKey": false,
             "compositeUniqueKey": false,
             "name": "SKU",
-            "hackoladeMeta": {},
             "isActivated": true,
             "GUID": "6b6386de-f9dc-46d9-9fc2-16d3c2c58340",
             "description": "A unique identifier assigned to each product for inventory management and tracking purposes. It helps differentiate products and streamline the ordering process.",
@@ -1015,7 +991,6 @@
             "compositePrimaryKey": false,
             "compositeUniqueKey": false,
             "name": "Name",
-            "hackoladeMeta": {},
             "isActivated": true,
             "GUID": "c5f20bbd-e577-4a70-b532-13e319e3ef18",
             "description": "The name of the product or service as displayed to the customer.",
@@ -1034,7 +1009,6 @@
             "compositePrimaryKey": false,
             "compositeUniqueKey": false,
             "name": "Category name",
-            "hackoladeMeta": {},
             "isActivated": true,
             "GUID": "4d678e93-e8cb-434c-9789-0d411b30a433",
             "foreignCollection": "2a4261e2-bfa0-46a7-a79e-5eb8692e8d9f",
@@ -1059,7 +1033,6 @@
             "compositePrimaryKey": false,
             "compositeUniqueKey": false,
             "name": "Supplier code",
-            "hackoladeMeta": {},
             "isActivated": true,
             "GUID": "a898b734-3304-48c1-b45d-98c1f7cc3808",
             "description": "References the unique code of the supplier who provides or manufactures the product. Ties to the Supplier entity, facilitating supplier relationship management and inventory tracking.",
@@ -1078,7 +1051,6 @@
             "compositePrimaryKey": false,
             "compositeUniqueKey": false,
             "name": "Description",
-            "hackoladeMeta": {},
             "isActivated": true,
             "GUID": "6ef810f9-c366-426b-9aa7-97f54138905f",
             "description": "A longer text providing additional details about the product. May be omitted if product details are referenced externally.",
@@ -1098,7 +1070,6 @@
                 "type": "string",
                 "compositePrimaryKey": false,
                 "compositeUniqueKey": false,
-                "hackoladeMeta": {},
                 "isActivated": true,
                 "GUID": "eb09feb9-6460-4193-b564-2d31c3ca40b4",
                 "arrayItem": true,
@@ -1117,7 +1088,6 @@
             "compositePrimaryKey": false,
             "compositeUniqueKey": false,
             "name": "Images",
-            "hackoladeMeta": {},
             "isActivated": true,
             "primaryKey": false,
             "required": false,
@@ -1141,7 +1111,6 @@
                     "compositePrimaryKey": false,
                     "compositeUniqueKey": false,
                     "name": "Currency",
-                    "hackoladeMeta": {},
                     "isActivated": true,
                     "GUID": "ea782112-8bc7-4902-98a0-7dc8ea8207e5",
                     "enum": [
@@ -1177,7 +1146,6 @@
                     "compositePrimaryKey": false,
                     "compositeUniqueKey": false,
                     "name": "Amount",
-                    "hackoladeMeta": {},
                     "isActivated": true,
                     "GUID": "bfcda36f-8a7b-421b-ba98-8a9b313affc6",
                     "mode": "decimal",
@@ -1197,7 +1165,6 @@
                     "compositePrimaryKey": false,
                     "compositeUniqueKey": false,
                     "name": "Effective date",
-                    "hackoladeMeta": {},
                     "isActivated": true,
                     "primaryKey": false,
                     "GUID": "2c86253b-1d80-4798-ad2b-3bef74fa239c",
@@ -1214,7 +1181,6 @@
                 "type": "document",
                 "compositePrimaryKey": false,
                 "compositeUniqueKey": false,
-                "hackoladeMeta": {},
                 "isActivated": true,
                 "GUID": "1002c3a4-64cd-46ec-b4ff-e330099caa23",
                 "arrayItem": true,
@@ -1233,7 +1199,6 @@
             "compositePrimaryKey": false,
             "compositeUniqueKey": false,
             "name": "Prices",
-            "hackoladeMeta": {},
             "isActivated": true,
             "primaryKey": false,
             "required": false,
@@ -1474,6 +1439,8 @@
       "value": "This Model serves as a basic example of reusable definitions within a data modeling context.\n\nIt is intended for illustration purposes only and simplifies the complexities of order management, omitting certain variations and best practices relevant to real-world applications."
     }
   ],
+  "businessGlossaries": [],
+  "businessGlossaryTerms": [],
   "dbVendor": "Polyglot",
   "appTarget": "Polyglot",
   "creationTS": "2024-12-31T13:26:26.101Z",
@@ -1484,16 +1451,18 @@
       "GUID": "814c59e0-6932-46af-afc6-dd578cadb3d9",
       "polyglotModelName": "Customer-Polyglot.hck",
       "polyglotModelPath": "../common/Customer-Polyglot.hck.json",
-      "normalization": false
+      "normalization": false,
+      "applyTargetNamingConventions": true
     },
     {
       "GUID": "d249a1ad-1b9d-4526-8f11-0b0e2f1df3a4",
       "polyglotModelName": "Product-Polyglot.hck",
       "polyglotModelPath": "../merchandising/Product-Polyglot.hck.json",
-      "normalization": false
+      "normalization": false,
+      "applyTargetNamingConventions": true
     }
   ],
-  "lastModifTS": "2025-02-28T12:18:10.996Z",
+  "lastModifTS": "2026-05-20T06:44:46.398Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -1502,7 +1471,7 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.0.2"
+    "version": "8.11.2"
   },
   "hackoladeMeta": {
     "validationErrors": {
@@ -1553,18 +1522,18 @@
         },
         "buckets": [
           {
-            "x": 1338.5380761523052,
-            "y": 758.3563794255192,
+            "x": 1314.5380761523052,
+            "y": 734.3563794255192,
             "GUID": "e863d79d-6e38-4098-a01e-46d6249501f8"
           },
           {
-            "x": 797.7959336385611,
-            "y": 842.2182641961967,
+            "x": 773.7959336385611,
+            "y": 818.2182641961967,
             "GUID": "a47b2731-dfa7-4364-91e6-4601ec648539"
           },
           {
-            "x": 1936.347586735294,
-            "y": 904.4195224825469,
+            "x": 1912.347586735294,
+            "y": 880.4195224825469,
             "GUID": "38a4f489-8d86-47f3-8cd5-bc666ce58741"
           }
         ],

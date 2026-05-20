@@ -19,7 +19,13 @@
             "compositeUniqueKey"
           ],
           "GUID": "65b54be5-17e3-480b-9543-41cade950030",
-          "error": {}
+          "error": {},
+          "glossaryTerms": [
+            {
+              "GUID": "9e510c0b-4f9f-43b1-9320-d0c51a1d4524",
+              "glossaryTermId": "35d4b7f7-0934-45d1-8c33-4e7ed4dec3c8"
+            }
+          ]
         },
         {
           "name": "Street",
@@ -35,7 +41,13 @@
           ],
           "GUID": "226178a4-d5d7-4303-8ded-6edd2bf5e94a",
           "description": "Specifies the street name and number, providing detailed location information within a city or town.",
-          "error": {}
+          "error": {},
+          "glossaryTerms": [
+            {
+              "GUID": "9c567260-824b-4190-b2a6-7f6f95836459",
+              "glossaryTermId": "6d9f9b26-b05f-4227-92ee-e223a628d0d3"
+            }
+          ]
         },
         {
           "name": "Postal code",
@@ -53,7 +65,13 @@
           "foreignCollection": "",
           "foreignField": [],
           "description": "A numerical or alphanumeric code assigned to a geographic area to facilitate mail delivery and location identification.",
-          "error": {}
+          "error": {},
+          "glossaryTerms": [
+            {
+              "GUID": "a6e5431e-c26f-46c2-ac42-5d0697bee4d9",
+              "glossaryTermId": "50f654c2-67a3-409d-9126-2a05b9c61f15"
+            }
+          ]
         },
         {
           "name": "City",
@@ -71,7 +89,13 @@
           "foreignCollection": "",
           "foreignField": [],
           "description": "Indicates the name of the city or town where the address is located, helping to define the broader geographic region.",
-          "error": {}
+          "error": {},
+          "glossaryTerms": [
+            {
+              "GUID": "1b1eea71-3e7a-4c93-b270-53bbb27cfd6a",
+              "glossaryTermId": "95bf7217-fe25-4a18-b6d8-85e666b86c51"
+            }
+          ]
         }
       ],
       "definitions": {
@@ -82,7 +106,13 @@
       "isActivated": true,
       "additionalProperties": false,
       "bucketId": "",
-      "description": "Represents a physical location, including street details, postal code, and city information. Used to store and manage location-based data for individuals, businesses, or properties."
+      "description": "Represents a physical location, including street details, postal code, and city information. Used to store and manage location-based data for individuals, businesses, or properties.",
+      "glossaryTerms": [
+        {
+          "GUID": "23c422e6-555d-4b59-8263-48029710ebc7",
+          "glossaryTermId": "ba4e7703-79aa-48d5-941a-1bcf5e5382ce"
+        }
+      ]
     }
   ],
   "buckets": [],
@@ -122,12 +152,171 @@
       "value": "This Model serves as a basic example of reusable definitions within a data modeling context.\n\nIt is intended for illustration purposes only and simplifies the complexities of address data management, omitting certain variations and best practices relevant to real-world applications."
     }
   ],
+  "businessGlossaries": [
+    {
+      "GUID": "40011719-5198-41cd-a043-fb7d8da9bdf0",
+      "name": "Core Glossary",
+      "updatedAt": "2026-05-20T06:56:14.705Z",
+      "hasHeaders": true,
+      "format": "custom",
+      "columnSeparator": ",",
+      "kind": "relativePath",
+      "relativePath": "../business-glossaries/Core-Business-Glossary.csv",
+      "mapping": [
+        {
+          "GUID": "17f60aaa-d39c-4fd5-9a7f-c50c2fdcce83",
+          "columnIdentifier": "id",
+          "displayName": "Identifier",
+          "role": "identifier",
+          "isMultipleValue": false,
+          "position": 0,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "5dad6df2-40ba-4ba9-98d0-8c5e732d4d7c",
+          "columnIdentifier": "term",
+          "displayName": "Term",
+          "role": "name",
+          "isMultipleValue": false,
+          "position": 1,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "faa8f3a2-c098-422e-b197-89e62099d751",
+          "columnIdentifier": "description",
+          "displayName": "Description",
+          "role": "description",
+          "isMultipleValue": false,
+          "position": 2,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "3cb23801-1bda-48e3-8c81-c03b5bf953e2",
+          "columnIdentifier": "domain",
+          "displayName": "Domain",
+          "isMultipleValue": false,
+          "position": 3,
+          "displayType": "tag",
+          "isMapped": true
+        },
+        {
+          "GUID": "265be069-8378-438a-876c-079cf8f5b015",
+          "columnIdentifier": "synonyms",
+          "displayName": "Synonyms",
+          "isMultipleValue": true,
+          "separator": ";",
+          "position": 4,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "277de272-a284-49a9-8880-0ec96796230c",
+          "columnIdentifier": "status",
+          "displayName": "Status",
+          "isMultipleValue": false,
+          "position": 5,
+          "displayType": "tag",
+          "isMapped": true
+        }
+      ]
+    }
+  ],
+  "businessGlossaryTerms": [
+    {
+      "GUID": "ba4e7703-79aa-48d5-941a-1bcf5e5382ce",
+      "glossaryId": "40011719-5198-41cd-a043-fb7d8da9bdf0",
+      "name": "Address",
+      "properties": {
+        "17f60aaa-d39c-4fd5-9a7f-c50c2fdcce83": "a1111111-aaaa-4aaa-8aaa-aaaaaaaa0004",
+        "5dad6df2-40ba-4ba9-98d0-8c5e732d4d7c": "Address",
+        "faa8f3a2-c098-422e-b197-89e62099d751": "A structured representation of a physical location, composed of distinct elements such as street name, house number, city, postal code, and country, utilized for various business functions including, but not limited to, the delivery of goods and services, the origination of financial transactions for billing and invoicing, and the establishment of contact points for correspondence or official communication.",
+        "3cb23801-1bda-48e3-8c81-c03b5bf953e2": "Location",
+        "265be069-8378-438a-876c-079cf8f5b015": "Postal Address;Location",
+        "277de272-a284-49a9-8880-0ec96796230c": "Validated"
+      },
+      "refIds": [
+        "50ec3adc-dd4a-4ddf-bab7-572b8e9b8bf7"
+      ],
+      "updatedAt": "2026-03-31T06:56:57.080Z"
+    },
+    {
+      "GUID": "35d4b7f7-0934-45d1-8c33-4e7ed4dec3c8",
+      "glossaryId": "40011719-5198-41cd-a043-fb7d8da9bdf0",
+      "name": "Identifier",
+      "properties": {
+        "17f60aaa-d39c-4fd5-9a7f-c50c2fdcce83": "a1111111-aaaa-4aaa-8aaa-aaaaaaaa0011",
+        "5dad6df2-40ba-4ba9-98d0-8c5e732d4d7c": "Identifier",
+        "faa8f3a2-c098-422e-b197-89e62099d751": "A unique and unambiguous value assigned to a specific business entity or record, ensuring its distinctness within a given system or dataset. This identifier serves as a reference point for data retrieval, linkage, and management, maintaining data integrity and facilitating accurate reporting and analysis.",
+        "3cb23801-1bda-48e3-8c81-c03b5bf953e2": "System",
+        "265be069-8378-438a-876c-079cf8f5b015": "ID;Identifier Value",
+        "277de272-a284-49a9-8880-0ec96796230c": "Under review"
+      },
+      "refIds": [
+        "65b54be5-17e3-480b-9543-41cade950030"
+      ],
+      "updatedAt": "2026-03-31T06:56:57.080Z"
+    },
+    {
+      "GUID": "6d9f9b26-b05f-4227-92ee-e223a628d0d3",
+      "glossaryId": "40011719-5198-41cd-a043-fb7d8da9bdf0",
+      "name": "Street Name",
+      "properties": {
+        "17f60aaa-d39c-4fd5-9a7f-c50c2fdcce83": "a1111111-aaaa-4aaa-8aaa-aaaaaaaa0005",
+        "5dad6df2-40ba-4ba9-98d0-8c5e732d4d7c": "Street Name",
+        "faa8f3a2-c098-422e-b197-89e62099d751": "The official designation of a public way intended for vehicular and pedestrian traffic, forming part of an address for location identification and mail delivery.",
+        "3cb23801-1bda-48e3-8c81-c03b5bf953e2": "Location",
+        "265be069-8378-438a-876c-079cf8f5b015": "Street;Road Name",
+        "277de272-a284-49a9-8880-0ec96796230c": "Validated"
+      },
+      "refIds": [
+        "226178a4-d5d7-4303-8ded-6edd2bf5e94a"
+      ],
+      "updatedAt": "2026-05-20T06:56:14.705Z"
+    },
+    {
+      "GUID": "50f654c2-67a3-409d-9126-2a05b9c61f15",
+      "glossaryId": "40011719-5198-41cd-a043-fb7d8da9bdf0",
+      "name": "Postal Code",
+      "properties": {
+        "17f60aaa-d39c-4fd5-9a7f-c50c2fdcce83": "a1111111-aaaa-4aaa-8aaa-aaaaaaaa0007",
+        "5dad6df2-40ba-4ba9-98d0-8c5e732d4d7c": "Postal Code",
+        "faa8f3a2-c098-422e-b197-89e62099d751": "A standardized alphanumeric or numeric code assigned by a postal service to a specific geographic region or address. It facilitates the efficient sorting, routing, and delivery of mail and packages by uniquely identifying delivery areas.",
+        "3cb23801-1bda-48e3-8c81-c03b5bf953e2": "Location",
+        "265be069-8378-438a-876c-079cf8f5b015": "ZIP Code;Postcode",
+        "277de272-a284-49a9-8880-0ec96796230c": "Validated"
+      },
+      "refIds": [
+        "172ef4de-fb50-4087-a44b-9a34e92b1f39"
+      ],
+      "updatedAt": "2026-05-20T06:56:14.705Z"
+    },
+    {
+      "GUID": "95bf7217-fe25-4a18-b6d8-85e666b86c51",
+      "glossaryId": "40011719-5198-41cd-a043-fb7d8da9bdf0",
+      "name": "City",
+      "properties": {
+        "17f60aaa-d39c-4fd5-9a7f-c50c2fdcce83": "a1111111-aaaa-4aaa-8aaa-aaaaaaaa0006",
+        "5dad6df2-40ba-4ba9-98d0-8c5e732d4d7c": "City",
+        "faa8f3a2-c098-422e-b197-89e62099d751": "The specific municipality or administrative division within a larger geographical region, forming a core component of a complete postal address. This term denotes the urban settlement where a specific location is situated, and it is critical for accurate mail delivery, geographical identification, and data segmentation.",
+        "3cb23801-1bda-48e3-8c81-c03b5bf953e2": "Location",
+        "265be069-8378-438a-876c-079cf8f5b015": "Town;Municipality",
+        "277de272-a284-49a9-8880-0ec96796230c": "Validated"
+      },
+      "refIds": [
+        "f23a20a2-d7b1-476d-b567-50a67b99f2fc"
+      ],
+      "updatedAt": "2026-05-20T06:56:14.705Z"
+    }
+  ],
   "dbVendor": "Polyglot",
   "appTarget": "Polyglot",
   "creationTS": "2024-12-31T10:50:34.735Z",
   "GUID": "251c1cc6-cb0b-4efc-bbc7-56d5a47c2515",
   "isLineageEnabled": false,
-  "lastModifTS": "2025-02-27T10:15:09.640Z",
+  "lastModifTS": "2026-05-20T06:56:45.673Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -136,7 +325,7 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.0.2"
+    "version": "8.11.2"
   },
   "hackoladeMeta": {
     "validationErrors": {
@@ -152,27 +341,28 @@
             "GUID": "50ec3adc-dd4a-4ddf-bab7-572b8e9b8bf7",
             "x": 1263,
             "y": 1084,
-            "width": 237,
-            "height": 97,
+            "width": 265,
+            "height": 122,
             "color": {
               "hex": "#2196F3"
             }
           }
         ],
+        "erdDefinitions": {
+          "erd": [],
+          "rootPath": [],
+          "entities": [],
+          "decorativeSymbols": []
+        },
         "buckets": [],
-        "diagramViews": [],
-        "decorativeSymbols": [
-          {
-            "GUID": "e5521fe8-98de-4f72-bfa0-156a53edd8af",
-            "x": 1587,
-            "y": 1013,
-            "height": 154,
-            "width": 366,
-            "color": {
-              "hex": "#fec107"
-            }
-          }
-        ],
+        "collapsedNodes": [],
+        "activeRelationship": "",
+        "activeRelationshipFields": {
+          "childField": [],
+          "parentField": []
+        },
+        "selectedCollections": [],
+        "displayColorPicker": false,
         "graphView": {
           "erd": [
             {
@@ -194,7 +384,29 @@
           ],
           "forceLayout": true,
           "defaultLinkLength": 300
-        }
+        },
+        "diagramViews": [],
+        "decorativeSymbols": [
+          {
+            "GUID": "e5521fe8-98de-4f72-bfa0-156a53edd8af",
+            "x": 1587,
+            "y": 1013,
+            "height": 154,
+            "width": 366,
+            "color": {
+              "hex": "#fec107"
+            }
+          }
+        ],
+        "nestedCollectionsLayout": "horizontal",
+        "options": [
+          {
+            "autoWidth": false,
+            "autoHeight": false,
+            "GUID": "50ec3adc-dd4a-4ddf-bab7-572b8e9b8bf7"
+          }
+        ],
+        "relationshipUpdateDisabled": false
       },
       "collectionLevel": {},
       "changed": false

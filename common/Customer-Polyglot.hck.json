@@ -52,7 +52,13 @@
           ],
           "GUID": "18d05aa0-70b0-4f8e-9736-ffbc7104f778",
           "description": "The unique email address of the customer, serving as the primary key and primary contact method. Often used for authentication and login purposes.",
-          "error": {}
+          "error": {},
+          "glossaryTerms": [
+            {
+              "GUID": "82cbe37e-e483-4704-ac88-bb31efd6177a",
+              "glossaryTermId": "f8d40c97-1496-44a8-aa71-e5d901c4c50e"
+            }
+          ]
         },
         {
           "name": "Phone number",
@@ -68,7 +74,13 @@
           ],
           "GUID": "bb57e423-15a3-43d2-bb4f-81c084e50416",
           "description": "The primary telephone or mobile number for contacting the customer. Format may vary based on locale.",
-          "error": {}
+          "error": {},
+          "glossaryTerms": [
+            {
+              "GUID": "346fe7ee-88e8-4f9b-a8f3-56ca48a1d5a5",
+              "glossaryTermId": "8e0c5872-191a-4621-b82e-bd29b419ba1c"
+            }
+          ]
         },
         {
           "name": "Registration date",
@@ -155,7 +167,17 @@
           "required": false,
           "GUID": "a569060a-b3b2-4f73-95c7-7c2e2145c273",
           "description": "Holds a list of potential shipping addresses registered by the customer. Customers can maintain multiple shipping addresses for convenience and flexibility, allowing them to select a preferred address when placing an order. This feature enhances the user experience by accommodating different delivery locations, such as home, work, or gift recipients.",
-          "error": {}
+          "error": {},
+          "glossaryTerms": [
+            {
+              "GUID": "16ef5d4b-d325-4d5d-810b-a8ed45301490",
+              "glossaryTermId": "74c65bc9-2d22-48f3-8ca4-3087ba30655f"
+            },
+            {
+              "GUID": "2e4e1d46-dc2b-4220-962e-67da4f9b5ea8",
+              "glossaryTermId": "929add6e-ec78-4fc2-a0db-25775b737a41"
+            }
+          ]
         }
       ],
       "definitions": {
@@ -166,7 +188,13 @@
       "isActivated": true,
       "additionalProperties": false,
       "bucketId": "81137752-f86d-41e7-bb91-6d3e9fdb9628",
-      "description": "The Customer entity represents an individual or organization using the ecommerce platform to browse, purchase, and manage orders. It stores essential contact information, registration data, and address details for billing and shipping."
+      "description": "The Customer entity represents an individual or organization using the ecommerce platform to browse, purchase, and manage orders. It stores essential contact information, registration data, and address details for billing and shipping.",
+      "glossaryTerms": [
+        {
+          "GUID": "2c60f1f8-86c0-4c38-bcb1-feafb5dab572",
+          "glossaryTermId": "f18ae58f-5e1e-425b-a027-7109a2571f80"
+        }
+      ]
     }
   ],
   "buckets": [
@@ -184,7 +212,6 @@
       },
       "show": true,
       "isActivated": true,
-      "indexes": [],
       "GUID": "81137752-f86d-41e7-bb91-6d3e9fdb9628",
       "description": "The Customer Management container encompasses all entities and relationships associated with users of the ecommerce platform. It covers personal information, contact details, and addresses needed to fulfill orders, provide customer support, and maintain communication preferences."
     }
@@ -331,13 +358,242 @@
       "disableInitialFocus": true
     }
   ],
+  "businessGlossaries": [
+    {
+      "GUID": "a0f9430a-73ca-4114-a139-1befb9bb8dfa",
+      "name": "Core Glossary",
+      "updatedAt": "2026-05-20T06:52:44.312Z",
+      "hasHeaders": true,
+      "format": "custom",
+      "columnSeparator": ",",
+      "kind": "relativePath",
+      "relativePath": "../business-glossaries/Core-Business-Glossary.csv",
+      "mapping": [
+        {
+          "GUID": "ce24f325-07bd-42da-ac55-591fc34927ae",
+          "columnIdentifier": "id",
+          "displayName": "Identifier",
+          "role": "identifier",
+          "isMultipleValue": false,
+          "position": 0,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "8b2aa3ec-4606-4473-af11-3c4e931c7dcf",
+          "columnIdentifier": "term",
+          "displayName": "Term",
+          "role": "name",
+          "isMultipleValue": false,
+          "position": 1,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "f9858762-0d5a-4c87-a96e-7b39f7fe5204",
+          "columnIdentifier": "description",
+          "displayName": "Description",
+          "role": "description",
+          "isMultipleValue": false,
+          "position": 2,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "fa198b6b-d0b3-44d1-966e-a3728c6fe5be",
+          "columnIdentifier": "domain",
+          "displayName": "Domain",
+          "isMultipleValue": false,
+          "position": 3,
+          "displayType": "tag",
+          "isMapped": true
+        },
+        {
+          "GUID": "8890c553-628b-4bff-8958-d97c2901cb9c",
+          "columnIdentifier": "synonyms",
+          "displayName": "Synonyms",
+          "isMultipleValue": true,
+          "separator": ";",
+          "position": 4,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "01891e24-ba26-495d-b7b0-3cf5563b66d7",
+          "columnIdentifier": "status",
+          "displayName": "Status",
+          "isMultipleValue": false,
+          "position": 5,
+          "displayType": "tag",
+          "isMapped": true
+        }
+      ]
+    },
+    {
+      "GUID": "4f9c11b4-a5e5-42b7-8fa5-62a141a2693a",
+      "name": "Order Glossary",
+      "updatedAt": "2026-05-20T06:52:44.312Z",
+      "hasHeaders": true,
+      "format": "custom",
+      "columnSeparator": ",",
+      "kind": "relativePath",
+      "relativePath": "../business-glossaries/Order-Management-Glossary.csv",
+      "mapping": [
+        {
+          "GUID": "4b44b89e-933f-49c3-ae51-3c39236a33dc",
+          "columnIdentifier": "id",
+          "displayName": "Identifier",
+          "role": "identifier",
+          "isMultipleValue": false,
+          "position": 0,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "4738633b-a25a-484c-b5e9-fd77af6094fc",
+          "columnIdentifier": "term",
+          "displayName": "Term",
+          "role": "name",
+          "isMultipleValue": false,
+          "position": 1,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "24b15b0c-0e14-40db-87cc-46274c8262c6",
+          "columnIdentifier": "description",
+          "displayName": "Description",
+          "role": "description",
+          "isMultipleValue": false,
+          "position": 2,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "9547393f-a961-4c9c-b236-5239258451e9",
+          "columnIdentifier": "domain",
+          "displayName": "Domain",
+          "isMultipleValue": false,
+          "position": 3,
+          "displayType": "tag",
+          "isMapped": true
+        },
+        {
+          "GUID": "e9923906-d3bf-45a4-a572-3d1a8858f151",
+          "columnIdentifier": "synonyms",
+          "displayName": "Synonyms",
+          "isMultipleValue": true,
+          "separator": ";",
+          "position": 4,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "3835ad08-8721-4b19-b3ac-2cfe74085058",
+          "columnIdentifier": "status",
+          "displayName": "Status",
+          "isMultipleValue": false,
+          "position": 5,
+          "displayType": "tag",
+          "isMapped": true
+        }
+      ]
+    }
+  ],
+  "businessGlossaryTerms": [
+    {
+      "GUID": "f18ae58f-5e1e-425b-a027-7109a2571f80",
+      "glossaryId": "a0f9430a-73ca-4114-a139-1befb9bb8dfa",
+      "name": "Customer",
+      "properties": {
+        "ce24f325-07bd-42da-ac55-591fc34927ae": "a1111111-aaaa-4aaa-8aaa-aaaaaaaa0001",
+        "8b2aa3ec-4606-4473-af11-3c4e931c7dcf": "Customer",
+        "f9858762-0d5a-4c87-a96e-7b39f7fe5204": "An individual, household, or organization that engages with the company for the purpose of purchasing products, utilizing services, or establishing a mutually beneficial relationship. This interaction may involve placing orders, receiving deliverables, or engaging in ongoing service agreements, signifying a formal or informal commitment to the business's offerings.",
+        "fa198b6b-d0b3-44d1-966e-a3728c6fe5be": "Party",
+        "8890c553-628b-4bff-8958-d97c2901cb9c": "Client;Buyer",
+        "01891e24-ba26-495d-b7b0-3cf5563b66d7": "Validated"
+      },
+      "refIds": [
+        "5cc94e26-8eb9-4b1c-a78d-a870d9f640db"
+      ],
+      "updatedAt": "2026-03-31T06:56:57.080Z"
+    },
+    {
+      "GUID": "f8d40c97-1496-44a8-aa71-e5d901c4c50e",
+      "glossaryId": "a0f9430a-73ca-4114-a139-1befb9bb8dfa",
+      "name": "Email Address",
+      "properties": {
+        "ce24f325-07bd-42da-ac55-591fc34927ae": "a1111111-aaaa-4aaa-8aaa-aaaaaaaa0009",
+        "8b2aa3ec-4606-4473-af11-3c4e931c7dcf": "Email Address",
+        "f9858762-0d5a-4c87-a96e-7b39f7fe5204": "A unique identifier assigned to an individual or entity, facilitating the transmission and reception of digital messages through a networked communication system. It comprises a local-part and a domain-part, separated by the '@' symbol, adhering to standardized formats for interoperability across various email service providers and platforms.",
+        "fa198b6b-d0b3-44d1-966e-a3728c6fe5be": "Contact",
+        "8890c553-628b-4bff-8958-d97c2901cb9c": "Email;Mail Address",
+        "01891e24-ba26-495d-b7b0-3cf5563b66d7": "Validated"
+      },
+      "refIds": [
+        "18d05aa0-70b0-4f8e-9736-ffbc7104f778"
+      ],
+      "updatedAt": "2026-03-31T06:56:57.080Z"
+    },
+    {
+      "GUID": "74c65bc9-2d22-48f3-8ca4-3087ba30655f",
+      "glossaryId": "a0f9430a-73ca-4114-a139-1befb9bb8dfa",
+      "name": "Address",
+      "properties": {
+        "ce24f325-07bd-42da-ac55-591fc34927ae": "a1111111-aaaa-4aaa-8aaa-aaaaaaaa0004",
+        "8b2aa3ec-4606-4473-af11-3c4e931c7dcf": "Address",
+        "f9858762-0d5a-4c87-a96e-7b39f7fe5204": "A structured representation of a physical location, composed of distinct elements such as street name, house number, city, postal code, and country, utilized for various business functions including, but not limited to, the delivery of goods and services, the origination of financial transactions for billing and invoicing, and the establishment of contact points for correspondence or official communication.",
+        "fa198b6b-d0b3-44d1-966e-a3728c6fe5be": "Location",
+        "8890c553-628b-4bff-8958-d97c2901cb9c": "Postal Address;Location",
+        "01891e24-ba26-495d-b7b0-3cf5563b66d7": "Validated"
+      },
+      "refIds": [
+        "a569060a-b3b2-4f73-95c7-7c2e2145c273"
+      ],
+      "updatedAt": "2026-05-20T06:52:44.312Z"
+    },
+    {
+      "GUID": "929add6e-ec78-4fc2-a0db-25775b737a41",
+      "glossaryId": "4f9c11b4-a5e5-42b7-8fa5-62a141a2693a",
+      "name": "Ship-to Address",
+      "properties": {
+        "4b44b89e-933f-49c3-ae51-3c39236a33dc": "b2222222-bbbb-4bbb-8bbb-bbbbbbbb0012",
+        "4738633b-a25a-484c-b5e9-fd77af6094fc": "Ship-to Address",
+        "24b15b0c-0e14-40db-87cc-46274c8262c6": "The designated physical location to which goods, services, or shipments are dispatched and received by the customer or recipient. This includes all necessary components for accurate delivery, such as street name, house or building number, city, postal code, and country.",
+        "9547393f-a961-4c9c-b236-5239258451e9": "Fulfillment",
+        "e9923906-d3bf-45a4-a572-3d1a8858f151": "Shipping Address;Destination",
+        "3835ad08-8721-4b19-b3ac-2cfe74085058": "Validated"
+      },
+      "refIds": [
+        "a569060a-b3b2-4f73-95c7-7c2e2145c273"
+      ],
+      "updatedAt": "2026-05-20T06:52:44.312Z"
+    },
+    {
+      "GUID": "8e0c5872-191a-4621-b82e-bd29b419ba1c",
+      "glossaryId": "a0f9430a-73ca-4114-a139-1befb9bb8dfa",
+      "name": "Phone Number",
+      "properties": {
+        "ce24f325-07bd-42da-ac55-591fc34927ae": "a1111111-aaaa-4aaa-8aaa-aaaaaaaa0010",
+        "8b2aa3ec-4606-4473-af11-3c4e931c7dcf": "Phone Number",
+        "f9858762-0d5a-4c87-a96e-7b39f7fe5204": "A unique sequence of digits assigned to an individual subscriber or service endpoint within a telecommunication network, facilitating voice and data communication.",
+        "fa198b6b-d0b3-44d1-966e-a3728c6fe5be": "Contact",
+        "8890c553-628b-4bff-8958-d97c2901cb9c": "Mobile;Telephone",
+        "01891e24-ba26-495d-b7b0-3cf5563b66d7": "Validated"
+      },
+      "refIds": [
+        "bb57e423-15a3-43d2-bb4f-81c084e50416"
+      ],
+      "updatedAt": "2026-05-20T06:52:44.312Z"
+    }
+  ],
   "dbVendor": "Polyglot",
   "appTarget": "Polyglot",
   "creationTS": "2024-12-31T11:04:00.830Z",
   "GUID": "dca9ade7-ee0b-4953-b408-cc0e6b806e82",
   "isLineageEnabled": false,
   "polyglotModelPaths": [],
-  "lastModifTS": "2025-02-28T12:15:06.712Z",
+  "lastModifTS": "2026-05-20T06:54:45.384Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -346,7 +602,7 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.0.2"
+    "version": "8.11.2"
   },
   "hackoladeMeta": {
     "validationErrors": {
@@ -363,8 +619,8 @@
             "GUID": "5cc94e26-8eb9-4b1c-a78d-a870d9f640db",
             "x": 1263,
             "y": 1167,
-            "width": 385,
-            "height": 317,
+            "width": 402,
+            "height": 362,
             "color": {
               "hex": "#2196F3"
             }
@@ -378,8 +634,8 @@
         },
         "buckets": [
           {
-            "x": 1223,
-            "y": 1127,
+            "x": 1199,
+            "y": 1103,
             "GUID": "81137752-f86d-41e7-bb91-6d3e9fdb9628"
           }
         ],
@@ -423,7 +679,7 @@
         "decorativeSymbols": [
           {
             "GUID": "f40517e2-29ea-49d0-9706-f405a6cf02ac",
-            "x": 1707,
+            "x": 1782,
             "y": 1139,
             "height": 150,
             "width": 300,
